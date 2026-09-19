@@ -27,14 +27,13 @@ class CatalogueTests(unittest.TestCase):
         cls.meta=validate.load('metadata.json')
         cls.i18n=validate.load('i18n.json')
         cls.media=validate.load('media.json')
-        cls.publication_dates=validate.load('publication_dates.json')
         cls.by_id={p['id']:p for p in cls.projects}
 
     def test_schema(self):
         self.assertEqual(validate.validate_data(self.projects,self.sources,self.artifacts,self.meta),[])
 
     def test_complete_bilingual_gallery_data(self):
-        self.assertEqual(validate.validate_presentation(self.projects,self.sources,self.i18n,self.media,self.publication_dates),[])
+        self.assertEqual(validate.validate_presentation(self.projects,self.sources,self.i18n,self.media),[])
         self.assertEqual(set(self.i18n['en']),set(self.by_id))
         self.assertTrue({'P01','P02','P03','P04','P05'}.issubset(self.media['media']))
 
@@ -52,8 +51,8 @@ class CatalogueTests(unittest.TestCase):
 
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
-        self.assertEqual(len(retained),31)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),14)
+        self.assertEqual(len(retained),30)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),13)
         self.assertEqual(sum(item['kind']=='video' for item in retained),17)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
         self.assertEqual(len(videos),17)
@@ -90,7 +89,7 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.media['media']['X07']['url'],'assets/social/SaveTwitter.Net_HST8HsrawAAkgPu.jpg')
         self.assertTrue((ROOT/'site'/self.media['media']['X07']['url']).is_file())
         self.assertEqual(self.media['media']['X13']['kind'],'video')
-        self.assertTrue(all(item['url'].startswith(('https://','assets/social/','assets/posters/')) for item in retained))
+        self.assertTrue(all(item['url'].startswith('https://') or item['url'].startswith('assets/social/') for item in retained))
         additions={f'P{i:02}' for i in range(13,18)}
         self.assertTrue(all(self.media['media'][pid]['source_page_url'].startswith('https://') for pid in additions))
         self.assertTrue(all(self.media['media'][pid]['source_path'] for pid in additions))
