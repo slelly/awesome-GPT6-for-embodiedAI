@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-09-18",
+  "python": "3.13.5",
+  "offline_unit_tests_passed": 16,
+  "browser_load_mode": "set_content of local generated HTML; file navigation blocked by environment",
+  "browser_checks": [
+    "Desktop initial core filter renders 12 cards",
+    "Reset shows all 41 cards",
+    "Search π0.5 returns the matched hybrid policy entry",
+    "Rednote filter renders 8 D-level leads",
+    "Conflicting filter displays empty state",
+    "Combined core / real filter renders 5 entries",
+    "Evidence detail disclosure opens",
+    "Filtered JSON exports the 5 visible projects",
+    "HF panel renders 8 resources",
+    "390px mobile viewport has no horizontal overflow",
+    "No JavaScript errors or external HTTP requests during browser test"
+  ],
+  "remote_http_probe_run": false,
+  "third_party_experiments_run": false,
+  "remote_published": false
+}

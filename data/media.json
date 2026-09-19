@@ -1,0 +1,359 @@
+{
+  "media": {
+    "P01": {
+      "kind": "video",
+      "url": "https://raw.githubusercontent.com/cheng-haha/GPT-Policy/main/assets/videos/gpt6-sprite-retrieval-5s.mp4",
+      "poster": "assets/posters/P01.jpg",
+      "source_url": "https://github.com/cheng-haha/GPT-Policy",
+      "source_path": "Repository MP4 URL; first decoded frame at 00:00:00, extracted 2026-09-19 with ffmpeg.",
+      "classification": "Static poster extracted from the project-hosted video; not a separate result image.",
+      "source_id": "S001",
+      "alt": {
+        "en": "GPT-Policy repository demonstration video for the GPT-6 Sprite retrieval task.",
+        "zh": "GPT-Policy 仓库中的 GPT-6 Sprite 检索任务演示视频。"
+      },
+      "caption": {
+        "en": "Repository-provided 5-second Sprite retrieval demonstration; see the primary README for task context.",
+        "zh": "仓库提供的 5 秒 Sprite 检索演示；任务语境见一手 README。"
+      }
+    },
+    "P02": {
+      "kind": "image",
+      "url": "https://anonymous-report-421.github.io/public-website/media/posters/gpt__arrange_largest_number__random__g0__l0.jpg",
+      "source_url": "https://anonymous-report-421.github.io/public-website/",
+      "source_id": "S050",
+      "alt": {
+        "en": "Project-hosted gallery poster for a GPT-labelled robot task recording.",
+        "zh": "项目托管的 GPT 标注机器人任务录像画廊海报。"
+      },
+      "caption": {
+        "en": "Official gallery poster. The full video gallery and per-video manifest remain linked on the project site.",
+        "zh": "官方画廊海报；完整视频画廊与逐视频清单仍由项目站点提供。"
+      }
+    },
+    "P03": {
+      "kind": "image",
+      "url": "https://agent-as-policy-2026.github.io/img/og.png",
+      "source_url": "https://agent-as-policy-2026.github.io/",
+      "source_id": "S005",
+      "alt": {
+        "en": "Overhead project image of 3D-printed part pairs used by Agent as Policy.",
+        "zh": "Agent as Policy 项目中的俯视图：桌面上的 3D 打印零件对。"
+      },
+      "caption": {
+        "en": "Project-provided scene image; see the primary project page for the original context.",
+        "zh": "项目页提供的场景图；原始语境请见一手项目页。"
+      }
+    },
+    "P04": {
+      "kind": "image",
+      "url": "https://openai.robocurve.org/gpt-6-astra/og.jpg",
+      "source_url": "https://openai.robocurve.org/gpt-6-astra/",
+      "source_id": "S010",
+      "alt": {
+        "en": "Official RoboCurve completion-rate chart for bowl and puzzle robot-arm tasks.",
+        "zh": "RoboCurve 官方的 Bowl 与 Puzzle 机械臂任务完成率图。"
+      },
+      "caption": {
+        "en": "Official report visual, not an independently reproduced result.",
+        "zh": "官方报告图，不代表本目录独立复现。"
+      }
+    },
+    "P05": {
+      "kind": "image",
+      "url": "https://openai.robocurve.org/stationerybench/og.jpg?v=72b030e18869",
+      "source_url": "https://openai.robocurve.org/stationerybench/",
+      "source_id": "S011",
+      "alt": {
+        "en": "Official StationeryBench headline-video frame with robot footage and pooled-trial plot.",
+        "zh": "StationeryBench 官方头图视频帧：机器人画面与汇总试验图。"
+      },
+      "caption": {
+        "en": "Official headline-video frame; progress and completion remain distinct metrics.",
+        "zh": "官方头图视频帧；进度与完全完成仍是不同指标。"
+      }
+    },
+    "P06": {
+      "kind": "image",
+      "url": "https://robodojo-benchmark.com/image.png",
+      "source_url": "https://robodojo-benchmark.com/report/gpt-6-astra-eval",
+      "source_id": "S013",
+      "alt": {
+        "en": "RoboDojo report social-preview image for the GPT-6 Astra evaluation report.",
+        "zh": "RoboDojo GPT-6 Astra 评测报告的社交预览图。"
+      },
+      "caption": {
+        "en": "Official report preview image; open the report for its evaluation context and limitations.",
+        "zh": "官方报告预览图；评测语境与限制请打开报告核查。"
+      }
+    },
+    "P07": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/NVlabs/ENPIRE/main/assets/main_figure.png",
+      "source_url": "https://github.com/NVlabs/ENPIRE",
+      "source_id": "S018",
+      "alt": {
+        "en": "ENPIRE repository overview figure.",
+        "zh": "ENPIRE 仓库的总览图。"
+      },
+      "caption": {
+        "en": "Repository-provided overview figure. This gallery item does not upgrade the separate GPT-6 lead beyond its stated evidence level.",
+        "zh": "仓库提供的总览图；此画廊项不改变独立 GPT-6 线索既有的证据等级。"
+      }
+    },
+    "P08": {
+      "kind": "video",
+      "url": "https://raw.githubusercontent.com/lingxiao-guo/GPT6-real2sim/main/real2sim_ep0/videos/comparison_all_views.mp4",
+      "poster": "assets/posters/P08.jpg",
+      "source_url": "https://github.com/lingxiao-guo/GPT6-real2sim",
+      "source_path": "Repository MP4 URL; first decoded frame at 00:00:00, extracted 2026-09-19 with ffmpeg.",
+      "classification": "Static poster extracted from the project-hosted video; not a separate result image.",
+      "source_id": "S020",
+      "alt": {
+        "en": "GPT6-real2sim original-versus-simulation all-views comparison video for DROID episode 0.",
+        "zh": "GPT6-real2sim 的 DROID 第 0 集原始画面与仿真全视角对比视频。"
+      },
+      "caption": {
+        "en": "Repository-provided DROID episode 0 comparison video; the README documents the visual-replay limits.",
+        "zh": "仓库提供的 DROID 第 0 集对比视频；视觉重放的限制见 README。"
+      }
+    },
+    "P09": {
+      "kind": "image",
+      "url": "assets/posters/P09-real2sim-title.svg",
+      "source_url": "https://github.com/hku-sail/Real2Sim_GPT6_ASTRA",
+      "source_id": "S021",
+      "source_path": "Local site SVG text cover, created 2026-09-19 after the repository's README was confirmed not to retain hostable RGB/video demo assets.",
+      "classification": "Site-made typographic cover using the repository name; not project media, a demonstration, or an experiment result.",
+      "alt": {
+        "en": "Text cover reading Real2Sim_GPT6_ASTRA. This is a site-made typographic cover, not a project demonstration image.",
+        "zh": "写有 Real2Sim_GPT6_ASTRA 的文字封面。这是本站制作的文字封面，不是项目演示图片。"
+      },
+      "caption": {
+        "en": "Site-made text cover because the repository does not retain directly hostable demo frames or video.",
+        "zh": "因仓库未保留可直接托管的演示帧或视频，本站制作的文字封面。"
+      }
+    },
+    "P10": {
+      "kind": "video",
+      "url": "https://cskrren.github.io/real2gym-site/media/human/compare.mp4",
+      "poster": "assets/posters/P10.jpg",
+      "source_url": "https://cskrren.github.io/real2gym-site/",
+      "source_path": "Official-site MP4 URL; first decoded frame at 00:00:00, extracted 2026-09-19 with ffmpeg.",
+      "classification": "Static poster extracted from the project-hosted video; not a separate result image.",
+      "source_id": "S022",
+      "alt": {
+        "en": "Real2Gym comparison video for a human demonstration, Blender reconstruction, and MuJoCo execution.",
+        "zh": "Real2Gym 的真人演示、Blender 重建与 MuJoCo 执行对比视频。"
+      },
+      "caption": {
+        "en": "Official site video. Its page distinguishes visual reconstruction from real-robot validation.",
+        "zh": "官方网站视频；页面明确区分视觉重建与真实机器人验证。"
+      }
+    },
+    "P11": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/Hu-xiao-max/dexgpt/main/outputs/comparison_preview.jpg",
+      "source_url": "https://github.com/Hu-xiao-max/dexgpt",
+      "source_id": "S023",
+      "alt": {
+        "en": "DexGPT comparison-video preview: source footage, kinematic reference, and contact physics.",
+        "zh": "DexGPT 对比视频预览：源录像、运动学参考与接触物理。"
+      },
+      "caption": {
+        "en": "Repository preview for the linked 20.3-second comparison video; this is simulation evidence, not hardware validation.",
+        "zh": "仓库中链接的 20.3 秒对比视频预览；这是仿真证据，不是真机验证。"
+      }
+    },
+    "P12": {
+      "kind": "video",
+      "url": "https://assets.andonlabs.com/evals/drone-bench/general/drone-tasks-combined.mp4",
+      "poster": "assets/posters/P12.jpg",
+      "source_url": "https://andonlabs.com/evals/drone-bench",
+      "source_path": "Official-site MP4 URL; first decoded frame at 00:00:00, extracted 2026-09-19 with ffmpeg.",
+      "classification": "Static poster extracted from the project-hosted video; not a separate result image.",
+      "source_id": "S025",
+      "alt": {
+        "en": "Drone-Bench project video showing combined drone tasks.",
+        "zh": "Drone-Bench 项目的综合无人机任务视频。"
+      },
+      "caption": {
+        "en": "Official Drone-Bench task video. The catalogue keeps the entry date unconfirmed rather than inferring it from this asset.",
+        "zh": "Drone-Bench 官方任务视频；目录未由此资产推断条目日期，仍标为未确认。"
+      }
+    },
+    "P13": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/robocurve/inspect-robots/main/website/static/img/social-card.png",
+      "source_url": "https://github.com/robocurve/inspect-robots",
+      "source_page_url": "https://github.com/robocurve/inspect-robots#readme",
+      "source_path": "website/static/img/social-card.png @ main",
+      "classification": "Project social card / project overview; not an experiment result.",
+      "source_id": "S026",
+      "alt": {
+        "en": "Inspect Robots project social card.",
+        "zh": "Inspect Robots 项目社交预览图。"
+      },
+      "caption": {
+        "en": "Repository-provided project overview image for the simulator inspection toolkit, not a robot experiment result.",
+        "zh": "仓库提供的仿真器检查工具项目总览图，不是机器人实验结果。"
+      }
+    },
+    "P14": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/showlab/Show-Harness/main/assets/overview.png",
+      "source_url": "https://github.com/showlab/Show-Harness",
+      "source_page_url": "https://github.com/showlab/Show-Harness/blob/main/README.md",
+      "source_path": "assets/overview.png @ main",
+      "classification": "Method and project overview figure; not an experiment demonstration.",
+      "source_id": "S027",
+      "alt": {
+        "en": "Show-Harness overview figure from the repository README.",
+        "zh": "Show-Harness 仓库 README 中的总览图。"
+      },
+      "caption": {
+        "en": "Repository README overview of the harness workflow; it illustrates the method rather than a claimed experimental demo.",
+        "zh": "仓库 README 的 harness 工作流总览；用于说明方法，不作为实验 Demo。"
+      }
+    },
+    "P15": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/DeepCybo-PhysAI/PhysBrain-1.5/gh-pages/assets/model-architecture-v2.png",
+      "source_url": "https://deepcybo-physai.github.io/PhysBrain-1.5/",
+      "source_page_url": "https://github.com/DeepCybo-PhysAI/PhysBrain-1.5#readme",
+      "source_path": "gh-pages/assets/model-architecture-v2.png @ gh-pages",
+      "classification": "Model architecture figure; not an experiment demonstration.",
+      "source_id": "S030",
+      "alt": {
+        "en": "PhysBrain 1.5 model architecture figure showing shared language, action, and visual-token modelling.",
+        "zh": "PhysBrain 1.5 模型架构图，展示语言、动作与视觉 token 的共享建模。"
+      },
+      "caption": {
+        "en": "Project-provided architecture figure. It explains the method and is not labelled as an experimental demonstration.",
+        "zh": "项目提供的模型架构图，用于说明方法，不标为实验演示。"
+      }
+    },
+    "P16": {
+      "kind": "image",
+      "url": "https://media.luminis-sim.com/media/home/teaser.png",
+      "source_url": "https://github.com/robodojo-benchmark/RoboDojo",
+      "source_page_url": "https://github.com/robodojo-benchmark/RoboDojo#readme",
+      "source_path": "RoboDojo README external asset: media/home/teaser.png",
+      "classification": "Project teaser image from the official README.",
+      "source_id": "S016",
+      "alt": {
+        "en": "RoboDojo project teaser image referenced by its official README.",
+        "zh": "RoboDojo 官方 README 引用的项目预览图。"
+      },
+      "caption": {
+        "en": "Official README teaser for the RoboDojo infrastructure project; open the source page for context.",
+        "zh": "RoboDojo 基础设施项目的官方 README 预览图；完整语境请见来源页。"
+      }
+    },
+    "P17": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/Human-CLAW/HumanCLAW/main/assets/teaser.png",
+      "source_url": "https://github.com/Human-CLAW/HumanCLAW",
+      "source_page_url": "https://github.com/Human-CLAW/HumanCLAW#readme",
+      "source_path": "assets/teaser.png @ main",
+      "classification": "Project teaser image from the repository README.",
+      "source_id": "S032",
+      "alt": {
+        "en": "HumanCLAW project teaser image from the repository README.",
+        "zh": "HumanCLAW 仓库 README 中的项目预览图。"
+      },
+      "caption": {
+        "en": "Repository-provided HumanCLAW project teaser; see the project page for benchmark and video context.",
+        "zh": "仓库提供的 HumanCLAW 项目预览图；基准与视频语境请见项目页。"
+      }
+    },
+    "X01": {
+      "kind": "video", "url": "assets/social/Physical%20Robot%20Keyboard%20Typing.mp4", "poster": "assets/social/X01.jpg", "source_url": "https://x.com/kaiwynd/status/2098823484474348008", "source_page_url": "https://x.com/kaiwynd/status/2098823484474348008", "source_id": "S036",
+      "source_path": "User attachment social-videos.zip: Physical Robot Keyboard Typing.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied video for the physical robot keyboard-typing post.", "zh": "用户提供的真实机器人键盘打字原帖视频。"},
+      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+    },
+    "X02": {
+      "kind": "video", "url": "assets/social/Physical%20Ethernet%20Insertion.mp4", "poster": "assets/social/X02.jpg", "source_url": "https://x.com/kaiwynd/status/2099524132341711051", "source_page_url": "https://x.com/kaiwynd/status/2099524132341711051", "source_id": "S036",
+      "source_path": "User attachment social-videos.zip: Physical Ethernet Insertion.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied video for the physical Ethernet-insertion post.", "zh": "用户提供的真实网线插入原帖视频。"},
+      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+    },
+    "X03": {
+      "kind": "video", "url": "assets/social/Robot%20Arm%20Draws%20the%20Golden%20Gate%20Bridge.mp4", "poster": "assets/social/X03.jpg", "source_url": "https://x.com/cdngdev/status/2097339677128982873", "source_page_url": "https://x.com/cdngdev/status/2097339677128982873", "source_id": "S037",
+      "source_path": "User attachment social-videos.zip: Robot Arm Draws the Golden Gate Bridge.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied video for the robot-arm Golden Gate Bridge drawing post.", "zh": "用户提供的机械臂画金门大桥原帖视频。"},
+      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+    },
+    "X04": {
+      "kind": "video", "url": "assets/social/Cross-Scene%20Mobile%20Manipulation%20ICL.mp4", "poster": "assets/social/X04.jpg", "source_url": "https://x.com/ax_pey/status/2098216469012283681", "source_page_url": "https://x.com/ax_pey/status/2098216469012283681", "source_id": "S038",
+      "source_path": "User attachment social-videos.zip: Cross-Scene Mobile Manipulation ICL.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied video for the cross-scene mobile-manipulation post.", "zh": "用户提供的跨场景移动操作原帖视频。"},
+      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+    },
+    "X05": {
+      "kind": "video", "url": "assets/social/G1%20Coke-Bottle%20Grasp.mp4", "poster": "assets/social/X05.jpg", "source_url": "https://x.com/RotekSong/status/2099104628562608371", "source_page_url": "https://x.com/RotekSong/status/2099104628562608371", "source_id": "S039",
+      "source_path": "User attachment social-videos.zip: G1 Coke-Bottle Grasp.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied video for the G1 coke-bottle grasp post.", "zh": "用户提供的 G1 可乐瓶抓取原帖视频。"},
+      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+    },
+    "X06": {
+      "kind": "video", "url": "assets/social/G1%20Navigation.mp4", "poster": "assets/social/X06.jpg", "source_url": "https://x.com/RotekSong/status/2098212303263183329", "source_page_url": "https://x.com/RotekSong/status/2098212303263183329", "source_id": "S038",
+      "source_path": "User attachment social-videos.zip: G1 Navigation.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied video for the G1 navigation post.", "zh": "用户提供的 G1 导航原帖视频。"},
+      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+    },
+    "X07": {
+      "kind": "image", "url": "assets/social/SaveTwitter.Net_HST8HsrawAAkgPu.jpg", "source_url": "https://dex-rubik-cube.yanjieze.com/", "source_page_url": "https://dex-rubik-cube.yanjieze.com/", "source_id": "S040",
+      "source_path": "User attachment SaveTwitter.Net_HST8HsrawAAkgPu.jpg", "classification": "User-supplied image attributed to the Dexterous Hand Rubik's Cube lead; no original-post URL is retained.",
+      "alt": {"en": "Supplied image for the Dexterous Hand Rubik's Cube lead.", "zh": "用户提供的灵巧手解魔方线索图片。"},
+      "caption": {"en": "User-supplied image for this lead; the retained project and account links remain unchanged.", "zh": "用户提供的该线索图片；保留的项目和账号链接不变。"}
+    },
+    "X08": {
+      "kind": "video", "url": "assets/social/Sharpa%20Dexterous-Hand%20Pen%20Spinning%20PPO.mp4", "poster": "assets/social/X08.jpg", "source_url": "https://x.com/walterzhu8/status/2100212420840989112", "source_page_url": "https://x.com/walterzhu8/status/2100212420840989112", "source_id": "S039",
+      "source_path": "User attachment social-videos.zip: Sharpa Dexterous-Hand Pen Spinning PPO.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied video for the Sharpa dexterous-hand pen-spinning post.", "zh": "用户提供的 Sharpa 灵巧手转笔原帖视频。"},
+      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+    },
+    "X09": {
+      "kind": "video", "url": "assets/social/Go1%20Paused-Physics%20Joint%20Control.mp4", "poster": "assets/social/X09.jpg", "source_url": "https://x.com/sri299792458/status/2097349207795335424", "source_page_url": "https://x.com/sri299792458/status/2097349207795335424", "source_id": "S024",
+      "source_path": "User attachment social-videos.zip: Go1 Paused-Physics Joint Control.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied video for the paused-physics Go1 post.", "zh": "用户提供的 Go1 暂停物理关节控制原帖视频。"},
+      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+    },
+    "X10": {
+      "kind": "video", "url": "assets/social/CARLA%20Visual%20Waypoint%20Driving.mp4", "poster": "assets/social/X10.jpg", "source_url": "https://x.com/ludocomito/status/2097329417760440461", "source_page_url": "https://x.com/ludocomito/status/2097329417760440461", "source_id": "S042",
+      "source_path": "User attachment social-videos.zip: CARLA Visual Waypoint Driving.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied video for the CARLA visual-waypoint driving post.", "zh": "用户提供的 CARLA 视觉路点驾驶原帖视频。"},
+      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+    },
+    "X11": {
+      "kind": "video", "url": "assets/social/Two-Robot%20Ball%20Toss.mp4", "poster": "assets/social/X11.jpg", "source_url": "https://x.com/thermalpastor/status/2097496200631210136", "source_page_url": "https://x.com/thermalpastor/status/2097496200631210136", "source_id": "S043",
+      "source_path": "User attachment social-videos.zip: Two-Robot Ball Toss.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied video for the two-robot ball-toss post.", "zh": "用户提供的双机器人抛接球原帖视频。"},
+      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+    },
+    "X12": {
+      "kind": "video", "url": "assets/social/G1%20Bicycle-Control%20Code.mp4", "poster": "assets/social/X12.jpg", "source_url": "https://x.com/thermalpastor/status/2097802933429796873", "source_page_url": "https://x.com/thermalpastor/status/2097802933429796873", "source_id": "S043",
+      "source_path": "User attachment social-videos.zip: G1 Bicycle-Control Code.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied video for the G1 bicycle-control-code post.", "zh": "用户提供的 G1 自行车控制代码原帖视频。"},
+      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+    },
+    "X13": {
+      "kind": "video", "url": "assets/social/Dual-ALOHA%20Spatial-Constraint%20Demo.mp4", "poster": "assets/social/X13.jpg", "source_url": "https://x.com/qineng_wang/status/2099893504658866561", "source_page_url": "https://x.com/qineng_wang/status/2099893504658866561", "source_id": "S052",
+      "source_path": "User attachment Dual-ALOHA Spatial-Constraint Demo.mp4; first decoded frame at 00:00:00", "classification": "User-supplied Dual-ALOHA video; exact original-post URL supplied by the user, not independently verified in this update.",
+      "alt": {"en": "Supplied video for the Dual-ALOHA spatial-constraint lead.", "zh": "用户提供的 Dual-ALOHA 空间约束演示视频。"},
+      "caption": {"en": "User-supplied video; the exact original-post URL was supplied by the user and was not independently verified in this update.", "zh": "用户提供的视频；具体原帖 URL 由用户补充，本轮未独立核验。"}
+    },
+    "X14": {
+      "kind": "video", "url": "assets/social/Office%20Scene%20to%20Newton%20%20G1.mp4", "poster": "assets/social/X14.jpg", "source_url": "https://x.com/Jiarui_X/status/2098439950991806804", "source_page_url": "https://x.com/Jiarui_X/status/2098439950991806804", "source_id": "S033",
+      "source_path": "User attachment social-videos.zip: Office Scene to Newton  G1.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied video for the office-to-Newton/G1 post.", "zh": "用户提供的办公场景到 Newton/G1 原帖视频。"},
+      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+    }
+  },
+  "missing_policy": {
+    "en": "No independently verifiable, directly linkable demo media was retained for this entry. The original project or lead URL remains available.",
+    "zh": "本条目未保留可独立核验且可直接链接的演示媒体；仍保留原始项目或线索入口。"
+  }
+}

@@ -1,0 +1,470 @@
+[
+  {
+    "id": "S001",
+    "title": "GPT-Policy public implementation",
+    "url": "https://github.com/cheng-haha/GPT-Policy",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "README substantive text reviewed; project license explicitly pending. No robot execution performed."
+  },
+  {
+    "id": "S002",
+    "title": "In-Context Robot Learning with VLM Agents",
+    "url": "https://arxiv.org/abs/2609.19138",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Abstract and submission date; PDF not analyzed."
+  },
+  {
+    "id": "S003",
+    "title": "GPT 6 Astra as an Embodied Policy",
+    "url": "https://github.com/anonymous-report-421/GPT-as-Policy",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "README, evaluation denominators, release scope and safety instructions reviewed."
+  },
+  {
+    "id": "S004",
+    "title": "GPT-as-Policy source-release notes",
+    "url": "https://github.com/anonymous-report-421/GPT-as-Policy/blob/main/RELEASE_NOTES.md",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": ""
+  },
+  {
+    "id": "S005",
+    "title": "Agent as Policy project page",
+    "url": "https://agent-as-policy-2026.github.io/",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Indexed project text available; direct fetch failed. Site trial counts differ from later dataset card."
+  },
+  {
+    "id": "S006",
+    "title": "Agent as Policy evaluated-trial dataset",
+    "url": "https://huggingface.co/datasets/Agent-as-Policy/agent-as-policy",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Current indexed card: 162 evaluated rows; multi-model, not 162 GPT-6 trials."
+  },
+  {
+    "id": "S007",
+    "title": "Agent as Policy dataset details",
+    "url": "https://huggingface.co/datasets/Agent-as-Policy/agent-as-policy/blob/main/docs/DETAILS.md",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Links code repository but says private until publication. Public access to code not independently established."
+  },
+  {
+    "id": "S008",
+    "title": "Agent as Policy earlier dataset snapshot",
+    "url": "https://huggingface.co/datasets/Agent-as-Policy/yam-agent-as-policy",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Older card: 196 sessions includes evaluated/reset/auxiliary; not interchangeable with canonical 162 evaluated rows."
+  },
+  {
+    "id": "S009",
+    "title": "Agent as Policy paper listing",
+    "url": "https://huggingface.co/papers/2609.12541",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Paper metadata and original abstract reviewed; generated summary not used as evidence."
+  },
+  {
+    "id": "S010",
+    "title": "RoboCurve GPT-6 Astra two-task evaluation",
+    "url": "https://openai.robocurve.org/gpt-6-astra/",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Primary report, trial counts, control specifications and limitations reviewed."
+  },
+  {
+    "id": "S011",
+    "title": "GPT-6 Astra vs MolmoAct2 on StationeryBench",
+    "url": "https://openai.robocurve.org/stationerybench/",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Primary report: 7/100 full completion; 46/100 mean progress, not 46% success."
+  },
+  {
+    "id": "S012",
+    "title": "StationeryBench task registry",
+    "url": "https://github.com/robocurve/stationerybench",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Task definitions, mock environment and real-evaluation caveats reviewed."
+  },
+  {
+    "id": "S013",
+    "title": "RoboDojo Astra evaluation report",
+    "url": "https://robodojo-benchmark.com/report/gpt-6-astra-eval",
+    "kind": "primary",
+    "access": "partial_index",
+    "checked_at": "2026-09-18",
+    "notes": "Title/date/harness snippet found; full report not retrievable. Quantitative claims not promoted into verified metrics."
+  },
+  {
+    "id": "S014",
+    "title": "RoboDojo Astra author announcement on X",
+    "url": "https://x.com/MarioChan2002/status/2100091875403469014",
+    "kind": "primary",
+    "access": "linked_only",
+    "checked_at": "2026-09-18",
+    "notes": "Exact post ID recovered from mirror S015; original X page not independently read."
+  },
+  {
+    "id": "S015",
+    "title": "Mirror of RoboDojo author announcement",
+    "url": "https://zamantika.com/ar/MarioChan2002/status/2100091875403469014",
+    "kind": "author_mirror",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Discovery only; mirrors can be stale or incomplete."
+  },
+  {
+    "id": "S016",
+    "title": "RoboDojo official code",
+    "url": "https://github.com/robodojo-benchmark/RoboDojo",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "README announces Sep 16–17 RGB/observation/data changes. License body says non-commercial while GitHub UI says MIT; unresolved discrepancy."
+  },
+  {
+    "id": "S017",
+    "title": "RoboDojo project site",
+    "url": "https://robodojo-benchmark.com/",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": ""
+  },
+  {
+    "id": "S018",
+    "title": "ENPIRE official code",
+    "url": "https://github.com/NVlabs/ENPIRE",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Framework and safe example verified. June paper is outside review window; GPT-6-specific demo supported by author-post mirror S019."
+  },
+  {
+    "id": "S019",
+    "title": "ENPIRE GPT6 author post mirrored in timeline",
+    "url": "https://mobile.twstalker.com/JayHe748646",
+    "kind": "author_mirror",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Contains TongheZhang01 author-post text pointing to NVlabs/ENPIRE."
+  },
+  {
+    "id": "S020",
+    "title": "GPT6-real2sim",
+    "url": "https://github.com/lingxiao-guo/GPT6-real2sim",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "README distinguishes contact-only failure from visual reconstruction and preserves historical physics issues."
+  },
+  {
+    "id": "S021",
+    "title": "Real2Sim GPT6 ASTRA",
+    "url": "https://github.com/hku-sail/Real2Sim_GPT6_ASTRA",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Primary README explicitly describes approximate geometric replay, not recovered dynamics."
+  },
+  {
+    "id": "S022",
+    "title": "Real2Gym project",
+    "url": "https://cskrren.github.io/real2gym-site/",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Project text and canonical code link found; code repository not separately readable."
+  },
+  {
+    "id": "S023",
+    "title": "dexgpt repository",
+    "url": "https://github.com/Hu-xiao-max/dexgpt",
+    "kind": "primary",
+    "access": "partial_index",
+    "checked_at": "2026-09-18",
+    "notes": "Public repository identity and description verified; implementation and reproducibility not reviewed."
+  },
+  {
+    "id": "S024",
+    "title": "Dexgpt and paused Go1 demos: author posts in mirror",
+    "url": "https://x.twstalker.com/hojoon_ai",
+    "kind": "author_mirror",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Contains huxiao93612565 44-DoF pipeline and sri299792458 paused-physics Go1 post."
+  },
+  {
+    "id": "S025",
+    "title": "Drone-Bench official evaluation",
+    "url": "https://andonlabs.com/evals/drone-bench",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Astra appears among model labels. Five isolated subtasks, best-of-ten feedback submissions; old Discussion may lag chart updates, so no new total score inferred."
+  },
+  {
+    "id": "S026",
+    "title": "Inspect Robots",
+    "url": "https://github.com/robocurve/inspect-robots",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-18",
+    "notes": "README directly read, including MIT, plugin boundaries and hardware-free mock."
+  },
+  {
+    "id": "S027",
+    "title": "Show-Harness",
+    "url": "https://github.com/showlab/Show-Harness",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Harness, data/model links verified. No GPT-6-specific primary result established here."
+  },
+  {
+    "id": "S028",
+    "title": "Show-Harness model adapters",
+    "url": "https://huggingface.co/showlab/Show-Harness-VLMs",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Five real adapters plus one sim adapter. Gemma adapter has Gemma terms despite repo-level Apache tag."
+  },
+  {
+    "id": "S029",
+    "title": "Show-Harness demonstration corpus",
+    "url": "https://huggingface.co/datasets/showlab/Show-Harness-Data",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "164 real + 230 simulation episodes; semantic actions and direction-convention warning reviewed."
+  },
+  {
+    "id": "S030",
+    "title": "PhysBrain 1.5 project",
+    "url": "https://deepcybo-physai.github.io/PhysBrain-1.5/",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "GPT6 73.3 comparison is mean on 28 embodied-understanding benchmarks, not robot success rate. Search publication date unreliable."
+  },
+  {
+    "id": "S031",
+    "title": "PhysBrain 1.5 code/report entry",
+    "url": "https://github.com/DeepCybo-PhysAI/PhysBrain-1.5",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Primary links to 2B/8B weights and evaluation toolkit; model-card license not separately confirmed."
+  },
+  {
+    "id": "S032",
+    "title": "HumanCLAW benchmark",
+    "url": "https://github.com/Human-CLAW/HumanCLAW",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Primary release checklist still has code/weights/environment/episodes pending; historical benchmark not a new verified GPT6 result."
+  },
+  {
+    "id": "S033",
+    "title": "Awesome Astra Embodied AI discovery collection",
+    "url": "https://github.com/zjwzcx/Awesome-Astra-Embodied-AI",
+    "kind": "secondary_index",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Credited for discovery. Selected social/Rednote leads are not independently verified and not counted as core evidence."
+  },
+  {
+    "id": "S034",
+    "title": "Awesome Robot Use Agent discovery collection",
+    "url": "https://github.com/kairunwen/Awesome-Robot-Use-Agent",
+    "kind": "secondary_index",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": ""
+  },
+  {
+    "id": "S035",
+    "title": "Awesome Robot Use Agent demo index",
+    "url": "https://kairunwen.github.io/Awesome-Robot-Use-Agent/",
+    "kind": "secondary_index",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Indexed text reviewed; direct fetch failed. Used as discovery and for follow-up search targets."
+  },
+  {
+    "id": "S036",
+    "title": "Kaifeng keyboard and Ethernet author posts, mirror",
+    "url": "https://www.instalker.org/kaiwynd",
+    "kind": "author_mirror",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Search-indexed recent text; direct mirrors sometimes return older timelines. No original tweet IDs or exact Ethernet publication day established."
+  },
+  {
+    "id": "S037",
+    "title": "Robot painting author post, mirror",
+    "url": "https://remaja.twstalker.com/zhefeigong",
+    "kind": "author_mirror",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Reproduces cdngdev paintbrush/camera/robot post. Not full rollout or controlled evaluation."
+  },
+  {
+    "id": "S038",
+    "title": "Mobile manipulation and G1 navigation author posts, mirror",
+    "url": "https://mobile.twstalker.com/ShengjieWa34067",
+    "kind": "author_mirror",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Contains ax_pey and RotekSong original-post text."
+  },
+  {
+    "id": "S039",
+    "title": "G1 bottle pickup and Sharpa RL author posts, mirror",
+    "url": "https://w.twstalker.com/RotekSong",
+    "kind": "author_mirror",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Contains RotekSong acknowledgement of IK and walterzhu8/Chengyang Li pen-spinning report."
+  },
+  {
+    "id": "S040",
+    "title": "Yanjie Ze project directory",
+    "url": "https://yanjieze.com/",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Author site confirms Dex Rubik simulation tool URL; no complete GPT-6 control protocol inspected."
+  },
+  {
+    "id": "S041",
+    "title": "Dex Rubik GPT6 author post, mirror",
+    "url": "https://mobile.twstalker.com/HaoranGeng2",
+    "kind": "author_mirror",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": ""
+  },
+  {
+    "id": "S042",
+    "title": "CARLA Astra author post, mirror",
+    "url": "https://zamantika.com/id/ludocomito/status/2097329417760440461",
+    "kind": "author_mirror",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Exact original post ID known. Author distinguishes high-level waypoints from local vehicle controller."
+  },
+  {
+    "id": "S043",
+    "title": "Juggling and bicycle author posts, mirror",
+    "url": "https://community.twstalker.com/yixxuan_li",
+    "kind": "author_mirror",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Contains thermalpastor posts; simulator demos, not physical deployment."
+  },
+  {
+    "id": "S044",
+    "title": "AGP author announcement, mirror",
+    "url": "https://platform.twstalker.com/JillJia6/status/2100275532378317038",
+    "kind": "author_mirror",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "62-trial and seven-of-eight configuration claims belong to this announcement subset, not all dataset rows."
+  },
+  {
+    "id": "S045",
+    "title": "GPT-as-Policy rollout dataset",
+    "url": "https://huggingface.co/datasets/YuMoool/astra-robodojo-rollouts",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Indexed dataset card retrieved via ?duplicate=true. 100 rows, 10 tasks ×5 cases ×2 methods; full listing about 135 GB; selective read supported."
+  },
+  {
+    "id": "S046",
+    "title": "RoboDojo HF dataset file index",
+    "url": "https://huggingface.co/datasets/RoboDojo-Benchmark/RoboDojo/blob/refs%2Fpr%2F3/RoboDojo_lerobot_v21_video/data/chunk-003/episode_003006.parquet",
+    "kind": "primary",
+    "access": "partial_index",
+    "checked_at": "2026-09-18",
+    "notes": "A PR-ref file page establishes HF repository identity, not main-branch completeness. That page reports a viewer API404; do not use this PR as a recommended release."
+  },
+  {
+    "id": "S047",
+    "title": "PhysBrain Chinese discussion on Zhihu",
+    "url": "https://zhuanlan.zhihu.com/p/2082787698893383667",
+    "kind": "secondary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Chinese discovery/discussion only; numerical claims traced back to S030/S031."
+  },
+  {
+    "id": "S048",
+    "title": "RoboDojo Astra Chinese news report",
+    "url": "https://m.cnyes.com/news/id/6608411",
+    "kind": "secondary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Sep16 news provides 28.97/22.48% and hardware-damage claims; primary full report unavailable, so these are quarantined rather than treated as verified benchmark records."
+  },
+  {
+    "id": "S049",
+    "title": "Official GPT-6 Astra announcement",
+    "url": "https://openai.com/index/gpt-6-astra/",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Official indexed announcement used to disambiguate model name from unrelated ASTRA projects; no open-weight claim inferred."
+  },
+  {
+    "id": "S050",
+    "title": "GPT-as-Policy public website source",
+    "url": "https://github.com/anonymous-report-421/public-website",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": "Static report/video-gallery scope; no new independent experiment counted."
+  },
+  {
+    "id": "S051",
+    "title": "Dexgpt author post mirrored with repository link",
+    "url": "https://mobile.twstalker.com/42bhargav",
+    "kind": "author_mirror",
+    "access": "search_text",
+    "checked_at": "2026-09-18",
+    "notes": ""
+  },
+  {
+    "id": "S052",
+    "title": "Dual-ALOHA original-post URL supplied by user",
+    "url": "https://x.com/qineng_wang/status/2099893504658866561",
+    "kind": "primary",
+    "access": "linked_only",
+    "checked_at": "2026-09-19",
+    "notes": "Exact X status URL supplied by the user on 2026-09-19. This update records the link without independently opening, reading, or content-matching the post."
+  }
+]

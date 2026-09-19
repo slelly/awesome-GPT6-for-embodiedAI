@@ -1,0 +1,37 @@
+name: Add a resource / 添加条目
+description: Submit an evidence-backed GPT6 embodied resource.
+title: "[Resource] "
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Project / 项目名
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Primary URL / 一手来源
+    validations:
+      required: true
+  - type: textarea
+    id: role
+    attributes:
+      label: GPT-6 role, environment and control interface
+      description: Specify online control, VLA review, offline coding, RL or replay.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence, date basis, code/data/license and limitations
+      description: Include denominators for metrics; separate original posts from mirrors.
+    validations:
+      required: true
+  - type: checkboxes
+    id: review
+    attributes:
+      label: Review
+      options:
+        - label: I checked duplicates and did not include private data or credentials.
+          required: true

@@ -1,0 +1,17 @@
+__pycache__/
+downloads/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+*.log
+*.zip
+node_modules/
+auth.json
+credentials*.json
+link-report.json

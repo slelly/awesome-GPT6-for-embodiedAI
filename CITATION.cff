@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "For scientific results, cite the original projects. Cite this catalogue only for its curation."
+title: "Awesome GPT6 Embodied AI"
+type: software
+authors:
+  - name: "Awesome GPT6 Embodied AI contributors"
+version: 0.1.0
+date-released: 2026-09-18
+license: MIT
+abstract: >-
+  Evidence-aware catalogue of GPT-6 Astra embodied AI projects,
+  evaluations, simulation work and community demonstration leads.
+  Snapshot covering August 18 through September 18, 2026.
+keywords:
+  - embodied AI
+  - robotics
+  - GPT-6 Astra
+  - evidence curation

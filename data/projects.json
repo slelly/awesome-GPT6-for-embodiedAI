@@ -1,0 +1,1108 @@
+[
+  {
+    "id": "P01",
+    "title": "GPT-Policy · In-Context Robot Learning",
+    "section": "core",
+    "category": "closed_loop",
+    "environment": "real",
+    "scene_tags": ["real"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "固定 VLM 从示教、目标图像和交互历史中适应任务，经受约束的机器人工具闭环执行。",
+    "authors": "Dongzhou Cheng et al.",
+    "event_date": "2026-09-16",
+    "event_date_basis": "README：论文、项目页及代码发布日；首批演示为 09-11",
+    "window_status": "in_window",
+    "url": "https://github.com/cheng-haha/GPT-Policy",
+    "code_url": "https://github.com/cheng-haha/GPT-Policy",
+    "license_status": "项目许可 pending；公开预览不授予再分发/商业使用",
+    "control_interface": "相机/状态/上下文 → Cartesian targets / waypoints → IK 校验 → ARX X5 或 I2RT/YAM",
+    "metrics": [],
+    "limitations": [
+      "真实评测记录、私有提示和现场标定不随代码完整提供。",
+      "README 的少量条件任务 100% 不等于整体通用成功率。",
+      "RoboDojo 完整仿真管线仍列在 TODO。"
+    ],
+    "source_ids": [
+      "S001",
+      "S002"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/2609.19138",
+      "project": "https://cheng-haha.github.io/GPT-Policy/",
+      "legacy": "https://github.com/cheng-haha/GPT-Policy-Eval"
+    },
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P02",
+    "title": "GPT-as-Policy · GPT-6 Direct / π0.5 Hybrid",
+    "section": "core",
+    "category": "hybrid",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "在对齐 RoboDojo cases 上比较 GPT 直接控制与审查/修正 π0.5 动作；同时提供 RoboLab 展示入口。",
+    "authors": "Jiayi Su, Yixin Zheng et al.",
+    "event_date": "2026-09",
+    "event_date_basis": "月级公开快照；不把报道日期、账号建立日期当成代码首发日",
+    "window_status": "month_only",
+    "url": "https://github.com/anonymous-report-421/GPT-as-Policy",
+    "code_url": "https://github.com/anonymous-report-421/GPT-as-Policy",
+    "license_status": "项目自有代码 MIT；数据 CC BY 4.0；上游资产/模型另计",
+    "control_interface": "Direct：GPT 工具动作；Hybrid：π0.5 提案 + GPT 审查/可选修正",
+    "metrics": [
+      {
+        "name": "Hybrid success",
+        "value": 48,
+        "unit": "%",
+        "denominator": "50 aligned cases",
+        "protocol": "10 tasks ×5 cases"
+      },
+      {
+        "name": "Direct success",
+        "value": 26,
+        "unit": "%",
+        "denominator": "50 aligned cases",
+        "protocol": "same selected case definitions"
+      },
+      {
+        "name": "Hybrid mean Score",
+        "value": 62.6,
+        "unit": "score",
+        "denominator": "50 cases",
+        "protocol": "native task score aggregation"
+      },
+      {
+        "name": "Direct mean Score",
+        "value": 37.81,
+        "unit": "score",
+        "denominator": "48 cases with native scores",
+        "protocol": "not same score denominator as success"
+      },
+      {
+        "name": "GPT correction fraction",
+        "value": 14.4,
+        "unit": "% of executed control steps",
+        "denominator": "hybrid executed steps",
+        "protocol": "not token/API cost savings"
+      }
+    ],
+    "limitations": [
+      "公开模型对照为重加权参考，不是同 seed 重新评测。",
+      "不能把这个 50-case 子集与官方 42-task 榜直接排名。",
+      "模拟器、OpenPI/JAX、checkpoint、授权模型账户需另行准备。"
+    ],
+    "source_ids": [
+      "S003",
+      "S004",
+      "S045",
+      "S050"
+    ],
+    "links": {
+      "project": "https://anonymous-report-421.github.io/public-website/?lang=zh&view=1",
+      "dataset": "https://huggingface.co/datasets/YuMoool/astra-robodojo-rollouts"
+    },
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P03",
+    "title": "Agent as Policy（AGP）",
+    "section": "core",
+    "category": "closed_loop",
+    "environment": "real",
+    "scene_tags": ["real"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "真实双臂环境中由通用 agent 观察、编程、发出控制命令并利用执行反馈修正。",
+    "authors": "Mengzhao Jia, Yang Lin, Xixin Zhang et al.",
+    "event_date": "2026-09-11",
+    "event_date_basis": "HF 论文元数据；数据 b01/b02 分别冻结于 09-13/09-14，宣传帖更晚",
+    "window_status": "in_window",
+    "url": "https://agent-as-policy-2026.github.io/",
+    "code_url": "https://github.com/agent-as-policy-2026/agent-as-policy-2026",
+    "license_status": "数据 CC BY 4.0；数据卡声明代码 Apache-2.0，但代码公开可访问性未确认",
+    "control_interface": "相机工具 → agent 生成程序 → Cartesian / joint commands → 机器人反馈",
+    "metrics": [
+      {
+        "name": "GPT-6 pooled completion (mixed conditions)",
+        "value": 123,
+        "unit": "successes",
+        "denominator": 130,
+        "protocol": "DETAILS 汇总；任务/effort/工具/知识条件混合，不是与其他模型同任务分布的受控比较"
+      }
+    ],
+    "limitations": [
+      "代码地址由数据卡链接；DETAILS 仍写 private until publication，不标记“代码已可复现”。",
+      "162 是当前数据卡全部模型 evaluated rows；62、112、196 属于不同页面/版本/口径。",
+      "不可将作者精选演示或部分配置成功率推广到全部任务。",
+      "DETAILS 中 GPT-6 的 123/130 是混合条件汇总；其他模型几乎仅测试 twopairs，禁止把总体比例当公平模型排名。"
+    ],
+    "source_ids": [
+      "S005",
+      "S006",
+      "S007",
+      "S009",
+      "S044"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/2609.12541",
+      "dataset": "https://huggingface.co/datasets/Agent-as-Policy/agent-as-policy",
+      "x": "https://x.com/JillJia6/status/2100275532378317038"
+    },
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P04",
+    "title": "RoboCurve · Bowl & Puzzle",
+    "section": "core",
+    "category": "evaluation",
+    "environment": "real",
+    "scene_tags": ["real"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "在 YAM 机械臂上测试粗粒度抓放与精细插入，提供逐次试验及失败边界。",
+    "authors": "Achu Menon et al. / Robocurve",
+    "event_date": "2026-09-04",
+    "event_date_basis": "主报告署日",
+    "window_status": "in_window",
+    "url": "https://openai.robocurve.org/gpt-6-astra/",
+    "code_url": "https://github.com/robocurve/inspect-robots",
+    "license_status": "评测框架 MIT；视频/报告版权另计",
+    "control_interface": "三相机+状态 → 绝对末端位姿/夹爪命令；medium，20 次模型调用上限，25% speed cap",
+    "metrics": [
+      {
+        "name": "Bowl completion",
+        "value": 19,
+        "unit": "successes",
+        "denominator": 20,
+        "protocol": "one task"
+      },
+      {
+        "name": "Puzzle completion",
+        "value": 2,
+        "unit": "successes",
+        "denominator": 20,
+        "protocol": "one task"
+      }
+    ],
+    "limitations": [
+      "非盲评、人工重置；不同模型运行日/部分 rig 不同。",
+      "19/20 不能代表所有具身任务。"
+    ],
+    "source_ids": [
+      "S010",
+      "S026"
+    ],
+    "links": {},
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P05",
+    "title": "StationeryBench · 五类真实双臂文具任务",
+    "section": "core",
+    "category": "evaluation",
+    "environment": "real",
+    "scene_tags": ["real"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "标记笔、纸夹、直尺、便签和盒子组成多阶段双臂任务；同时公布任务进度与完全完成率。",
+    "authors": "Zihan Jack Zhang et al. / Robocurve",
+    "event_date": "2026-09-10",
+    "event_date_basis": "主报告署日",
+    "window_status": "in_window",
+    "url": "https://openai.robocurve.org/stationerybench/",
+    "code_url": "https://github.com/robocurve/stationerybench",
+    "license_status": "任务仓库 MIT；报告/媒体按原许可",
+    "control_interface": "GPT：末端位姿工具；MolmoAct2：10 Hz joint action chunks",
+    "metrics": [
+      {
+        "name": "Astra full completion",
+        "value": 7,
+        "unit": "successes",
+        "denominator": 100,
+        "protocol": "5 tasks ×20 trials"
+      },
+      {
+        "name": "Astra mean progress",
+        "value": 46,
+        "unit": "out of 100",
+        "denominator": "100 graded trials",
+        "protocol": "human graded milestones"
+      },
+      {
+        "name": "MolmoAct2 full completion",
+        "value": 0,
+        "unit": "successes",
+        "denominator": 100,
+        "protocol": "zero-shot checkpoint, different action/time budget"
+      }
+    ],
+    "limitations": [
+      "46 是进度均值，不能写成 46% 成功率。",
+      "非盲评；两模型 action/time budget、部分 rig 不同；MolmoAct2 无任务微调。",
+      "仓库 mock 是抽象环境，不是物理仿真；scripted oracle 的成功不属于 GPT-6。"
+    ],
+    "source_ids": [
+      "S011",
+      "S012"
+    ],
+    "links": {},
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P06",
+    "title": "RoboDojo · 官方 GPT-6 Astra 评测报告",
+    "section": "core",
+    "category": "evaluation",
+    "environment": "real_and_sim",
+    "scene_tags": ["sim", "real"],
+    "gpt6_relation": "explicit_partial",
+    "evidence_level": "B",
+    "summary": "官方报告与作者宣布的评测覆盖 RoboDojo、类人机器人高层控制及灵巧操作；正文获取不完整。",
+    "authors": "RoboDojo team",
+    "event_date": "2026-09-16",
+    "event_date_basis": "检索摘要中的报告日期；原页完整正文不可得",
+    "window_status": "in_window",
+    "url": "https://robodojo-benchmark.com/report/gpt-6-astra-eval",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "已检索片段称 RoboProbe L3 固定控制接口；完整配置待核",
+    "metrics": [],
+    "limitations": [
+      "保留官方入口，但不将二手报道的分数写进已核验指标表。",
+      "未确认专用 RoboProbe 代码的公开地址。",
+      "不声称 GPT-6 当前榜首；榜单与代码持续更新。"
+    ],
+    "source_ids": [
+      "S013",
+      "S014",
+      "S015"
+    ],
+    "links": {
+      "x": "https://x.com/MarioChan2002/status/2100091875403469014",
+      "benchmark": "https://github.com/robodojo-benchmark/RoboDojo"
+    },
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P07",
+    "title": "ENPIRE · GPT-6 机器人自主实验线索",
+    "section": "core",
+    "category": "policy_improvement",
+    "environment": "real",
+    "scene_tags": ["real"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "B",
+    "summary": "NVIDIA 的真实机器人实验框架；GPT-6 特定应用来自作者演示声明，框架本体早于本窗口。",
+    "authors": "NVlabs / Tonghe Zhang et al.",
+    "event_date": "2026-09-09",
+    "event_date_basis": "社区索引给出的 GPT6 演示日；精确原帖日期待核",
+    "window_status": "reported_in_window",
+    "url": "https://github.com/NVlabs/ENPIRE",
+    "code_url": "https://github.com/NVlabs/ENPIRE",
+    "license_status": "Apache-2.0；第三方组件另计",
+    "control_interface": "reset → execute → verify → record → refine；CaP / RL / BC 等可用",
+    "metrics": [],
+    "limitations": [
+      "不能把整个 ENPIRE 论文实验默认当成 GPT-6 结果。",
+      "依赖现场标定、感知、机器人服务及 reset/reward 函数。",
+      "并非只输入一句 prompt 即获得完全独立真机系统。"
+    ],
+    "source_ids": [
+      "S018",
+      "S019"
+    ],
+    "links": {
+      "project": "https://research.nvidia.com/labs/gear/enpire/",
+      "x_profile": "https://x.com/TongheZhang01"
+    },
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P08",
+    "title": "GPT6-real2sim · DROID / YAM 重建",
+    "section": "core",
+    "category": "real2sim",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "由演示重建场景、标定及接触回放；代码同时保留不成功的物理重放。",
+    "authors": "Lingxiao Guo",
+    "event_date": "2026-09",
+    "event_date_basis": "月级公开快照；不采用第三方抓取时间为首发日",
+    "window_status": "month_only",
+    "url": "https://github.com/lingxiao-guo/GPT6-real2sim",
+    "code_url": "https://github.com/lingxiao-guo/GPT6-real2sim",
+    "license_status": "需逐项检查第三方资产及仓库许可",
+    "control_interface": "多视角 RGB / 机器人动作 → MuJoCo 接触仿真 + Blender 渲染",
+    "metrics": [],
+    "limitations": [
+      "YAM microphones 的 contact-only attachment 失败；reference 视觉拟合不可替代成功。",
+      "归档回放验证不等于重新执行动力学实验。",
+      "部分原始数据须自行取得。"
+    ],
+    "source_ids": [
+      "S020"
+    ],
+    "links": {},
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P09",
+    "title": "Real2Sim_GPT6_ASTRA · 三视角几何重放",
+    "section": "core",
+    "category": "real2sim",
+    "environment": "visual_replay",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "从三路 RGB 重建可编辑 Blender 场景与动作动画，公开建模、拟合及验证代码。",
+    "authors": "Kaixin Ding, Linjing You, Hengshuang Zhao",
+    "event_date": "2026-09",
+    "event_date_basis": "月级公开快照",
+    "window_status": "month_only",
+    "url": "https://github.com/hku-sail/Real2Sim_GPT6_ASTRA",
+    "code_url": "https://github.com/hku-sail/Real2Sim_GPT6_ASTRA",
+    "license_status": "项目/机器人资产各自许可需核对",
+    "control_interface": "RGB → 估计相机/尺度/几何/轨迹 → Blender 重放",
+    "metrics": [],
+    "limitations": [
+      "无真实关节、深度、标定或动力学输入，不能称物理参数精确恢复。",
+      "夹持和释放包含姿态绑定及动画插值。",
+      "原始帧不在仓库中。"
+    ],
+    "source_ids": [
+      "S021"
+    ],
+    "links": {},
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P10",
+    "title": "Real2Gym",
+    "section": "core",
+    "category": "real2sim",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "B",
+    "summary": "项目页展示真人/机器人视频到可执行机器人仿真的工作流，结合 Blender 与 MuJoCo。",
+    "authors": "Real2Gym contributors",
+    "event_date": "2026-09",
+    "event_date_basis": "本月项目快照；首发日未确认",
+    "window_status": "month_only",
+    "url": "https://cskrren.github.io/real2gym-site/",
+    "code_url": "https://github.com/cskrren/Real2Gym",
+    "license_status": "未核实",
+    "control_interface": "真实演示 → 场景重建/动作重定向 → 仿真执行与场景变化",
+    "metrics": [],
+    "limitations": [
+      "项目页明确链接代码；本次未读到完整仓库，环境安装和资源完备性待核。",
+      "不能把视觉匹配自动等同于新场景闭环泛化。"
+    ],
+    "source_ids": [
+      "S022"
+    ],
+    "links": {},
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P11",
+    "title": "dexgpt · 手部视频到仿真",
+    "section": "core",
+    "category": "real2sim",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "B",
+    "summary": "已定位作者的 dexgpt 仓库；44-DoF 手部跟踪、IK 和抓取细节仍主要来自作者社交演示。",
+    "authors": "xiao hu / Hu-xiao-max",
+    "event_date": "2026-09-09",
+    "event_date_basis": "社区索引给出日期，原帖日未独立确认",
+    "window_status": "reported_in_window",
+    "url": "https://github.com/Hu-xiao-max/dexgpt",
+    "code_url": "https://github.com/Hu-xiao-max/dexgpt",
+    "license_status": "未核实",
+    "control_interface": "作者声称：视频 → hand tracking → IK retargeting → grasp refinement",
+    "metrics": [],
+    "limitations": [
+      "只确认仓库身份，未检查完整实现、数据或安装流程。",
+      "不声称已完成独立物理验证。"
+    ],
+    "source_ids": [
+      "S023",
+      "S024",
+      "S051"
+    ],
+    "links": {
+      "x_profile": "https://x.com/huxiao93612565"
+    },
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P12",
+    "title": "Drone-Bench · Astra 更新",
+    "section": "core",
+    "category": "coding_evaluation",
+    "environment": "simulation_and_hardware_demo",
+    "scene_tags": ["real"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "评测模型编写无人机感知与控制程序的能力，官方页面已列入 gpt-6-astra。",
+    "authors": "Andon Labs",
+    "event_date": null,
+    "event_date_basis": "未确认首发日；2026-09-18 检索快照",
+    "window_status": "date_unconfirmed",
+    "url": "https://andonlabs.com/evals/drone-bench",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "编码 agent → 五项独立子任务代码；局部控制系统执行",
+    "metrics": [],
+    "limitations": [
+      "基准本体早于本窗口；Astra 更新的确切日未确认。",
+      "每项输入上游干净参考产物，10 次反馈提交取最佳；不是一次端到端飞行成功率。",
+      "页面旧 Discussion 与动态图更新可能不同步，不转录媒体的“全部超过人类”结论。",
+      "仅收录评测研究，不提供对未经同意人员的跟踪部署指导。"
+    ],
+    "source_ids": [
+      "S025"
+    ],
+    "links": {},
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P13",
+    "title": "Inspect Robots",
+    "section": "supporting",
+    "category": "harness",
+    "environment": "real_and_sim",
+    "scene_tags": ["sim", "real"],
+    "gpt6_relation": "infrastructure",
+    "evidence_level": "A",
+    "summary": "真实/仿真任务与多类策略共用的可审计评测框架，是 RoboCurve 报告的执行基础。",
+    "authors": "Robocurve",
+    "event_date": null,
+    "event_date_basis": "未确认首发日；2026-09-18 检索快照",
+    "window_status": "date_unconfirmed",
+    "url": "https://github.com/robocurve/inspect-robots",
+    "code_url": "https://github.com/robocurve/inspect-robots",
+    "license_status": "MIT",
+    "control_interface": "policy × embodiment × task；日志包含配置、动作和评判",
+    "metrics": [],
+    "limitations": [
+      "框架本体不算新的独立 GPT-6 成功案例。",
+      "默认安全检查不构成硬件安全认证。"
+    ],
+    "source_ids": [
+      "S026"
+    ],
+    "links": {},
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P14",
+    "title": "Show-Harness",
+    "section": "supporting",
+    "category": "harness",
+    "environment": "real_and_sim",
+    "scene_tags": ["sim", "real"],
+    "gpt6_relation": "not_established",
+    "evidence_level": "A",
+    "summary": "将离散语义动作交给本体解释器，附示教采集、训练、模型和数据。",
+    "authors": "Show Lab @ NUS",
+    "event_date": "2026-09",
+    "event_date_basis": "README 月级 release",
+    "window_status": "month_only",
+    "url": "https://github.com/showlab/Show-Harness",
+    "code_url": "https://github.com/showlab/Show-Harness",
+    "license_status": "HF Qwen adapters/data Apache-2.0；Gemma adapter 受 Gemma terms 约束；代码许可需单独核对",
+    "control_interface": "图像 → MV_* / GRASP / RELEASE / DONE → 确定性运动解释器",
+    "metrics": [],
+    "limitations": [
+      "未建立 GPT-6 专项结果；不是已证实的 Astra benchmark。",
+      "小模型权重不是 GPT-6 权重，也不据此断言为 GPT-6 蒸馏。",
+      "不同本体方向约定和 chat template 需核对。"
+    ],
+    "source_ids": [
+      "S027",
+      "S028",
+      "S029"
+    ],
+    "links": {
+      "project": "https://showlab.github.io/Show-Harness/",
+      "paper": "https://arxiv.org/abs/2609.10522"
+    },
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P15",
+    "title": "PhysBrain 1.5 / PhysBrainEvalKit",
+    "section": "supporting",
+    "category": "understanding_benchmark",
+    "environment": "noninteractive",
+    "scene_tags": ["sim", "real"],
+    "gpt6_relation": "comparison_only",
+    "evidence_level": "A",
+    "summary": "包含 GPT-6 作为对照的具身理解评测，以及独立开源模型和动作/未来状态展示。",
+    "authors": "DeepCybo team",
+    "event_date": "2026-09",
+    "event_date_basis": "本月项目与报告快照；不采纳搜索引擎异常首发时间",
+    "window_status": "month_only",
+    "url": "https://deepcybo-physai.github.io/PhysBrain-1.5/",
+    "code_url": "https://github.com/DeepCybo-PhysAI/PhysBrain-1.5",
+    "license_status": "未核实",
+    "control_interface": "本条对比口径为具身理解输出，而非 GPT6 控制机器人成功率",
+    "metrics": [
+      {
+        "name": "GPT-6 embodied-understanding mean",
+        "value": 73.3,
+        "unit": "out of 100",
+        "denominator": "28 benchmarks",
+        "protocol": "project-reported unweighted mean; not action success"
+      }
+    ],
+    "limitations": [
+      "28-benchmark 均值不可与 StationeryBench 或 RoboDojo 成功率合并。",
+      "模型的动作输出能力与这张理解榜不是同一评测结论。"
+    ],
+    "source_ids": [
+      "S030",
+      "S031"
+    ],
+    "links": {
+      "evalkit": "https://github.com/DeepCybo-PhysAI/PhysBrainEvalKit",
+      "project": "https://deepcybo-physai.github.io/PhysBrain-1.5/"
+    },
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P16",
+    "title": "RoboDojo / XPolicyLab 基础设施",
+    "section": "supporting",
+    "category": "benchmark",
+    "environment": "real_and_sim",
+    "scene_tags": ["sim", "real"],
+    "gpt6_relation": "infrastructure",
+    "evidence_level": "A",
+    "summary": "统一模拟和真机操作评测；RoboDojo 负责环境，XPolicyLab 负责策略侧集成。",
+    "authors": "RoboDojo contributors",
+    "event_date": "2026-09-16",
+    "event_date_basis": "09-16 至 09-17 维护更新；原始基准发布于 07-06",
+    "window_status": "updated_in_window",
+    "url": "https://github.com/robodojo-benchmark/RoboDojo",
+    "code_url": "https://github.com/robodojo-benchmark/RoboDojo",
+    "license_status": "待核冲突：README 正文为非商业研究许可，GitHub UI 标签显示 MIT",
+    "control_interface": "策略服务器 ↔ 仿真客户端；状态/动作协议按本体配置",
+    "metrics": [],
+    "limitations": [
+      "09-16/17 更新涉及 observation 时序、RGB byte order 与 swap_T 资产，应固定代码和数据版本。",
+      "不要直接混用旧评测快照与新资产。",
+      "商业使用前必须解决许可文本不一致。"
+    ],
+    "source_ids": [
+      "S016",
+      "S017"
+    ],
+    "links": {},
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P17",
+    "title": "HumanCLAW",
+    "section": "supporting",
+    "category": "benchmark",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "reported_secondary",
+    "evidence_level": "A",
+    "summary": "人形机器人导航与交互基准；社区存在 Astra 演示线索，但本条只确认基准本体。",
+    "authors": "HumanCLAW contributors",
+    "event_date": "2026-07-29",
+    "event_date_basis": "论文日期，明确早于本窗口",
+    "window_status": "outside_window",
+    "url": "https://github.com/Human-CLAW/HumanCLAW",
+    "code_url": "https://github.com/Human-CLAW/HumanCLAW",
+    "license_status": "未核实",
+    "control_interface": "抽象动作/技能与 half-physics 环境",
+    "metrics": [],
+    "limitations": [
+      "不能把原基准其他模型结果认作 GPT-6。",
+      "代码、权重与环境 release checklist 未完成；不标记“一键可复现”。"
+    ],
+    "source_ids": [
+      "S032"
+    ],
+    "links": {},
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X01",
+    "title": "真实机器人键盘打字",
+    "section": "watchlist",
+    "category": "closed_loop",
+    "environment": "real",
+    "scene_tags": ["real"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "C",
+    "summary": "作者展示约 40 分钟探索后的物理按键；视频为加速播放。",
+    "authors": "@kaiwynd",
+    "event_date": "2026-09-12",
+    "event_date_basis": "索引给出的演示日期；具体原帖 URL 由用户于 2026-09-19 补充，本轮未独立核实其内容或绝对时间",
+    "window_status": "reported_in_window",
+    "url": "https://x.com/kaiwynd/status/2098823484474348008",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "单演示，无重复成功率；不是电脑键盘 API 的 computer use。",
+      "未独立复现；原帖/完整日志/代码状态需继续核实。"
+    ],
+    "source_ids": [
+      "S036"
+    ],
+    "links": {
+      "post": "https://x.com/kaiwynd/status/2098823484474348008"
+    },
+    "last_checked": "2026-09-19",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X02",
+    "title": "真实网线插入",
+    "section": "watchlist",
+    "category": "closed_loop",
+    "environment": "real",
+    "scene_tags": ["real"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "C",
+    "summary": "作者称约 2 小时、4 次人类提示介入后完成网线插入。",
+    "authors": "@kaiwynd",
+    "event_date": null,
+    "event_date_basis": "只取得相对时间或二手索引；不强行换算首发日",
+    "window_status": "date_unconfirmed",
+    "url": "https://x.com/kaiwynd/status/2099524132341711051",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "不能称完全无人干预，也不能用剪辑时长估计延迟。",
+      "未独立复现；原帖/完整日志/代码状态需继续核实。"
+    ],
+    "source_ids": [
+      "S036"
+    ],
+    "links": {
+      "post": "https://x.com/kaiwynd/status/2099524132341711051"
+    },
+    "last_checked": "2026-09-19",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X03",
+    "title": "机械臂画金门大桥",
+    "section": "watchlist",
+    "category": "closed_loop",
+    "environment": "real",
+    "scene_tags": ["real"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "C",
+    "summary": "作者给机器人画笔和相机，通过多次尝试完成语义目标绘画。",
+    "authors": "@cdngdev",
+    "event_date": "2026-09-08",
+    "event_date_basis": "索引给出的演示日期，原帖绝对时间未独立核实",
+    "window_status": "reported_in_window",
+    "url": "https://x.com/cdngdev/status/2097339677128982873",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "演示不是重复评测；完整机器人控制脚本未核实。",
+      "未独立复现；原帖/完整日志/代码状态需继续核实。"
+    ],
+    "source_ids": [
+      "S037"
+    ],
+    "links": {
+      "post": "https://x.com/cdngdev/status/2097339677128982873"
+    },
+    "last_checked": "2026-09-19",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X04",
+    "title": "跨场景移动操作 ICL",
+    "section": "watchlist",
+    "category": "closed_loop",
+    "environment": "real",
+    "scene_tags": ["real"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "C",
+    "summary": "作者展示不同视角/布局下从视频推断移动操作。",
+    "authors": "@ax_pey",
+    "event_date": "2026-09-11",
+    "event_date_basis": "索引给出的演示日期，原帖绝对时间未独立核实",
+    "window_status": "reported_in_window",
+    "url": "https://x.com/ax_pey/status/2098216469012283681",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "“无任务文字提示”不意味着没有系统提示、工具定义或控制先验。",
+      "未独立复现；原帖/完整日志/代码状态需继续核实。"
+    ],
+    "source_ids": [
+      "S038"
+    ],
+    "links": {
+      "post": "https://x.com/ax_pey/status/2098216469012283681"
+    },
+    "last_checked": "2026-09-19",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X05",
+    "title": "G1 可乐瓶抓取",
+    "section": "watchlist",
+    "category": "hierarchical_control",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "C",
+    "summary": "作者展示 Codex/Astra 在 Isaac Sim 控制 G1，并明确回复使用 IK。",
+    "authors": "@RotekSong",
+    "event_date": "2026-09-13",
+    "event_date_basis": "索引给出的演示日期，原帖绝对时间未独立核实",
+    "window_status": "reported_in_window",
+    "url": "https://x.com/RotekSong/status/2099104628562608371",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "模型规划与低层全身控制应分开评估，不能称纯模型关节闭环。",
+      "未独立复现；原帖/完整日志/代码状态需继续核实。"
+    ],
+    "source_ids": [
+      "S039"
+    ],
+    "links": {
+      "post": "https://x.com/RotekSong/status/2099104628562608371"
+    },
+    "last_checked": "2026-09-19",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X06",
+    "title": "G1 导航",
+    "section": "watchlist",
+    "category": "hierarchical_control",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "C",
+    "summary": "作者展示 GPT-6 生成导航行为与场景的仿真演示。",
+    "authors": "@RotekSong",
+    "event_date": "2026-09-11",
+    "event_date_basis": "索引给出的演示日期，原帖绝对时间未独立核实",
+    "window_status": "reported_in_window",
+    "url": "https://x.com/RotekSong/status/2098212303263183329",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "低层轨迹跟踪器负责哪些动作、是否在线重规划待核。",
+      "未独立复现；原帖/完整日志/代码状态需继续核实。"
+    ],
+    "source_ids": [
+      "S038"
+    ],
+    "links": {
+      "post": "https://x.com/RotekSong/status/2098212303263183329"
+    },
+    "last_checked": "2026-09-19",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X07",
+    "title": "灵巧手解魔方",
+    "section": "watchlist",
+    "category": "dexterous_sim",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "C",
+    "summary": "作者声明 Astra 解魔方；个人主页确认存在对应 MuJoCo 双手项目。",
+    "authors": "@ZeYanjie",
+    "event_date": "2026-09-10",
+    "event_date_basis": "索引给出的演示日期，原帖绝对时间未独立核实",
+    "window_status": "reported_in_window",
+    "url": "https://x.com/ZeYanjie",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "完整控制方式与在线/离线搜索协议未核实，不直接标“真机零样本”。",
+      "未独立复现；原帖/完整日志/代码状态需继续核实。"
+    ],
+    "source_ids": [
+      "S040",
+      "S041"
+    ],
+    "links": {
+      "x_profile": "https://x.com/ZeYanjie",
+      "demo": "https://dex-rubik-cube.yanjieze.com/",
+      "x_search": "https://x.com/search?q=from%3AZeYanjie%20%28%22GPT-6%22%20OR%20GPT6%20OR%20Astra%29%20since%3A2026-08-18%20until%3A2026-09-19&f=live"
+    },
+    "last_checked": "2026-09-18",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X08",
+    "title": "Sharpa 灵巧手转笔 PPO",
+    "section": "watchlist",
+    "category": "rl_engineering",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "C",
+    "summary": "作者展示学生 Chengyang Li 用 Astra 构建 Isaac Lab 任务并训练转笔策略。",
+    "authors": "@walterzhu8",
+    "event_date": "2026-09-16",
+    "event_date_basis": "索引给出的演示日期，原帖绝对时间未独立核实",
+    "window_status": "reported_in_window",
+    "url": "https://x.com/walterzhu8/status/2100212420840989112",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "控制机器人的是训练得到的策略；不是 GPT-6 在线以关节频率输出动作。",
+      "未独立复现；原帖/完整日志/代码状态需继续核实。"
+    ],
+    "source_ids": [
+      "S039"
+    ],
+    "links": {
+      "post": "https://x.com/walterzhu8/status/2100212420840989112"
+    },
+    "last_checked": "2026-09-19",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X09",
+    "title": "Go1 暂停物理的关节控制",
+    "section": "watchlist",
+    "category": "paused_physics",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "C",
+    "summary": "作者描述每次推理暂停物理，250 次推理对应 5 秒仿真运动。",
+    "authors": "@sri299792458",
+    "event_date": null,
+    "event_date_basis": "只取得相对时间或二手索引；不强行换算首发日",
+    "window_status": "date_unconfirmed",
+    "url": "https://x.com/sri299792458/status/2097349207795335424",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "模拟 50 Hz 关节目标不等于墙钟 50 Hz 实时 GPT 控制。",
+      "未独立复现；原帖/完整日志/代码状态需继续核实。"
+    ],
+    "source_ids": [
+      "S024"
+    ],
+    "links": {
+      "post": "https://x.com/sri299792458/status/2097349207795335424"
+    },
+    "last_checked": "2026-09-19",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X10",
+    "title": "CARLA 视觉路点驾驶",
+    "section": "watchlist",
+    "category": "hierarchical_control",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "C",
+    "summary": "作者展示相机图像到短期路点；局部控制器再输出转向、油门和刹车。",
+    "authors": "@ludocomito",
+    "event_date": null,
+    "event_date_basis": "只取得相对时间或二手索引；不强行换算首发日",
+    "window_status": "date_unconfirmed",
+    "url": "https://x.com/ludocomito/status/2097329417760440461",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "没有受控成功率；仿真演示不建立道路行驶安全。",
+      "未独立复现；原帖/完整日志/代码状态需继续核实。"
+    ],
+    "source_ids": [
+      "S042"
+    ],
+    "links": {
+      "post": "https://x.com/ludocomito/status/2097329417760440461"
+    },
+    "last_checked": "2026-09-19",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X11",
+    "title": "双机器人抛接球",
+    "section": "watchlist",
+    "category": "generated_control",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "C",
+    "summary": "作者展示 MuJoCo 抛接球仿真。",
+    "authors": "@thermalpastor",
+    "event_date": null,
+    "event_date_basis": "只取得相对时间或二手索引；不强行换算首发日",
+    "window_status": "date_unconfirmed",
+    "url": "https://x.com/thermalpastor/status/2097496200631210136",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "模型是否在每个决策步在线调用尚未核实；不按真机动态控制计。",
+      "未独立复现；原帖/完整日志/代码状态需继续核实。"
+    ],
+    "source_ids": [
+      "S043"
+    ],
+    "links": {
+      "post": "https://x.com/thermalpastor/status/2097496200631210136"
+    },
+    "last_checked": "2026-09-19",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X12",
+    "title": "G1 自行车控制代码",
+    "section": "watchlist",
+    "category": "generated_control",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "explicit_author_mirror",
+    "evidence_level": "C",
+    "summary": "作者称 Astra 帮助编写并调试 MuJoCo 自行车控制代码。",
+    "authors": "@thermalpastor",
+    "event_date": null,
+    "event_date_basis": "只取得相对时间或二手索引；不强行换算首发日",
+    "window_status": "date_unconfirmed",
+    "url": "https://x.com/thermalpastor/status/2097802933429796873",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "生成控制代码与模型实时平衡策略不同。",
+      "未独立复现；原帖/完整日志/代码状态需继续核实。"
+    ],
+    "source_ids": [
+      "S043"
+    ],
+    "links": {
+      "post": "https://x.com/thermalpastor/status/2097802933429796873"
+    },
+    "last_checked": "2026-09-19",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X13",
+    "title": "Dual-ALOHA 空间约束演示",
+    "section": "watchlist",
+    "category": "planned_replay",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "reported_secondary",
+    "evidence_level": "D",
+    "summary": "双臂空间约束演示线索。",
+    "authors": "@qineng_wang",
+    "event_date": "2026-09-15",
+    "event_date_basis": "索引给出的演示日期，原帖绝对时间未独立核实",
+    "window_status": "reported_in_window",
+    "url": "https://x.com/qineng_wang/status/2099893504658866561",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "尚未核实原始协议；需区分计划回放与在线策略。",
+      "未独立复现；用户补充的原帖链接、完整日志与代码状态仍需独立核实。"
+    ],
+    "source_ids": [
+      "S033",
+      "S052"
+    ],
+    "links": {},
+    "last_checked": "2026-09-19",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X14",
+    "title": "办公场景 → Newton / G1",
+    "section": "watchlist",
+    "category": "environment_engineering",
+    "environment": "simulation",
+    "scene_tags": ["sim"],
+    "gpt6_relation": "reported_secondary",
+    "evidence_level": "D",
+    "summary": "办公场景仿真构建线索。",
+    "authors": "@Jiarui_X",
+    "event_date": "2026-09-11",
+    "event_date_basis": "索引给出的演示日期，原帖绝对时间未独立核实",
+    "window_status": "reported_in_window",
+    "url": "https://x.com/Jiarui_X/status/2098439950991806804",
+    "code_url": null,
+    "license_status": "未核实",
+    "control_interface": "未披露/未核实",
+    "metrics": [],
+    "limitations": [
+      "需核实是场景工程还是 GPT6 在线控制。",
+      "未独立复现；原帖/完整日志/代码状态需继续核实。"
+    ],
+    "source_ids": [
+      "S033"
+    ],
+    "links": {
+      "post": "https://x.com/Jiarui_X/status/2098439950991806804"
+    },
+    "last_checked": "2026-09-19",
+    "independently_reproduced": false
+  }
+]

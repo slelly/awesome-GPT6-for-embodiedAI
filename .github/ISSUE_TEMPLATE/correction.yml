@@ -1,0 +1,16 @@
+name: Correction / 勘误
+description: Correct provenance, attribution, metrics, dates or licensing.
+title: "[Correction] "
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry or source ID
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Correction and supporting primary source
+    validations:
+      required: true
