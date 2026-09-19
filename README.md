@@ -1,69 +1,57 @@
 # Awesome GPT6 Embodied AI [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-An evidence-aware catalogue of GPT-6 Astra robotics, embodied evaluation, simulation engineering, and community demonstrations.
+An evidence-aware, bilingual collection of GPT-6 Astra embodied-AI projects, evaluations, workflow resources, and attributable community demonstrations.
 
-[中文版本 / Chinese](README.zh-CN.md) · [Gallery](site/index.html) · [Full catalogue](docs/CATALOG.md) · [Sources](docs/SOURCES.md) · [Scene tags](docs/SCENE_TAGS.md) · [Astra relevance review](docs/ASTRA_RELEVANCE_REVIEW.md) · [Media ledger](docs/MEDIA.md) · [Public social-video downloader](docs/SOCIAL_VIDEO_DOWNLOADER.md) · [Hugging Face](docs/HUGGING_FACE.md)
-
-**Window:** August 18–September 18, 2026. **Snapshot:** September 18, 2026, Asia/Taipei. This is an independent curated snapshot, not an OpenAI resource, continuous monitoring service, or claim of exhaustive platform coverage. No robot/model experiments were independently run for this catalogue.
+[中文版本 / Chinese](README.zh-CN.md) · [Gallery](site/index.html) · [Sources](docs/SOURCES.md) · [Media](docs/MEDIA.md) · [Tags](docs/TAGS.md) · [Date ledger](docs/PUBLICATION_DATES.md) · [Contributing](CONTRIBUTING.md)
 
 ## Contents
 
-- [Scope](#scope)
-- [Gallery](#gallery)
-- [Selected primary resources](#selected-primary-resources)
-- [Key distinctions](#key-distinctions)
-- [Use locally](#use-locally)
-- [Publication and Awesome-list readiness](#publication-and-awesome-list-readiness)
-- [Attribution and licensing](#attribution-and-licensing)
+- [What is included](#what-is-included)
+- [Browse by workflow tags](#browse-by-workflow-tags)
+- [Dates and source credit](#dates-and-source-credit)
+- [Use and GitHub Pages](#use-and-github-pages)
+- [Attribution and license](#attribution-and-license)
 
-## Scope
+## What is included
 
-31 entries: **12 directly relevant projects/evaluations**, **5 supporting resources**, and **14 X leads**. Two Awesome-style discovery collections and eight anchor-only duplicates from the same collection are retained as provenance credits, not presented as independent project cards. The 8 HF resources cross-reference projects and are not additional experiments. Several foundational resources predate the window; unknown dates and incomplete model attribution remain explicitly marked.
+This snapshot contains 31 entries: 17 Projects and 14 Social posts. Projects and posts are grouped in the Gallery and sorted newest-first within their group, while every card keeps direct Paper, Code, Project page, or Post links where those targets exist.
 
-Evidence levels describe sources, not performance: **A** readable primary material; **B** primary entry with incomplete implementation or GPT-6-specific evidence; **C** readable mirror of an author's demonstration; **D** secondary discovery lead. A does not imply complete public code or successful reproduction.
+The collection is organized around visitor-facing workflows, following the useful structure of [Awesome Astra Embodied AI](https://github.com/zjwzcx/Awesome-Astra-Embodied-AI): clear source credit, a visible date, and workflow-oriented discovery. Unlike that reference list, this repository retains a per-entry evidence ledger and distinguishes direct projects from supporting resources and social leads.
 
-## Gallery
+## Browse by workflow tags
 
-`site/index.html` is a bilingual gallery. Its language order is an explicit saved choice, then the first supported browser language, then English. Each card opens a concise project description, key results where available, and de-duplicated main links. Media is only shown when this catalogue retained a directly linkable, attributable public image or video; entries without such media show an explicit fallback and keep the original project or lead URL. See the generated [media ledger](docs/MEDIA.md) for item-by-item provenance and omissions. Lightweight delivery packages omit only the large user-uploaded Social originals; the [Chinese placement guide](docs/SOCIAL_MEDIA_PLACEMENT.zh-CN.md) lists the exact filenames and destination.
+Cards combine factual scene tags with one or more workflow tags. Search accepts an English or Chinese project name, a tag, or multiple terms; multiple terms use AND matching.
 
-## Selected primary resources
+| Scene | Workflow examples |
+| --- | --- |
+| `simulation` / `仿真` | `control`, `real-to-sim`, `replay`, `RL training`, `physics simulation` |
+| `real world` / `真机` | `control`, `evaluation`, `policy`, `harness` |
+| Cross-cutting | `benchmark`, `code generation`, `dexterous manipulation`, `environment building` |
 
-| Resource | Role | Important boundary |
-| --- | --- | --- |
-| [GPT-Policy](https://github.com/cheng-haha/GPT-Policy) | Real-robot in-context learning with constrained tools | License pending; not all experimental assets public |
-| [GPT-as-Policy](https://github.com/anonymous-report-421/GPT-as-Policy) | Direct GPT vs π0.5 proposals reviewed/corrected by GPT | Selected aligned cases, not same-seed reruns of official baselines |
-| [Agent as Policy](https://agent-as-policy-2026.github.io/) | Real-robot agent execution and feedback | Public trial data does not establish code availability |
-| [RoboCurve](https://openai.robocurve.org/gpt-6-astra/) | Repeated real-robot bowl/puzzle trials | Task-dependent performance and protocol limitations |
-| [StationeryBench](https://openai.robocurve.org/stationerybench/) | Five bimanual stationery tasks | Progress score is not full-completion rate |
-| [GPT6-real2sim](https://github.com/lingxiao-guo/GPT6-real2sim) | MuJoCo/Blender reconstruction | Contact simulation, fitted trajectories and replay are distinct |
-| [Real2Sim_GPT6_ASTRA](https://github.com/hku-sail/Real2Sim_GPT6_ASTRA) | Multi-view visual scene/action reconstruction | Editable animation is not validated physical control |
+Tags describe the work shown by the retained project material. They are not a claim that projects share a benchmark, deployment setting, or model result. The complete tag vocabulary and project mapping are in [docs/TAGS.md](docs/TAGS.md).
 
-The full catalogue also includes ENPIRE, RoboDojo, Real2Gym, dexgpt, Drone-Bench, Inspect Robots, Show-Harness, PhysBrain, HumanCLAW and social discovery leads. **GPT-Policy, GPT-as-Policy and Agent as Policy are different projects.**
+## Dates and source credit
 
-## Key distinctions
+The Gallery uses the compact `YYYY-MMDD` presentation used by the reference list. Each date is backed by a ledger that records what the date represents: for example, an original post timestamp, paper submission, repository creation, or version release. Those events are not treated as interchangeable first-publication claims. One entry without a recoverable dated source remains explicitly estimated in the ledger.
 
-Record whether GPT-6 runs online, proposes tool actions, reviews another policy, writes code offline, optimizes RL training, or constructs a scene. Do not equate simulated control frequency with wall-clock inference frequency. Do not merge curated demonstrations, repeated trials, progress scores, VQA-style understanding benchmarks, and control success into one leaderboard.
+Every retained entry has source identifiers and linked evidence in [docs/SOURCES.md](docs/SOURCES.md). Source and media credit belong to the original authors, projects, and posts. This is a non-commercial curation, not an OpenAI resource, an experiment report, or a continuous monitoring service.
 
-Most X leads were read through search indexes or author-post mirrors. Unknown original tweet IDs are never synthesized. Original Rednote notes could not be verified; these remain secondary leads. Source access mode and date are retained for each record.
+## Use and GitHub Pages
 
-## Use locally
-
-Open `site/index.html` directly or serve only the `site/` directory. It embeds the catalogue and uses no external scripts or API keys; the few attributable gallery images are loaded from their original public hosts and gracefully fall back if unavailable.
+The Gallery is a static, self-contained site under `site/`; it has no API keys or backend. For local review, serve only that directory:
 
 ```bash
+python -m pip install --requirement requirements.txt
 python scripts/validate.py
 python scripts/build.py
 python -m unittest discover -s tests -v
+python -m http.server 8765 --bind 127.0.0.1 --directory site
 ```
 
-Core catalogue tooling uses Python 3.10+ standard library only. The optional [public social-video downloader](docs/SOCIAL_VIDEO_DOWNLOADER.md) uses the already-installed `requests` package and optional local `ffmpeg`; it does not use credentials or browser-login automation. Edit `data/projects.json`, `data/sources.json`, `data/i18n.json`, and `data/media.json`, then rebuild. Default CI and the Pages workflow perform offline validation, gallery-data checks, builds, tests, and generated-file checks; they do not run third-party robot experiments. See [publishing](docs/PUBLISHING.md), [methodology](docs/METHODOLOGY.md), and [reproducibility](docs/REPRODUCIBILITY.md).
+The included Pages workflow validates, builds, tests, and publishes only `site/` when manually dispatched after a maintainer configures GitHub Pages for their repository. No remote repository, deployment URL, or Pages site is claimed by this source package. See [docs/PUBLISHING.md](docs/PUBLISHING.md) for the maintainer checklist and [docs/SOCIAL_MEDIA_PLACEMENT.zh-CN.md](docs/SOCIAL_MEDIA_PLACEMENT.zh-CN.md) for the optional large Social-media files omitted from lightweight packages.
 
-## Publication and Awesome-list readiness
+## Attribution and license
 
-This repository is intentionally local until maintainers approve a public remote. The Pages workflow remains manual. When publishing, use a lowercase repository slug (for example, `awesome-gpt6-embodied`), set `awesome` and `awesome-list` topics, and confirm the current [Awesome list guidance](https://github.com/sindresorhus/awesome/blob/main/awesome.md): curate rather than aggregate, keep a succinct scope, use consistent entry descriptions, retain contribution guidance, and select a Creative Commons license if submitting to the upstream Awesome list. This local source bundle currently retains MIT for its original code and prose, so it must **not** be represented as eligible for upstream inclusion until maintainers decide on that license change.
+Discovery credit includes [Awesome Astra Embodied AI](https://github.com/zjwzcx/Awesome-Astra-Embodied-AI) and [Awesome Robot Use Agent](https://github.com/kairunwen/Awesome-Robot-Use-Agent). Discovery lists are not presented as independent projects here.
 
-## Attribution and licensing
-
-Discovery credits: [Awesome Astra Embodied AI](https://github.com/zjwzcx/Awesome-Astra-Embodied-AI) and [Awesome Robot Use Agent](https://github.com/kairunwen/Awesome-Robot-Use-Agent). Their entries are leads, not independent replications.
-
-MIT applies only to this repository's original curation and tooling. Linked code, model weights, datasets, papers and media keep their respective terms. No third-party repository, font, robot asset, model weight or video is bundled. No remote GitHub repository has been published as part of this snapshot.
+MIT applies only to this repository's original curation and tooling. Linked papers, code, datasets, model weights, trademarks, and media remain under their respective terms. See [LICENSE](LICENSE), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), and [CITATION.cff](CITATION.cff).

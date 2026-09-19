@@ -1,0 +1,3 @@
+# Runtime dependency for scripts/download_social_video.py and its unit tests.
+# The catalogue builder and validator otherwise use the Python standard library.
+requests>=2.31,<3

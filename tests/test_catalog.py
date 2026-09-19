@@ -27,13 +27,14 @@ class CatalogueTests(unittest.TestCase):
         cls.meta=validate.load('metadata.json')
         cls.i18n=validate.load('i18n.json')
         cls.media=validate.load('media.json')
+        cls.tag_taxonomy=validate.load('tag_taxonomy.json')
         cls.by_id={p['id']:p for p in cls.projects}
 
     def test_schema(self):
         self.assertEqual(validate.validate_data(self.projects,self.sources,self.artifacts,self.meta),[])
 
     def test_complete_bilingual_gallery_data(self):
-        self.assertEqual(validate.validate_presentation(self.projects,self.sources,self.i18n,self.media),[])
+        self.assertEqual(validate.validate_presentation(self.projects,self.sources,self.i18n,self.media,validate.load('publication_dates.json'),self.tag_taxonomy),[])
         self.assertEqual(set(self.i18n['en']),set(self.by_id))
         self.assertTrue({'P01','P02','P03','P04','P05'}.issubset(self.media['media']))
 
@@ -49,10 +50,21 @@ class CatalogueTests(unittest.TestCase):
         self.assertIn('P06 的两个标签',ledger)
         self.assertIn('X01–X04',ledger)
 
+    def test_workflow_tags_are_complete_and_factual(self):
+        labels=self.tag_taxonomy['labels']
+        category_tags=self.tag_taxonomy['category_tags']
+        self.assertEqual(set(category_tags),validate.CATEGORIES)
+        self.assertTrue(all(tags and set(tags)<=set(labels) for tags in category_tags.values()))
+        self.assertEqual(category_tags['real2sim'],['real-to-sim','replay'])
+        self.assertEqual(category_tags['coding_evaluation'],['evaluation','code-generation'])
+        ledger=(ROOT/'docs/TAGS.md').read_text(encoding='utf-8')
+        self.assertIn('| P08 | sim | real-to-sim, replay |',ledger)
+        self.assertIn('| X08 | sim | rl-training, dexterous |',ledger)
+
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
-        self.assertEqual(len(retained),30)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),13)
+        self.assertEqual(len(retained),31)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),14)
         self.assertEqual(sum(item['kind']=='video' for item in retained),17)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
         self.assertEqual(len(videos),17)
@@ -83,13 +95,13 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual({pid:unquote(self.media['media'][pid]['url']).removeprefix('assets/social/') for pid in social_video_ids},social_video_names)
         self.assertTrue(all(' ' not in self.media['media'][pid]['url'] for pid in social_video_ids))
         self.assertTrue(all(self.media['media'][pid]['poster']==f'assets/social/{pid}.jpg' for pid in social_video_ids))
-        self.assertTrue(all((ROOT/'site'/unquote(self.media['media'][pid]['url'])).is_file() for pid in social_video_ids))
+        self.assertTrue(all((ROOT/'site'/unquote(self.media['media'][pid]['url'])).is_file() or validate.optional_lightweight_media(self.media['media'][pid]) for pid in social_video_ids))
         self.assertTrue(all((ROOT/'site'/self.media['media'][pid]['poster']).is_file() for pid in social_video_ids))
         self.assertEqual(self.media['media']['X07']['kind'],'image')
         self.assertEqual(self.media['media']['X07']['url'],'assets/social/SaveTwitter.Net_HST8HsrawAAkgPu.jpg')
-        self.assertTrue((ROOT/'site'/self.media['media']['X07']['url']).is_file())
+        self.assertTrue((ROOT/'site'/self.media['media']['X07']['url']).is_file() or validate.optional_lightweight_media(self.media['media']['X07']))
         self.assertEqual(self.media['media']['X13']['kind'],'video')
-        self.assertTrue(all(item['url'].startswith('https://') or item['url'].startswith('assets/social/') for item in retained))
+        self.assertTrue(all(item['url'].startswith('https://') or item['url'].startswith(('assets/social/','assets/posters/')) for item in retained))
         additions={f'P{i:02}' for i in range(13,18)}
         self.assertTrue(all(self.media['media'][pid]['source_page_url'].startswith('https://') for pid in additions))
         self.assertTrue(all(self.media['media'][pid]['source_path'] for pid in additions))
@@ -191,6 +203,9 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(data['projects'],self.projects)
         self.assertEqual(data['i18n'],self.i18n)
         self.assertEqual(set(data['media']),set(self.by_id))
+        self.assertEqual(set(data['topic_tags']),set(self.by_id))
+        self.assertEqual(data['topic_tags']['P08'],['real-to-sim','replay'])
+        self.assertEqual(data['tag_labels']['real-to-sim']['zh'],'真转仿')
         self.assertNotIn('__CATALOG_JSON__',text)
         self.assertNotRegex(text,r'<script[^>]+src=')
         self.assertNotIn('fetch(',text)
@@ -215,6 +230,9 @@ class CatalogueTests(unittest.TestCase):
         self.assertIn("data-group=\"social\"",template)
         self.assertIn("let group='projects'",template)
         self.assertIn('scene_tags',template)
+        self.assertIn('function projectTags(p)',template)
+        self.assertIn('DATA.topic_tags[p.id]',template)
+        self.assertIn('DATA.tag_labels[tag]',template)
         self.assertIn('function matchesQuery(p)',template)
         self.assertIn('DATA.i18n.en[p.id].title',template)
         self.assertIn('queryTerms().every',template)
@@ -253,19 +271,17 @@ class CatalogueTests(unittest.TestCase):
         self.assertIn('[中文版本 / Chinese](README.zh-CN.md)',readme)
         self.assertIn('## Contents',readme)
         self.assertIn('docs/MEDIA.md',readme)
-        self.assertIn('docs/ASTRA_RELEVANCE_REVIEW.md',readme)
-        self.assertIn('docs/SCENE_TAGS.md',readme)
-        review=(ROOT/'docs/ASTRA_RELEVANCE_REVIEW.md').read_text(encoding='utf-8')
-        self.assertEqual(len(re.findall(r'^\| P\d{2} \|',review,re.M)), 17)
-        self.assertEqual(len(re.findall(r'^\| X\d{2} \|',review,re.M)), 14)
-        self.assertIn('本轮不删除、隐藏、合并或新增卡片',review)
-        self.assertIn('OpenVLA',review)
+        self.assertIn('docs/TAGS.md',readme)
+        self.assertIn('docs/PUBLICATION_DATES.md',readme)
+        self.assertNotIn('docs/ASTRA_RELEVANCE_REVIEW.md',readme)
+        self.assertIn('workflow_dispatch:',pages)
+        self.assertIn('path: site',pages)
         self.assertTrue((ROOT/'docs/SOCIAL_LINKS.md').is_file())
         self.assertIn('python -m unittest discover -s tests -v',pages)
         self.assertIn('docs/MEDIA.md',pages)
         self.assertIn('docs/MEDIA.md',validate_workflow)
         self.assertIn('31 entries:',readme)
-        self.assertIn('31 条目录', (ROOT/'README.zh-CN.md').read_text(encoding='utf-8'))
+        self.assertIn('31 条', (ROOT/'README.zh-CN.md').read_text(encoding='utf-8'))
 
     def test_network_probe_is_opt_in(self):
         p=subprocess.run([sys.executable,str(ROOT/'scripts/check_links.py')],capture_output=True,text=True,timeout=10)

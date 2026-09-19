@@ -36,11 +36,15 @@ def main() -> int:
 
         manifest = page.evaluate("""() => {
             const data = JSON.parse(document.querySelector('#catalog-data').textContent);
-            return {projects: data.projects, media: data.media, i18n: data.i18n, publication_dates: data.publication_dates};
+            return {projects: data.projects, media: data.media, i18n: data.i18n, publication_dates: data.publication_dates, topic_tags: data.topic_tags, tag_labels: data.tag_labels};
         }""")
         projects = manifest['projects']
         by_id = {project['id']: project for project in projects}
         publication_dates = manifest['publication_dates']
+        topic_tags = manifest['topic_tags']
+        tag_labels = manifest['tag_labels']
+        assert set(topic_tags) == set(by_id)
+        assert set(tag_labels) >= {'sim', 'real', 'control', 'real-to-sim', 'replay'}
         assert sum(item['status'] == 'verified' for item in publication_dates.values()) == 30
         assert sum(item['status'] == 'estimated' for item in publication_dates.values()) == 1
 
@@ -55,7 +59,13 @@ def main() -> int:
                     return 'projects'
             return 'social'
 
-        expected = {name: [project['id'] for project in projects if group_for(project) == name] for name in ('projects', 'social')}
+        expected = {
+            name: [project['id'] for project in sorted(
+                (p for p in projects if group_for(p) == name),
+                key=lambda p: publication_dates[p['id']]['date'], reverse=True,
+            )]
+            for name in ('projects', 'social')
+        }
         assert len(expected['projects']) == 17 and len(expected['social']) == 14
         assert set(expected['projects']).isdisjoint(expected['social'])
 
@@ -113,6 +123,9 @@ def main() -> int:
                     assert 'estimated' not in (published.get_attribute('class') or ''), pid
                     assert published.locator('.label').text_content() == {'en': 'Published', 'zh': '发布日期'}[language], pid
                     assert published.locator('span').nth(1).inner_text() == date_value, pid
+                    expected_tags = [*by_id[pid]['scene_tags'], *topic_tags[pid]]
+                    assert card.locator('.tags .tag').evaluate_all('(els) => els.map((el) => el.dataset.tag)') == expected_tags, pid
+                    assert card.locator('.tags .tag').all_inner_texts() == [tag_labels[tag][language] for tag in expected_tags], pid
                     item = retained.get(pid)
                     if item and item['kind'] == 'video':
                         video = card.locator('video')
@@ -146,6 +159,16 @@ def main() -> int:
         assert page.locator('.card').evaluate_all('(els) => els.map((el) => el.dataset.projectId)') == ['X01']
         page.locator('#clear-query').evaluate('(element) => element.click()')
         activate('projects')
+        page.locator('#query').fill('real-to-sim')
+        assert page.locator('.card').evaluate_all('(els) => els.map((el) => el.dataset.projectId)') == ['P11', 'P10', 'P08', 'P09']
+        page.get_by_role('button', name='中文').evaluate('(element) => element.click()')
+        assert page.locator('.card').evaluate_all('(els) => els.map((el) => el.dataset.projectId)') == ['P11', 'P10', 'P08', 'P09']
+        page.locator('#query').fill('真转仿')
+        assert page.locator('.card').evaluate_all('(els) => els.map((el) => el.dataset.projectId)') == ['P11', 'P10', 'P08', 'P09']
+        page.locator('#query').fill('sim real')
+        actual_dual = page.locator('.card').evaluate_all('(els) => els.map((el) => el.dataset.projectId)')
+        assert actual_dual == ['P06', 'P16', 'P14', 'P15', 'P13'], actual_dual
+        page.locator('#clear-query').evaluate('(element) => element.click()')
         page.set_viewport_size({'width': 390, 'height': 844})
         assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth')
         assert page.locator('#gallery').bounding_box()['y'] < 460

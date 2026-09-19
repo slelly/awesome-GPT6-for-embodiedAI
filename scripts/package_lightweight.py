@@ -33,6 +33,12 @@ EXCLUDED_MEDIA = (
 EXCLUDED_PATHS = {MEDIA_DIR / name for name in EXCLUDED_MEDIA}
 RUNTIME_TOP_LEVEL = {'downloads', '.pytest_cache'}
 RUNTIME_DIR_NAMES = {'__pycache__'}
+PUBLIC_EXCLUDED = {
+    Path('CHANGELOG.md'), Path('data/search-log.json'), Path('data/validation.json'), Path('data/video-audit.json'),
+    Path('docs/ASTRA_RELEVANCE_REVIEW.md'), Path('docs/FINDINGS.md'), Path('docs/METHODOLOGY.md'),
+    Path('docs/REPRODUCIBILITY.md'), Path('docs/REVIEW_PLAN.md'), Path('docs/RUNNING.md'),
+    Path('docs/SEARCH.md'), Path('docs/VALIDATION.md'),
+}
 
 
 def is_runtime_artifact(relative: Path) -> bool:
@@ -51,13 +57,13 @@ def package(output: Path) -> list[Path]:
             if not path.is_file():
                 continue
             relative = path.relative_to(ROOT)
-            if relative in EXCLUDED_PATHS or is_runtime_artifact(relative):
+            if relative in EXCLUDED_PATHS or relative in PUBLIC_EXCLUDED or is_runtime_artifact(relative):
                 continue
             archive.write(path, Path(ROOT.name) / relative)
             members.append(relative)
     with zipfile.ZipFile(output) as archive:
         actual = {Path(name).relative_to(ROOT.name) for name in archive.namelist() if not name.endswith('/')}
-    leaked = EXCLUDED_PATHS & actual
+    leaked = (EXCLUDED_PATHS | PUBLIC_EXCLUDED) & actual
     if leaked:
         raise ValueError(f'lightweight package contains excluded originals: {sorted(map(str, leaked))}')
     return members
@@ -72,7 +78,7 @@ def main() -> int:
         print('\n'.join(str(path) for path in sorted(EXCLUDED_PATHS)))
         return 0
     members = package(args.output.resolve())
-    print(f'created {args.output.resolve()} with {len(members)} files; excluded {len(EXCLUDED_PATHS)} uploaded originals plus runtime artifacts')
+    print(f'created {args.output.resolve()} with {len(members)} files; excluded {len(EXCLUDED_PATHS)} uploaded originals, {len(PUBLIC_EXCLUDED)} local review records, plus runtime artifacts')
     return 0
 
 

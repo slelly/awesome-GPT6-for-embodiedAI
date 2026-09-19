@@ -7,6 +7,7 @@
 在解压出的 `awesome-gpt6-embodied` 目录运行。以下命令会创建公开仓库，执行前确认当前 GitHub 账户和目标名称正确；本次并未执行这些写操作。
 
 ```bash
+python -m pip install --requirement requirements.txt
 python scripts/validate.py
 python scripts/build.py
 python -m unittest discover -s tests -v
@@ -35,10 +36,26 @@ gh repo create awesome-gpt6-embodied --public --source=. --push
 
 只部署静态网站，不公开模型认证、机器人服务、标注接口或运行日志。网页“导出当前 JSON”在用户浏览器本地生成文件，不把查询上传到服务端。
 
+## Public file set
+
+`.gitignore` keeps local change history, review/validation notes, search logs, video audits, downloader outputs, caches, credentials, and lightweight-package ZIPs out of a future public commit. It intentionally does **not** ignore `site/`, `.github/workflows/`, source data required by `scripts/build.py`, `docs/SOURCES.md`, `docs/MEDIA.md`, `docs/TAGS.md`, `docs/PUBLICATION_DATES.md`, contribution guidance, or license notices.
+
+Lightweight packages intentionally omit the 14 user-supplied Social originals listed in `docs/SOCIAL_MEDIA_PLACEMENT.zh-CN.md`. The validator recognizes only those documented `assets/social/` omissions, so a clean source checkout can build and publish the static site; those cards show their normal media fallback until a maintainer with redistribution authority places the originals in `site/assets/social/` before deployment. Do not substitute unrelated images or change the encoded filenames.
+
+This source bundle has no `.git/` directory, so there is no existing index from which to remove ignored files. After initializing a repository, maintainers should inspect the staged public set before the first commit:
+
+```bash
+git add -n .
+git check-ignore -v CHANGELOG.md data/search-log.json docs/VALIDATION.md
+git status --short
+```
+
+If a future repository already tracks a newly ignored local record, use `git rm --cached <path>` only after checking the target; this removes it from the index while retaining the local file.
+
 ## 更新目录
 
 1. 修改 `data/projects.json`、`data/sources.json` 或 `data/artifacts.json`。
 2. 按规则注明来源、日期、角色、许可与限制；必要时更新快照元信息与 README 数量。
 3. 运行离线 validate / build / tests，检查生成文档与网页，再提交。
 
-变更记录放在 CHANGELOG.md。不要为了让 CI 通过而把未知值改成猜测；使用 null、未确认标记和限制说明。
+保留来源、日期事件含义、许可和限制；不要为了让 CI 通过而把未知值改成猜测。公开仓库不需要包含本地变更记录、审查笔记、运行日志或缓存。

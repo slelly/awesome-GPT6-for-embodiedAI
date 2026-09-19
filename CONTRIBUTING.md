@@ -8,7 +8,7 @@
 
 指标必须说明分母和协议；“成功片段”“全部 trials”“全部 models”和“辅助 reset”不能混计。不能用 46/100 的进度分数替换 7/100 的完全成功率。没有原帖时保留镜像或二手等级。
 
-来源分级与详细字段解释见 [METHODOLOGY.md](docs/METHODOLOGY.md)。贡献者提交是新的证据，不会自动改变既有核验状态。
+来源 ID、可访问方式和逐项说明见 [SOURCES.md](docs/SOURCES.md)，日期事件含义见 [PUBLICATION_DATES.md](docs/PUBLICATION_DATES.md)。贡献者提交是新的证据，不会自动改变既有核验状态。
 
 ```bash
 python scripts/validate.py

@@ -1,0 +1,38 @@
+{
+  "labels": {
+    "sim": {"en": "simulation", "zh": "仿真"},
+    "real": {"en": "real world", "zh": "真机"},
+    "control": {"en": "control", "zh": "控制"},
+    "evaluation": {"en": "evaluation", "zh": "评测"},
+    "policy": {"en": "policy", "zh": "策略"},
+    "real-to-sim": {"en": "real-to-sim", "zh": "真转仿"},
+    "replay": {"en": "replay", "zh": "重放"},
+    "code-generation": {"en": "code generation", "zh": "代码生成"},
+    "harness": {"en": "harness", "zh": "测试框架"},
+    "benchmark": {"en": "benchmark", "zh": "基准"},
+    "understanding": {"en": "embodied understanding", "zh": "具身理解"},
+    "dexterous": {"en": "dexterous manipulation", "zh": "灵巧操作"},
+    "rl-training": {"en": "RL training", "zh": "强化学习训练"},
+    "physics": {"en": "physics simulation", "zh": "物理仿真"},
+    "environment-building": {"en": "environment building", "zh": "环境构建"}
+  },
+  "category_tags": {
+    "closed_loop": ["control"],
+    "hybrid": ["control", "policy"],
+    "evaluation": ["evaluation"],
+    "policy_improvement": ["policy", "control"],
+    "real2sim": ["real-to-sim", "replay"],
+    "coding_evaluation": ["evaluation", "code-generation"],
+    "harness": ["harness", "control"],
+    "understanding_benchmark": ["benchmark", "understanding"],
+    "benchmark": ["benchmark"],
+    "hierarchical_control": ["control"],
+    "dexterous_sim": ["dexterous", "control"],
+    "rl_engineering": ["rl-training", "dexterous"],
+    "paused_physics": ["physics", "control"],
+    "generated_control": ["code-generation", "control"],
+    "planned_replay": ["replay", "control"],
+    "environment_engineering": ["environment-building", "rl-training"],
+    "discovery_collection": ["benchmark"]
+  }
+}

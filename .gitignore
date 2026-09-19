@@ -14,3 +14,17 @@ node_modules/
 auth.json
 credentials*.json
 link-report.json
+
+# Local curation history and review records are not part of the public source.
+/CHANGELOG.md
+/data/search-log.json
+/data/validation.json
+/data/video-audit.json
+/docs/ASTRA_RELEVANCE_REVIEW.md
+/docs/FINDINGS.md
+/docs/METHODOLOGY.md
+/docs/REPRODUCIBILITY.md
+/docs/REVIEW_PLAN.md
+/docs/RUNNING.md
+/docs/SEARCH.md
+/docs/VALIDATION.md

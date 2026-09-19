@@ -36,7 +36,8 @@ def media_reference(url: str) -> str:
     return f'`site/{url}` (Pages-relative)'
 
 def build() -> None:
-    projects, sources, artifacts, meta, i18n, media_data, publication_dates = (load(n) for n in ['projects.json', 'sources.json', 'artifacts.json', 'metadata.json', 'i18n.json', 'media.json', 'publication_dates.json'])
+    projects, sources, artifacts, meta, i18n, media_data, publication_dates, tag_taxonomy = (load(n) for n in ['projects.json', 'sources.json', 'artifacts.json', 'metadata.json', 'i18n.json', 'media.json', 'publication_dates.json', 'tag_taxonomy.json'])
+    topic_tags = {p['id']: tag_taxonomy['category_tags'][p['category']] for p in projects}
     smap = {s['id']: s for s in sources}
     media = {}
     for p in projects:
@@ -95,6 +96,15 @@ def build() -> None:
         lines.append(f"| {p['id']} | {cell(item['previous_display'])} | {display} | {cell(item['meaning'])} | [{item['evidence_url']}]({item['evidence_url']}) | {checked} |")
     write('docs/PUBLICATION_DATES.md', '\n'.join(lines))
 
+    lines = ['# Gallery tags', '', 'Cards combine one or two factual scene tags (`simulation` / `real world`) with one or more workflow tags. Tags are additive: they help visitors search and compare work; they do not claim a shared benchmark, deployment result, or model capability.', '', '| Tag | English | 中文 | Applied from category |', '| --- | --- | --- | --- |']
+    for tag, label in tag_taxonomy['labels'].items():
+        categories = ', '.join(category for category, tags in tag_taxonomy['category_tags'].items() if tag in tags)
+        lines.append(f"| `{tag}` | {label['en']} | {label['zh']} | {categories or 'scene tag'} |")
+    lines += ['', '## Project mapping', '', '| ID | Scene tags | Workflow tags |', '| --- | --- | --- |']
+    for p in projects:
+        lines.append(f"| {p['id']} | {', '.join(p['scene_tags'])} | {', '.join(topic_tags[p['id']])} |")
+    write('docs/TAGS.md', '\n'.join(lines))
+
     lines = ['# 来源台账 / Source ledger', '', '本文件由 `data/sources.json` 生成。外链状态是 2026-09-18 的读取方式，不代表当前仍可访问。', '',
              '`search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。', '',
              '镜像用于发现作者声明，不等同于原始 X 帖文已独立核验。这里只保存链接与原创核验备注，不转载第三方全文或视频。', '']
@@ -137,16 +147,17 @@ def build() -> None:
             lines.append(f"- **{p['id']} · {p['title']}** — {item['reason']['en']} Checked: {checks}; evidence source: [{item['source_id']}](SOURCES.md#{item['source_id'].lower()}).")
     write('docs/MEDIA.md', '\n'.join(lines))
 
-    fields = ['id', 'title', 'section', 'category', 'environment', 'gpt6_relation', 'evidence_level', 'event_date', 'window_status', 'url', 'code_url', 'license_status', 'summary', 'control_interface', 'source_ids']
+    fields = ['id', 'title', 'section', 'category', 'topic_tags', 'environment', 'gpt6_relation', 'evidence_level', 'event_date', 'window_status', 'url', 'code_url', 'license_status', 'summary', 'control_interface', 'source_ids']
     out = io.StringIO(newline='')
     writer = csv.DictWriter(out, fieldnames=fields, lineterminator='\n')
     writer.writeheader()
     for p in projects:
-        row = {k: p[k] for k in fields}
+        row = {k: p[k] for k in fields if k != 'topic_tags'}
+        row['topic_tags'] = ';'.join(topic_tags[p['id']])
         row['source_ids'] = ';'.join(p['source_ids'])
         writer.writerow(row)
     write('data/projects.csv', out.getvalue())
-    payload = json.dumps({'metadata': meta, 'projects': projects, 'sources': sources, 'artifacts': artifacts, 'i18n': i18n, 'media': media, 'publication_dates': publication_dates, 'labels': {'section': SECTIONS, 'environment': ENV, 'relation': REL, 'date': DATE}}, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
+    payload = json.dumps({'metadata': meta, 'projects': projects, 'sources': sources, 'artifacts': artifacts, 'i18n': i18n, 'media': media, 'publication_dates': publication_dates, 'topic_tags': topic_tags, 'tag_labels': tag_taxonomy['labels'], 'labels': {'section': SECTIONS, 'environment': ENV, 'relation': REL, 'date': DATE}}, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
     template = (ROOT / 'site' / 'template.html').read_text(encoding='utf-8')
     write('site/index.html', template.replace('__CATALOG_JSON__', payload))
     print(f'Built catalogue: {len(projects)} entries, {len(artifacts)} HF resources, {len(sources)} source records, {len(verified)} verified gallery media items.')

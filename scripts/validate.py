@@ -55,6 +55,21 @@ def valid_media_url(value: str) -> bool:
     return (ROOT / 'site' / path).is_file()
 
 
+def optional_lightweight_media(item: dict) -> bool:
+    """The delivery ZIP omits only user-supplied Social originals.
+
+    Their paths remain valid Pages-relative targets when a maintainer copies
+    the listed originals in before a full-media deployment.  A lean public
+    source checkout must still validate, build, and publish its static shell
+    without mistaking these deliberate omissions for arbitrary missing assets.
+    """
+    return (
+        isinstance(item, dict)
+        and str(item.get('url', '')).startswith('assets/social/')
+        and str(item.get('source_path', '')).startswith('User attachment')
+    )
+
+
 def valid_date(value: str, month_allowed: bool = False) -> bool:
     if not isinstance(value, str):
         return False
@@ -160,7 +175,7 @@ def validate_data(projects, sources, artifacts, metadata) -> list[str]:
     return errors
 
 
-def validate_presentation(projects, sources, i18n, media_data, publication_dates) -> list[str]:
+def validate_presentation(projects, sources, i18n, media_data, publication_dates, tag_taxonomy) -> list[str]:
     """Validate complete English coverage and attributable gallery media."""
     errors=[]
     pids={p['id'] for p in projects}
@@ -175,6 +190,22 @@ def validate_presentation(projects, sources, i18n, media_data, publication_dates
         for key in ('title','summary'):
             if not isinstance(entry.get(key),str) or not entry[key].strip():
                 errors.append(f'i18n: {pid} missing English {key}')
+    if not isinstance(tag_taxonomy, dict):
+        errors.append('tag_taxonomy: missing taxonomy')
+    else:
+        labels = tag_taxonomy.get('labels')
+        category_tags = tag_taxonomy.get('category_tags')
+        if not isinstance(labels, dict) or not isinstance(category_tags, dict):
+            errors.append('tag_taxonomy: requires labels and category_tags maps')
+        else:
+            if set(category_tags) != CATEGORIES:
+                errors.append('tag_taxonomy: category_tags must exactly cover categories')
+            for tag, label in labels.items():
+                if not isinstance(tag, str) or not tag.strip() or not isinstance(label, dict) or not all(isinstance(label.get(lang), str) and label[lang].strip() for lang in ('en', 'zh')):
+                    errors.append(f'tag_taxonomy: invalid bilingual label {tag}')
+            for category, tags in category_tags.items():
+                if not isinstance(tags, list) or not tags or len(tags) != len(set(tags)) or not set(tags).issubset(labels):
+                    errors.append(f'tag_taxonomy: {category} invalid topic tags')
     if not isinstance(publication_dates, dict) or set(publication_dates) != pids:
         errors.append('publication_dates: IDs must exactly match projects')
     else:
@@ -220,6 +251,8 @@ def validate_presentation(projects, sources, i18n, media_data, publication_dates
             continue
         for key in (('source_url',) if item.get('kind') == 'missing' else ('url','source_url')):
             valid = valid_url(item.get(key,'')) if key == 'source_url' else valid_media_url(item.get(key,''))
+            if key == 'url' and not valid and optional_lightweight_media(item):
+                valid = True
             if not valid:
                 errors.append(f'media: {pid} invalid {key}')
         if item.get('source_id') not in sids:
@@ -281,9 +314,9 @@ def main() -> int:
     parser.add_argument('--data-only',action='store_true',help='Skip local Markdown links')
     args=parser.parse_args()
     try:
-        projects,sources,artifacts,meta,i18n,media,publication_dates=(load(n) for n in ['projects.json','sources.json','artifacts.json','metadata.json','i18n.json','media.json','publication_dates.json'])
+        projects,sources,artifacts,meta,i18n,media,publication_dates,tag_taxonomy=(load(n) for n in ['projects.json','sources.json','artifacts.json','metadata.json','i18n.json','media.json','publication_dates.json','tag_taxonomy.json'])
         errors=validate_data(projects,sources,artifacts,meta)
-        errors.extend(validate_presentation(projects,sources,i18n,media,publication_dates))
+        errors.extend(validate_presentation(projects,sources,i18n,media,publication_dates,tag_taxonomy))
         if not args.data_only:
             errors.extend(check_local_markdown())
     except (OSError,ValueError,KeyError,TypeError) as exc:
