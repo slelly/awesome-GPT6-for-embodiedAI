@@ -238,6 +238,8 @@ class CatalogueTests(unittest.TestCase):
         self.assertIn('queryTerms().every',template)
         self.assertIn('id="query"',template)
         self.assertIn('id="clear-query"',template)
+        self.assertIn('aria-label="GitHub repository"',template)
+        self.assertIn('https://github.com/slelly/awesome-GPT6-for-embodiedAI',template)
         self.assertNotIn("Author profile",template)
         self.assertNotIn('DETAIL_COPY',template)
         self.assertNotIn('openDetail',template)
