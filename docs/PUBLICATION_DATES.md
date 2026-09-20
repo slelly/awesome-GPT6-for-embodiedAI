@@ -35,6 +35,9 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | X12 | 2026-0909 | verified | pending confirmation | 原帖 status ID `2097802933429796873` 依 X Snowflake epoch 解码为 `2026-09-09T21:42:49.280Z`。 | — | 日期精确到 UTC 日；从原帖 ID 时间位推导。 | [S043](SOURCES.md#s043) |
 | X13 | 2026-0915 | verified | 2026-09-15 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S033](SOURCES.md#s033) · [S052](SOURCES.md#s052) |
 | X14 | 2026-0911 | verified | 2026-09-11 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S033](SOURCES.md#s033) |
+| P18 | 2026-0919 | verified | 2026-09-19 | 发布帖 status ID `2101118049944543545` 依 X Snowflake epoch 解码为 `2026-09-19T01:15:54.649Z`；公开代码仓同日更新。 | — | 日期精确到 UTC 日；作为本条目的可验证公开发布日，不替代报告页面可能存在的署日。 | [S053](SOURCES.md#s053) · [S054](SOURCES.md#s054) · [S055](SOURCES.md#s055) |
+| P19 | 2026-0917 | verified | 2026-09-17 | arXiv 条目 2609.20330 显示 `Submitted on 17 Sep 2026`，v1 时间为 `2026-09-17T13:04:23Z`。 | — | 日期精确到 UTC 日；它是论文首次公开提交日，不是代码 release 日。 | [S056](SOURCES.md#s056) |
+| X15 | 2026-0918 | verified | 2026-09-18 | 原帖 status ID `2100754714971287557` 依 X Snowflake epoch 解码为 `2026-09-18T01:12:08.841Z`。 | — | 日期精确到 UTC 日；原帖页面受限，但具体 status ID、作者研究笔记与用户提供视频内容相互匹配。 | [S057](SOURCES.md#s057) · [S058](SOURCES.md#s058) |
 
 ## Date-research replacement audit
 

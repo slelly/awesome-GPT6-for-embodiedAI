@@ -466,5 +466,59 @@
     "access": "linked_only",
     "checked_at": "2026-09-19",
     "notes": "Exact X status URL supplied by the user on 2026-09-19. This update records the link without independently opening, reading, or content-matching the post."
+  },
+  {
+    "id": "S053",
+    "title": "RoboHarm benchmark and collection toolkit",
+    "url": "https://github.com/robocurve/roboharm",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-20",
+    "notes": "README, task definitions, run budgets, provenance boundary and repository license reviewed. The repository explicitly excludes raw rollouts and is not a frozen results dataset."
+  },
+  {
+    "id": "S054",
+    "title": "RoboHarm research report entry point",
+    "url": "https://robocurve.org/roboharm/",
+    "kind": "primary",
+    "access": "linked_only",
+    "checked_at": "2026-09-20",
+    "notes": "Official report URL retained from the release materials. Direct retrieval failed in this environment, so report-only result claims are not promoted to structured metrics."
+  },
+  {
+    "id": "S055",
+    "title": "RoboHarm author release post and supplied video",
+    "url": "https://x.com/chooi_jeq/status/2101118049944543545",
+    "kind": "primary",
+    "access": "linked_only",
+    "checked_at": "2026-09-20",
+    "notes": "Exact post URL retained. User attachment `wujie2.mp4` was visually matched to the RoboHarm release content despite its misleading filename: 10.000 s, 640x360, silent H.264, SHA-256 b372896be1a04201f8e0a891d8ab60ae94ed2fc2ed537e455d6dcf5b8c7a21f1."
+  },
+  {
+    "id": "S056",
+    "title": "RoboFind paper and PDF",
+    "url": "https://arxiv.org/abs/2609.20330",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-20",
+    "notes": "Nine-page arXiv v1 PDF read locally; SHA-256 35e9abf4c10fedbbfbfa19d7ece9e454e1d3d91e42c39e6263e2ea96edd06b02. Gallery cover is the paper's page 4, Fig. 3 multi-agent pipeline, resized without content changes."
+  },
+  {
+    "id": "S057",
+    "title": "Wuji2 hand self-righting author post and supplied video",
+    "url": "https://x.com/frankzydou/status/2100754714971287557",
+    "kind": "primary",
+    "access": "linked_only",
+    "checked_at": "2026-09-20",
+    "notes": "Exact post URL and status timestamp retained. User attachment `savetwt.com_2100754714971287557_640x360.mp4` visually shows the Wuji2 self-righting run: 34.154667 s, 640x360, H.264/AAC, SHA-256 f9f554b52f32eb66dd19e5e0475db11d989eb08e1e314c0802e7f0a0f7bd36c3."
+  },
+  {
+    "id": "S058",
+    "title": "Zhiyang Dou research note: robotic hand self-righting",
+    "url": "https://frank-zy-dou.github.io/blog/wuji2-hand-stands-up/",
+    "kind": "primary",
+    "access": "search_text",
+    "checked_at": "2026-09-20",
+    "notes": "Author research-note index describes asking Astra to stand the Wuji2 hand upright and retaining the pose with motors switched off; direct article retrieval was unavailable."
   }
 ]

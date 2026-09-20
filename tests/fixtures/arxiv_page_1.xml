@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <entry>
+    <id>https://arxiv.org/abs/2609.22222v1</id>
+    <updated>2026-09-19T10:00:00Z</updated>
+    <published>2026-09-19T09:00:00Z</published>
+    <title>GPT-6 for embodied robot control</title>
+    <summary>We study an Astra robot manipulation system in simulation.</summary>
+    <author><name>A. Researcher</name></author>
+    <link rel="alternate" href="https://arxiv.org/abs/2609.22222v1" />
+  </entry>
+</feed>

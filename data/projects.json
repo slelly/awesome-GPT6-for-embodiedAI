@@ -1104,5 +1104,122 @@
     },
     "last_checked": "2026-09-19",
     "independently_reproduced": false
+  },
+  {
+    "id": "P18",
+    "title": "RoboHarm · 机器人危险指令拒绝评测",
+    "section": "core",
+    "category": "evaluation",
+    "environment": "real",
+    "scene_tags": ["real"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "在五类固定危险场景中比较 GPT-6 Astra、Claude Fable 5.1 与 MolmoAct2 是否尝试、拒绝或完成有害指令，并保留三机位视频与转录的事后标注流程。",
+    "authors": "Edward Sun, Sravanthi Machcha, Sabrina Zou, Tzu Kit Chan, Jay Chooi / RoboCurve",
+    "event_date": "2026-09-19",
+    "event_date_basis": "发布帖 status ID 2101118049944543545 的 X Snowflake 时间为 2026-09-19T01:15:54Z；公开代码仓同日更新",
+    "window_status": "in_window",
+    "url": "https://github.com/robocurve/roboharm",
+    "code_url": "https://github.com/robocurve/roboharm",
+    "license_status": "仓库声明 All rights reserved，不授予开源许可；第三方组件另依其条款",
+    "control_interface": "三相机与本体状态 → Inspect Robots agent/VLA policy → YAM 双臂动作；Astra/Fable 为 medium effort、40 次模型调用上限与 25% 速度限制",
+    "metrics": [],
+    "limitations": [
+      "公开仓库提供任务、采集与标注工具，但不包含 raw rollouts，也不是冻结结果数据集。",
+      "报告入口本轮无法直接读取，因此不把视频中的汇总图转写为结构化排名指标。",
+      "五个固定场景与固定措辞不能代表开放环境安全性；复现实验应使用惰性替代物，禁止制造真实刀具、电器、压力或化学危险。"
+    ],
+    "source_ids": ["S053", "S054", "S055"],
+    "links": {
+      "project": "https://robocurve.org/roboharm/",
+      "post": "https://x.com/chooi_jeq/status/2101118049944543545"
+    },
+    "last_checked": "2026-09-20",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P19",
+    "title": "RoboFind · 面向视障用户的个性化物品搜索",
+    "section": "core",
+    "category": "closed_loop",
+    "environment": "real",
+    "scene_tags": ["real"],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "手机端一次性教授个人物品，Unitree Go2 执行搜索，验证与恢复 agent 在候选停点核对实例身份并决定完成或继续搜索；GPT-6 Astra 用于目标画像与导航指令，并设独立 Astra-only 对照。",
+    "authors": "Ruiping Liu, Shaofang Quan, Qian Yin et al.",
+    "event_date": "2026-09-17",
+    "event_date_basis": "arXiv v1 首次提交时间 2026-09-17T13:04:23Z",
+    "window_status": "in_window",
+    "url": "https://arxiv.org/abs/2609.20330",
+    "code_url": null,
+    "license_status": "论文 CC BY 4.0；正文称代码与结果将公开，但本轮未定位对应公开实现",
+    "control_interface": "手机教学视频 → GPT-6 Astra 目标画像/导航指令 → Uni-NaVid 驱动 Go2 搜索 → Grounding DINO + DINOv2 验证 → 固定恢复动作后继续搜索",
+    "metrics": [
+      {
+        "name": "RoboFind success",
+        "value": 17,
+        "unit": "successes",
+        "denominator": 20,
+        "protocol": "十个目标各两次真机任务；含验证与恢复"
+      },
+      {
+        "name": "Sequential first-stop success",
+        "value": 5,
+        "unit": "successes",
+        "denominator": 20,
+        "protocol": "从同一批 RoboFind 轨迹重建，不是另行执行的 baseline"
+      },
+      {
+        "name": "GPT-6 Astra-only success",
+        "value": 5,
+        "unit": "successes",
+        "denominator": 12,
+        "protocol": "六个共享目标上的独立执行；RoboFind 在同一目标子集为 10/12"
+      }
+    ],
+    "limitations": [
+      "Sequential baseline 由 RoboFind 运行的首个稳定候选重建，不能描述为独立复跑。",
+      "GPT-6 Astra-only 仅覆盖六个共享目标、12 次运行；不同分母不能与完整 20 次 RoboFind 结果直接合并。",
+      "论文未提供公开代码或公开视频入口；卡片封面来自论文第 4 页 Fig. 3，不是视频首帧。"
+    ],
+    "source_ids": ["S056"],
+    "links": {
+      "paper": "https://arxiv.org/abs/2609.20330"
+    },
+    "last_checked": "2026-09-20",
+    "independently_reproduced": false
+  },
+  {
+    "id": "X15",
+    "title": "Wuji2 灵巧手视觉自扶正",
+    "section": "watchlist",
+    "category": "closed_loop",
+    "environment": "real",
+    "scene_tags": ["real"],
+    "gpt6_relation": "explicit_partial",
+    "evidence_level": "B",
+    "summary": "作者演示 GPT-6 Astra Ultra 根据第三人称 RGB 反馈，让倒卧的 Wuji2 灵巧手用手指支撑并站立；视频同时展示加速片段与正常速度片段。",
+    "authors": "Zhiyang (Frank) Dou",
+    "event_date": "2026-09-18",
+    "event_date_basis": "原帖 status ID 2100754714971287557 的 X Snowflake 时间为 2026-09-18T01:12:08Z",
+    "window_status": "in_window",
+    "url": "https://x.com/frankzydou/status/2100754714971287557",
+    "code_url": null,
+    "license_status": "用户提供原帖视频用于本站展示；未取得代码、模型输出或更广泛再许可",
+    "control_interface": "第三人称 RGB 相机反馈 → Astra Ultra 迭代控制 → Wuji2 灵巧手手指接触与姿态调整",
+    "metrics": [],
+    "limitations": [
+      "原帖页面在本轮环境返回 403；视频与精确 status URL 已匹配，但完整提示、工具接口和运行日志未公开。",
+      "单次剪辑包含 16× 加速，不构成重复成功率或实时控制延迟证据。",
+      "未独立复现硬件控制，也未核验断电后保持姿态的时长。"
+    ],
+    "source_ids": ["S057", "S058"],
+    "links": {
+      "post": "https://x.com/frankzydou/status/2100754714971287557",
+      "project": "https://frank-zy-dou.github.io/blog/wuji2-hand-stands-up/"
+    },
+    "last_checked": "2026-09-20",
+    "independently_reproduced": false
   }
 ]

@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-09-18。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-09-20。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 12
+## 核心项目与评测 · 14
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -310,6 +310,59 @@ x_profile：[https://x.com/huxiao93612565](https://x.com/huxiao93612565)
 
 ---
 
+<a id="p18"></a>
+### P18 · RoboHarm · 机器人危险指令拒绝评测
+
+在五类固定危险场景中比较 GPT-6 Astra、Claude Fable 5.1 与 MolmoAct2 是否尝试、拒绝或完成有害指令，并保留三机位视频与转录的事后标注流程。
+
+**来源等级：A** · 真机 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Edward Sun, Sravanthi Machcha, Sabrina Zou, Tzu Kit Chan, Jay Chooi / RoboCurve  
+**事件日期：** 2026-09-19（窗口内）  
+**日期依据：** 发布帖 status ID 2101118049944543545 的 X Snowflake 时间为 2026-09-19T01:15:54Z；公开代码仓同日更新  
+**入口：** [https://github.com/robocurve/roboharm](https://github.com/robocurve/roboharm)  
+**代码入口：** [https://github.com/robocurve/roboharm](https://github.com/robocurve/roboharm)  
+**许可状态：** 仓库声明 All rights reserved，不授予开源许可；第三方组件另依其条款  
+**控制接口 / 作用：** 三相机与本体状态 → Inspect Robots agent/VLA policy → YAM 双臂动作；Astra/Fable 为 medium effort、40 次模型调用上限与 25% 速度限制
+
+**限制与未决项：** 公开仓库提供任务、采集与标注工具，但不包含 raw rollouts，也不是冻结结果数据集。 报告入口本轮无法直接读取，因此不把视频中的汇总图转写为结构化排名指标。 五个固定场景与固定措辞不能代表开放环境安全性；复现实验应使用惰性替代物，禁止制造真实刀具、电器、压力或化学危险。
+
+project：[https://robocurve.org/roboharm/](https://robocurve.org/roboharm/)  
+post：[https://x.com/chooi_jeq/status/2101118049944543545](https://x.com/chooi_jeq/status/2101118049944543545)  
+
+**来源：** [S053 · RoboHarm benchmark and collection toolkit](SOURCES.md#s053) · [S054 · RoboHarm research report entry point](SOURCES.md#s054) · [S055 · RoboHarm author release post and supplied video](SOURCES.md#s055)
+
+---
+
+<a id="p19"></a>
+### P19 · RoboFind · 面向视障用户的个性化物品搜索
+
+手机端一次性教授个人物品，Unitree Go2 执行搜索，验证与恢复 agent 在候选停点核对实例身份并决定完成或继续搜索；GPT-6 Astra 用于目标画像与导航指令，并设独立 Astra-only 对照。
+
+**来源等级：A** · 真机 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Ruiping Liu, Shaofang Quan, Qian Yin et al.  
+**事件日期：** 2026-09-17（窗口内）  
+**日期依据：** arXiv v1 首次提交时间 2026-09-17T13:04:23Z  
+**入口：** [https://arxiv.org/abs/2609.20330](https://arxiv.org/abs/2609.20330)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 论文 CC BY 4.0；正文称代码与结果将公开，但本轮未定位对应公开实现  
+**控制接口 / 作用：** 手机教学视频 → GPT-6 Astra 目标画像/导航指令 → Uni-NaVid 驱动 Go2 搜索 → Grounding DINO + DINOv2 验证 → 固定恢复动作后继续搜索
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| RoboFind success | 17 successes | 20 | 十个目标各两次真机任务；含验证与恢复 |
+| Sequential first-stop success | 5 successes | 20 | 从同一批 RoboFind 轨迹重建，不是另行执行的 baseline |
+| GPT-6 Astra-only success | 5 successes | 12 | 六个共享目标上的独立执行；RoboFind 在同一目标子集为 10/12 |
+
+**限制与未决项：** Sequential baseline 由 RoboFind 运行的首个稳定候选重建，不能描述为独立复跑。 GPT-6 Astra-only 仅覆盖六个共享目标、12 次运行；不同分母不能与完整 20 次 RoboFind 结果直接合并。 论文未提供公开代码或公开视频入口；卡片封面来自论文第 4 页 Fig. 3，不是视频首帧。
+
+paper：[https://arxiv.org/abs/2609.20330](https://arxiv.org/abs/2609.20330)  
+
+**来源：** [S056 · RoboFind paper and PDF](SOURCES.md#s056)
+
+---
+
 ## 配套资源与对照 · 5
 
 <a id="p13"></a>
@@ -430,7 +483,7 @@ project：[https://deepcybo-physai.github.io/PhysBrain-1.5/](https://deepcybo-ph
 
 ---
 
-## X / Twitter 演示线索 · 14
+## X / Twitter 演示线索 · 15
 
 <a id="x01"></a>
 ### X01 · 真实机器人键盘打字
@@ -752,5 +805,29 @@ post：[https://x.com/thermalpastor/status/2097802933429796873](https://x.com/th
 post：[https://x.com/Jiarui_X/status/2098439950991806804](https://x.com/Jiarui_X/status/2098439950991806804)  
 
 **来源：** [S033 · Awesome Astra Embodied AI discovery collection](SOURCES.md#s033)
+
+---
+
+<a id="x15"></a>
+### X15 · Wuji2 灵巧手视觉自扶正
+
+作者演示 GPT-6 Astra Ultra 根据第三人称 RGB 反馈，让倒卧的 Wuji2 灵巧手用手指支撑并站立；视频同时展示加速片段与正常速度片段。
+
+**来源等级：B** · 真机 · GPT-6 明确，但正文证据不完整
+
+**作者 / 团队：** Zhiyang (Frank) Dou  
+**事件日期：** 2026-09-18（窗口内）  
+**日期依据：** 原帖 status ID 2100754714971287557 的 X Snowflake 时间为 2026-09-18T01:12:08Z  
+**入口：** [https://x.com/frankzydou/status/2100754714971287557](https://x.com/frankzydou/status/2100754714971287557)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 用户提供原帖视频用于本站展示；未取得代码、模型输出或更广泛再许可  
+**控制接口 / 作用：** 第三人称 RGB 相机反馈 → Astra Ultra 迭代控制 → Wuji2 灵巧手手指接触与姿态调整
+
+**限制与未决项：** 原帖页面在本轮环境返回 403；视频与精确 status URL 已匹配，但完整提示、工具接口和运行日志未公开。 单次剪辑包含 16× 加速，不构成重复成功率或实时控制延迟证据。 未独立复现硬件控制，也未核验断电后保持姿态的时长。
+
+post：[https://x.com/frankzydou/status/2100754714971287557](https://x.com/frankzydou/status/2100754714971287557)  
+project：[https://frank-zy-dou.github.io/blog/wuji2-hand-stands-up/](https://frank-zy-dou.github.io/blog/wuji2-hand-stands-up/)  
+
+**来源：** [S057 · Wuji2 hand self-righting author post and supplied video](SOURCES.md#s057) · [S058 · Zhiyang Dou research note: robotic hand self-righting](SOURCES.md#s058)
 
 ---

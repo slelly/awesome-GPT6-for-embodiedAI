@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-09-18 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-09-20 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -473,3 +473,57 @@ Static report/video-gallery scope; no new independent experiment counted.
 类型：`primary` · 读取：`linked_only` · 检查日期：2026-09-19
 
 Exact X status URL supplied by the user on 2026-09-19. This update records the link without independently opening, reading, or content-matching the post.
+
+<a id="s053"></a>
+## S053 · RoboHarm benchmark and collection toolkit
+
+[https://github.com/robocurve/roboharm](https://github.com/robocurve/roboharm)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-20
+
+README, task definitions, run budgets, provenance boundary and repository license reviewed. The repository explicitly excludes raw rollouts and is not a frozen results dataset.
+
+<a id="s054"></a>
+## S054 · RoboHarm research report entry point
+
+[https://robocurve.org/roboharm/](https://robocurve.org/roboharm/)
+
+类型：`primary` · 读取：`linked_only` · 检查日期：2026-09-20
+
+Official report URL retained from the release materials. Direct retrieval failed in this environment, so report-only result claims are not promoted to structured metrics.
+
+<a id="s055"></a>
+## S055 · RoboHarm author release post and supplied video
+
+[https://x.com/chooi_jeq/status/2101118049944543545](https://x.com/chooi_jeq/status/2101118049944543545)
+
+类型：`primary` · 读取：`linked_only` · 检查日期：2026-09-20
+
+Exact post URL retained. User attachment `wujie2.mp4` was visually matched to the RoboHarm release content despite its misleading filename: 10.000 s, 640x360, silent H.264, SHA-256 b372896be1a04201f8e0a891d8ab60ae94ed2fc2ed537e455d6dcf5b8c7a21f1.
+
+<a id="s056"></a>
+## S056 · RoboFind paper and PDF
+
+[https://arxiv.org/abs/2609.20330](https://arxiv.org/abs/2609.20330)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-20
+
+Nine-page arXiv v1 PDF read locally; SHA-256 35e9abf4c10fedbbfbfa19d7ece9e454e1d3d91e42c39e6263e2ea96edd06b02. Gallery cover is the paper's page 4, Fig. 3 multi-agent pipeline, resized without content changes.
+
+<a id="s057"></a>
+## S057 · Wuji2 hand self-righting author post and supplied video
+
+[https://x.com/frankzydou/status/2100754714971287557](https://x.com/frankzydou/status/2100754714971287557)
+
+类型：`primary` · 读取：`linked_only` · 检查日期：2026-09-20
+
+Exact post URL and status timestamp retained. User attachment `savetwt.com_2100754714971287557_640x360.mp4` visually shows the Wuji2 self-righting run: 34.154667 s, 640x360, H.264/AAC, SHA-256 f9f554b52f32eb66dd19e5e0475db11d989eb08e1e314c0802e7f0a0f7bd36c3.
+
+<a id="s058"></a>
+## S058 · Zhiyang Dou research note: robotic hand self-righting
+
+[https://frank-zy-dou.github.io/blog/wuji2-hand-stands-up/](https://frank-zy-dou.github.io/blog/wuji2-hand-stands-up/)
+
+类型：`primary` · 读取：`search_text` · 检查日期：2026-09-20
+
+Author research-note index describes asking Astra to stand the Wuji2 hand upright and retaining the pose with motors switched off; direct article retrieval was unavailable.

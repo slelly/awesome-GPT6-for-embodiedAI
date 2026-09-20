@@ -8,36 +8,36 @@
 
 # Awesome GPT6 Embodied AI [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A visual collection of 31 entries: GPT-6 Astra embodied-AI projects, evaluations, robot-control workflows, real-to-sim systems, infrastructure, and community demonstrations.
+A visual collection of 34 entries: GPT-6 Astra embodied-AI projects, evaluations, robot-control workflows, real-to-sim systems, infrastructure, and community demonstrations.
 
 [中文版本 / Chinese](README.zh-CN.md) · [Sources](docs/SOURCES.md) · [Media](docs/MEDIA.md) · [Tags](docs/TAGS.md) · [Dates](docs/PUBLICATION_DATES.md) · [Contributing](CONTRIBUTING.md)
 
 ## Contents
 
 - [Tag Overview](#tag-overview) — 15 tags
-- [🤖 Robot Control &amp; Policy](#robot-control-and-policy) — 15 cases
-- [📊 Evaluation &amp; Benchmarks](#evaluation-and-benchmarks) — 7 cases
+- [🤖 Robot Control &amp; Policy](#robot-control-and-policy) — 17 cases
+- [📊 Evaluation &amp; Benchmarks](#evaluation-and-benchmarks) — 8 cases
 - [🔄 Real-to-Sim &amp; Replay](#real-to-sim-and-replay) — 5 cases
 - [🧰 Infrastructure &amp; Harnesses](#infrastructure-and-harnesses) — 2 cases
 - [🛠️ RL &amp; Environment Engineering](#rl-and-environment-engineering) — 2 cases
 
 ## Tag Overview
 
-15 tags across 31 entries: 2 scene tags and 13 workflow tags. A project may carry more than one tag.
+15 tags across 34 entries: 2 scene tags and 13 workflow tags. A project may carry more than one tag.
 
 ### Scene Tags
 
 | Tag            | Cases |
 | -------------- | ----: |
 | `simulation` |    21 |
-| `real world` |    15 |
+| `real world` |    18 |
 
 ### Workflow Tags
 
 | Tag                        | Cases | Tag                    | Cases |
 | -------------------------- | ----: | ---------------------- | ----: |
-| `control`                |    18 | `replay`             |     5 |
-| `evaluation`             |     4 | `real-to-sim`        |     4 |
+| `control`                |    20 | `replay`             |     5 |
+| `evaluation`             |     5 | `real-to-sim`        |     4 |
 | `benchmark`              |     3 | `code generation`    |     3 |
 | `policy`                 |     2 | `harness`            |     2 |
 | `dexterous manipulation` |     2 | `RL training`        |     2 |
@@ -47,6 +47,34 @@ A visual collection of 31 entries: GPT-6 Astra embodied-AI projects, evaluations
 ## 🤖 Robot Control & Policy
 
 Closed-loop control, policy use, hierarchical execution, and generated robot behavior.
+
+#### [Wuji2 Hand Visual Self-Righting](https://x.com/frankzydou/status/2100754714971287557)
+
+**Source / Credit:** Zhiyang (Frank) Dou
+**Published:** 2026-09-18
+**Tags:** `real world` `control`
+
+<p align="center"><a href="site/assets/social/savetwt.com_2100754714971287557_640x360.mp4"><img src="site/assets/social/X15.jpg" alt="Supplied video of the Wuji2 robotic hand using finger contacts to stand upright." width="760"></a></p>
+
+An author demo shows GPT-6 Astra Ultra using third-person RGB feedback to make a fallen Wuji2 hand push itself upright with its fingers. The supplied clip contains accelerated and normal-speed segments; prompts, tool interfaces, logs, and repeated-trial evidence are not public.
+
+[Project note](https://frank-zy-dou.github.io/blog/wuji2-hand-stands-up/)
+
+---
+
+#### [RoboFind · Personalized Object Search for Blind and Low-Vision Users](https://arxiv.org/abs/2609.20330)
+
+**Source / Credit:** Ruiping Liu, Shaofang Quan, Qian Yin et al.
+**Published:** 2026-09-17
+**Tags:** `real world` `control`
+
+<p align="center"><a href="https://arxiv.org/abs/2609.20330"><img src="site/assets/posters/P19-robofind-fig3.jpg" alt="RoboFind Figure 3: target teaching, robot search, candidate verification, and recovery pipeline." width="760"></a></p>
+
+A smartphone teaches a personal item, a Unitree Go2 searches, and verification/recovery agents decide whether to finish or continue. GPT-6 Astra builds the target profile and navigation instruction and is also evaluated as a separate baseline. The sequential baseline is reconstructed from RoboFind trajectories, while the Astra-only comparison covers a separate 12-run shared-target subset.
+
+[Paper](https://arxiv.org/abs/2609.20330)
+
+---
 
 #### [GPT-Policy · In-Context Robot Learning](https://github.com/cheng-haha/GPT-Policy)
 
@@ -241,6 +269,20 @@ A robot with a camera and pen attempts a semantic drawing goal over multiple tri
 ## 📊 Evaluation & Benchmarks
 
 Robot evaluations, embodied-understanding benchmarks, and benchmark infrastructure.
+
+#### [RoboHarm · Harmful-instruction Refusal Evaluation](https://github.com/robocurve/roboharm)
+
+**Source / Credit:** Edward Sun, Sravanthi Machcha, Sabrina Zou, Tzu Kit Chan, Jay Chooi / RoboCurve
+**Published:** 2026-09-19
+**Tags:** `real world` `evaluation`
+
+<p align="center"><a href="site/assets/social/wujie2.mp4"><img src="site/assets/posters/P18.jpg" alt="Supplied RoboHarm release video comparing harmful robot-task attempts and outcomes." width="760"></a></p>
+
+Five fixed hazardous scenes compare whether GPT-6 Astra, Claude Fable 5.1, and MolmoAct2 attempt, refuse, or complete harmful robot instructions, with post-hoc review from three camera views and transcripts. The public repository provides tasks and collection/labeling tools, but excludes raw rollouts and is not a frozen results dataset.
+
+[Code](https://github.com/robocurve/roboharm) · [Project page](https://robocurve.org/roboharm/) · [Post](https://x.com/chooi_jeq/status/2101118049944543545)
+
+---
 
 #### [Drone-Bench · Astra Update](https://andonlabs.com/evals/drone-bench)
 

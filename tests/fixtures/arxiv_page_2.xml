@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <entry>
+    <id>https://arxiv.org/abs/hep-th/9901001v2</id>
+    <updated>2026-09-18T08:00:00Z</updated>
+    <published>1999-01-01T07:00:00Z</published>
+    <title>Astra embodied navigation benchmark</title>
+    <summary>A robot navigation benchmark with GPT6 evaluation.</summary>
+    <author><name>B. Scientist</name></author>
+    <link rel="alternate" href="https://arxiv.org/abs/hep-th/9901001v2" />
+  </entry>
+</feed>

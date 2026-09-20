@@ -1,0 +1,6 @@
+{
+  "arxiv:embodied": [
+    {"status": 200, "body_file": "arxiv_page_1.xml"},
+    {"status": 200, "body_file": "arxiv_page_2.xml"}
+  ]
+}

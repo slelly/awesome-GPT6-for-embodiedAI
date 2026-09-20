@@ -105,7 +105,7 @@ def build() -> None:
         lines.append(f"| {p['id']} | {', '.join(p['scene_tags'])} | {', '.join(topic_tags[p['id']])} |")
     write('docs/TAGS.md', '\n'.join(lines))
 
-    lines = ['# 来源台账 / Source ledger', '', '本文件由 `data/sources.json` 生成。外链状态是 2026-09-18 的读取方式，不代表当前仍可访问。', '',
+    lines = ['# 来源台账 / Source ledger', '', f"本文件由 `data/sources.json` 生成。外链状态是 {meta['snapshot_date']} 的读取方式，不代表当前仍可访问。", '',
              '`search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。', '',
              '镜像用于发现作者声明，不等同于原始 X 帖文已独立核验。这里只保存链接与原创核验备注，不转载第三方全文或视频。', '']
     for s in sources:
@@ -127,7 +127,7 @@ def build() -> None:
               '本仓库没有下载这些大文件、替用户接受访问协议或执行远程数据中的脚本。访问错误、revision 和依赖版本应在实际使用时重新确认。']
     write('docs/HUGGING_FACE.md', '\n'.join(lines))
 
-    lines = ['# Gallery media ledger', '', 'This ledger is generated from `data/media.json` and `data/projects.json`. Project-hosted videos stay on their original host, while every retained video uses a local static poster extracted from its first decoded frame at 00:00:00. Thirteen user-supplied Social videos, one supplied Social image, and all poster frames are published under `site/assets/` for Pages; each keeps its matched source record. P09 instead uses a clearly labelled site-made text cover because no hostable project demo asset was retained; it is not presented as project media. Gallery cards disclose a fallback when no retained media is available. The lightweight delivery package deliberately excludes the 14 large uploaded originals; see [the Chinese placement guide](SOCIAL_MEDIA_PLACEMENT.zh-CN.md).', '', '## Verified, directly linkable media', '']
+    lines = ['# Gallery media ledger', '', 'This ledger is generated from `data/media.json` and `data/projects.json`. Project-hosted videos stay on their original host, while every retained video uses a local static poster extracted from its first decoded frame at 00:00:00. Fourteen user-supplied Social videos, one user-supplied Project video, one supplied Social image, and all poster frames are published under `site/assets/` for Pages; each keeps its matched source record. P09 instead uses a clearly labelled site-made text cover because no hostable project demo asset was retained; it is not presented as project media. P19 uses the clearly labelled mechanism figure from page 4, Fig. 3 of its paper and is not described as a video frame. Gallery cards disclose a fallback when no retained media is available. The legacy lightweight-package exclusion list still covers the 14 earlier uploaded originals; this complete preview includes the newly supplied P18 and X15 videos.', '', '## Verified, directly linkable media', '']
     verified = [(p, media[p['id']]) for p in projects if media[p['id']]['kind'] != 'missing']
     for p, item in verified:
         source_page = item.get('source_page_url', item['source_url'])

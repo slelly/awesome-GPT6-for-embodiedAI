@@ -1,0 +1,22 @@
+{
+  "schedule": {"timezone": "Asia/Taipei", "local_time": "02:30"},
+  "discovery": {"initial_lookback_days": 30, "overlap_hours": 72},
+  "runtime": {"max_concurrency": 2, "lock_timeout_seconds": 0, "timeout_seconds": 15, "retries": 1, "minimum_request_interval_seconds": 0},
+  "persistence": {"backend": "local", "configured": false, "note": "Offline fixture configuration only."},
+  "sources": {
+    "github_repositories": [{"repo": "example/gpt6-robot"}],
+    "github_searches": [{"name": "public", "query_template": "{model_terms} {embodied_terms}", "page_size": 30, "max_pages": 2}],
+    "feeds": [{"name": "official", "url": "https://project.example/feed.atom", "source_kind": "primary", "language": "en"}],
+    "project_pages": [],
+    "arxiv_queries": [{"name": "embodied", "query_template": "{model_terms} AND {embodied_terms}", "page_size": 1, "max_pages": 2}],
+    "huggingface_seeds": [], "social_post_seeds": [], "discovery_indexes": []
+  },
+  "queries": {"model_terms": ["GPT-6", "GPT6", "Astra"], "embodied_terms": ["embodied", "robot", "robotics", "manipulation", "navigation", "simulation"]},
+  "adapters": {
+    "fixture": {"enabled": true, "allowlist": [], "denylist": [], "languages": ["en", "zh"]},
+    "seed": {"enabled": true, "allowlist": [], "denylist": [], "deny_terms": [], "languages": ["en", "zh"]},
+    "arxiv": {"enabled": true, "allowlist": ["arxiv.org"], "denylist": [], "deny_terms": [], "languages": ["en"]},
+    "github": {"enabled": true, "allowlist": ["api.github.com", "github.com"], "denylist": [], "deny_terms": [], "languages": ["en", "zh"]},
+    "feed": {"enabled": true, "allowlist": ["project.example"], "denylist": [], "deny_terms": [], "languages": ["en"]}
+  }
+}

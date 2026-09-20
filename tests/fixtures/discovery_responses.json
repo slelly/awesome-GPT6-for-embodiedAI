@@ -1,0 +1,13 @@
+{
+  "arxiv:embodied": [
+    {"status": 200, "body_file": "arxiv_page_1.xml"},
+    {"status": 200, "body_file": "arxiv_page_2.xml"}
+  ],
+  "github-search:public": [{"status": 200, "body_file": "github_search_page.json", "final_url": "https://api.github.com/search/repositories"}],
+  "github-repo:example/gpt6-robot": {
+    "repository": {"status": 200, "body_file": "github_repo.json"},
+    "releases": {"status": 200, "body_file": "github_releases.json"},
+    "commits": {"status": 200, "body_file": "github_commits.json"}
+  },
+  "feed:official": {"status": 200, "body_file": "project_feed.atom", "final_url": "https://project.example/feed.atom"}
+}

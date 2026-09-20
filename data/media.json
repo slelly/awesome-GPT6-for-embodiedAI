@@ -350,6 +350,24 @@
       "source_path": "User attachment social-videos.zip: Office Scene to Newton  G1.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
       "alt": {"en": "Supplied video for the office-to-Newton/G1 post.", "zh": "用户提供的办公场景到 Newton/G1 原帖视频。"},
       "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+    },
+    "P18": {
+      "kind": "video", "url": "assets/social/wujie2.mp4", "poster": "assets/posters/P18.jpg", "source_url": "https://x.com/chooi_jeq/status/2101118049944543545", "source_page_url": "https://x.com/chooi_jeq/status/2101118049944543545", "source_id": "S055",
+      "source_path": "User attachment `wujie2.mp4`; SHA-256 b372896be1a04201f8e0a891d8ab60ae94ed2fc2ed537e455d6dcf5b8c7a21f1; 10.000 s; first decoded frame at 00:00:00", "classification": "User-supplied RoboHarm release-post video, content-matched despite the misleading filename; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied RoboHarm release video comparing harmful robot-task attempts and outcomes.", "zh": "用户提供的 RoboHarm 发布视频，展示危险机器人任务的尝试与结果对比。"},
+      "caption": {"en": "Supplied RoboHarm release-post video; the code, report, and exact post remain linked.", "zh": "用户提供的 RoboHarm 发布帖视频；代码、报告与具体原帖链接均保留。"}
+    },
+    "P19": {
+      "kind": "image", "url": "assets/posters/P19-robofind-fig3.jpg", "fit": "contain", "source_url": "https://arxiv.org/abs/2609.20330", "source_page_url": "https://arxiv.org/abs/2609.20330", "source_id": "S056",
+      "source_path": "RoboFind arXiv v1 PDF, page 4, Fig. 3; embedded figure extracted and resized to 1400 px width without content changes", "classification": "Paper mechanism figure showing target teaching, search, verification, and recovery; not a video frame or generated illustration.",
+      "alt": {"en": "RoboFind Figure 3: target teaching, robot search, candidate verification, and recovery pipeline.", "zh": "RoboFind 论文图 3：目标教学、机器人搜索、候选验证与恢复流程。"},
+      "caption": {"en": "RoboFind arXiv v1, page 4, Figure 3 (CC BY 4.0); resized only.", "zh": "RoboFind arXiv v1 第 4 页图 3（CC BY 4.0）；仅调整尺寸。"}
+    },
+    "X15": {
+      "kind": "video", "url": "assets/social/savetwt.com_2100754714971287557_640x360.mp4", "poster": "assets/social/X15.jpg", "source_url": "https://x.com/frankzydou/status/2100754714971287557", "source_page_url": "https://x.com/frankzydou/status/2100754714971287557", "source_id": "S057",
+      "source_path": "User attachment `savetwt.com_2100754714971287557_640x360.mp4`; SHA-256 f9f554b52f32eb66dd19e5e0475db11d989eb08e1e314c0802e7f0a0f7bd36c3; 34.154667 s; first decoded frame at 00:00:00", "classification": "User-supplied Wuji2 original-post video; poster extracted from the supplied video.",
+      "alt": {"en": "Supplied video of the Wuji2 robotic hand using finger contacts to stand upright.", "zh": "用户提供的 Wuji2 灵巧手利用手指接触自扶正视频。"},
+      "caption": {"en": "Supplied Wuji2 original-post video; accelerated and normal-speed segments are retained.", "zh": "用户提供的 Wuji2 原帖视频；保留加速与正常速度片段。"}
     }
   },
   "missing_policy": {

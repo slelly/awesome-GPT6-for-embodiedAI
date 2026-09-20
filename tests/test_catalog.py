@@ -42,7 +42,7 @@ class CatalogueTests(unittest.TestCase):
         allowed={'sim','real'}
         self.assertTrue(all(set(p['scene_tags'])<=allowed and p['scene_tags'] for p in self.projects))
         self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),21)
-        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),15)
+        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),18)
         self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),5)
         self.assertEqual(self.by_id['P12']['scene_tags'],['real'])
         self.assertEqual(self.by_id['P15']['scene_tags'],['sim','real'])
@@ -63,11 +63,11 @@ class CatalogueTests(unittest.TestCase):
 
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
-        self.assertEqual(len(retained),31)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),14)
-        self.assertEqual(sum(item['kind']=='video' for item in retained),17)
+        self.assertEqual(len(retained),34)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),15)
+        self.assertEqual(sum(item['kind']=='video' for item in retained),19)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
-        self.assertEqual(len(videos),17)
+        self.assertEqual(len(videos),19)
         self.assertTrue(all(item.get('poster','').startswith('assets/') for item in videos.values()))
         self.assertTrue(all((ROOT/'site'/item['poster']).is_file() for item in videos.values()))
         self.assertTrue(all('first decoded frame at 00:00:00' in item.get('source_path','') for item in videos.values()))
@@ -89,6 +89,7 @@ class CatalogueTests(unittest.TestCase):
             'X12':'G1 Bicycle-Control Code.mp4',
             'X13':'Dual-ALOHA Spatial-Constraint Demo.mp4',
             'X14':'Office Scene to Newton  G1.mp4',
+            'X15':'savetwt.com_2100754714971287557_640x360.mp4',
         }
         social_video_ids=set(social_video_names)
         self.assertTrue(all(self.media['media'][pid]['url'].startswith('assets/social/') for pid in social_video_ids))
@@ -107,6 +108,21 @@ class CatalogueTests(unittest.TestCase):
         self.assertTrue(all(self.media['media'][pid]['source_path'] for pid in additions))
         self.assertIn('not an experiment demonstration',self.media['media']['P15']['classification'])
 
+    def test_new_cards_keep_source_media_and_cover_provenance(self):
+        p18=self.by_id['P18']
+        self.assertEqual(p18['links']['post'],'https://x.com/chooi_jeq/status/2101118049944543545')
+        self.assertEqual(p18['code_url'],'https://github.com/robocurve/roboharm')
+        self.assertEqual(self.media['media']['P18']['url'],'assets/social/wujie2.mp4')
+        self.assertIn('b372896be1a04201f8e0a891d8ab60ae94ed2fc2ed537e455d6dcf5b8c7a21f1',self.media['media']['P18']['source_path'])
+        self.assertEqual(self.media['media']['P19']['fit'],'contain')
+        self.assertIn('page 4, Fig. 3',self.media['media']['P19']['source_path'])
+        self.assertIn('not a video frame',self.media['media']['P19']['classification'])
+        self.assertEqual(self.by_id['X15']['url'],'https://x.com/frankzydou/status/2100754714971287557')
+        self.assertEqual(self.media['media']['X15']['url'],'assets/social/savetwt.com_2100754714971287557_640x360.mp4')
+        self.assertIn('f9f554b52f32eb66dd19e5e0475db11d989eb08e1e314c0802e7f0a0f7bd36c3',self.media['media']['X15']['source_path'])
+        self.assertEqual(self.meta['window_start'],'2026-08-20')
+        self.assertEqual(self.meta['window_end'],'2026-09-20')
+
     def test_initial_snapshot_counts(self):
         if self.meta['version']!='0.1.0':
             self.skipTest('Initial snapshot count fixture applies only to 0.1.0.')
@@ -116,9 +132,9 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(len(validate.load('search-log.json')['queries']),34)
 
     def test_catalogue_excludes_awesome_collection_pseudo_cards(self):
-        removed={'P18','P19','R01','R02','R03','R04','R05','R06','R07','R08'}
+        removed={'R01','R02','R03','R04','R05','R06','R07','R08'}
         self.assertTrue(removed.isdisjoint(self.by_id))
-        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':12,'supporting':5,'watchlist':14})
+        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':14,'supporting':5,'watchlist':15})
         self.assertFalse(any(p['section']=='rednote_leads' for p in self.projects))
         self.assertNotIn('小红书待核实线索 · 0',(ROOT/'docs/CATALOG.md').read_text(encoding='utf-8'))
         repositories={}
@@ -132,10 +148,10 @@ class CatalogueTests(unittest.TestCase):
         # independent content verification.
         self.assertEqual(urlsplit(self.by_id['X01']['url']).netloc,'x.com')
         self.assertNotEqual(self.by_id['X01']['url'],self.by_id['X02']['url'])
-        social=[self.by_id[f'X{n:02d}'] for n in (*range(1,7),*range(8,15))]
+        social=[self.by_id[f'X{n:02d}'] for n in (*range(1,7),*range(8,16))]
         verified=[p for p in social if '/status/' in p['url']]
-        self.assertEqual(len(verified),13)
-        self.assertEqual(len({p['url'] for p in verified}),13)
+        self.assertEqual(len(verified),14)
+        self.assertEqual(len({p['url'] for p in verified}),14)
         self.assertEqual(self.by_id['X13']['links'],{})
         self.assertEqual(self.by_id['X13']['url'],'https://x.com/qineng_wang/status/2099893504658866561')
         self.assertIn('S052',self.by_id['X13']['source_ids'])
@@ -225,7 +241,7 @@ class CatalogueTests(unittest.TestCase):
         self.assertIn("displayLinks(p).forEach",template)
         self.assertIn('function displayLinks(p)',template)
         self.assertIn("function groupFor(p)",template)
-        self.assertIn("if(p.id==='X07')return'social'",template)
+        self.assertIn("if(['X07','X15'].includes(p.id))return'social'",template)
         self.assertIn("data-group=\"projects\"",template)
         self.assertIn("data-group=\"social\"",template)
         self.assertIn("let group='projects'",template)
@@ -282,8 +298,8 @@ class CatalogueTests(unittest.TestCase):
         self.assertIn('python -m unittest discover -s tests -v',pages)
         self.assertIn('docs/MEDIA.md',pages)
         self.assertIn('docs/MEDIA.md',validate_workflow)
-        self.assertIn('31 entries:',readme)
-        self.assertIn('31 条', (ROOT/'README.zh-CN.md').read_text(encoding='utf-8'))
+        self.assertIn('34 entries:',readme)
+        self.assertIn('34 条', (ROOT/'README.zh-CN.md').read_text(encoding='utf-8'))
 
     def test_network_probe_is_opt_in(self):
         p=subprocess.run([sys.executable,str(ROOT/'scripts/check_links.py')],capture_output=True,text=True,timeout=10)

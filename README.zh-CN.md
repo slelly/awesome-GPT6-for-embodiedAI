@@ -14,7 +14,7 @@
 
 ## 收录内容
 
-本快照包含 31 条：17 个 Projects 和 14 个 Social 原帖线索。画廊将两者分组展示，并在各组内按日期倒序；存在时，卡片会保留直达 Paper、Code、Project page 或 Post 的链接。
+本快照包含 34 条：19 个 Projects 和 15 个 Social 原帖线索。画廊将两者分组展示，并在各组内按日期倒序；存在时，卡片会保留直达 Paper、Code、Project page 或 Post 的链接。
 
 目录借鉴 [Awesome Astra Embodied AI](https://github.com/zjwzcx/Awesome-Astra-Embodied-AI) 便于访客浏览的写法：按工作流组织、显式来源署名、突出日期。必要差异是：本仓库保留逐项证据台账，并区分直接项目、配套资源和社媒线索。
 

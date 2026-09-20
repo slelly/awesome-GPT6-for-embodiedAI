@@ -1,14 +1,14 @@
 # Social original-post verification
 
-Checked: 2026-09-19. This ledger covers the 14 entries in the Gallery’s
+Checked: 2026-09-20. This ledger covers the 15 entries in the Gallery’s
 **Social / 社媒** tab only. A retained URL is an exact `x.com/<account>/status/<id>`
-target. Twelve targets were independently matched to the project claim by
+target. Thirteen targets were independently matched to the project claim by
 account, post text, and/or the attached demonstration; X13 is separately
 identified as a user-supplied URL not independently checked in this update.
 Account pages, search URLs, and posts about a different project are deliberately
 not substitutes.
 
-## Independently matched original posts (12)
+## Independently matched original posts (13)
 
 | ID | Project | Original post | Why it matches the retained item |
 | --- | --- | --- | --- |
@@ -24,6 +24,7 @@ not substitutes.
 | X11 | Two-Robot Ball Toss / 双机器人抛接球 | [Post](https://x.com/thermalpastor/status/2097496200631210136) | thermalpastor’s post shows two robots catching and juggling a ball in MuJoCo. |
 | X12 | G1 Bicycle-Control Code / G1 自行车控制代码 | [Post](https://x.com/thermalpastor/status/2097802933429796873) | thermalpastor’s post concerns Astra-assisted writing and debugging of a G1 bicycle controller in MuJoCo. |
 | X14 | Office → Newton / G1 / 办公场景 → Newton / G1 | [Post](https://x.com/Jiarui_X/status/2098439950991806804) | Jiarui_X’s post describes converting office scans into a Blender/Newton scene with desks and a G1 task. |
+| X15 | Wuji2 Hand Visual Self-Righting / Wuji2 灵巧手视觉自扶正 | [Post](https://x.com/frankzydou/status/2100754714971287557) | The exact status ID, author project note, and supplied clip all identify the Wuji2 hand self-righting demonstration. |
 
 ## User-supplied exact original-post URL (not independently verified here)
 
@@ -33,7 +34,7 @@ not substitutes.
 
 ## Rendering rule
 
-The Gallery renders `Post / 原帖` only for exact status URLs: the 12 independently
+The Gallery renders `Post / 原帖` only for exact status URLs: the 13 independently
 matched targets above and the separately labelled user-supplied X13 target. X13
 remains in Social and retains its source record and qualification. This document
 records URLs for user-directed video download; it does not download, mirror, or

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Official project updates</title>
+  <entry>
+    <id>https://project.example/updates/demo</id>
+    <title>GPT-6 robot demo post</title>
+    <updated>2026-09-18T11:00:00Z</updated>
+    <link rel="alternate" href="https://project.example/updates/demo" />
+    <summary>Original demo post: https://x.com/example/status/123456789</summary>
+  </entry>
+</feed>
