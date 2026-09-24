@@ -734,3 +734,30 @@ Official 2026-09-19 commit corrects the organize_table task description; no new 
 类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
 
 Official 2026-09-22 commit declares CC BY-NC 4.0; result claims and media are unchanged.
+
+<a id="s082"></a>
+## S082 · RoboDawn official project page and results browser
+
+[https://robodawn.top/](https://robodawn.top/)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official project page describes the closed-loop semantic-action interface, simulation results, real-robot boundary, and replay browser. The page distinguishes GPT-6 Astra simulation results from Gemini 3.8 Flash real-robot results.
+
+<a id="s083"></a>
+## S083 · RoboDawn technical report
+
+[https://arxiv.org/abs/2609.22966](https://arxiv.org/abs/2609.22966)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+arXiv v1 submitted 2026-09-19T11:34:13Z. The locally read 16-page PDF supplies the reported protocols, denominators, model roles, limitations, and page 5 Figure 2 used as the card cover.
+
+<a id="s084"></a>
+## S084 · RoboDawn official code
+
+[https://github.com/Hugo-AGI/RoboDawn](https://github.com/Hugo-AGI/RoboDawn)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+MIT repository created 2026-09-22 with harnesses, prompts, demonstrations, evaluation seeds, and pinned RoboTwin/RoboDojo submodules; public results were not rerun by this catalogue.

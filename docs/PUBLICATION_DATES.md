@@ -38,6 +38,7 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | P32 | 2026-0923 | verified | 2026-09-23 | GitHub repository created 2026-09-23 UTC. | — | Repository creation date. | [S074](SOURCES.md#s074) |
 | P33 | 2026-0915 | verified | 2026-09-15 | Repository created and v0.5.0 released 2026-09-15 UTC. | — | Release date is directly verifiable. | [S075](SOURCES.md#s075) |
 | P34 | 2026-0915 | verified | 2026-09-15 | quackd v0.9.0 and the public SO-101 log were released 2026-09-15. | — | The associated author post followed on 2026-09-16. | [S076](SOURCES.md#s076) · [S077](SOURCES.md#s077) |
+| P35 | 2026-0919 | verified | 2026-09-19 | arXiv:2609.22966 v1 was submitted 2026-09-19T11:34:13Z. | — | Paper submission date; public code followed on 2026-09-22. | [S082](SOURCES.md#s082) · [S083](SOURCES.md#s083) · [S084](SOURCES.md#s084) |
 | X01 | 2026-0912 | verified | 2026-09-12 | 保留项目记录给出精确演示日期；原帖绝对时间未另行复核。 | — | 无；资料记录为精确日。 | [S036](SOURCES.md#s036) |
 | X02 | 2026-0914 | verified | pending confirmation | 原帖 status ID `2099524132341711051` 依 X Snowflake epoch 解码为 `2026-09-14T15:42:15.079Z`。 | — | 日期精确到 UTC 日；从原帖 ID 时间位推导，未把二手索引的相对时间当日期。 | [S036](SOURCES.md#s036) |
 | X03 | 2026-0908 | verified | 2026-09-08 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S037](SOURCES.md#s037) |

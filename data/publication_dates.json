@@ -442,5 +442,12 @@
     "basis": "quackd v0.9.0 and the public SO-101 log were released 2026-09-15.",
     "rule": null,
     "uncertainty": "The associated author post followed on 2026-09-16."
+  },
+  "P35": {
+    "date": "2026-09-19",
+    "status": "verified",
+    "basis": "arXiv:2609.22966 v1 was submitted 2026-09-19T11:34:13Z.",
+    "rule": null,
+    "uncertainty": "Paper submission date; public code followed on 2026-09-22."
   }
 }

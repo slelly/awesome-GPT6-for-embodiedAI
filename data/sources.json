@@ -727,5 +727,32 @@
     "access": "page_text",
     "checked_at": "2026-09-24",
     "notes": "Official 2026-09-22 commit declares CC BY-NC 4.0; result claims and media are unchanged."
+  },
+  {
+    "id": "S082",
+    "title": "RoboDawn official project page and results browser",
+    "url": "https://robodawn.top/",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official project page describes the closed-loop semantic-action interface, simulation results, real-robot boundary, and replay browser. The page distinguishes GPT-6 Astra simulation results from Gemini 3.8 Flash real-robot results."
+  },
+  {
+    "id": "S083",
+    "title": "RoboDawn technical report",
+    "url": "https://arxiv.org/abs/2609.22966",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "arXiv v1 submitted 2026-09-19T11:34:13Z. The locally read 16-page PDF supplies the reported protocols, denominators, model roles, limitations, and page 5 Figure 2 used as the card cover."
+  },
+  {
+    "id": "S084",
+    "title": "RoboDawn official code",
+    "url": "https://github.com/Hugo-AGI/RoboDawn",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "MIT repository created 2026-09-22 with harnesses, prompts, demonstrations, evaluation seeds, and pinned RoboTwin/RoboDojo submodules; public results were not rerun by this catalogue."
   }
 ]

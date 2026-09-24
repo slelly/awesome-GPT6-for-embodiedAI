@@ -832,6 +832,24 @@
         "en": "Project image showing what the LeRobot camera observed.",
         "zh": "项目图：LeRobot 相机所见画面。"
       }
+    },
+    "P35": {
+      "kind": "image",
+      "url": "assets/posters/P35-robodawn-fig2.jpg",
+      "fit": "contain",
+      "source_url": "https://github.com/Hugo-AGI/RoboDawn/blob/9247f366cd31f278e10f2fbe5fe8469b5f1b5b94/assets/readme/framework.jpg",
+      "source_page_url": "https://arxiv.org/abs/2609.22966",
+      "source_path": "Official MIT repository asset assets/readme/framework.jpg at commit 9247f366cd31f278e10f2fbe5fe8469b5f1b5b94 (SHA-256 3318d9e184a3e262d3396428f3edb55e613c2464490d4c0a3486801f499bc00e); matches the complete mechanism diagram in the locally read arXiv v1 PDF page 5, Figure 2; copied without content changes.",
+      "classification": "Official repository copy of the paper mechanism figure showing interface, in-context demonstration, VLM reasoning, semantic commands, execution, feedback, and memory; not a video frame or generated illustration.",
+      "source_id": "S084",
+      "alt": {
+        "en": "RoboDawn Figure 2: the closed-loop VLM robot-control framework.",
+        "zh": "RoboDawn 论文图 2：VLM 闭环机器人控制框架。"
+      },
+      "caption": {
+        "en": "Official MIT repository copy of RoboDawn arXiv v1, PDF page 5, Figure 2.",
+        "zh": "RoboDawn arXiv v1 PDF 第 5 页图 2 的官方 MIT 仓库副本。"
+      }
     }
   },
   "missing_policy": {

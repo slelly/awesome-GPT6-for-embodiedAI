@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 26
+## 核心项目与评测 · 27
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -670,6 +670,41 @@ post：[https://x.com/rokbenko/status/2100234282631360540](https://x.com/rokbenk
 package：[https://pypi.org/project/quackd/](https://pypi.org/project/quackd/)  
 
 **来源：** [S076 · quackd repository and experiment log](SOURCES.md#s076) · [S077 · quackd SO-101 author post](SOURCES.md#s077)
+
+---
+
+<a id="p35"></a>
+### P35 · RoboDawn · 冻结 VLM 闭环机器人控制
+
+冻结 VLM 通过离散移动、旋转和夹爪命令闭环控制机器人，并用示范做上下文学习；GPT-6 Astra 的正式结果来自 RoboTwin 2.0 与 RoboDojo 仿真，论文真机表格使用 Gemini 3.8 Flash。
+
+**来源等级：A** · 真机 + 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Meng-Hao Guo, Zhe-Han Mo, Jia-Jun Wang et al.  
+**事件日期：** 2026-09-19（窗口内）  
+**日期依据：** arXiv:2609.22966 v1 submitted 2026-09-19T11:34:13Z; public code followed on 2026-09-22.  
+**入口：** [https://robodawn.top/](https://robodawn.top/)  
+**代码入口：** [https://github.com/Hugo-AGI/RoboDawn](https://github.com/Hugo-AGI/RoboDawn)  
+**许可状态：** 代码仓库为 MIT；论文为 arXiv non-exclusive distribution license，项目站回放媒体未见独立再许可声明。  
+**控制接口 / 作用：** 多视角图像 + 机器人状态 + 任务/示范/历史 → 冻结 VLM 推理 → 离散语义动作 → 运动规划执行 → 反馈与记忆更新
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| RoboTwin 2.0 C2R zero-shot success | 53.2 % | 50 tasks × 10 episodes = 500 trials | GPT-6 Astra; no task demonstration and no parameter update |
+| RoboTwin 2.0 C2R one-shot success | 73.6 % | 50 tasks × 10 episodes = 500 trials | GPT-6 Astra; one clean-scene demonstration in context and no parameter update |
+| RoboDojo zero-shot success | 35.67 % | 42 tasks × 5 episodes = 210 trials | GPT-6 Astra; score 39.92; no task demonstration |
+| RoboDojo one-shot success | 47.17 % | 42 tasks × 5 episodes = 210 trials | GPT-6 Astra; score 54.63; one task demonstration in context |
+| Real Franka block-in-basket | 9 successes | 10 zero-shot trials | Gemini 3.8 Flash, not GPT-6 Astra |
+| Real Franka block stacking | 5 successes | 10 zero-shot trials | Gemini 3.8 Flash, not GPT-6 Astra |
+| Real Piper cloth folding | 0 successes | 10 zero-shot trials | Gemini 3.8 Flash, not GPT-6 Astra |
+
+**限制与未决项：** Astra 的主要量化结果来自仿真；论文正式真机表格全部使用 Gemini 3.8 Flash，不能混写为 Astra 真机成绩。 项目演示浏览器含一条 Astra 在真实 Piper 上的折衣失败记录，但它不是论文正式真机成功率。 结果、代码和回放均未由本仓库独立复现；项目站所称 710 个评测 episode 与 128 个示范未逐条审计。 项目站视频可访问不等于获得再分发许可，本卡只保留论文机制图。
+
+paper：[https://arxiv.org/abs/2609.22966](https://arxiv.org/abs/2609.22966)  
+project：[https://robodawn.top/](https://robodawn.top/)  
+results：[https://robodawn.top/results/](https://robodawn.top/results/)  
+
+**来源：** [S082 · RoboDawn official project page and results browser](SOURCES.md#s082) · [S083 · RoboDawn technical report](SOURCES.md#s083) · [S084 · RoboDawn official code](SOURCES.md#s084)
 
 ---
 

@@ -241,6 +241,11 @@
       "title": "quackd · Multi-Robot LLM CLI",
       "summary": "An LLM chooses among declared robot verbs through a CLI/harness; the retained experiment log documents an SO-101 wave run.",
       "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+    },
+    "P35": {
+      "title": "RoboDawn · Closed-Loop Robot Control with Frozen VLMs",
+      "summary": "A frozen VLM issues discrete move, rotate, and gripper commands in a feedback loop and adapts from in-context demonstrations; GPT-6 Astra is evaluated in simulation, while the paper's real-robot table uses Gemini 3.8 Flash.",
+      "detail": "The catalogue keeps the simulation and real-robot model roles separate and reports author-provided results without claiming an independent reproduction."
     }
   }
 }

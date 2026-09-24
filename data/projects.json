@@ -1447,6 +1447,97 @@
     "independently_reproduced": false
   },
   {
+    "id": "P35",
+    "title": "RoboDawn · 冻结 VLM 闭环机器人控制",
+    "section": "core",
+    "category": "closed_loop",
+    "environment": "real_and_sim",
+    "scene_tags": [
+      "sim",
+      "real"
+    ],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "冻结 VLM 通过离散移动、旋转和夹爪命令闭环控制机器人，并用示范做上下文学习；GPT-6 Astra 的正式结果来自 RoboTwin 2.0 与 RoboDojo 仿真，论文真机表格使用 Gemini 3.8 Flash。",
+    "authors": "Meng-Hao Guo, Zhe-Han Mo, Jia-Jun Wang et al.",
+    "event_date": "2026-09-19",
+    "event_date_basis": "arXiv:2609.22966 v1 submitted 2026-09-19T11:34:13Z; public code followed on 2026-09-22.",
+    "window_status": "in_window",
+    "url": "https://robodawn.top/",
+    "code_url": "https://github.com/Hugo-AGI/RoboDawn",
+    "license_status": "代码仓库为 MIT；论文为 arXiv non-exclusive distribution license，项目站回放媒体未见独立再许可声明。",
+    "control_interface": "多视角图像 + 机器人状态 + 任务/示范/历史 → 冻结 VLM 推理 → 离散语义动作 → 运动规划执行 → 反馈与记忆更新",
+    "metrics": [
+      {
+        "name": "RoboTwin 2.0 C2R zero-shot success",
+        "value": 53.2,
+        "unit": "%",
+        "denominator": "50 tasks × 10 episodes = 500 trials",
+        "protocol": "GPT-6 Astra; no task demonstration and no parameter update"
+      },
+      {
+        "name": "RoboTwin 2.0 C2R one-shot success",
+        "value": 73.6,
+        "unit": "%",
+        "denominator": "50 tasks × 10 episodes = 500 trials",
+        "protocol": "GPT-6 Astra; one clean-scene demonstration in context and no parameter update"
+      },
+      {
+        "name": "RoboDojo zero-shot success",
+        "value": 35.67,
+        "unit": "%",
+        "denominator": "42 tasks × 5 episodes = 210 trials",
+        "protocol": "GPT-6 Astra; score 39.92; no task demonstration"
+      },
+      {
+        "name": "RoboDojo one-shot success",
+        "value": 47.17,
+        "unit": "%",
+        "denominator": "42 tasks × 5 episodes = 210 trials",
+        "protocol": "GPT-6 Astra; score 54.63; one task demonstration in context"
+      },
+      {
+        "name": "Real Franka block-in-basket",
+        "value": 9,
+        "unit": "successes",
+        "denominator": "10 zero-shot trials",
+        "protocol": "Gemini 3.8 Flash, not GPT-6 Astra"
+      },
+      {
+        "name": "Real Franka block stacking",
+        "value": 5,
+        "unit": "successes",
+        "denominator": "10 zero-shot trials",
+        "protocol": "Gemini 3.8 Flash, not GPT-6 Astra"
+      },
+      {
+        "name": "Real Piper cloth folding",
+        "value": 0,
+        "unit": "successes",
+        "denominator": "10 zero-shot trials",
+        "protocol": "Gemini 3.8 Flash, not GPT-6 Astra"
+      }
+    ],
+    "limitations": [
+      "Astra 的主要量化结果来自仿真；论文正式真机表格全部使用 Gemini 3.8 Flash，不能混写为 Astra 真机成绩。",
+      "项目演示浏览器含一条 Astra 在真实 Piper 上的折衣失败记录，但它不是论文正式真机成功率。",
+      "结果、代码和回放均未由本仓库独立复现；项目站所称 710 个评测 episode 与 128 个示范未逐条审计。",
+      "项目站视频可访问不等于获得再分发许可，本卡只保留论文机制图。"
+    ],
+    "source_ids": [
+      "S082",
+      "S083",
+      "S084"
+    ],
+    "links": {
+      "paper": "https://arxiv.org/abs/2609.22966",
+      "project": "https://robodawn.top/",
+      "results": "https://robodawn.top/results/"
+    },
+    "last_checked": "2026-09-24",
+    "independently_reproduced": false
+  },
+  {
     "id": "X01",
     "title": "真实机器人键盘打字",
     "section": "watchlist",

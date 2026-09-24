@@ -41,9 +41,9 @@ class CatalogueTests(unittest.TestCase):
     def test_scene_tags_are_complete_and_source_bounded(self):
         allowed={'sim','real'}
         self.assertTrue(all(set(p['scene_tags'])<=allowed and p['scene_tags'] for p in self.projects))
-        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),33)
-        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),21)
-        self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),5)
+        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),34)
+        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),22)
+        self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),6)
         self.assertEqual(self.by_id['P12']['scene_tags'],['real'])
         self.assertEqual(self.by_id['P15']['scene_tags'],['sim','real'])
         ledger=(ROOT/'docs/SCENE_TAGS.md').read_text(encoding='utf-8')
@@ -63,8 +63,8 @@ class CatalogueTests(unittest.TestCase):
 
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
-        self.assertEqual(len(retained),49)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),28)
+        self.assertEqual(len(retained),50)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),29)
         self.assertEqual(sum(item['kind']=='video' for item in retained),21)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
         self.assertEqual(len(videos),21)
@@ -79,6 +79,7 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(videos['P22']['url'],'assets/posters/P22-fridge.mp4')
         self.assertIn('226.234-second decodable transcode',videos['P22']['source_path'])
         self.assertIn('page 3, Figure 2',self.media['media']['P23']['source_path'])
+        self.assertIn('PDF page 5, Figure 2',self.media['media']['P35']['source_path'])
         social_video_names={
             'X01':'Physical Robot Keyboard Typing.mp4',
             'X02':'Physical Ethernet Insertion.mp4',
@@ -138,7 +139,7 @@ class CatalogueTests(unittest.TestCase):
     def test_catalogue_excludes_awesome_collection_pseudo_cards(self):
         removed={'R01','R02','R03','R04','R05','R06','R07','R08'}
         self.assertTrue(removed.isdisjoint(self.by_id))
-        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':26,'supporting':8,'watchlist':15})
+        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':27,'supporting':8,'watchlist':15})
         self.assertFalse(any(p['section']=='rednote_leads' for p in self.projects))
         self.assertNotIn('小红书待核实线索 · 0',(ROOT/'docs/CATALOG.md').read_text(encoding='utf-8'))
         repositories={}
@@ -163,6 +164,15 @@ class CatalogueTests(unittest.TestCase):
     def test_no_claimed_independent_experiment(self):
         if self.meta['independent_experiments_run']==0:
             self.assertTrue(all(p['independently_reproduced'] is False for p in self.projects))
+
+    def test_robodawn_keeps_sim_and_real_model_roles_distinct(self):
+        project=self.by_id['P35']
+        self.assertIn('GPT-6 Astra',project['summary'])
+        self.assertIn('Gemini 3.8 Flash',project['summary'])
+        real_metrics=[m for m in project['metrics'] if m['name'].startswith('Real ')]
+        self.assertEqual(len(real_metrics),3)
+        self.assertTrue(all(m['protocol']=='Gemini 3.8 Flash, not GPT-6 Astra' for m in real_metrics))
+        self.assertEqual(self.media['media']['P35']['fit'],'contain')
 
     def test_source_references_exist(self):
         ids={s['id'] for s in self.sources}
