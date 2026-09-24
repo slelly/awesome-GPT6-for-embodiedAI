@@ -6,21 +6,38 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | P01 | 2026-0916 | verified | 2026-09-16 | 保留的一手项目记录给出精确日。 | — | 无；资料记录为精确日。 | [S001](SOURCES.md#s001) · [S002](SOURCES.md#s002) |
 | P02 | 2026-0913 | verified | 2026-09 | GitHub REST 仓库元数据 `created_at=2026-09-13T19:05:04Z`。 | — | 日期精确到 UTC 日；它是仓库创建日，不等同于功能 release。 | [S003](SOURCES.md#s003) · [S004](SOURCES.md#s004) · [S045](SOURCES.md#s045) · [S050](SOURCES.md#s050) |
-| P03 | 2026-0911 | verified | 2026-09-11 | 保留的一手项目记录给出精确日。 | — | 无；资料记录为精确日。 | [S005](SOURCES.md#s005) · [S006](SOURCES.md#s006) · [S007](SOURCES.md#s007) · [S009](SOURCES.md#s009) · [S044](SOURCES.md#s044) |
+| P03 | 2026-0911 | verified | 2026-09-11 | 保留的一手项目记录给出精确日。 | — | 无；资料记录为精确日。 | [S005](SOURCES.md#s005) · [S006](SOURCES.md#s006) · [S007](SOURCES.md#s007) · [S009](SOURCES.md#s009) · [S044](SOURCES.md#s044) · [S078](SOURCES.md#s078) |
 | P04 | 2026-0904 | verified | 2026-09-04 | 保留的一手项目记录给出精确日。 | — | 无；资料记录为精确日。 | [S010](SOURCES.md#s010) · [S026](SOURCES.md#s026) |
 | P05 | 2026-0910 | verified | 2026-09-10 | 保留的一手项目记录给出精确日。 | — | 无；资料记录为精确日。 | [S011](SOURCES.md#s011) · [S012](SOURCES.md#s012) |
-| P06 | 2026-0916 | verified | 2026-09-16 | 保留的项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S013](SOURCES.md#s013) · [S014](SOURCES.md#s014) · [S015](SOURCES.md#s015) |
+| P06 | 2026-0916 | verified | 2026-09-16 | 保留的项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S013](SOURCES.md#s013) · [S014](SOURCES.md#s014) · [S015](SOURCES.md#s015) · [S064](SOURCES.md#s064) |
 | P07 | 2026-0909 | verified | 2026-09-09 | 保留的一手项目记录给出精确日。 | — | 无；资料记录为精确日。 | [S018](SOURCES.md#s018) · [S019](SOURCES.md#s019) |
 | P08 | 2026-0907 | verified | 2026-09 | GitHub REST 仓库元数据 `created_at=2026-09-07T18:21:17Z`。 | — | 日期精确到 UTC 日；它是仓库创建日，不等同于后续推送。 | [S020](SOURCES.md#s020) |
 | P09 | 2026-0907 | verified | 2026-09 | GitHub REST 仓库元数据 `created_at=2026-09-07T01:49:19Z`。 | — | 日期精确到 UTC 日；它是仓库创建日，不等同于后续推送。 | [S021](SOURCES.md#s021) |
 | P10 | 2026-0908 | verified | 2026-09 | GitHub REST 仓库元数据 `created_at=2026-09-08T17:52:53Z`；项目页链接到该代码仓库。 | — | 日期精确到 UTC 日；它是仓库创建日，不等同于项目页或功能 release。 | [S022](SOURCES.md#s022) |
 | P11 | 2026-0909 | verified | 2026-09-09 | 保留的一手项目记录给出精确日。 | — | 无；资料记录为精确日。 | [S023](SOURCES.md#s023) · [S024](SOURCES.md#s024) · [S051](SOURCES.md#s051) |
 | P12 | ≈ 2026-0918 | estimated | pending confirmation | 直接检查官方 Drone-Bench 页面及其响应头：页面未提供发布/更新时间、变更日志、原帖或代码入口；保留来源快照日为 2026-09-18。 | 无日期入口回退：仅为满足每张卡片显示日期而保留该条目的既有来源快照日；不是发布日。 | 实际 Astra 更新日期未知；官方页面内容可变且无可追溯版本记录。 | [S025](SOURCES.md#s025) |
-| P13 | 2026-0902 | verified | pending confirmation | GitHub Release `v0.58.0` 的 `published_at=2026-09-02T16:35:27Z`。 | — | 日期精确到 UTC 日；它是该框架版本发布日，不是仓库初建日（仓库创建于 2026-06-26）。 | [S026](SOURCES.md#s026) |
+| P13 | 2026-0902 | verified | pending confirmation | GitHub Release `v0.58.0` 的 `published_at=2026-09-02T16:35:27Z`。 | — | 日期精确到 UTC 日；它是该框架版本发布日，不是仓库初建日（仓库创建于 2026-06-26）。 | [S026](SOURCES.md#s026) · [S079](SOURCES.md#s079) |
 | P14 | 2026-0909 | verified | 2026-09 | arXiv 条目 2609.10522 显示 `Submitted on 9 Sep 2026`（API `published=2026-09-09T17:53:38Z`）。 | — | 日期精确到 UTC 日；它是论文首次公开提交日，不是 GitHub 仓库创建日。 | [S027](SOURCES.md#s027) · [S028](SOURCES.md#s028) · [S029](SOURCES.md#s029) |
 | P15 | 2026-0908 | verified | 2026-09 | GitHub REST 仓库元数据 `created_at=2026-09-08T03:25:19Z`。 | — | 日期精确到 UTC 日；它是仓库创建日，不等同于项目页或后续模型更新。 | [S030](SOURCES.md#s030) · [S031](SOURCES.md#s031) |
-| P16 | 2026-0916 | verified | 2026-09-16 | 保留的一手项目记录给出精确日。 | — | 无；资料记录为精确日。 | [S016](SOURCES.md#s016) · [S017](SOURCES.md#s017) |
+| P16 | 2026-0916 | verified | 2026-09-16 | 保留的一手项目记录给出精确日。 | — | 无；资料记录为精确日。 | [S016](SOURCES.md#s016) · [S017](SOURCES.md#s017) · [S080](SOURCES.md#s080) |
 | P17 | 2026-0729 | verified | 2026-07-29 | 保留的一手项目记录给出精确日。 | — | 无；资料记录为精确日。 | [S032](SOURCES.md#s032) |
+| P18 | 2026-0919 | verified | 2026-09-19 | 发布帖 status ID `2101118049944543545` 依 X Snowflake epoch 解码为 `2026-09-19T01:15:54.649Z`；公开代码仓同日更新。 | — | 日期精确到 UTC 日；作为本条目的可验证公开发布日，不替代报告页面可能存在的署日。 | [S053](SOURCES.md#s053) · [S054](SOURCES.md#s054) · [S055](SOURCES.md#s055) · [S081](SOURCES.md#s081) |
+| P19 | 2026-0917 | verified | 2026-09-17 | arXiv 条目 2609.20330 显示 `Submitted on 17 Sep 2026`，v1 时间为 `2026-09-17T13:04:23Z`。 | — | 日期精确到 UTC 日；它是论文首次公开提交日，不是代码 release 日。 | [S056](SOURCES.md#s056) |
+| P20 | 2026-0920 | verified | 2026-09-20 | 作者新闻明确标注 2026-09-20 released。 | — | 作者发布公告的日期，不是论文提交日。 | [S059](SOURCES.md#s059) · [S060](SOURCES.md#s060) |
+| P21 | ≈ 2026-0923 | estimated | pending confirmation | 独立项目页未提供发布日期；2026-09-23 仅为本轮发现日。 | 以本轮首次发现日作为内部排序回退值；不代表发布日期。 | 实际发布日期未知；页面直接显示未知，内部排序使用发现日。 | [S061](SOURCES.md#s061) · [S063](SOURCES.md#s063) |
+| P22 | ≈ 2026-0923 | estimated | pending confirmation | 独立项目页未提供发布日期；2026-09-23 仅为本轮发现日。 | 以本轮首次发现日作为内部排序回退值；不代表发布日期。 | 实际发布日期未知；页面直接显示未知，内部排序使用发现日。 | [S062](SOURCES.md#s062) · [S063](SOURCES.md#s063) |
+| P23 | 2026-0917 | verified | 2026-09-17 | arXiv v1 submitted 2026-09-17. | — | This is the paper's first public submission date. | [S065](SOURCES.md#s065) |
+| P24 | 2026-0917 | verified | 2026-09-17 | Pantograph research index dates the report to 2026-09-17. | — | Official report date; not an experiment-run timestamp. | [S066](SOURCES.md#s066) |
+| P25 | 2026-0918 | verified | 2026-09-18 | GitHub repository created 2026-09-18. | — | Repository creation date; media/results were updated later. | [S067](SOURCES.md#s067) |
+| P26 | 2026-0917 | verified | 2026-09-17 | GitHub repository created 2026-09-17. | — | Repository creation date; not necessarily the physical run date. | [S068](SOURCES.md#s068) |
+| P27 | 2026-0917 | verified | 2026-09-17 | Repository and v0.1.0 release published 2026-09-17. | — | Release date is directly verifiable. | [S069](SOURCES.md#s069) |
+| P28 | 2026-0917 | verified | 2026-09-17 | GitHub repository created 2026-09-17. | — | Repository creation date; not every rollout timestamp. | [S070](SOURCES.md#s070) |
+| P29 | 2026-0921 | verified | 2026-09-21 | Initial public repository release committed 2026-09-21 UTC. | — | Public release date; not every experiment timestamp. | [S071](SOURCES.md#s071) |
+| P30 | 2026-0919 | verified | 2026-09-19 | GitHub repository created 2026-09-19 UTC. | — | Repository creation date. | [S072](SOURCES.md#s072) |
+| P31 | 2026-0923 | verified | 2026-09-23 | GitHub repository created 2026-09-23 UTC. | — | Repository creation date. | [S073](SOURCES.md#s073) |
+| P32 | 2026-0923 | verified | 2026-09-23 | GitHub repository created 2026-09-23 UTC. | — | Repository creation date. | [S074](SOURCES.md#s074) |
+| P33 | 2026-0915 | verified | 2026-09-15 | Repository created and v0.5.0 released 2026-09-15 UTC. | — | Release date is directly verifiable. | [S075](SOURCES.md#s075) |
+| P34 | 2026-0915 | verified | 2026-09-15 | quackd v0.9.0 and the public SO-101 log were released 2026-09-15. | — | The associated author post followed on 2026-09-16. | [S076](SOURCES.md#s076) · [S077](SOURCES.md#s077) |
 | X01 | 2026-0912 | verified | 2026-09-12 | 保留项目记录给出精确演示日期；原帖绝对时间未另行复核。 | — | 无；资料记录为精确日。 | [S036](SOURCES.md#s036) |
 | X02 | 2026-0914 | verified | pending confirmation | 原帖 status ID `2099524132341711051` 依 X Snowflake epoch 解码为 `2026-09-14T15:42:15.079Z`。 | — | 日期精确到 UTC 日；从原帖 ID 时间位推导，未把二手索引的相对时间当日期。 | [S036](SOURCES.md#s036) |
 | X03 | 2026-0908 | verified | 2026-09-08 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S037](SOURCES.md#s037) |
@@ -35,8 +52,6 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | X12 | 2026-0909 | verified | pending confirmation | 原帖 status ID `2097802933429796873` 依 X Snowflake epoch 解码为 `2026-09-09T21:42:49.280Z`。 | — | 日期精确到 UTC 日；从原帖 ID 时间位推导。 | [S043](SOURCES.md#s043) |
 | X13 | 2026-0915 | verified | 2026-09-15 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S033](SOURCES.md#s033) · [S052](SOURCES.md#s052) |
 | X14 | 2026-0911 | verified | 2026-09-11 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S033](SOURCES.md#s033) |
-| P18 | 2026-0919 | verified | 2026-09-19 | 发布帖 status ID `2101118049944543545` 依 X Snowflake epoch 解码为 `2026-09-19T01:15:54.649Z`；公开代码仓同日更新。 | — | 日期精确到 UTC 日；作为本条目的可验证公开发布日，不替代报告页面可能存在的署日。 | [S053](SOURCES.md#s053) · [S054](SOURCES.md#s054) · [S055](SOURCES.md#s055) |
-| P19 | 2026-0917 | verified | 2026-09-17 | arXiv 条目 2609.20330 显示 `Submitted on 17 Sep 2026`，v1 时间为 `2026-09-17T13:04:23Z`。 | — | 日期精确到 UTC 日；它是论文首次公开提交日，不是代码 release 日。 | [S056](SOURCES.md#s056) |
 | X15 | 2026-0918 | verified | 2026-09-18 | 原帖 status ID `2100754714971287557` 依 X Snowflake epoch 解码为 `2026-09-18T01:12:08.841Z`。 | — | 日期精确到 UTC 日；原帖页面受限，但具体 status ID、作者研究笔记与用户提供视频内容相互匹配。 | [S057](SOURCES.md#s057) · [S058](SOURCES.md#s058) |
 
 ## Date-research replacement audit

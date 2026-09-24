@@ -520,5 +520,212 @@
     "access": "search_text",
     "checked_at": "2026-09-20",
     "notes": "Author research-note index describes asking Astra to stand the Wuji2 hand upright and retaining the pose with motors switched off; direct article retrieval was unavailable."
+  },
+  {
+    "id": "S059",
+    "title": "EmbodiedSWE project page",
+    "url": "https://embodiedswe.github.io/",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-23",
+    "notes": "Project page read on 2026-09-23. Astra is evaluated through a coding-agent harness. Paper and blog are marked soon; the linked repository was reported as 404 in this batch. No original video downloaded."
+  },
+  {
+    "id": "S060",
+    "title": "Kashu Yamazaki news: EmbodiedSWE release",
+    "url": "https://kashu7100.github.io/",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-23",
+    "notes": "Author news explicitly dates the EmbodiedSWE release to 2026-09-20."
+  },
+  {
+    "id": "S061",
+    "title": "OpenArm Mona Lisa — LeRobot ACT",
+    "url": "https://arena.himrobotics.com/uploads/source_59ffd3291f3623fc498d",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-23",
+    "notes": "Independent HIM project page read. Simulation only; hardware and real paint not tested. No publication timestamp is shown. No ZIP executed or video downloaded."
+  },
+  {
+    "id": "S062",
+    "title": "Fridge Speller",
+    "url": "https://arena.himrobotics.com/uploads/source_62bc9b696cef9e7c64d6",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-23",
+    "notes": "Project HTML retrieved directly with HTTP 200 after browser search retrieval failed. Author describes a nominal-scene five-letter simulation run built with GPT-6 Astra. No publication timestamp shown; no code run or video downloaded."
+  },
+  {
+    "id": "S063",
+    "title": "HIM GPT-6 Astra Challenge results",
+    "url": "https://arena.himrobotics.com/challenges/gpt-astra",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-23",
+    "notes": "Challenge results checked in the 2026-09-23 discovery report. OpenArm is listed as winner and Fridge Speller as runner-up. Challenge deadline is not treated as either project publication date."
+  },
+  {
+    "id": "S064",
+    "title": "An Unexpected Robot Policy — arXiv v1",
+    "url": "https://arxiv.org/abs/2609.24170",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-23",
+    "notes": "24-page v1 PDF downloaded; study design, protocols, results, hardware limitations and appendices inspected. SHA-256 6bb575e9327e6606c26fef453d19a5a1ece447eea3c83dc52e0b7d98509f3055. Cover extracted from page 4, Figure 2; no video frame claim. arXiv non-exclusive distribution license is not a general reuse license."
+  },
+  {
+    "id": "S065",
+    "title": "How Far Can GPT-6-Astra Go? arXiv paper",
+    "url": "https://arxiv.org/abs/2609.20116",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Fifteen-page v2 PDF read locally; Figure 2 was retained as the navigation-loop mechanism cover. PDF SHA-256 b7f83019c916a29f1fe50ddfa80b539ca14d1bad8e993cd55b4ca75c4bf7e81e."
+  },
+  {
+    "id": "S066",
+    "title": "Pantograph VLM robot harness report",
+    "url": "https://pantograph.com/journal/vlm-harness",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official report, method, task table, and selected rollout media checked. Project media reuse terms were not separately granted."
+  },
+  {
+    "id": "S067",
+    "title": "Robot Agent Gallery repository and media",
+    "url": "https://github.com/tianqi-zh/robot-agent-gallery",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official repository, result manifests, and hosted media tree checked; the gallery is an evidence collection rather than one transferable aggregate benchmark."
+  },
+  {
+    "id": "S068",
+    "title": "Axol robot pick-and-pack repository",
+    "url": "https://github.com/dineshreddy91/robot-pick-pack",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official repository README, deterministic controller boundary, safety-stop record, and evidence photographs checked."
+  },
+  {
+    "id": "S069",
+    "title": "LLM Robotics Playground repository",
+    "url": "https://github.com/dimentary/llm-robotics-playground",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official repository, v0.1.0 release, four experiment previews, replay assets, and MIT code license checked."
+  },
+  {
+    "id": "S070",
+    "title": "GPT-6 Astra policy on DexJoCo",
+    "url": "https://github.com/YichengDraw/astra-policy-dexjoco",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official repository, result CSV, validation script, media, and MIT license checked."
+  },
+  {
+    "id": "S071",
+    "title": "Astra on RoboMME repository",
+    "url": "https://github.com/bingaochen/Astra-on-RoboMME",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official repository, method diagram, task prompts, per-task results, monitor weights link, and Apache-2.0 license checked."
+  },
+  {
+    "id": "S072",
+    "title": "RoboICL repository",
+    "url": "https://github.com/Mosi-AI/RoboICL",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official repository and linked project page checked; request anatomy, nine-task evaluation protocol, and rollout media are public."
+  },
+  {
+    "id": "S073",
+    "title": "GPT-6 LIBERO manipulation probe",
+    "url": "https://github.com/Jacksonha7/gpt6-libero-probe",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official repository, code, success counts, and 15 comparison GIFs checked."
+  },
+  {
+    "id": "S074",
+    "title": "Astra World Model research repository",
+    "url": "https://github.com/wentingw/astra-world-model-blog",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official bilingual study, machine-readable evaluation, frozen assets, hero image, and drone/G1 replays checked."
+  },
+  {
+    "id": "S075",
+    "title": "Robot-vLLM repository",
+    "url": "https://github.com/nssmd/robot-vllm",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official repository, architecture, experiment logs, v0.5.0 release, and Apache-2.0 license checked."
+  },
+  {
+    "id": "S076",
+    "title": "quackd repository and experiment log",
+    "url": "https://github.com/rokbenko/quackd",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official repository README and public experiment log checked; the selected cover is a project image of what the LeRobot camera observed."
+  },
+  {
+    "id": "S077",
+    "title": "quackd SO-101 author post",
+    "url": "https://x.com/rokbenko/status/2100234282631360540",
+    "kind": "primary",
+    "access": "linked_only",
+    "checked_at": "2026-09-24",
+    "notes": "Exact status URL retained and merged into the project rather than counted as a separate card; direct X access remained restricted."
+  },
+  {
+    "id": "S078",
+    "title": "Agent as Policy English-film update",
+    "url": "https://github.com/agent-as-policy-2026/agent-as-policy-2026/commit/c6875d04",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official repository update adds the full English project film, more task previews, and media provenance."
+  },
+  {
+    "id": "S079",
+    "title": "Inspect Robots v0.59.0",
+    "url": "https://github.com/robocurve/inspect-robots/releases/tag/v0.59.0",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official release adds environment-budget hints, provenance recording, Jev/AprilTag support, and validation/logging fixes."
+  },
+  {
+    "id": "S080",
+    "title": "RoboDojo organize_table task correction",
+    "url": "https://github.com/robodojo-benchmark/RoboDojo/commit/726e9aabfaa642203722eb126f5eaf0f37f3e1ad",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official 2026-09-19 commit corrects the organize_table task description; no new benchmark result or media is claimed."
+  },
+  {
+    "id": "S081",
+    "title": "RoboHarm license clarification",
+    "url": "https://github.com/robocurve/roboharm/commit/5952f0035037604265d5cf38fa24938d4acf7133",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-24",
+    "notes": "Official 2026-09-22 commit declares CC BY-NC 4.0; result claims and media are unchanged."
   }
 ]

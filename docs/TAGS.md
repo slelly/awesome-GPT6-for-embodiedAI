@@ -41,6 +41,23 @@ Cards combine one or two factual scene tags (`simulation` / `real world`) with o
 | P15 | sim, real | benchmark, understanding |
 | P16 | sim, real | benchmark |
 | P17 | sim | benchmark |
+| P18 | real | evaluation |
+| P19 | real | control |
+| P20 | sim | evaluation, code-generation |
+| P21 | sim | code-generation, control |
+| P22 | sim | code-generation, control |
+| P23 | sim | control |
+| P24 | real | evaluation |
+| P25 | sim | evaluation |
+| P26 | real | control, policy |
+| P27 | sim | code-generation, control |
+| P28 | sim | code-generation, control |
+| P29 | sim | control |
+| P30 | sim | control |
+| P31 | sim | control |
+| P32 | sim | environment-building, rl-training |
+| P33 | sim | control, policy |
+| P34 | real | harness, control |
 | X01 | real | control |
 | X02 | real | control |
 | X03 | real | control |
@@ -55,6 +72,4 @@ Cards combine one or two factual scene tags (`simulation` / `real world`) with o
 | X12 | sim | code-generation, control |
 | X13 | sim | replay, control |
 | X14 | sim | environment-building, rl-training |
-| P18 | real | evaluation |
-| P19 | real | control |
 | X15 | real | control |

@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-09-20 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-09-24 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -527,3 +527,210 @@ Exact post URL and status timestamp retained. User attachment `savetwt.com_21007
 类型：`primary` · 读取：`search_text` · 检查日期：2026-09-20
 
 Author research-note index describes asking Astra to stand the Wuji2 hand upright and retaining the pose with motors switched off; direct article retrieval was unavailable.
+
+<a id="s059"></a>
+## S059 · EmbodiedSWE project page
+
+[https://embodiedswe.github.io/](https://embodiedswe.github.io/)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-23
+
+Project page read on 2026-09-23. Astra is evaluated through a coding-agent harness. Paper and blog are marked soon; the linked repository was reported as 404 in this batch. No original video downloaded.
+
+<a id="s060"></a>
+## S060 · Kashu Yamazaki news: EmbodiedSWE release
+
+[https://kashu7100.github.io/](https://kashu7100.github.io/)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-23
+
+Author news explicitly dates the EmbodiedSWE release to 2026-09-20.
+
+<a id="s061"></a>
+## S061 · OpenArm Mona Lisa — LeRobot ACT
+
+[https://arena.himrobotics.com/uploads/source_59ffd3291f3623fc498d](https://arena.himrobotics.com/uploads/source_59ffd3291f3623fc498d)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-23
+
+Independent HIM project page read. Simulation only; hardware and real paint not tested. No publication timestamp is shown. No ZIP executed or video downloaded.
+
+<a id="s062"></a>
+## S062 · Fridge Speller
+
+[https://arena.himrobotics.com/uploads/source_62bc9b696cef9e7c64d6](https://arena.himrobotics.com/uploads/source_62bc9b696cef9e7c64d6)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-23
+
+Project HTML retrieved directly with HTTP 200 after browser search retrieval failed. Author describes a nominal-scene five-letter simulation run built with GPT-6 Astra. No publication timestamp shown; no code run or video downloaded.
+
+<a id="s063"></a>
+## S063 · HIM GPT-6 Astra Challenge results
+
+[https://arena.himrobotics.com/challenges/gpt-astra](https://arena.himrobotics.com/challenges/gpt-astra)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-23
+
+Challenge results checked in the 2026-09-23 discovery report. OpenArm is listed as winner and Fridge Speller as runner-up. Challenge deadline is not treated as either project publication date.
+
+<a id="s064"></a>
+## S064 · An Unexpected Robot Policy — arXiv v1
+
+[https://arxiv.org/abs/2609.24170](https://arxiv.org/abs/2609.24170)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-23
+
+24-page v1 PDF downloaded; study design, protocols, results, hardware limitations and appendices inspected. SHA-256 6bb575e9327e6606c26fef453d19a5a1ece447eea3c83dc52e0b7d98509f3055. Cover extracted from page 4, Figure 2; no video frame claim. arXiv non-exclusive distribution license is not a general reuse license.
+
+<a id="s065"></a>
+## S065 · How Far Can GPT-6-Astra Go? arXiv paper
+
+[https://arxiv.org/abs/2609.20116](https://arxiv.org/abs/2609.20116)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Fifteen-page v2 PDF read locally; Figure 2 was retained as the navigation-loop mechanism cover. PDF SHA-256 b7f83019c916a29f1fe50ddfa80b539ca14d1bad8e993cd55b4ca75c4bf7e81e.
+
+<a id="s066"></a>
+## S066 · Pantograph VLM robot harness report
+
+[https://pantograph.com/journal/vlm-harness](https://pantograph.com/journal/vlm-harness)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official report, method, task table, and selected rollout media checked. Project media reuse terms were not separately granted.
+
+<a id="s067"></a>
+## S067 · Robot Agent Gallery repository and media
+
+[https://github.com/tianqi-zh/robot-agent-gallery](https://github.com/tianqi-zh/robot-agent-gallery)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official repository, result manifests, and hosted media tree checked; the gallery is an evidence collection rather than one transferable aggregate benchmark.
+
+<a id="s068"></a>
+## S068 · Axol robot pick-and-pack repository
+
+[https://github.com/dineshreddy91/robot-pick-pack](https://github.com/dineshreddy91/robot-pick-pack)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official repository README, deterministic controller boundary, safety-stop record, and evidence photographs checked.
+
+<a id="s069"></a>
+## S069 · LLM Robotics Playground repository
+
+[https://github.com/dimentary/llm-robotics-playground](https://github.com/dimentary/llm-robotics-playground)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official repository, v0.1.0 release, four experiment previews, replay assets, and MIT code license checked.
+
+<a id="s070"></a>
+## S070 · GPT-6 Astra policy on DexJoCo
+
+[https://github.com/YichengDraw/astra-policy-dexjoco](https://github.com/YichengDraw/astra-policy-dexjoco)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official repository, result CSV, validation script, media, and MIT license checked.
+
+<a id="s071"></a>
+## S071 · Astra on RoboMME repository
+
+[https://github.com/bingaochen/Astra-on-RoboMME](https://github.com/bingaochen/Astra-on-RoboMME)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official repository, method diagram, task prompts, per-task results, monitor weights link, and Apache-2.0 license checked.
+
+<a id="s072"></a>
+## S072 · RoboICL repository
+
+[https://github.com/Mosi-AI/RoboICL](https://github.com/Mosi-AI/RoboICL)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official repository and linked project page checked; request anatomy, nine-task evaluation protocol, and rollout media are public.
+
+<a id="s073"></a>
+## S073 · GPT-6 LIBERO manipulation probe
+
+[https://github.com/Jacksonha7/gpt6-libero-probe](https://github.com/Jacksonha7/gpt6-libero-probe)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official repository, code, success counts, and 15 comparison GIFs checked.
+
+<a id="s074"></a>
+## S074 · Astra World Model research repository
+
+[https://github.com/wentingw/astra-world-model-blog](https://github.com/wentingw/astra-world-model-blog)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official bilingual study, machine-readable evaluation, frozen assets, hero image, and drone/G1 replays checked.
+
+<a id="s075"></a>
+## S075 · Robot-vLLM repository
+
+[https://github.com/nssmd/robot-vllm](https://github.com/nssmd/robot-vllm)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official repository, architecture, experiment logs, v0.5.0 release, and Apache-2.0 license checked.
+
+<a id="s076"></a>
+## S076 · quackd repository and experiment log
+
+[https://github.com/rokbenko/quackd](https://github.com/rokbenko/quackd)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official repository README and public experiment log checked; the selected cover is a project image of what the LeRobot camera observed.
+
+<a id="s077"></a>
+## S077 · quackd SO-101 author post
+
+[https://x.com/rokbenko/status/2100234282631360540](https://x.com/rokbenko/status/2100234282631360540)
+
+类型：`primary` · 读取：`linked_only` · 检查日期：2026-09-24
+
+Exact status URL retained and merged into the project rather than counted as a separate card; direct X access remained restricted.
+
+<a id="s078"></a>
+## S078 · Agent as Policy English-film update
+
+[https://github.com/agent-as-policy-2026/agent-as-policy-2026/commit/c6875d04](https://github.com/agent-as-policy-2026/agent-as-policy-2026/commit/c6875d04)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official repository update adds the full English project film, more task previews, and media provenance.
+
+<a id="s079"></a>
+## S079 · Inspect Robots v0.59.0
+
+[https://github.com/robocurve/inspect-robots/releases/tag/v0.59.0](https://github.com/robocurve/inspect-robots/releases/tag/v0.59.0)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official release adds environment-budget hints, provenance recording, Jev/AprilTag support, and validation/logging fixes.
+
+<a id="s080"></a>
+## S080 · RoboDojo organize_table task correction
+
+[https://github.com/robodojo-benchmark/RoboDojo/commit/726e9aabfaa642203722eb126f5eaf0f37f3e1ad](https://github.com/robodojo-benchmark/RoboDojo/commit/726e9aabfaa642203722eb126f5eaf0f37f3e1ad)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official 2026-09-19 commit corrects the organize_table task description; no new benchmark result or media is claimed.
+
+<a id="s081"></a>
+## S081 · RoboHarm license clarification
+
+[https://github.com/robocurve/roboharm/commit/5952f0035037604265d5cf38fa24938d4acf7133](https://github.com/robocurve/roboharm/commit/5952f0035037604265d5cf38fa24938d4acf7133)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+
+Official 2026-09-22 commit declares CC BY-NC 4.0; result claims and media are unchanged.

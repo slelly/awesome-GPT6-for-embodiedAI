@@ -1,36 +1,446 @@
 {
-  "P01": {"date":"2026-09-16","status":"verified","basis":"保留的一手项目记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "P02": {"date":"2026-09-13","status":"verified","basis":"GitHub REST 仓库元数据 `created_at=2026-09-13T19:05:04Z`。","rule":null,"uncertainty":"日期精确到 UTC 日；它是仓库创建日，不等同于功能 release。","previous_display":"2026-0915（月中估算）","meaning":"GitHub 公开仓库创建日。","evidence_url":"https://api.github.com/repos/anonymous-report-421/GPT-as-Policy","checked_endpoints":["https://github.com/anonymous-report-421/GPT-as-Policy","https://github.com/anonymous-report-421/GPT-as-Policy/blob/main/RELEASE_NOTES.md"]},
-  "P03": {"date":"2026-09-11","status":"verified","basis":"保留的一手项目记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "P04": {"date":"2026-09-04","status":"verified","basis":"保留的一手项目记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "P05": {"date":"2026-09-10","status":"verified","basis":"保留的一手项目记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "P06": {"date":"2026-09-16","status":"verified","basis":"保留的项目来源记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "P07": {"date":"2026-09-09","status":"verified","basis":"保留的一手项目记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "P08": {"date":"2026-09-07","status":"verified","basis":"GitHub REST 仓库元数据 `created_at=2026-09-07T18:21:17Z`。","rule":null,"uncertainty":"日期精确到 UTC 日；它是仓库创建日，不等同于后续推送。","previous_display":"2026-0915（月中估算）","meaning":"GitHub 公开仓库创建日。","evidence_url":"https://api.github.com/repos/lingxiao-guo/GPT6-real2sim","checked_endpoints":["https://github.com/lingxiao-guo/GPT6-real2sim"]},
-  "P09": {"date":"2026-09-07","status":"verified","basis":"GitHub REST 仓库元数据 `created_at=2026-09-07T01:49:19Z`。","rule":null,"uncertainty":"日期精确到 UTC 日；它是仓库创建日，不等同于后续推送。","previous_display":"2026-0915（月中估算）","meaning":"GitHub 公开仓库创建日。","evidence_url":"https://api.github.com/repos/hku-sail/Real2Sim_GPT6_ASTRA","checked_endpoints":["https://github.com/hku-sail/Real2Sim_GPT6_ASTRA"]},
-  "P10": {"date":"2026-09-08","status":"verified","basis":"GitHub REST 仓库元数据 `created_at=2026-09-08T17:52:53Z`；项目页链接到该代码仓库。","rule":null,"uncertainty":"日期精确到 UTC 日；它是仓库创建日，不等同于项目页或功能 release。","previous_display":"2026-0915（月中估算）","meaning":"项目页所链接 GitHub 公开仓库创建日。","evidence_url":"https://api.github.com/repos/cskrren/Real2Gym","checked_endpoints":["https://cskrren.github.io/real2gym-site/","https://github.com/cskrren/Real2Gym"]},
-  "P11": {"date":"2026-09-09","status":"verified","basis":"保留的一手项目记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "P12": {"date":"2026-09-18","status":"estimated","basis":"直接检查官方 Drone-Bench 页面及其响应头：页面未提供发布/更新时间、变更日志、原帖或代码入口；保留来源快照日为 2026-09-18。","rule":"无日期入口回退：仅为满足每张卡片显示日期而保留该条目的既有来源快照日；不是发布日。","uncertainty":"实际 Astra 更新日期未知；官方页面内容可变且无可追溯版本记录。","previous_display":"2026-0918（首次观察快照）","meaning":"保留来源快照日，不是项目或功能发布日期。","evidence_url":"https://andonlabs.com/evals/drone-bench","checked_endpoints":["https://andonlabs.com/evals/drone-bench"]},
-  "P13": {"date":"2026-09-02","status":"verified","basis":"GitHub Release `v0.58.0` 的 `published_at=2026-09-02T16:35:27Z`。","rule":null,"uncertainty":"日期精确到 UTC 日；它是该框架版本发布日，不是仓库初建日（仓库创建于 2026-06-26）。","previous_display":"2026-0918（首次观察快照）","meaning":"GitHub Release v0.58.0 发布日。","evidence_url":"https://github.com/robocurve/inspect-robots/releases/tag/v0.58.0","checked_endpoints":["https://api.github.com/repos/robocurve/inspect-robots/releases?per_page=5","https://github.com/robocurve/inspect-robots"]},
-  "P14": {"date":"2026-09-09","status":"verified","basis":"arXiv 条目 2609.10522 显示 `Submitted on 9 Sep 2026`（API `published=2026-09-09T17:53:38Z`）。","rule":null,"uncertainty":"日期精确到 UTC 日；它是论文首次公开提交日，不是 GitHub 仓库创建日。","previous_display":"2026-0915（月中估算）","meaning":"Show-Harness 论文首次公开提交日。","evidence_url":"https://arxiv.org/abs/2609.10522","checked_endpoints":["https://arxiv.org/abs/2609.10522","https://api.github.com/repos/showlab/Show-Harness"]},
-  "P15": {"date":"2026-09-08","status":"verified","basis":"GitHub REST 仓库元数据 `created_at=2026-09-08T03:25:19Z`。","rule":null,"uncertainty":"日期精确到 UTC 日；它是仓库创建日，不等同于项目页或后续模型更新。","previous_display":"2026-0915（月中估算）","meaning":"GitHub 公开仓库创建日。","evidence_url":"https://api.github.com/repos/DeepCybo-PhysAI/PhysBrain-1.5","checked_endpoints":["https://github.com/DeepCybo-PhysAI/PhysBrain-1.5","https://deepcybo-physai.github.io/PhysBrain-1.5/"]},
-  "P16": {"date":"2026-09-16","status":"verified","basis":"保留的一手项目记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "P17": {"date":"2026-07-29","status":"verified","basis":"保留的一手项目记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "X01": {"date":"2026-09-12","status":"verified","basis":"保留项目记录给出精确演示日期；原帖绝对时间未另行复核。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "X02": {"date":"2026-09-14","status":"verified","basis":"原帖 status ID `2099524132341711051` 依 X Snowflake epoch 解码为 `2026-09-14T15:42:15.079Z`。","rule":null,"uncertainty":"日期精确到 UTC 日；从原帖 ID 时间位推导，未把二手索引的相对时间当日期。","previous_display":"2026-0918（首次观察快照）","meaning":"X 原帖创建时间（由具体 status ID 推导）。","evidence_url":"https://x.com/kaiwynd/status/2099524132341711051","checked_endpoints":["https://x.com/kaiwynd/status/2099524132341711051"]},
-  "X03": {"date":"2026-09-08","status":"verified","basis":"保留项目来源记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "X04": {"date":"2026-09-11","status":"verified","basis":"保留项目来源记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "X05": {"date":"2026-09-13","status":"verified","basis":"保留项目来源记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "X06": {"date":"2026-09-11","status":"verified","basis":"保留项目来源记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "X07": {"date":"2026-09-10","status":"verified","basis":"保留项目来源记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "X08": {"date":"2026-09-16","status":"verified","basis":"保留项目来源记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "X09": {"date":"2026-09-08","status":"verified","basis":"原帖 status ID `2097349207795335424` 依 X Snowflake epoch 解码为 `2026-09-08T15:39:52.659Z`。","rule":null,"uncertainty":"日期精确到 UTC 日；从原帖 ID 时间位推导。","previous_display":"2026-0918（首次观察快照）","meaning":"X 原帖创建时间（由具体 status ID 推导）。","evidence_url":"https://x.com/sri299792458/status/2097349207795335424","checked_endpoints":["https://x.com/sri299792458/status/2097349207795335424"]},
-  "X10": {"date":"2026-09-08","status":"verified","basis":"原帖 status ID `2097329417760440461` 依 X Snowflake epoch 解码为 `2026-09-08T14:21:14.347Z`。","rule":null,"uncertainty":"日期精确到 UTC 日；从原帖 ID 时间位推导。","previous_display":"2026-0918（首次观察快照）","meaning":"X 原帖创建时间（由具体 status ID 推导）。","evidence_url":"https://x.com/ludocomito/status/2097329417760440461","checked_endpoints":["https://x.com/ludocomito/status/2097329417760440461"]},
-  "X11": {"date":"2026-09-09","status":"verified","basis":"原帖 status ID `2097496200631210136` 依 X Snowflake epoch 解码为 `2026-09-09T01:23:58.482Z`。","rule":null,"uncertainty":"日期精确到 UTC 日；从原帖 ID 时间位推导。","previous_display":"2026-0918（首次观察快照）","meaning":"X 原帖创建时间（由具体 status ID 推导）。","evidence_url":"https://x.com/thermalpastor/status/2097496200631210136","checked_endpoints":["https://x.com/thermalpastor/status/2097496200631210136"]},
-  "X12": {"date":"2026-09-09","status":"verified","basis":"原帖 status ID `2097802933429796873` 依 X Snowflake epoch 解码为 `2026-09-09T21:42:49.280Z`。","rule":null,"uncertainty":"日期精确到 UTC 日；从原帖 ID 时间位推导。","previous_display":"2026-0918（首次观察快照）","meaning":"X 原帖创建时间（由具体 status ID 推导）。","evidence_url":"https://x.com/thermalpastor/status/2097802933429796873","checked_endpoints":["https://x.com/thermalpastor/status/2097802933429796873"]},
-  "X13": {"date":"2026-09-15","status":"verified","basis":"保留项目来源记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "X14": {"date":"2026-09-11","status":"verified","basis":"保留项目来源记录给出精确日。","rule":null,"uncertainty":"无；资料记录为精确日。"},
-  "P18": {"date":"2026-09-19","status":"verified","basis":"发布帖 status ID `2101118049944543545` 依 X Snowflake epoch 解码为 `2026-09-19T01:15:54.649Z`；公开代码仓同日更新。","rule":null,"uncertainty":"日期精确到 UTC 日；作为本条目的可验证公开发布日，不替代报告页面可能存在的署日。","meaning":"RoboHarm 公开发布帖的创建日。","evidence_url":"https://x.com/chooi_jeq/status/2101118049944543545","checked_endpoints":["https://github.com/robocurve/roboharm","https://x.com/chooi_jeq/status/2101118049944543545"]},
-  "P19": {"date":"2026-09-17","status":"verified","basis":"arXiv 条目 2609.20330 显示 `Submitted on 17 Sep 2026`，v1 时间为 `2026-09-17T13:04:23Z`。","rule":null,"uncertainty":"日期精确到 UTC 日；它是论文首次公开提交日，不是代码 release 日。","meaning":"RoboFind 论文 arXiv v1 首次公开提交日。","evidence_url":"https://arxiv.org/abs/2609.20330","checked_endpoints":["https://arxiv.org/abs/2609.20330","https://arxiv.org/pdf/2609.20330"]},
-  "X15": {"date":"2026-09-18","status":"verified","basis":"原帖 status ID `2100754714971287557` 依 X Snowflake epoch 解码为 `2026-09-18T01:12:08.841Z`。","rule":null,"uncertainty":"日期精确到 UTC 日；原帖页面受限，但具体 status ID、作者研究笔记与用户提供视频内容相互匹配。","meaning":"Wuji2 自扶正原帖创建日。","evidence_url":"https://x.com/frankzydou/status/2100754714971287557","checked_endpoints":["https://x.com/frankzydou/status/2100754714971287557","https://frank-zy-dou.github.io/blog/wuji2-hand-stands-up/"]}
+  "P01": {
+    "date": "2026-09-16",
+    "status": "verified",
+    "basis": "保留的一手项目记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "P02": {
+    "date": "2026-09-13",
+    "status": "verified",
+    "basis": "GitHub REST 仓库元数据 `created_at=2026-09-13T19:05:04Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；它是仓库创建日，不等同于功能 release。",
+    "previous_display": "2026-0915（月中估算）",
+    "meaning": "GitHub 公开仓库创建日。",
+    "evidence_url": "https://api.github.com/repos/anonymous-report-421/GPT-as-Policy",
+    "checked_endpoints": [
+      "https://github.com/anonymous-report-421/GPT-as-Policy",
+      "https://github.com/anonymous-report-421/GPT-as-Policy/blob/main/RELEASE_NOTES.md"
+    ]
+  },
+  "P03": {
+    "date": "2026-09-11",
+    "status": "verified",
+    "basis": "保留的一手项目记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "P04": {
+    "date": "2026-09-04",
+    "status": "verified",
+    "basis": "保留的一手项目记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "P05": {
+    "date": "2026-09-10",
+    "status": "verified",
+    "basis": "保留的一手项目记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "P06": {
+    "date": "2026-09-16",
+    "status": "verified",
+    "basis": "保留的项目来源记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "P07": {
+    "date": "2026-09-09",
+    "status": "verified",
+    "basis": "保留的一手项目记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "P08": {
+    "date": "2026-09-07",
+    "status": "verified",
+    "basis": "GitHub REST 仓库元数据 `created_at=2026-09-07T18:21:17Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；它是仓库创建日，不等同于后续推送。",
+    "previous_display": "2026-0915（月中估算）",
+    "meaning": "GitHub 公开仓库创建日。",
+    "evidence_url": "https://api.github.com/repos/lingxiao-guo/GPT6-real2sim",
+    "checked_endpoints": [
+      "https://github.com/lingxiao-guo/GPT6-real2sim"
+    ]
+  },
+  "P09": {
+    "date": "2026-09-07",
+    "status": "verified",
+    "basis": "GitHub REST 仓库元数据 `created_at=2026-09-07T01:49:19Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；它是仓库创建日，不等同于后续推送。",
+    "previous_display": "2026-0915（月中估算）",
+    "meaning": "GitHub 公开仓库创建日。",
+    "evidence_url": "https://api.github.com/repos/hku-sail/Real2Sim_GPT6_ASTRA",
+    "checked_endpoints": [
+      "https://github.com/hku-sail/Real2Sim_GPT6_ASTRA"
+    ]
+  },
+  "P10": {
+    "date": "2026-09-08",
+    "status": "verified",
+    "basis": "GitHub REST 仓库元数据 `created_at=2026-09-08T17:52:53Z`；项目页链接到该代码仓库。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；它是仓库创建日，不等同于项目页或功能 release。",
+    "previous_display": "2026-0915（月中估算）",
+    "meaning": "项目页所链接 GitHub 公开仓库创建日。",
+    "evidence_url": "https://api.github.com/repos/cskrren/Real2Gym",
+    "checked_endpoints": [
+      "https://cskrren.github.io/real2gym-site/",
+      "https://github.com/cskrren/Real2Gym"
+    ]
+  },
+  "P11": {
+    "date": "2026-09-09",
+    "status": "verified",
+    "basis": "保留的一手项目记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "P12": {
+    "date": "2026-09-18",
+    "status": "estimated",
+    "basis": "直接检查官方 Drone-Bench 页面及其响应头：页面未提供发布/更新时间、变更日志、原帖或代码入口；保留来源快照日为 2026-09-18。",
+    "rule": "无日期入口回退：仅为满足每张卡片显示日期而保留该条目的既有来源快照日；不是发布日。",
+    "uncertainty": "实际 Astra 更新日期未知；官方页面内容可变且无可追溯版本记录。",
+    "previous_display": "2026-0918（首次观察快照）",
+    "meaning": "保留来源快照日，不是项目或功能发布日期。",
+    "evidence_url": "https://andonlabs.com/evals/drone-bench",
+    "checked_endpoints": [
+      "https://andonlabs.com/evals/drone-bench"
+    ]
+  },
+  "P13": {
+    "date": "2026-09-02",
+    "status": "verified",
+    "basis": "GitHub Release `v0.58.0` 的 `published_at=2026-09-02T16:35:27Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；它是该框架版本发布日，不是仓库初建日（仓库创建于 2026-06-26）。",
+    "previous_display": "2026-0918（首次观察快照）",
+    "meaning": "GitHub Release v0.58.0 发布日。",
+    "evidence_url": "https://github.com/robocurve/inspect-robots/releases/tag/v0.58.0",
+    "checked_endpoints": [
+      "https://api.github.com/repos/robocurve/inspect-robots/releases?per_page=5",
+      "https://github.com/robocurve/inspect-robots"
+    ]
+  },
+  "P14": {
+    "date": "2026-09-09",
+    "status": "verified",
+    "basis": "arXiv 条目 2609.10522 显示 `Submitted on 9 Sep 2026`（API `published=2026-09-09T17:53:38Z`）。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；它是论文首次公开提交日，不是 GitHub 仓库创建日。",
+    "previous_display": "2026-0915（月中估算）",
+    "meaning": "Show-Harness 论文首次公开提交日。",
+    "evidence_url": "https://arxiv.org/abs/2609.10522",
+    "checked_endpoints": [
+      "https://arxiv.org/abs/2609.10522",
+      "https://api.github.com/repos/showlab/Show-Harness"
+    ]
+  },
+  "P15": {
+    "date": "2026-09-08",
+    "status": "verified",
+    "basis": "GitHub REST 仓库元数据 `created_at=2026-09-08T03:25:19Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；它是仓库创建日，不等同于项目页或后续模型更新。",
+    "previous_display": "2026-0915（月中估算）",
+    "meaning": "GitHub 公开仓库创建日。",
+    "evidence_url": "https://api.github.com/repos/DeepCybo-PhysAI/PhysBrain-1.5",
+    "checked_endpoints": [
+      "https://github.com/DeepCybo-PhysAI/PhysBrain-1.5",
+      "https://deepcybo-physai.github.io/PhysBrain-1.5/"
+    ]
+  },
+  "P16": {
+    "date": "2026-09-16",
+    "status": "verified",
+    "basis": "保留的一手项目记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "P17": {
+    "date": "2026-07-29",
+    "status": "verified",
+    "basis": "保留的一手项目记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "X01": {
+    "date": "2026-09-12",
+    "status": "verified",
+    "basis": "保留项目记录给出精确演示日期；原帖绝对时间未另行复核。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "X02": {
+    "date": "2026-09-14",
+    "status": "verified",
+    "basis": "原帖 status ID `2099524132341711051` 依 X Snowflake epoch 解码为 `2026-09-14T15:42:15.079Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；从原帖 ID 时间位推导，未把二手索引的相对时间当日期。",
+    "previous_display": "2026-0918（首次观察快照）",
+    "meaning": "X 原帖创建时间（由具体 status ID 推导）。",
+    "evidence_url": "https://x.com/kaiwynd/status/2099524132341711051",
+    "checked_endpoints": [
+      "https://x.com/kaiwynd/status/2099524132341711051"
+    ]
+  },
+  "X03": {
+    "date": "2026-09-08",
+    "status": "verified",
+    "basis": "保留项目来源记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "X04": {
+    "date": "2026-09-11",
+    "status": "verified",
+    "basis": "保留项目来源记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "X05": {
+    "date": "2026-09-13",
+    "status": "verified",
+    "basis": "保留项目来源记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "X06": {
+    "date": "2026-09-11",
+    "status": "verified",
+    "basis": "保留项目来源记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "X07": {
+    "date": "2026-09-10",
+    "status": "verified",
+    "basis": "保留项目来源记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "X08": {
+    "date": "2026-09-16",
+    "status": "verified",
+    "basis": "保留项目来源记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "X09": {
+    "date": "2026-09-08",
+    "status": "verified",
+    "basis": "原帖 status ID `2097349207795335424` 依 X Snowflake epoch 解码为 `2026-09-08T15:39:52.659Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；从原帖 ID 时间位推导。",
+    "previous_display": "2026-0918（首次观察快照）",
+    "meaning": "X 原帖创建时间（由具体 status ID 推导）。",
+    "evidence_url": "https://x.com/sri299792458/status/2097349207795335424",
+    "checked_endpoints": [
+      "https://x.com/sri299792458/status/2097349207795335424"
+    ]
+  },
+  "X10": {
+    "date": "2026-09-08",
+    "status": "verified",
+    "basis": "原帖 status ID `2097329417760440461` 依 X Snowflake epoch 解码为 `2026-09-08T14:21:14.347Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；从原帖 ID 时间位推导。",
+    "previous_display": "2026-0918（首次观察快照）",
+    "meaning": "X 原帖创建时间（由具体 status ID 推导）。",
+    "evidence_url": "https://x.com/ludocomito/status/2097329417760440461",
+    "checked_endpoints": [
+      "https://x.com/ludocomito/status/2097329417760440461"
+    ]
+  },
+  "X11": {
+    "date": "2026-09-09",
+    "status": "verified",
+    "basis": "原帖 status ID `2097496200631210136` 依 X Snowflake epoch 解码为 `2026-09-09T01:23:58.482Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；从原帖 ID 时间位推导。",
+    "previous_display": "2026-0918（首次观察快照）",
+    "meaning": "X 原帖创建时间（由具体 status ID 推导）。",
+    "evidence_url": "https://x.com/thermalpastor/status/2097496200631210136",
+    "checked_endpoints": [
+      "https://x.com/thermalpastor/status/2097496200631210136"
+    ]
+  },
+  "X12": {
+    "date": "2026-09-09",
+    "status": "verified",
+    "basis": "原帖 status ID `2097802933429796873` 依 X Snowflake epoch 解码为 `2026-09-09T21:42:49.280Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；从原帖 ID 时间位推导。",
+    "previous_display": "2026-0918（首次观察快照）",
+    "meaning": "X 原帖创建时间（由具体 status ID 推导）。",
+    "evidence_url": "https://x.com/thermalpastor/status/2097802933429796873",
+    "checked_endpoints": [
+      "https://x.com/thermalpastor/status/2097802933429796873"
+    ]
+  },
+  "X13": {
+    "date": "2026-09-15",
+    "status": "verified",
+    "basis": "保留项目来源记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "X14": {
+    "date": "2026-09-11",
+    "status": "verified",
+    "basis": "保留项目来源记录给出精确日。",
+    "rule": null,
+    "uncertainty": "无；资料记录为精确日。"
+  },
+  "P18": {
+    "date": "2026-09-19",
+    "status": "verified",
+    "basis": "发布帖 status ID `2101118049944543545` 依 X Snowflake epoch 解码为 `2026-09-19T01:15:54.649Z`；公开代码仓同日更新。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；作为本条目的可验证公开发布日，不替代报告页面可能存在的署日。",
+    "meaning": "RoboHarm 公开发布帖的创建日。",
+    "evidence_url": "https://x.com/chooi_jeq/status/2101118049944543545",
+    "checked_endpoints": [
+      "https://github.com/robocurve/roboharm",
+      "https://x.com/chooi_jeq/status/2101118049944543545"
+    ]
+  },
+  "P19": {
+    "date": "2026-09-17",
+    "status": "verified",
+    "basis": "arXiv 条目 2609.20330 显示 `Submitted on 17 Sep 2026`，v1 时间为 `2026-09-17T13:04:23Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；它是论文首次公开提交日，不是代码 release 日。",
+    "meaning": "RoboFind 论文 arXiv v1 首次公开提交日。",
+    "evidence_url": "https://arxiv.org/abs/2609.20330",
+    "checked_endpoints": [
+      "https://arxiv.org/abs/2609.20330",
+      "https://arxiv.org/pdf/2609.20330"
+    ]
+  },
+  "X15": {
+    "date": "2026-09-18",
+    "status": "verified",
+    "basis": "原帖 status ID `2100754714971287557` 依 X Snowflake epoch 解码为 `2026-09-18T01:12:08.841Z`。",
+    "rule": null,
+    "uncertainty": "日期精确到 UTC 日；原帖页面受限，但具体 status ID、作者研究笔记与用户提供视频内容相互匹配。",
+    "meaning": "Wuji2 自扶正原帖创建日。",
+    "evidence_url": "https://x.com/frankzydou/status/2100754714971287557",
+    "checked_endpoints": [
+      "https://x.com/frankzydou/status/2100754714971287557",
+      "https://frank-zy-dou.github.io/blog/wuji2-hand-stands-up/"
+    ]
+  },
+  "P20": {
+    "date": "2026-09-20",
+    "status": "verified",
+    "basis": "作者新闻明确标注 2026-09-20 released。",
+    "rule": null,
+    "uncertainty": "作者发布公告的日期，不是论文提交日。"
+  },
+  "P21": {
+    "date": "2026-09-23",
+    "status": "estimated",
+    "basis": "独立项目页未提供发布日期；2026-09-23 仅为本轮发现日。",
+    "rule": "以本轮首次发现日作为内部排序回退值；不代表发布日期。",
+    "uncertainty": "实际发布日期未知；页面直接显示未知，内部排序使用发现日。"
+  },
+  "P22": {
+    "date": "2026-09-23",
+    "status": "estimated",
+    "basis": "独立项目页未提供发布日期；2026-09-23 仅为本轮发现日。",
+    "rule": "以本轮首次发现日作为内部排序回退值；不代表发布日期。",
+    "uncertainty": "实际发布日期未知；页面直接显示未知，内部排序使用发现日。"
+  },
+  "P23": {
+    "date": "2026-09-17",
+    "status": "verified",
+    "basis": "arXiv v1 submitted 2026-09-17.",
+    "rule": null,
+    "uncertainty": "This is the paper's first public submission date."
+  },
+  "P24": {
+    "date": "2026-09-17",
+    "status": "verified",
+    "basis": "Pantograph research index dates the report to 2026-09-17.",
+    "rule": null,
+    "uncertainty": "Official report date; not an experiment-run timestamp."
+  },
+  "P25": {
+    "date": "2026-09-18",
+    "status": "verified",
+    "basis": "GitHub repository created 2026-09-18.",
+    "rule": null,
+    "uncertainty": "Repository creation date; media/results were updated later."
+  },
+  "P26": {
+    "date": "2026-09-17",
+    "status": "verified",
+    "basis": "GitHub repository created 2026-09-17.",
+    "rule": null,
+    "uncertainty": "Repository creation date; not necessarily the physical run date."
+  },
+  "P27": {
+    "date": "2026-09-17",
+    "status": "verified",
+    "basis": "Repository and v0.1.0 release published 2026-09-17.",
+    "rule": null,
+    "uncertainty": "Release date is directly verifiable."
+  },
+  "P28": {
+    "date": "2026-09-17",
+    "status": "verified",
+    "basis": "GitHub repository created 2026-09-17.",
+    "rule": null,
+    "uncertainty": "Repository creation date; not every rollout timestamp."
+  },
+  "P29": {
+    "date": "2026-09-21",
+    "status": "verified",
+    "basis": "Initial public repository release committed 2026-09-21 UTC.",
+    "rule": null,
+    "uncertainty": "Public release date; not every experiment timestamp."
+  },
+  "P30": {
+    "date": "2026-09-19",
+    "status": "verified",
+    "basis": "GitHub repository created 2026-09-19 UTC.",
+    "rule": null,
+    "uncertainty": "Repository creation date."
+  },
+  "P31": {
+    "date": "2026-09-23",
+    "status": "verified",
+    "basis": "GitHub repository created 2026-09-23 UTC.",
+    "rule": null,
+    "uncertainty": "Repository creation date."
+  },
+  "P32": {
+    "date": "2026-09-23",
+    "status": "verified",
+    "basis": "GitHub repository created 2026-09-23 UTC.",
+    "rule": null,
+    "uncertainty": "Repository creation date."
+  },
+  "P33": {
+    "date": "2026-09-15",
+    "status": "verified",
+    "basis": "Repository created and v0.5.0 released 2026-09-15 UTC.",
+    "rule": null,
+    "uncertainty": "Release date is directly verifiable."
+  },
+  "P34": {
+    "date": "2026-09-15",
+    "status": "verified",
+    "basis": "quackd v0.9.0 and the public SO-101 log were released 2026-09-15.",
+    "rule": null,
+    "uncertainty": "The associated author post followed on 2026-09-16."
+  }
 }

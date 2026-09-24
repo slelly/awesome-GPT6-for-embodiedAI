@@ -41,8 +41,8 @@ class CatalogueTests(unittest.TestCase):
     def test_scene_tags_are_complete_and_source_bounded(self):
         allowed={'sim','real'}
         self.assertTrue(all(set(p['scene_tags'])<=allowed and p['scene_tags'] for p in self.projects))
-        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),21)
-        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),18)
+        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),33)
+        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),21)
         self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),5)
         self.assertEqual(self.by_id['P12']['scene_tags'],['real'])
         self.assertEqual(self.by_id['P15']['scene_tags'],['sim','real'])
@@ -63,11 +63,11 @@ class CatalogueTests(unittest.TestCase):
 
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
-        self.assertEqual(len(retained),34)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),15)
-        self.assertEqual(sum(item['kind']=='video' for item in retained),19)
+        self.assertEqual(len(retained),49)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),28)
+        self.assertEqual(sum(item['kind']=='video' for item in retained),21)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
-        self.assertEqual(len(videos),19)
+        self.assertEqual(len(videos),21)
         self.assertTrue(all(item.get('poster','').startswith('assets/') for item in videos.values()))
         self.assertTrue(all((ROOT/'site'/item['poster']).is_file() for item in videos.values()))
         self.assertTrue(all('first decoded frame at 00:00:00' in item.get('source_path','') for item in videos.values()))
@@ -75,6 +75,10 @@ class CatalogueTests(unittest.TestCase):
             'P01':'assets/posters/P01.jpg','P08':'assets/posters/P08.jpg',
             'P10':'assets/posters/P10.jpg','P12':'assets/posters/P12.jpg',
         })
+        self.assertEqual(videos['P21']['url'],'assets/posters/P21-openarm.mp4')
+        self.assertEqual(videos['P22']['url'],'assets/posters/P22-fridge.mp4')
+        self.assertIn('226.234-second decodable transcode',videos['P22']['source_path'])
+        self.assertIn('page 3, Figure 2',self.media['media']['P23']['source_path'])
         social_video_names={
             'X01':'Physical Robot Keyboard Typing.mp4',
             'X02':'Physical Ethernet Insertion.mp4',
@@ -121,7 +125,7 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.media['media']['X15']['url'],'assets/social/savetwt.com_2100754714971287557_640x360.mp4')
         self.assertIn('f9f554b52f32eb66dd19e5e0475db11d989eb08e1e314c0802e7f0a0f7bd36c3',self.media['media']['X15']['source_path'])
         self.assertEqual(self.meta['window_start'],'2026-08-20')
-        self.assertEqual(self.meta['window_end'],'2026-09-20')
+        self.assertEqual(self.meta['window_end'],'2026-09-24')
 
     def test_initial_snapshot_counts(self):
         if self.meta['version']!='0.1.0':
@@ -134,7 +138,7 @@ class CatalogueTests(unittest.TestCase):
     def test_catalogue_excludes_awesome_collection_pseudo_cards(self):
         removed={'R01','R02','R03','R04','R05','R06','R07','R08'}
         self.assertTrue(removed.isdisjoint(self.by_id))
-        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':14,'supporting':5,'watchlist':15})
+        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':26,'supporting':8,'watchlist':15})
         self.assertFalse(any(p['section']=='rednote_leads' for p in self.projects))
         self.assertNotIn('小红书待核实线索 · 0',(ROOT/'docs/CATALOG.md').read_text(encoding='utf-8'))
         repositories={}
@@ -204,6 +208,18 @@ class CatalogueTests(unittest.TestCase):
 
     def test_local_markdown_links(self):
         self.assertEqual(validate.check_local_markdown(),[])
+
+    def test_local_markdown_links_ignore_review_downloads_but_check_site_docs(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as directory:
+            root=Path(directory)
+            (root/'docs').mkdir()
+            (root/'downloads'/'third-party').mkdir(parents=True)
+            (root/'downloads'/'third-party'/'README.md').write_text('[missing](recordings.json)',encoding='utf-8')
+            (root/'docs'/'README.md').write_text('[missing](owned.json)',encoding='utf-8')
+            errors=validate.check_local_markdown(root)
+            self.assertEqual(len(errors),1)
+            self.assertIn('docs/README.md: missing local target owned.json',errors[0])
 
     def test_csv_round_trip(self):
         with (ROOT/'data/projects.csv').open(encoding='utf-8',newline='') as f:

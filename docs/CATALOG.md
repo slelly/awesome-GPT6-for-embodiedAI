@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-09-20。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-09-24。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 14
+## 核心项目与评测 · 26
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -86,13 +86,14 @@ dataset：[https://huggingface.co/datasets/YuMoool/astra-robodojo-rollouts](http
 | --- | --- | --- | --- |
 | GPT-6 pooled completion (mixed conditions) | 123 successes | 130 | DETAILS 汇总；任务/effort/工具/知识条件混合，不是与其他模型同任务分布的受控比较 |
 
-**限制与未决项：** 代码地址由数据卡链接；DETAILS 仍写 private until publication，不标记“代码已可复现”。 162 是当前数据卡全部模型 evaluated rows；62、112、196 属于不同页面/版本/口径。 不可将作者精选演示或部分配置成功率推广到全部任务。 DETAILS 中 GPT-6 的 123/130 是混合条件汇总；其他模型几乎仅测试 twopairs，禁止把总体比例当公平模型排名。
+**限制与未决项：** 代码地址由数据卡链接；DETAILS 仍写 private until publication，不标记“代码已可复现”。 162 是当前数据卡全部模型 evaluated rows；62、112、196 属于不同页面/版本/口径。 不可将作者精选演示或部分配置成功率推广到全部任务。 DETAILS 中 GPT-6 的 123/130 是混合条件汇总；其他模型几乎仅测试 twopairs，禁止把总体比例当公平模型排名。 2026-09-21 新增完整英文项目影片、更多任务预览与 provenance；不改变既有指标。
 
 paper：[https://arxiv.org/abs/2609.12541](https://arxiv.org/abs/2609.12541)  
 dataset：[https://huggingface.co/datasets/Agent-as-Policy/agent-as-policy](https://huggingface.co/datasets/Agent-as-Policy/agent-as-policy)  
 x：[https://x.com/JillJia6/status/2100275532378317038](https://x.com/JillJia6/status/2100275532378317038)  
+video：[https://github.com/user-attachments/assets/788696b7-7461-4011-b58c-dce6ee930342](https://github.com/user-attachments/assets/788696b7-7461-4011-b58c-dce6ee930342)  
 
-**来源：** [S005 · Agent as Policy project page](SOURCES.md#s005) · [S006 · Agent as Policy evaluated-trial dataset](SOURCES.md#s006) · [S007 · Agent as Policy dataset details](SOURCES.md#s007) · [S009 · Agent as Policy paper listing](SOURCES.md#s009) · [S044 · AGP author announcement, mirror](SOURCES.md#s044)
+**来源：** [S005 · Agent as Policy project page](SOURCES.md#s005) · [S006 · Agent as Policy evaluated-trial dataset](SOURCES.md#s006) · [S007 · Agent as Policy dataset details](SOURCES.md#s007) · [S009 · Agent as Policy paper listing](SOURCES.md#s009) · [S044 · AGP author announcement, mirror](SOURCES.md#s044) · [S078 · Agent as Policy English-film update](SOURCES.md#s078)
 
 ---
 
@@ -154,24 +155,30 @@ x：[https://x.com/JillJia6/status/2100275532378317038](https://x.com/JillJia6/s
 <a id="p06"></a>
 ### P06 · RoboDojo · 官方 GPT-6 Astra 评测报告
 
-官方报告与作者宣布的评测覆盖 RoboDojo、类人机器人高层控制及灵巧操作；正文获取不完整。
+9 月 21 日论文补充完整仿真评测：Astra 在 42 个任务、每任务 50 次、共 2,100 次试验上报告平均成功率 22.48%、Score 28.97。真机协议因不安全动作中止，保留的 33 次仅为诊断样本。
 
-**来源等级：B** · 真机 + 仿真 · GPT-6 明确，但正文证据不完整
+**来源等级：A** · 真机 + 仿真 · 一手资料明确涉及 GPT-6
 
-**作者 / 团队：** RoboDojo team  
+**作者 / 团队：** Wenbo Zhang, Kaixuan Wang, Yutao Ouyang et al.  
 **事件日期：** 2026-09-16（窗口内）  
 **日期依据：** 检索摘要中的报告日期；原页完整正文不可得  
 **入口：** [https://robodojo-benchmark.com/report/gpt-6-astra-eval](https://robodojo-benchmark.com/report/gpt-6-astra-eval)  
 **代码入口：** 未定位公开代码；不等于确认代码不存在  
-**许可状态：** 未核实  
-**控制接口 / 作用：** 已检索片段称 RoboProbe L3 固定控制接口；完整配置待核
+**许可状态：** 论文 arXiv non-exclusive distribution license；不是 CC BY 或通用再利用许可。图 2 仅用于本地审核预览，公开再发布许可未确认。  
+**控制接口 / 作用：** 固定 LLM 通过 move_eef 选择末端目标，非学习后处理转换为关节轨迹；不是 25 Hz 模型推理。
 
-**限制与未决项：** 保留官方入口，但不将二手报道的分数写进已核验指标表。 未确认专用 RoboProbe 代码的公开地址。 不声称 GPT-6 当前榜首；榜单与代码持续更新。
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| RoboDojo Average success rate | 22.48 % | 42 tasks × 50 episodes = 2,100 trials; one evaluation seed | arXiv v1 Table 1; leaderboard Average is axis-averaged. Public policy snapshot is dated 2026-09-10 and was not rerun with the LLM task text. |
+| RoboDojo Average Score | 28.97 score / 100 | 5 capability-axis averages from the same 2,100 Astra trials | Mean process reward × 100; not success rate. Episode-pooled Score is 28.72, distinct from the reported leaderboard Average. |
+
+**限制与未决项：** 未独立复现；主评测每模型一个 seed，无重复种子方差。 GPT-5.5 同为 50 次/任务；DeepSeek-Flash 为 10 次/任务，不能混用分母。 公开策略基线为 2026-09-10 榜单快照，未以 LLM 所获文字输入重新运行。 真机协议中止，12 任务、33 次为选择性诊断材料，不是正式 RoboDojo-Real 成绩。
 
 x：[https://x.com/MarioChan2002/status/2100091875403469014](https://x.com/MarioChan2002/status/2100091875403469014)  
 benchmark：[https://github.com/robodojo-benchmark/RoboDojo](https://github.com/robodojo-benchmark/RoboDojo)  
+paper：[https://arxiv.org/abs/2609.24170](https://arxiv.org/abs/2609.24170)  
 
-**来源：** [S013 · RoboDojo Astra evaluation report](SOURCES.md#s013) · [S014 · RoboDojo Astra author announcement on X](SOURCES.md#s014) · [S015 · Mirror of RoboDojo author announcement](SOURCES.md#s015)
+**来源：** [S013 · RoboDojo Astra evaluation report](SOURCES.md#s013) · [S014 · RoboDojo Astra author announcement on X](SOURCES.md#s014) · [S015 · Mirror of RoboDojo author announcement](SOURCES.md#s015) · [S064 · An Unexpected Robot Policy — arXiv v1](SOURCES.md#s064)
 
 ---
 
@@ -322,15 +329,16 @@ x_profile：[https://x.com/huxiao93612565](https://x.com/huxiao93612565)
 **日期依据：** 发布帖 status ID 2101118049944543545 的 X Snowflake 时间为 2026-09-19T01:15:54Z；公开代码仓同日更新  
 **入口：** [https://github.com/robocurve/roboharm](https://github.com/robocurve/roboharm)  
 **代码入口：** [https://github.com/robocurve/roboharm](https://github.com/robocurve/roboharm)  
-**许可状态：** 仓库声明 All rights reserved，不授予开源许可；第三方组件另依其条款  
+**许可状态：** 项目明确采用 CC BY-NC 4.0；原始视频与第三方依赖仍按各自权利边界处理。  
 **控制接口 / 作用：** 三相机与本体状态 → Inspect Robots agent/VLA policy → YAM 双臂动作；Astra/Fable 为 medium effort、40 次模型调用上限与 25% 速度限制
 
-**限制与未决项：** 公开仓库提供任务、采集与标注工具，但不包含 raw rollouts，也不是冻结结果数据集。 报告入口本轮无法直接读取，因此不把视频中的汇总图转写为结构化排名指标。 五个固定场景与固定措辞不能代表开放环境安全性；复现实验应使用惰性替代物，禁止制造真实刀具、电器、压力或化学危险。
+**限制与未决项：** 公开仓库提供任务、采集与标注工具，但不包含 raw rollouts，也不是冻结结果数据集。 报告入口本轮无法直接读取，因此不把视频中的汇总图转写为结构化排名指标。 五个固定场景与固定措辞不能代表开放环境安全性；复现实验应使用惰性替代物，禁止制造真实刀具、电器、压力或化学危险。 2026-09-22 许可提交明确项目采用 CC BY-NC 4.0；实验数字与媒体未变。
 
 project：[https://robocurve.org/roboharm/](https://robocurve.org/roboharm/)  
 post：[https://x.com/chooi_jeq/status/2101118049944543545](https://x.com/chooi_jeq/status/2101118049944543545)  
+license_commit：[https://github.com/robocurve/roboharm/commit/5952f0035037604265d5cf38fa24938d4acf7133](https://github.com/robocurve/roboharm/commit/5952f0035037604265d5cf38fa24938d4acf7133)  
 
-**来源：** [S053 · RoboHarm benchmark and collection toolkit](SOURCES.md#s053) · [S054 · RoboHarm research report entry point](SOURCES.md#s054) · [S055 · RoboHarm author release post and supplied video](SOURCES.md#s055)
+**来源：** [S053 · RoboHarm benchmark and collection toolkit](SOURCES.md#s053) · [S054 · RoboHarm research report entry point](SOURCES.md#s054) · [S055 · RoboHarm author release post and supplied video](SOURCES.md#s055) · [S081 · RoboHarm license clarification](SOURCES.md#s081)
 
 ---
 
@@ -363,7 +371,309 @@ paper：[https://arxiv.org/abs/2609.20330](https://arxiv.org/abs/2609.20330)
 
 ---
 
-## 配套资源与对照 · 5
+<a id="p20"></a>
+### P20 · EmbodiedSWE · 长时程灵巧机器人编码智能体基准
+
+GPT-6 Astra 通过 Codex 编写和迭代仿真任务解法。项目覆盖 28 个任务，报告 Astra 成功率 82%；页面未给出主评测逐模型运行分母，尚未独立复现。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Zeyu Shen, Haoxiang You, Yilang Liu et al.  
+**事件日期：** 2026-09-20（窗口内）  
+**日期依据：** 作者新闻明确标注 2026-09-20 released。  
+**入口：** [https://embodiedswe.github.io/](https://embodiedswe.github.io/)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 项目媒体与代码许可未核实；本次未下载或重新托管视频。  
+**控制接口 / 作用：** GPT-6 Astra writes and iterates simulation solutions through Codex. The project covers 28 tasks and reports 82% success for Astra; the page does not state the main evaluation run denominator. Not independently reproduced.
+
+**限制与未决项：** 作者项目页自报；未独立复现。 未收到视频原文件，预览保留来源链接。 论文与博客仍标 soon；本轮发现时项目页 Code 链接返回 404，未作为可用代码按钮。 编码智能体生成解法，不应解读为高频端到端动作策略。
+
+
+**来源：** [S059 · EmbodiedSWE project page](SOURCES.md#s059) · [S060 · Kashu Yamazaki news: EmbodiedSWE release](SOURCES.md#s060)
+
+---
+
+<a id="p21"></a>
+### P21 · OpenArm Mona Lisa · LeRobot ACT 仿真绘画
+
+HIM Astra 挑战中的 OpenArm 仿真绘画项目，结合脚本绘画序列与 ACT 关节策略。GPT-6 是构建助手；真机和真实颜料未测试，发布日期未知。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** HIM Arena user e  
+**事件日期：** 未确认（首发/更新时间未确认）  
+**日期依据：** 独立项目页未提供发布日期；2026-09-23 仅为本轮发现日。  
+**入口：** [https://arena.himrobotics.com/uploads/source_59ffd3291f3623fc498d](https://arena.himrobotics.com/uploads/source_59ffd3291f3623fc498d)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 官方 HIM Arena 视频已下载并仅用于本地审核预览；项目媒体与代码的公开再利用许可仍未核实。  
+**控制接口 / 作用：** An OpenArm simulation painting entry in the HIM Astra challenge combines a scripted painting sequence with an ACT joint policy. GPT-6 assists development; physical hardware and real paint are untested. Publication date unknown.
+
+**限制与未决项：** 作者项目页自报；未独立复现。 已从官方 HIM Arena 项目页取得视频并在本地审核预览中实播；公开再利用许可未核实。 Physical Palette Runner 是同一成果前身，不另计卡片。 HIM 未审查或执行上传的项目代码；本轮也未运行。
+
+
+**来源：** [S061 · OpenArm Mona Lisa — LeRobot ACT](SOURCES.md#s061) · [S063 · HIM GPT-6 Astra Challenge results](SOURCES.md#s063)
+
+---
+
+<a id="p22"></a>
+### P22 · Fridge Speller · G1 字母磁贴拼词
+
+在 MuJoCo 中，Unitree G1 与 Dex3-1 手行走至冰箱并用磁贴拼出 HELLO。作者称项目用 GPT-6 Astra 构建；仅报告单场景演示，未证明模型逐步直接控制，也无真机结果。发布日期未知。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Maddie D. Reese / HIM Arena  
+**事件日期：** 未确认（首发/更新时间未确认）  
+**日期依据：** 独立项目页未提供发布日期；2026-09-23 仅为本轮发现日。  
+**入口：** [https://arena.himrobotics.com/uploads/source_62bc9b696cef9e7c64d6](https://arena.himrobotics.com/uploads/source_62bc9b696cef9e7c64d6)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 官方 HIM Arena 视频已下载并仅用于本地审核预览；项目媒体与代码的公开再利用许可仍未核实。  
+**控制接口 / 作用：** A simulated Unitree G1 with Dex3-1 hands walks to a fridge and spells HELLO with magnets. The author credits GPT-6 Astra for building the project; this is a nominal-scene demo, without evidence of direct model control or real-hardware results. Publication date unknown.
+
+**限制与未决项：** 作者项目页自报；未独立复现。 已从官方 HIM Arena 项目页取得视频；原响应末尾约 4.4 秒存在损坏，预览使用可解码的 226.234 秒审核转码。 五次放置属于一段演示，不是五次独立试验。 HIM 未审查或执行上传的项目代码；本轮也未运行。
+
+
+**来源：** [S062 · Fridge Speller](SOURCES.md#s062) · [S063 · HIM GPT-6 Astra Challenge results](SOURCES.md#s063)
+
+---
+
+<a id="p23"></a>
+### P23 · How Far Can GPT-6-Astra Go? · 连续环境视觉语言导航
+
+Astra 在 VLN-CE 工作流中根据图像、指令、执行反馈与历史提出导航动作；固定 R2R-CE val-unseen 子集报告 SR 52.0%、SPL 48.9%、nDTW 70.8%。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Guangzhao Dai, Qi Wu, Bin Zhu  
+**事件日期：** 2026-09-17（窗口内）  
+**日期依据：** arXiv v1 submitted 2026-09-17; v2 followed on 2026-09-18.  
+**入口：** [https://arxiv.org/abs/2609.20116](https://arxiv.org/abs/2609.20116)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 论文按 arXiv 页面提供；图 2 仅用于本地审核预览，公开再利用许可未确认。  
+**控制接口 / 作用：** 选定观测与历史 → Astra 导航决策 → 环境动作与反馈循环
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Navigation success rate | 52.0 % | 50 R2R-CE val-unseen episodes | fixed author-selected evaluation subset |
+| SPL | 48.9 % | same 50 episodes | R2R-CE evaluation |
+| nDTW | 70.8 score | same 50 episodes | R2R-CE evaluation |
+
+**限制与未决项：** 结果来自作者固定 50-episode 子集，未独立复现。 52% 包含 36% 接受 STOP 后成功与 16% 到步数上限时满足距离条件。 未发现公开视频或代码入口。
+
+paper：[https://arxiv.org/abs/2609.20116](https://arxiv.org/abs/2609.20116)  
+
+**来源：** [S065 · How Far Can GPT-6-Astra Go? arXiv paper](SOURCES.md#s065)
+
+---
+
+<a id="p24"></a>
+### P24 · Benchmarking Frontier VLMs on Robots · Pantograph
+
+在 6 台 Pandroid 双臂移动机器人上，以相同提示、工具和预算比较 Astra 与 Fable；官方页报告 Astra 完成率 36%、Fable 15%。
+
+**来源等级：A** · 真机 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Pantograph  
+**事件日期：** 2026-09-17（窗口内）  
+**日期依据：** Pantograph research index dates the official report to 2026-09-17.  
+**入口：** [https://pantograph.com/journal/vlm-harness](https://pantograph.com/journal/vlm-harness)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 报告和媒体版权归 Pantograph；本地仅保留官方社交预览图，未声明再许可。  
+**控制接口 / 作用：** 统一 VLM harness → 离散工具调用 → Pandroid 双臂移动机器人
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Astra completion | 36 % | 80 rollouts | 8 tasks × 10 trials, 20-minute or 96-turn limit |
+| Fable completion | 15 % | 80 rollouts | same harness and task budget |
+
+**限制与未决项：** 作者自报，未独立复现。 8 个任务、每模型每任务 10 次，不能推广到其他硬件或任务。 网页精选成功/失败视频不是全部 160 次 rollout。
+
+project：[https://pantograph.com/journal/vlm-harness](https://pantograph.com/journal/vlm-harness)  
+
+**来源：** [S066 · Pantograph VLM robot harness report](SOURCES.md#s066)
+
+---
+
+<a id="p26"></a>
+### P26 · Axol Pick-and-Pack · Astra 视觉复核
+
+Astra 仅审阅相机图像，确定性 Python 规划与受保护的 Axol 控制代码执行动作；作者记录一次罐头入袋成功及随后扭矩安全中止。
+
+**来源等级：A** · 真机 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** dineshreddy91  
+**事件日期：** 2026-09-17（窗口内）  
+**日期依据：** GitHub repository created 2026-09-17.  
+**入口：** [https://github.com/dineshreddy91/robot-pick-pack](https://github.com/dineshreddy91/robot-pick-pack)  
+**代码入口：** [https://github.com/dineshreddy91/robot-pick-pack](https://github.com/dineshreddy91/robot-pick-pack)  
+**许可状态：** 仓库代码与证据图片的明确再许可未核实；本地图片仅供审核。  
+**控制接口 / 作用：** 相机图像 → Astra 复核 → 确定性规划器 → 受保护 Axol 控制器
+
+**限制与未决项：** 只记录一次成功抓取放袋，不能视为重复成功率。 回零因肩部扭矩残差 4.1 Nm 超过 4.0 Nm 限值而中止。 仓库没有公开视频。
+
+
+**来源：** [S068 · Axol robot pick-and-pack repository](SOURCES.md#s068)
+
+---
+
+<a id="p28"></a>
+### P28 · GPT-6 Astra Policy on DexJoCo
+
+Astra 编写基于示例、图像和机器人状态的控制器，冻结代码后在三项 DexJoCo 任务和两种随机化条件下评测 900 episodes。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** YichengDraw  
+**事件日期：** 2026-09-17（窗口内）  
+**日期依据：** GitHub repository created 2026-09-17.  
+**入口：** [https://github.com/YichengDraw/astra-policy-dexjoco](https://github.com/YichengDraw/astra-policy-dexjoco)  
+**代码入口：** [https://github.com/YichengDraw/astra-policy-dexjoco](https://github.com/YichengDraw/astra-policy-dexjoco)  
+**许可状态：** 代码 MIT；仓库演示媒体未见单独许可声明。  
+**控制接口 / 作用：** 示例/观测/状态 → Astra 一次性生成控制器 → 冻结代码评测
+
+**限制与未决项：** 评测阶段不逐步调用模型。 成功率应按任务与随机化条件分别读取，不能合并成单一通用分数。 三个成功样例视频不代表全部 900 次运行。
+
+
+**来源：** [S070 · GPT-6 Astra policy on DexJoCo](SOURCES.md#s070)
+
+---
+
+<a id="p29"></a>
+### P29 · Astra on RoboMME · 稀疏规划与视觉完成监控
+
+三层长时程操作系统由 Astra 规划 grounded subtask、π0.5/MME-VLA 执行动作、Qwen3-VL-4B LoRA 判断何时再次规划。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Bingao Chen, Haoquan Fang, C. Karen Liu  
+**事件日期：** 2026-09-21（窗口内）  
+**日期依据：** Initial public repository release committed 2026-09-21 UTC.  
+**入口：** [https://bingaochen.github.io/Astra-on-RoboMME/](https://bingaochen.github.io/Astra-on-RoboMME/)  
+**代码入口：** [https://github.com/bingaochen/Astra-on-RoboMME](https://github.com/bingaochen/Astra-on-RoboMME)  
+**许可状态：** 代码 Apache-2.0；Qwen、RoboMME、VLA 及媒体保持上游许可。  
+**控制接口 / 作用：** Astra 规划 → π0.5/VLA action chunks → Qwen3-VL-4B 完成监控 → 按需再规划
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Overall success | 79.13 % | 800 official RoboMME test episodes | 633 success, 103 failure, 64 timeout |
+| Mean Astra calls | 3.63 calls per episode | same 800 episodes | three-tier scheduler |
+
+**限制与未决项：** 作者自报，未独立复现。 官方 test split 800 episodes 的结果依赖公开流程之外的模型/API与 GPU 环境。 79.13% 是整个三层系统结果，不是 Astra 单模型分数。
+
+code：[https://github.com/bingaochen/Astra-on-RoboMME](https://github.com/bingaochen/Astra-on-RoboMME)  
+weights：[https://huggingface.co/bingaochen/Astra-on-RoboMME-Monitor](https://huggingface.co/bingaochen/Astra-on-RoboMME-Monitor)  
+
+**来源：** [S071 · Astra on RoboMME repository](SOURCES.md#s071)
+
+---
+
+<a id="p30"></a>
+### P30 · RoboICL · 具身上下文学习
+
+以同构 TRAIN/LIVE 观测—动作—反馈上下文让 Astra 在线输出双臂末端增量，在九项任务、45 次 rollout 上比较 0/1/3-shot 设置。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Mosi-AI  
+**事件日期：** 2026-09-19（窗口内）  
+**日期依据：** GitHub repository created 2026-09-19 UTC.  
+**入口：** [https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/](https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/)  
+**代码入口：** [https://github.com/Mosi-AI/RoboICL](https://github.com/Mosi-AI/RoboICL)  
+**许可状态：** 项目页和仓库媒体公开可访问；未见统一媒体再许可声明。  
+**控制接口 / 作用：** TRAIN/LIVE 图像与动作反馈 → Astra → 15×14 双臂末端增量
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| 3-shot mean score | 57.33 score | 45 rollouts | 9 tasks × 5 layouts/settings |
+
+**限制与未决项：** 作者项目页自报，未独立复现。 3-shot 57.33 与 Direct 36.11 是跨协议上下文，不是严格因果对照。 九任务各 5 个设置，样本量仍有限。
+
+code：[https://github.com/Mosi-AI/RoboICL](https://github.com/Mosi-AI/RoboICL)  
+
+**来源：** [S072 · RoboICL repository](SOURCES.md#s072)
+
+---
+
+<a id="p31"></a>
+### P31 · GPT-6 LIBERO Manipulation Probe
+
+把规划、2D/3D 定位和低层控制拆开评测；Astra 直接输出 7-D 末端增量，额外正交视角显著改善所测抓放任务。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Jacksonha7  
+**事件日期：** 2026-09-23（窗口内）  
+**日期依据：** GitHub repository created 2026-09-23 UTC.  
+**入口：** [https://github.com/Jacksonha7/gpt6-libero-probe](https://github.com/Jacksonha7/gpt6-libero-probe)  
+**代码入口：** [https://github.com/Jacksonha7/gpt6-libero-probe](https://github.com/Jacksonha7/gpt6-libero-probe)  
+**许可状态：** 仓库许可状态未核实；本地证据图仅供审核预览。  
+**控制接口 / 作用：** 多视角 RGB / 可选真值坐标 → Astra → 7-D 末端增量动作
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Ground-truth coordinate success | 37 successes | 40 | four pick-and-place tasks |
+| Main/wrist-view success | 2 successes | 40 | same four tasks without privileged coordinates |
+| Orthogonal-view success | 34 successes | 40 | same four tasks with added side view |
+
+**限制与未决项：** 仅四项 LIBERO 抓放任务、每条件 40 次。 多视角与真值定位结果不应推广到一般具身任务。 公开媒体是对照 GIF，未见独立 MP4。
+
+
+**来源：** [S073 · GPT-6 LIBERO manipulation probe](SOURCES.md#s073)
+
+---
+
+<a id="p33"></a>
+### P33 · Robot-vLLM · GPT Planner + π₀.₅ + ROS 2
+
+连接 GPT Planner、官方 OpenPI π₀.₅ 客户端与 ROS 2 执行/恢复，在四滑块共享感知实验中记录 12 seeds×3 组运行。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** nssmd  
+**事件日期：** 2026-09-15（窗口内）  
+**日期依据：** GitHub repository created 2026-09-15; v0.5.0 released the same day.  
+**入口：** [https://github.com/nssmd/robot-vllm](https://github.com/nssmd/robot-vllm)  
+**代码入口：** [https://github.com/nssmd/robot-vllm](https://github.com/nssmd/robot-vllm)  
+**许可状态：** 代码 Apache-2.0；OpenPI、模型权重和仿真依赖另按上游许可。  
+**控制接口 / 作用：** GPT-6 高层规划 → π₀.₅ 动作策略 → ROS 2 执行与恢复
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Valid completed runs | 33 successes | 36 | 12 seeds × 3 shared-perception groups; 3 infrastructure interruptions |
+
+**限制与未决项：** 任务只验证简单视觉到达与共享感知，不代表复杂抓取或真机性能。 33 个有效成功与 3 个基础设施中断不能解释为 100% 无条件成功。 未找到公开视频。
+
+release：[https://github.com/nssmd/robot-vllm/releases/tag/v0.5.0](https://github.com/nssmd/robot-vllm/releases/tag/v0.5.0)  
+
+**来源：** [S075 · Robot-vLLM repository](SOURCES.md#s075)
+
+---
+
+<a id="p34"></a>
+### P34 · quackd · 多机器人 LLM CLI / Harness
+
+LLM 在声明的机器人 verbs 中逐步选动作；2026-09-15 的 SO-101 真机 wave 记录包含 10 次模型调用、8 个 verbs 和 97 条被接受命令。
+
+**来源等级：A** · 真机 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Rok Benko  
+**事件日期：** 2026-09-15（本月更新，基础项目更早）  
+**日期依据：** quackd v0.9.0 and the public SO-101 experiment log were released 2026-09-15; author post followed 2026-09-16.  
+**入口：** [https://github.com/rokbenko/quackd](https://github.com/rokbenko/quackd)  
+**代码入口：** [https://github.com/rokbenko/quackd](https://github.com/rokbenko/quackd)  
+**许可状态：** 项目代码按仓库许可；README GIF/PNG 未见独立媒体再许可声明，本地仅保留项目图用于审核。  
+**控制接口 / 作用：** LLM → 机器人 verbs / JSON 命令 → quackd 适配器 → SO-101 真机
+
+**限制与未决项：** 相机裁掉抬起的手臂，且每次结束机械臂都会掉落。 97 条命令被解析接受不等同于 97 次任务成功。 X 原帖正文访问受限；原帖作为同一项目来源合并，不单独建卡。
+
+post：[https://x.com/rokbenko/status/2100234282631360540](https://x.com/rokbenko/status/2100234282631360540)  
+package：[https://pypi.org/project/quackd/](https://pypi.org/project/quackd/)  
+
+**来源：** [S076 · quackd repository and experiment log](SOURCES.md#s076) · [S077 · quackd SO-101 author post](SOURCES.md#s077)
+
+---
+
+## 配套资源与对照 · 8
 
 <a id="p13"></a>
 ### P13 · Inspect Robots
@@ -380,10 +690,11 @@ paper：[https://arxiv.org/abs/2609.20330](https://arxiv.org/abs/2609.20330)
 **许可状态：** MIT  
 **控制接口 / 作用：** policy × embodiment × task；日志包含配置、动作和评判
 
-**限制与未决项：** 框架本体不算新的独立 GPT-6 成功案例。 默认安全检查不构成硬件安全认证。
+**限制与未决项：** 框架本体不算新的独立 GPT-6 成功案例。 默认安全检查不构成硬件安全认证。 v0.59.0 增加环境预算提示、provenance、Jev/AprilTag 支持及验证/日志修复。
 
+release：[https://github.com/robocurve/inspect-robots/releases/tag/v0.59.0](https://github.com/robocurve/inspect-robots/releases/tag/v0.59.0)  
 
-**来源：** [S026 · Inspect Robots](SOURCES.md#s026)
+**来源：** [S026 · Inspect Robots](SOURCES.md#s026) · [S079 · Inspect Robots v0.59.0](SOURCES.md#s079)
 
 ---
 
@@ -454,10 +765,11 @@ project：[https://deepcybo-physai.github.io/PhysBrain-1.5/](https://deepcybo-ph
 **许可状态：** 待核冲突：README 正文为非商业研究许可，GitHub UI 标签显示 MIT  
 **控制接口 / 作用：** 策略服务器 ↔ 仿真客户端；状态/动作协议按本体配置
 
-**限制与未决项：** 09-16/17 更新涉及 observation 时序、RGB byte order 与 swap_T 资产，应固定代码和数据版本。 不要直接混用旧评测快照与新资产。 商业使用前必须解决许可文本不一致。
+**限制与未决项：** 09-16/17 更新涉及 observation 时序、RGB byte order 与 swap_T 资产，应固定代码和数据版本。 不要直接混用旧评测快照与新资产。 商业使用前必须解决许可文本不一致。 2026-09-19 修正 organize_table 任务说明；没有新增评测结果。
 
+task_update：[https://github.com/robodojo-benchmark/RoboDojo/commit/726e9aabfaa642203722eb126f5eaf0f37f3e1ad](https://github.com/robodojo-benchmark/RoboDojo/commit/726e9aabfaa642203722eb126f5eaf0f37f3e1ad)  
 
-**来源：** [S016 · RoboDojo official code](SOURCES.md#s016) · [S017 · RoboDojo project site](SOURCES.md#s017)
+**来源：** [S016 · RoboDojo official code](SOURCES.md#s016) · [S017 · RoboDojo project site](SOURCES.md#s017) · [S080 · RoboDojo organize_table task correction](SOURCES.md#s080)
 
 ---
 
@@ -480,6 +792,79 @@ project：[https://deepcybo-physai.github.io/PhysBrain-1.5/](https://deepcybo-ph
 
 
 **来源：** [S032 · HumanCLAW benchmark](SOURCES.md#s032)
+
+---
+
+<a id="p25"></a>
+### P25 · Robot Agent Gallery · Astra 仿真机器人评测画廊
+
+汇总 Astra 从 RGB 与本体状态在线控制 LIBERO、RoboTwin、RoboCasa365、RoboDojo 等仿真基准的公开结果和可播放 episode。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** tianqi-zh  
+**事件日期：** 2026-09-18（窗口内）  
+**日期依据：** GitHub repository created 2026-09-18; Robotwin media/results were refreshed on 2026-09-22.  
+**入口：** [https://github.com/tianqi-zh/robot-agent-gallery](https://github.com/tianqi-zh/robot-agent-gallery)  
+**代码入口：** [https://github.com/tianqi-zh/robot-agent-gallery](https://github.com/tianqi-zh/robot-agent-gallery)  
+**许可状态：** 仓库未见统一媒体再许可；本地仅保留仓库社交预览图用于审核。  
+**控制接口 / 作用：** RGB + 本体状态 → Astra 动作 → 多仿真基准环境
+
+**限制与未决项：** 各基准任务、控制接口和预算不同，不能合并为单一成功率。 当前画廊计数会随仓库更新，预览记录的是本轮核对状态。 未审计生成这些结果的全部私有源材料。
+
+project：[https://tianqi-zh.github.io/robot-agent-gallery/](https://tianqi-zh.github.io/robot-agent-gallery/)  
+
+**来源：** [S067 · Robot Agent Gallery repository and media](SOURCES.md#s067)
+
+---
+
+<a id="p27"></a>
+### P27 · LLM Robotics Playground · 四项 MuJoCo 控制器实验
+
+Astra/Codex 协助搭建 MuJoCo 环境并编写耳机线解缠、六足搬运、白板写程序和灵巧手绘画控制器；回放时不调用模型。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** dimentary  
+**事件日期：** 2026-09-17（窗口内）  
+**日期依据：** Repository and v0.1.0 release both published 2026-09-17.  
+**入口：** [https://github.com/dimentary/llm-robotics-playground](https://github.com/dimentary/llm-robotics-playground)  
+**代码入口：** [https://github.com/dimentary/llm-robotics-playground](https://github.com/dimentary/llm-robotics-playground)  
+**许可状态：** 项目代码 MIT；上游机器人模型及鸽子图样保持各自许可。  
+**控制接口 / 作用：** Astra/Codex 编写环境与控制代码 → 仿真真值状态/接触 → 固定控制器回放
+
+**限制与未决项：** 不是 Astra 在线闭环控制。 项目样例不能作为通用机器人成功率。 上游资产许可应与 MIT 代码分开理解。
+
+release：[https://github.com/dimentary/llm-robotics-playground/releases/tag/v0.1.0](https://github.com/dimentary/llm-robotics-playground/releases/tag/v0.1.0)  
+
+**来源：** [S069 · LLM Robotics Playground repository](SOURCES.md#s069)
+
+---
+
+<a id="p32"></a>
+### P32 · 当地图成为程序 · Astra World Model
+
+Astra 读取 RGB/几何输入并调用 Blender 构造对象化三维场景；下游用生成场景做无人机复拍和 G1 语言导航。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** wentingw  
+**事件日期：** 2026-09-23（窗口内）  
+**日期依据：** GitHub repository created 2026-09-23 UTC.  
+**入口：** [https://github.com/wentingw/astra-world-model-blog](https://github.com/wentingw/astra-world-model-blog)  
+**代码入口：** [https://github.com/wentingw/astra-world-model-blog](https://github.com/wentingw/astra-world-model-blog)  
+**许可状态：** 仓库研究资产未见统一再许可声明；本地仅保留官方 hero 图。  
+**控制接口 / 作用：** RGB/几何输入 → Astra + Blender 工具 → 对象化 3D 场景 → 下游固定控制器
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Drone exact revisit | 0 successes | 20 | M3 generated-scene downstream evaluation |
+| G1 language-navigation arrival | 18 successes | 30 | declared model-world evaluation |
+
+**限制与未决项：** 不是 Astra 在线控制无人机或 G1。 无人机准确复拍 0/20；G1 的 18/30 只适用于声明的模型世界。 冻结资产与机器可读结果仍是作者自报。
+
+
+**来源：** [S074 · Astra World Model research repository](SOURCES.md#s074)
 
 ---
 

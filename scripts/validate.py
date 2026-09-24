@@ -289,6 +289,13 @@ def validate_presentation(projects, sources, i18n, media_data, publication_dates
 def check_local_markdown(root: Path = ROOT) -> list[str]:
     errors=[]
     for path in root.rglob('*.md'):
+        relative = path.relative_to(root)
+        # downloads/ is an ignored review workspace that may contain partial
+        # third-party checkouts.  Their own relative links are outside this
+        # catalogue's publication contract; repository-owned Markdown remains
+        # checked, including README.md and everything under docs/.
+        if relative.parts and relative.parts[0] == 'downloads':
+            continue
         text=path.read_text(encoding='utf-8')
         for dest in re.findall(r'\]\(([^\s)]+)\)',text):
             parsed=urlsplit(dest)
@@ -296,16 +303,16 @@ def check_local_markdown(root: Path = ROOT) -> list[str]:
                 continue
             target=(path.parent/unquote(parsed.path)).resolve() if parsed.path else path
             if not target.is_relative_to(root.resolve()):
-                errors.append(f'{path.relative_to(root)}: local link escapes repository: {dest}')
+                errors.append(f'{relative}: local link escapes repository: {dest}')
                 continue
             if not target.exists():
-                errors.append(f'{path.relative_to(root)}: missing local target {dest}')
+                errors.append(f'{relative}: missing local target {dest}')
             elif parsed.fragment and target.suffix=='.md':
                 # Catalogue/source links use explicit stable anchors rather than generated heading slugs.
                 if re.fullmatch(r'[pxr]\d{2}|s\d{3}',parsed.fragment):
                     body=target.read_text(encoding='utf-8')
                     if f'id="{parsed.fragment}"' not in body:
-                        errors.append(f'{path.relative_to(root)}: missing explicit anchor {dest}')
+                        errors.append(f'{relative}: missing explicit anchor {dest}')
     return errors
 
 

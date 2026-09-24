@@ -1,38 +1,246 @@
 {
   "en": {
-    "P01": {"title": "GPT-Policy · In-Context Robot Learning", "summary": "A fixed VLM adapts from demonstrations, goal images, and interaction history before using constrained robot tools in a closed loop.", "detail": "Primary project material describes in-context adaptation and constrained tool execution; public experimental assets and licensing remain incomplete."},
-    "P02": {"title": "GPT-as-Policy · GPT-6 Direct / π0.5 Hybrid", "summary": "Compares direct GPT control with GPT-reviewed and corrected π0.5 actions on aligned RoboDojo cases.", "detail": "Reported results apply to a selected aligned case set, not a same-seed rerun of official baselines."},
-    "P03": {"title": "Agent as Policy (AGP)", "summary": "A general agent observes, programs, commands, and corrects from execution feedback in a real bimanual setup.", "detail": "The project publishes trial-data evidence, while public code availability and full real-robot configuration remain to be confirmed."},
-    "P04": {"title": "RoboCurve · Bowl & Puzzle", "summary": "Repeated YAM-arm trials contrast coarse pick-and-place with fine insertion and retain per-trial failure boundaries.", "detail": "The official report distinguishes the two tasks; its results should not be read as one transferable robot score."},
-    "P05": {"title": "StationeryBench · Five Real Bimanual Tasks", "summary": "Markers, clips, rulers, sticky notes, and boxes form multi-stage bimanual tasks with both progress and completion reported.", "detail": "Mean progress and fully completed trials are distinct reported measures and are shown separately."},
-    "P06": {"title": "RoboDojo · Official GPT-6 Astra Evaluation Report", "summary": "An official report and author announcement cover RoboDojo, humanoid high-level control, and dexterous manipulation.", "detail": "The report entry is retained, but its full quantitative body was not available in this snapshot."},
-    "P07": {"title": "ENPIRE · GPT-6 Robot Autonomy Lead", "summary": "NVIDIA's real-robot experimentation framework with a GPT-6-specific author demonstration lead.", "detail": "The framework predates this window; the GPT-6 application is not treated as a confirmed framework-wide result."},
-    "P08": {"title": "GPT6-real2sim · DROID / YAM Reconstruction", "summary": "Reconstructs scenes, calibration, and contact replay from demonstrations while retaining unsuccessful physical replays.", "detail": "Visual replay, fitted trajectories, and successful physical contact are kept as separate claims."},
-    "P09": {"title": "Real2Sim_GPT6_ASTRA · Three-View Geometry Replay", "summary": "Builds editable Blender scenes and action animation from three RGB views with public modelling and fitting code.", "detail": "Editable animation is not evidence of validated physical control."},
-    "P10": {"title": "Real2Gym", "summary": "A workflow from human or robot video to executable robot simulation using Blender and MuJoCo.", "detail": "The project page and code route are retained; individual implementation files were not audited here."},
-    "P11": {"title": "dexgpt · Hand Video to Simulation", "summary": "A located dexgpt repository with social-demo leads for 44-DoF hand tracking, IK, and grasping.", "detail": "Implementation, licensing, and repeated experiment evidence remain unresolved."},
-    "P12": {"title": "Drone-Bench · Astra Update", "summary": "Evaluates models that write drone perception and control programs; the official page lists gpt-6-astra.", "detail": "The benchmark is older and the precise date of the Astra update was not confirmed."},
-    "P13": {"title": "Inspect Robots", "summary": "An auditable evaluation framework shared by real and simulated tasks and multiple policy types.", "detail": "It is execution infrastructure for RoboCurve reports, not a standalone GPT-6 result."},
-    "P14": {"title": "Show-Harness", "summary": "Routes discrete semantic actions through an embodiment interpreter with collection, training, models, and data.", "detail": "It is a supporting resource; GPT-6-specific performance has not been established."},
-    "P15": {"title": "PhysBrain 1.5 / PhysBrainEvalKit", "summary": "An embodied-understanding evaluation with GPT-6 comparisons, an open model, and action/future-state demonstrations.", "detail": "Understanding benchmarks are not equated with online control success."},
-    "P16": {"title": "RoboDojo / XPolicyLab Infrastructure", "summary": "Shared simulation and real-robot evaluation infrastructure: RoboDojo for environments and XPolicyLab for policy integration.", "detail": "Infrastructure is retained as context rather than counted as a new GPT-6 experiment."},
-    "P17": {"title": "HumanCLAW", "summary": "A humanoid navigation and interaction benchmark with community Astra demonstration leads.", "detail": "This entry confirms the benchmark itself, not a GPT-6-specific result."},
-    "X01": {"title": "Physical Robot Keyboard Typing", "summary": "An author demo shows physical key presses after roughly 40 minutes of exploration; video is accelerated.", "detail": "This is an author-mirrored demonstration, not a standardized evaluation."},
-    "X02": {"title": "Physical Ethernet Insertion", "summary": "An author reports Ethernet insertion after roughly two hours and four human-prompt interventions.", "detail": "The intervention count and duration are author-reported and need original-post verification."},
-    "X03": {"title": "Robot Arm Draws the Golden Gate Bridge", "summary": "A robot with a camera and pen attempts a semantic drawing goal over multiple trials.", "detail": "The item is a demonstration lead rather than a comparative metric."},
-    "X04": {"title": "Cross-Scene Mobile Manipulation ICL", "summary": "An author shows mobile manipulation inferred from video across changed views and layouts.", "detail": "The source is a social demonstration and does not establish broad generalization."},
-    "X05": {"title": "G1 Coke-Bottle Grasp", "summary": "An author shows Codex/Astra controlling G1 in Isaac Sim and explicitly notes IK use.", "detail": "The simulation controller and the language model's role are recorded separately."},
-    "X06": {"title": "G1 Navigation", "summary": "An author shows GPT-6-generated navigation behavior and scenes in simulation.", "detail": "This is a social demonstration lead, not a real-robot validation."},
-    "X07": {"title": "Dexterous Hand Rubik's Cube", "summary": "An author claims an Astra cube-solving demo; a personal page confirms a related MuJoCo bimanual project.", "detail": "The original post and implementation details remain to be verified."},
-    "X08": {"title": "Sharpa Dexterous-Hand Pen Spinning PPO", "summary": "An author shows an Isaac Lab pen-spinning task built with Astra and trained with PPO.", "detail": "The claim is author-provided; it is not treated as a repeated independent result."},
-    "X09": {"title": "Go1 Paused-Physics Joint Control", "summary": "An author describes pausing physics at each inference: 250 inferences for five seconds of simulated motion.", "detail": "Simulation time and wall-clock inference time are intentionally not conflated."},
-    "X10": {"title": "CARLA Visual Waypoint Driving", "summary": "An author shows camera images mapped to short-horizon waypoints, then a local controller emits steering, throttle, and brake.", "detail": "The language model does not receive sole credit for the controller's output."},
-    "X11": {"title": "Two-Robot Ball Toss", "summary": "An author shows a MuJoCo simulation of robots tossing and catching a ball.", "detail": "This is a simulation demonstration lead without a standardized success record."},
-    "X12": {"title": "G1 Bicycle-Control Code", "summary": "An author says Astra helped write and debug MuJoCo bicycle-control code.", "detail": "Code assistance is distinct from an online robot-control result."},
-    "X13": {"title": "Dual-ALOHA Spatial-Constraint Demo", "summary": "A lead for a dual-arm spatial-constraint demonstration.", "detail": "The original demonstration and its protocol have not been verified in this snapshot."},
-    "X14": {"title": "Office Scene to Newton / G1", "summary": "A lead for constructing an office-scene simulation for Newton and G1.", "detail": "This is a discovery lead, not confirmed physical execution."},
-    "P18": {"title": "RoboHarm · Harmful-instruction Refusal Evaluation", "summary": "Five fixed hazardous scenes compare whether GPT-6 Astra, Claude Fable 5.1, and MolmoAct2 attempt, refuse, or complete harmful robot instructions, with post-hoc review from three camera views and transcripts.", "detail": "The public repository provides tasks and collection/labeling tools, but excludes raw rollouts and is not a frozen results dataset; report-only numbers are therefore not promoted here."},
-    "P19": {"title": "RoboFind · Personalized Object Search for Blind and Low-Vision Users", "summary": "A smartphone teaches a personal item, a Unitree Go2 searches, and verification/recovery agents decide whether to finish or continue; GPT-6 Astra builds the target profile and navigation instruction and is also evaluated as a separate baseline.", "detail": "The sequential baseline is reconstructed from RoboFind trajectories, while the Astra-only comparison covers a separate 12-run shared-target subset."},
-    "X15": {"title": "Wuji2 Hand Visual Self-Righting", "summary": "An author demo shows GPT-6 Astra Ultra using third-person RGB feedback to make a fallen Wuji2 hand push itself upright with its fingers.", "detail": "The supplied clip contains accelerated and normal-speed segments; prompts, tool interfaces, logs, and repeated-trial evidence are not public."}
+    "P01": {
+      "title": "GPT-Policy · In-Context Robot Learning",
+      "summary": "A fixed VLM adapts from demonstrations, goal images, and interaction history before using constrained robot tools in a closed loop.",
+      "detail": "Primary project material describes in-context adaptation and constrained tool execution; public experimental assets and licensing remain incomplete."
+    },
+    "P02": {
+      "title": "GPT-as-Policy · GPT-6 Direct / π0.5 Hybrid",
+      "summary": "Compares direct GPT control with GPT-reviewed and corrected π0.5 actions on aligned RoboDojo cases.",
+      "detail": "Reported results apply to a selected aligned case set, not a same-seed rerun of official baselines."
+    },
+    "P03": {
+      "title": "Agent as Policy (AGP)",
+      "summary": "A general agent observes, programs, commands, and corrects from execution feedback in a real bimanual setup.",
+      "detail": "The project publishes trial-data evidence, while public code availability and full real-robot configuration remain to be confirmed."
+    },
+    "P04": {
+      "title": "RoboCurve · Bowl & Puzzle",
+      "summary": "Repeated YAM-arm trials contrast coarse pick-and-place with fine insertion and retain per-trial failure boundaries.",
+      "detail": "The official report distinguishes the two tasks; its results should not be read as one transferable robot score."
+    },
+    "P05": {
+      "title": "StationeryBench · Five Real Bimanual Tasks",
+      "summary": "Markers, clips, rulers, sticky notes, and boxes form multi-stage bimanual tasks with both progress and completion reported.",
+      "detail": "Mean progress and fully completed trials are distinct reported measures and are shown separately."
+    },
+    "P06": {
+      "title": "RoboDojo · Official GPT-6 Astra Evaluation Report",
+      "summary": "The September 21 paper reports Astra at 22.48% Average SR and 28.97 Score on 42 tasks × 50 episodes (2,100 trials). Unsafe actions halted the real-hardware protocol; the retained 33 trials are diagnostic material, not an official real-world result.",
+      "detail": "The report entry is retained, but its full quantitative body was not available in this snapshot."
+    },
+    "P07": {
+      "title": "ENPIRE · GPT-6 Robot Autonomy Lead",
+      "summary": "NVIDIA's real-robot experimentation framework with a GPT-6-specific author demonstration lead.",
+      "detail": "The framework predates this window; the GPT-6 application is not treated as a confirmed framework-wide result."
+    },
+    "P08": {
+      "title": "GPT6-real2sim · DROID / YAM Reconstruction",
+      "summary": "Reconstructs scenes, calibration, and contact replay from demonstrations while retaining unsuccessful physical replays.",
+      "detail": "Visual replay, fitted trajectories, and successful physical contact are kept as separate claims."
+    },
+    "P09": {
+      "title": "Real2Sim_GPT6_ASTRA · Three-View Geometry Replay",
+      "summary": "Builds editable Blender scenes and action animation from three RGB views with public modelling and fitting code.",
+      "detail": "Editable animation is not evidence of validated physical control."
+    },
+    "P10": {
+      "title": "Real2Gym",
+      "summary": "A workflow from human or robot video to executable robot simulation using Blender and MuJoCo.",
+      "detail": "The project page and code route are retained; individual implementation files were not audited here."
+    },
+    "P11": {
+      "title": "dexgpt · Hand Video to Simulation",
+      "summary": "A located dexgpt repository with social-demo leads for 44-DoF hand tracking, IK, and grasping.",
+      "detail": "Implementation, licensing, and repeated experiment evidence remain unresolved."
+    },
+    "P12": {
+      "title": "Drone-Bench · Astra Update",
+      "summary": "Evaluates models that write drone perception and control programs; the official page lists gpt-6-astra.",
+      "detail": "The benchmark is older and the precise date of the Astra update was not confirmed."
+    },
+    "P13": {
+      "title": "Inspect Robots",
+      "summary": "An auditable evaluation framework shared by real and simulated tasks and multiple policy types.",
+      "detail": "It is execution infrastructure for RoboCurve reports, not a standalone GPT-6 result."
+    },
+    "P14": {
+      "title": "Show-Harness",
+      "summary": "Routes discrete semantic actions through an embodiment interpreter with collection, training, models, and data.",
+      "detail": "It is a supporting resource; GPT-6-specific performance has not been established."
+    },
+    "P15": {
+      "title": "PhysBrain 1.5 / PhysBrainEvalKit",
+      "summary": "An embodied-understanding evaluation with GPT-6 comparisons, an open model, and action/future-state demonstrations.",
+      "detail": "Understanding benchmarks are not equated with online control success."
+    },
+    "P16": {
+      "title": "RoboDojo / XPolicyLab Infrastructure",
+      "summary": "Shared simulation and real-robot evaluation infrastructure: RoboDojo for environments and XPolicyLab for policy integration.",
+      "detail": "Infrastructure is retained as context rather than counted as a new GPT-6 experiment."
+    },
+    "P17": {
+      "title": "HumanCLAW",
+      "summary": "A humanoid navigation and interaction benchmark with community Astra demonstration leads.",
+      "detail": "This entry confirms the benchmark itself, not a GPT-6-specific result."
+    },
+    "X01": {
+      "title": "Physical Robot Keyboard Typing",
+      "summary": "An author demo shows physical key presses after roughly 40 minutes of exploration; video is accelerated.",
+      "detail": "This is an author-mirrored demonstration, not a standardized evaluation."
+    },
+    "X02": {
+      "title": "Physical Ethernet Insertion",
+      "summary": "An author reports Ethernet insertion after roughly two hours and four human-prompt interventions.",
+      "detail": "The intervention count and duration are author-reported and need original-post verification."
+    },
+    "X03": {
+      "title": "Robot Arm Draws the Golden Gate Bridge",
+      "summary": "A robot with a camera and pen attempts a semantic drawing goal over multiple trials.",
+      "detail": "The item is a demonstration lead rather than a comparative metric."
+    },
+    "X04": {
+      "title": "Cross-Scene Mobile Manipulation ICL",
+      "summary": "An author shows mobile manipulation inferred from video across changed views and layouts.",
+      "detail": "The source is a social demonstration and does not establish broad generalization."
+    },
+    "X05": {
+      "title": "G1 Coke-Bottle Grasp",
+      "summary": "An author shows Codex/Astra controlling G1 in Isaac Sim and explicitly notes IK use.",
+      "detail": "The simulation controller and the language model's role are recorded separately."
+    },
+    "X06": {
+      "title": "G1 Navigation",
+      "summary": "An author shows GPT-6-generated navigation behavior and scenes in simulation.",
+      "detail": "This is a social demonstration lead, not a real-robot validation."
+    },
+    "X07": {
+      "title": "Dexterous Hand Rubik's Cube",
+      "summary": "An author claims an Astra cube-solving demo; a personal page confirms a related MuJoCo bimanual project.",
+      "detail": "The original post and implementation details remain to be verified."
+    },
+    "X08": {
+      "title": "Sharpa Dexterous-Hand Pen Spinning PPO",
+      "summary": "An author shows an Isaac Lab pen-spinning task built with Astra and trained with PPO.",
+      "detail": "The claim is author-provided; it is not treated as a repeated independent result."
+    },
+    "X09": {
+      "title": "Go1 Paused-Physics Joint Control",
+      "summary": "An author describes pausing physics at each inference: 250 inferences for five seconds of simulated motion.",
+      "detail": "Simulation time and wall-clock inference time are intentionally not conflated."
+    },
+    "X10": {
+      "title": "CARLA Visual Waypoint Driving",
+      "summary": "An author shows camera images mapped to short-horizon waypoints, then a local controller emits steering, throttle, and brake.",
+      "detail": "The language model does not receive sole credit for the controller's output."
+    },
+    "X11": {
+      "title": "Two-Robot Ball Toss",
+      "summary": "An author shows a MuJoCo simulation of robots tossing and catching a ball.",
+      "detail": "This is a simulation demonstration lead without a standardized success record."
+    },
+    "X12": {
+      "title": "G1 Bicycle-Control Code",
+      "summary": "An author says Astra helped write and debug MuJoCo bicycle-control code.",
+      "detail": "Code assistance is distinct from an online robot-control result."
+    },
+    "X13": {
+      "title": "Dual-ALOHA Spatial-Constraint Demo",
+      "summary": "A lead for a dual-arm spatial-constraint demonstration.",
+      "detail": "The original demonstration and its protocol have not been verified in this snapshot."
+    },
+    "X14": {
+      "title": "Office Scene to Newton / G1",
+      "summary": "A lead for constructing an office-scene simulation for Newton and G1.",
+      "detail": "This is a discovery lead, not confirmed physical execution."
+    },
+    "P18": {
+      "title": "RoboHarm · Harmful-instruction Refusal Evaluation",
+      "summary": "Five fixed hazardous scenes compare whether GPT-6 Astra, Claude Fable 5.1, and MolmoAct2 attempt, refuse, or complete harmful robot instructions, with post-hoc review from three camera views and transcripts.",
+      "detail": "The public repository provides tasks and collection/labeling tools, but excludes raw rollouts and is not a frozen results dataset; report-only numbers are therefore not promoted here."
+    },
+    "P19": {
+      "title": "RoboFind · Personalized Object Search for Blind and Low-Vision Users",
+      "summary": "A smartphone teaches a personal item, a Unitree Go2 searches, and verification/recovery agents decide whether to finish or continue; GPT-6 Astra builds the target profile and navigation instruction and is also evaluated as a separate baseline.",
+      "detail": "The sequential baseline is reconstructed from RoboFind trajectories, while the Astra-only comparison covers a separate 12-run shared-target subset."
+    },
+    "X15": {
+      "title": "Wuji2 Hand Visual Self-Righting",
+      "summary": "An author demo shows GPT-6 Astra Ultra using third-person RGB feedback to make a fallen Wuji2 hand push itself upright with its fingers.",
+      "detail": "The supplied clip contains accelerated and normal-speed segments; prompts, tool interfaces, logs, and repeated-trial evidence are not public."
+    },
+    "P20": {
+      "title": "EmbodiedSWE · Coding Agents for Long-Horizon Dexterous Robotics",
+      "summary": "GPT-6 Astra writes and iterates simulation solutions through Codex. The project covers 28 tasks and reports 82% success for Astra; the page does not state the main evaluation run denominator. Not independently reproduced."
+    },
+    "P21": {
+      "title": "OpenArm Mona Lisa · LeRobot ACT",
+      "summary": "An OpenArm simulation painting entry in the HIM Astra challenge combines a scripted painting sequence with an ACT joint policy. GPT-6 assists development; physical hardware and real paint are untested. Publication date unknown."
+    },
+    "P22": {
+      "title": "Fridge Speller · G1 Alphabet Magnets",
+      "summary": "A simulated Unitree G1 with Dex3-1 hands walks to a fridge and spells HELLO with magnets. The author credits GPT-6 Astra for building the project; this is a nominal-scene demo, without evidence of direct model control or real-hardware results. Publication date unknown."
+    },
+    "P23": {
+      "title": "How Far Can GPT-6-Astra Go? · VLN-CE",
+      "summary": "Astra proposes navigation actions from selected observations, execution feedback, and history on a fixed R2R-CE subset.",
+      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+    },
+    "P24": {
+      "title": "Benchmarking Frontier VLMs on Robots · Pantograph",
+      "summary": "A common tool harness compares Astra and Fable across eight real-robot tasks on six Pandroid platforms.",
+      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+    },
+    "P25": {
+      "title": "Robot Agent Gallery",
+      "summary": "A public gallery collects scored Astra episodes across several simulated robot benchmarks without collapsing them into one score.",
+      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+    },
+    "P26": {
+      "title": "Axol Pick-and-Pack with Astra Reviews",
+      "summary": "Astra reviews camera images while deterministic guarded code plans and executes one documented physical pick-and-pack run.",
+      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+    },
+    "P27": {
+      "title": "LLM Robotics Playground",
+      "summary": "Astra/Codex helps build four MuJoCo environments and controllers; replay does not call the model online.",
+      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+    },
+    "P28": {
+      "title": "GPT-6 Astra Policy on DexJoCo",
+      "summary": "Astra writes a controller once, then frozen code is evaluated over 900 simulated episodes.",
+      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+    },
+    "P29": {
+      "title": "Astra on RoboMME",
+      "summary": "Astra plans grounded subtasks, a VLA executes action chunks, and a small visual monitor decides when to re-plan.",
+      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+    },
+    "P30": {
+      "title": "RoboICL · Embodied In-Context Learning",
+      "summary": "Astra receives homologous TRAIN/LIVE visual-action-feedback context and produces bimanual end-effector deltas online.",
+      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+    },
+    "P31": {
+      "title": "GPT-6 LIBERO Manipulation Probe",
+      "summary": "A controlled probe separates planning, visual localization, and low-level control across four LIBERO pick-and-place tasks.",
+      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+    },
+    "P32": {
+      "title": "When the Map Becomes the Program · Astra World Model",
+      "summary": "Astra uses Blender tools to build object-level 3D scenes that are evaluated by downstream drone and G1 controllers.",
+      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+    },
+    "P33": {
+      "title": "Robot-vLLM",
+      "summary": "A GPT planner, an official OpenPI pi0.5 client, and ROS 2 execution/recovery are joined in a shared-perception simulation.",
+      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+    },
+    "P34": {
+      "title": "quackd · Multi-Robot LLM CLI",
+      "summary": "An LLM chooses among declared robot verbs through a CLI/harness; the retained experiment log documents an SO-101 wave run.",
+      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+    }
   }
 }

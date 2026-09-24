@@ -75,16 +75,20 @@
     },
     "P06": {
       "kind": "image",
-      "url": "https://robodojo-benchmark.com/image.png",
-      "source_url": "https://robodojo-benchmark.com/report/gpt-6-astra-eval",
-      "source_id": "S013",
+      "url": "assets/posters/P06-robodojo-v1-fig2.png",
+      "fit": "contain",
+      "source_url": "https://arxiv.org/abs/2609.24170",
+      "source_page_url": "https://arxiv.org/abs/2609.24170",
+      "source_id": "S064",
+      "source_path": "arXiv:2609.24170v1 PDF, page 4, Fig. 2; raster crop (106,84,505,354) PDF points at 3x, full mechanism retained; PDF SHA-256 6bb575e9327e6606c26fef453d19a5a1ece447eea3c83dc52e0b7d98509f3055",
+      "classification": "Paper mechanism figure, not a video frame. Local review preview; public reuse permission unconfirmed.",
       "alt": {
-        "en": "RoboDojo report social-preview image for the GPT-6 Astra evaluation report.",
-        "zh": "RoboDojo GPT-6 Astra 评测报告的社交预览图。"
+        "en": "RoboDojo Figure 2: model inputs, motion targets, action conversion, execution and feedback loop.",
+        "zh": "RoboDojo 论文图 2：模型输入、动作目标、转换、执行及反馈闭环。"
       },
       "caption": {
-        "en": "Official report preview image; open the report for its evaluation context and limitations.",
-        "zh": "官方报告预览图；评测语境与限制请打开报告核查。"
+        "en": "arXiv v1, page 4, Figure 2. arXiv non-exclusive distribution license; local review preview.",
+        "zh": "arXiv v1 第 4 页图 2。arXiv 非独占分发许可；本地审核预览。"
       }
     },
     "P07": {
@@ -268,106 +272,566 @@
       }
     },
     "X01": {
-      "kind": "video", "url": "assets/social/Physical%20Robot%20Keyboard%20Typing.mp4", "poster": "assets/social/X01.jpg", "source_url": "https://x.com/kaiwynd/status/2098823484474348008", "source_page_url": "https://x.com/kaiwynd/status/2098823484474348008", "source_id": "S036",
-      "source_path": "User attachment social-videos.zip: Physical Robot Keyboard Typing.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied video for the physical robot keyboard-typing post.", "zh": "用户提供的真实机器人键盘打字原帖视频。"},
-      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+      "kind": "video",
+      "url": "assets/social/Physical%20Robot%20Keyboard%20Typing.mp4",
+      "poster": "assets/social/X01.jpg",
+      "source_url": "https://x.com/kaiwynd/status/2098823484474348008",
+      "source_page_url": "https://x.com/kaiwynd/status/2098823484474348008",
+      "source_id": "S036",
+      "source_path": "User attachment social-videos.zip: Physical Robot Keyboard Typing.mp4; first decoded frame at 00:00:00",
+      "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied video for the physical robot keyboard-typing post.",
+        "zh": "用户提供的真实机器人键盘打字原帖视频。"
+      },
+      "caption": {
+        "en": "Supplied original-post video; the original post remains linked.",
+        "zh": "用户提供的原帖视频；原帖链接仍保留。"
+      }
     },
     "X02": {
-      "kind": "video", "url": "assets/social/Physical%20Ethernet%20Insertion.mp4", "poster": "assets/social/X02.jpg", "source_url": "https://x.com/kaiwynd/status/2099524132341711051", "source_page_url": "https://x.com/kaiwynd/status/2099524132341711051", "source_id": "S036",
-      "source_path": "User attachment social-videos.zip: Physical Ethernet Insertion.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied video for the physical Ethernet-insertion post.", "zh": "用户提供的真实网线插入原帖视频。"},
-      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+      "kind": "video",
+      "url": "assets/social/Physical%20Ethernet%20Insertion.mp4",
+      "poster": "assets/social/X02.jpg",
+      "source_url": "https://x.com/kaiwynd/status/2099524132341711051",
+      "source_page_url": "https://x.com/kaiwynd/status/2099524132341711051",
+      "source_id": "S036",
+      "source_path": "User attachment social-videos.zip: Physical Ethernet Insertion.mp4; first decoded frame at 00:00:00",
+      "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied video for the physical Ethernet-insertion post.",
+        "zh": "用户提供的真实网线插入原帖视频。"
+      },
+      "caption": {
+        "en": "Supplied original-post video; the original post remains linked.",
+        "zh": "用户提供的原帖视频；原帖链接仍保留。"
+      }
     },
     "X03": {
-      "kind": "video", "url": "assets/social/Robot%20Arm%20Draws%20the%20Golden%20Gate%20Bridge.mp4", "poster": "assets/social/X03.jpg", "source_url": "https://x.com/cdngdev/status/2097339677128982873", "source_page_url": "https://x.com/cdngdev/status/2097339677128982873", "source_id": "S037",
-      "source_path": "User attachment social-videos.zip: Robot Arm Draws the Golden Gate Bridge.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied video for the robot-arm Golden Gate Bridge drawing post.", "zh": "用户提供的机械臂画金门大桥原帖视频。"},
-      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+      "kind": "video",
+      "url": "assets/social/Robot%20Arm%20Draws%20the%20Golden%20Gate%20Bridge.mp4",
+      "poster": "assets/social/X03.jpg",
+      "source_url": "https://x.com/cdngdev/status/2097339677128982873",
+      "source_page_url": "https://x.com/cdngdev/status/2097339677128982873",
+      "source_id": "S037",
+      "source_path": "User attachment social-videos.zip: Robot Arm Draws the Golden Gate Bridge.mp4; first decoded frame at 00:00:00",
+      "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied video for the robot-arm Golden Gate Bridge drawing post.",
+        "zh": "用户提供的机械臂画金门大桥原帖视频。"
+      },
+      "caption": {
+        "en": "Supplied original-post video; the original post remains linked.",
+        "zh": "用户提供的原帖视频；原帖链接仍保留。"
+      }
     },
     "X04": {
-      "kind": "video", "url": "assets/social/Cross-Scene%20Mobile%20Manipulation%20ICL.mp4", "poster": "assets/social/X04.jpg", "source_url": "https://x.com/ax_pey/status/2098216469012283681", "source_page_url": "https://x.com/ax_pey/status/2098216469012283681", "source_id": "S038",
-      "source_path": "User attachment social-videos.zip: Cross-Scene Mobile Manipulation ICL.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied video for the cross-scene mobile-manipulation post.", "zh": "用户提供的跨场景移动操作原帖视频。"},
-      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+      "kind": "video",
+      "url": "assets/social/Cross-Scene%20Mobile%20Manipulation%20ICL.mp4",
+      "poster": "assets/social/X04.jpg",
+      "source_url": "https://x.com/ax_pey/status/2098216469012283681",
+      "source_page_url": "https://x.com/ax_pey/status/2098216469012283681",
+      "source_id": "S038",
+      "source_path": "User attachment social-videos.zip: Cross-Scene Mobile Manipulation ICL.mp4; first decoded frame at 00:00:00",
+      "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied video for the cross-scene mobile-manipulation post.",
+        "zh": "用户提供的跨场景移动操作原帖视频。"
+      },
+      "caption": {
+        "en": "Supplied original-post video; the original post remains linked.",
+        "zh": "用户提供的原帖视频；原帖链接仍保留。"
+      }
     },
     "X05": {
-      "kind": "video", "url": "assets/social/G1%20Coke-Bottle%20Grasp.mp4", "poster": "assets/social/X05.jpg", "source_url": "https://x.com/RotekSong/status/2099104628562608371", "source_page_url": "https://x.com/RotekSong/status/2099104628562608371", "source_id": "S039",
-      "source_path": "User attachment social-videos.zip: G1 Coke-Bottle Grasp.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied video for the G1 coke-bottle grasp post.", "zh": "用户提供的 G1 可乐瓶抓取原帖视频。"},
-      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+      "kind": "video",
+      "url": "assets/social/G1%20Coke-Bottle%20Grasp.mp4",
+      "poster": "assets/social/X05.jpg",
+      "source_url": "https://x.com/RotekSong/status/2099104628562608371",
+      "source_page_url": "https://x.com/RotekSong/status/2099104628562608371",
+      "source_id": "S039",
+      "source_path": "User attachment social-videos.zip: G1 Coke-Bottle Grasp.mp4; first decoded frame at 00:00:00",
+      "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied video for the G1 coke-bottle grasp post.",
+        "zh": "用户提供的 G1 可乐瓶抓取原帖视频。"
+      },
+      "caption": {
+        "en": "Supplied original-post video; the original post remains linked.",
+        "zh": "用户提供的原帖视频；原帖链接仍保留。"
+      }
     },
     "X06": {
-      "kind": "video", "url": "assets/social/G1%20Navigation.mp4", "poster": "assets/social/X06.jpg", "source_url": "https://x.com/RotekSong/status/2098212303263183329", "source_page_url": "https://x.com/RotekSong/status/2098212303263183329", "source_id": "S038",
-      "source_path": "User attachment social-videos.zip: G1 Navigation.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied video for the G1 navigation post.", "zh": "用户提供的 G1 导航原帖视频。"},
-      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+      "kind": "video",
+      "url": "assets/social/G1%20Navigation.mp4",
+      "poster": "assets/social/X06.jpg",
+      "source_url": "https://x.com/RotekSong/status/2098212303263183329",
+      "source_page_url": "https://x.com/RotekSong/status/2098212303263183329",
+      "source_id": "S038",
+      "source_path": "User attachment social-videos.zip: G1 Navigation.mp4; first decoded frame at 00:00:00",
+      "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied video for the G1 navigation post.",
+        "zh": "用户提供的 G1 导航原帖视频。"
+      },
+      "caption": {
+        "en": "Supplied original-post video; the original post remains linked.",
+        "zh": "用户提供的原帖视频；原帖链接仍保留。"
+      }
     },
     "X07": {
-      "kind": "image", "url": "assets/social/SaveTwitter.Net_HST8HsrawAAkgPu.jpg", "source_url": "https://dex-rubik-cube.yanjieze.com/", "source_page_url": "https://dex-rubik-cube.yanjieze.com/", "source_id": "S040",
-      "source_path": "User attachment SaveTwitter.Net_HST8HsrawAAkgPu.jpg", "classification": "User-supplied image attributed to the Dexterous Hand Rubik's Cube lead; no original-post URL is retained.",
-      "alt": {"en": "Supplied image for the Dexterous Hand Rubik's Cube lead.", "zh": "用户提供的灵巧手解魔方线索图片。"},
-      "caption": {"en": "User-supplied image for this lead; the retained project and account links remain unchanged.", "zh": "用户提供的该线索图片；保留的项目和账号链接不变。"}
+      "kind": "image",
+      "url": "assets/social/SaveTwitter.Net_HST8HsrawAAkgPu.jpg",
+      "source_url": "https://dex-rubik-cube.yanjieze.com/",
+      "source_page_url": "https://dex-rubik-cube.yanjieze.com/",
+      "source_id": "S040",
+      "source_path": "User attachment SaveTwitter.Net_HST8HsrawAAkgPu.jpg",
+      "classification": "User-supplied image attributed to the Dexterous Hand Rubik's Cube lead; no original-post URL is retained.",
+      "alt": {
+        "en": "Supplied image for the Dexterous Hand Rubik's Cube lead.",
+        "zh": "用户提供的灵巧手解魔方线索图片。"
+      },
+      "caption": {
+        "en": "User-supplied image for this lead; the retained project and account links remain unchanged.",
+        "zh": "用户提供的该线索图片；保留的项目和账号链接不变。"
+      }
     },
     "X08": {
-      "kind": "video", "url": "assets/social/Sharpa%20Dexterous-Hand%20Pen%20Spinning%20PPO.mp4", "poster": "assets/social/X08.jpg", "source_url": "https://x.com/walterzhu8/status/2100212420840989112", "source_page_url": "https://x.com/walterzhu8/status/2100212420840989112", "source_id": "S039",
-      "source_path": "User attachment social-videos.zip: Sharpa Dexterous-Hand Pen Spinning PPO.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied video for the Sharpa dexterous-hand pen-spinning post.", "zh": "用户提供的 Sharpa 灵巧手转笔原帖视频。"},
-      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+      "kind": "video",
+      "url": "assets/social/Sharpa%20Dexterous-Hand%20Pen%20Spinning%20PPO.mp4",
+      "poster": "assets/social/X08.jpg",
+      "source_url": "https://x.com/walterzhu8/status/2100212420840989112",
+      "source_page_url": "https://x.com/walterzhu8/status/2100212420840989112",
+      "source_id": "S039",
+      "source_path": "User attachment social-videos.zip: Sharpa Dexterous-Hand Pen Spinning PPO.mp4; first decoded frame at 00:00:00",
+      "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied video for the Sharpa dexterous-hand pen-spinning post.",
+        "zh": "用户提供的 Sharpa 灵巧手转笔原帖视频。"
+      },
+      "caption": {
+        "en": "Supplied original-post video; the original post remains linked.",
+        "zh": "用户提供的原帖视频；原帖链接仍保留。"
+      }
     },
     "X09": {
-      "kind": "video", "url": "assets/social/Go1%20Paused-Physics%20Joint%20Control.mp4", "poster": "assets/social/X09.jpg", "source_url": "https://x.com/sri299792458/status/2097349207795335424", "source_page_url": "https://x.com/sri299792458/status/2097349207795335424", "source_id": "S024",
-      "source_path": "User attachment social-videos.zip: Go1 Paused-Physics Joint Control.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied video for the paused-physics Go1 post.", "zh": "用户提供的 Go1 暂停物理关节控制原帖视频。"},
-      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+      "kind": "video",
+      "url": "assets/social/Go1%20Paused-Physics%20Joint%20Control.mp4",
+      "poster": "assets/social/X09.jpg",
+      "source_url": "https://x.com/sri299792458/status/2097349207795335424",
+      "source_page_url": "https://x.com/sri299792458/status/2097349207795335424",
+      "source_id": "S024",
+      "source_path": "User attachment social-videos.zip: Go1 Paused-Physics Joint Control.mp4; first decoded frame at 00:00:00",
+      "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied video for the paused-physics Go1 post.",
+        "zh": "用户提供的 Go1 暂停物理关节控制原帖视频。"
+      },
+      "caption": {
+        "en": "Supplied original-post video; the original post remains linked.",
+        "zh": "用户提供的原帖视频；原帖链接仍保留。"
+      }
     },
     "X10": {
-      "kind": "video", "url": "assets/social/CARLA%20Visual%20Waypoint%20Driving.mp4", "poster": "assets/social/X10.jpg", "source_url": "https://x.com/ludocomito/status/2097329417760440461", "source_page_url": "https://x.com/ludocomito/status/2097329417760440461", "source_id": "S042",
-      "source_path": "User attachment social-videos.zip: CARLA Visual Waypoint Driving.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied video for the CARLA visual-waypoint driving post.", "zh": "用户提供的 CARLA 视觉路点驾驶原帖视频。"},
-      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+      "kind": "video",
+      "url": "assets/social/CARLA%20Visual%20Waypoint%20Driving.mp4",
+      "poster": "assets/social/X10.jpg",
+      "source_url": "https://x.com/ludocomito/status/2097329417760440461",
+      "source_page_url": "https://x.com/ludocomito/status/2097329417760440461",
+      "source_id": "S042",
+      "source_path": "User attachment social-videos.zip: CARLA Visual Waypoint Driving.mp4; first decoded frame at 00:00:00",
+      "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied video for the CARLA visual-waypoint driving post.",
+        "zh": "用户提供的 CARLA 视觉路点驾驶原帖视频。"
+      },
+      "caption": {
+        "en": "Supplied original-post video; the original post remains linked.",
+        "zh": "用户提供的原帖视频；原帖链接仍保留。"
+      }
     },
     "X11": {
-      "kind": "video", "url": "assets/social/Two-Robot%20Ball%20Toss.mp4", "poster": "assets/social/X11.jpg", "source_url": "https://x.com/thermalpastor/status/2097496200631210136", "source_page_url": "https://x.com/thermalpastor/status/2097496200631210136", "source_id": "S043",
-      "source_path": "User attachment social-videos.zip: Two-Robot Ball Toss.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied video for the two-robot ball-toss post.", "zh": "用户提供的双机器人抛接球原帖视频。"},
-      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+      "kind": "video",
+      "url": "assets/social/Two-Robot%20Ball%20Toss.mp4",
+      "poster": "assets/social/X11.jpg",
+      "source_url": "https://x.com/thermalpastor/status/2097496200631210136",
+      "source_page_url": "https://x.com/thermalpastor/status/2097496200631210136",
+      "source_id": "S043",
+      "source_path": "User attachment social-videos.zip: Two-Robot Ball Toss.mp4; first decoded frame at 00:00:00",
+      "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied video for the two-robot ball-toss post.",
+        "zh": "用户提供的双机器人抛接球原帖视频。"
+      },
+      "caption": {
+        "en": "Supplied original-post video; the original post remains linked.",
+        "zh": "用户提供的原帖视频；原帖链接仍保留。"
+      }
     },
     "X12": {
-      "kind": "video", "url": "assets/social/G1%20Bicycle-Control%20Code.mp4", "poster": "assets/social/X12.jpg", "source_url": "https://x.com/thermalpastor/status/2097802933429796873", "source_page_url": "https://x.com/thermalpastor/status/2097802933429796873", "source_id": "S043",
-      "source_path": "User attachment social-videos.zip: G1 Bicycle-Control Code.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied video for the G1 bicycle-control-code post.", "zh": "用户提供的 G1 自行车控制代码原帖视频。"},
-      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+      "kind": "video",
+      "url": "assets/social/G1%20Bicycle-Control%20Code.mp4",
+      "poster": "assets/social/X12.jpg",
+      "source_url": "https://x.com/thermalpastor/status/2097802933429796873",
+      "source_page_url": "https://x.com/thermalpastor/status/2097802933429796873",
+      "source_id": "S043",
+      "source_path": "User attachment social-videos.zip: G1 Bicycle-Control Code.mp4; first decoded frame at 00:00:00",
+      "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied video for the G1 bicycle-control-code post.",
+        "zh": "用户提供的 G1 自行车控制代码原帖视频。"
+      },
+      "caption": {
+        "en": "Supplied original-post video; the original post remains linked.",
+        "zh": "用户提供的原帖视频；原帖链接仍保留。"
+      }
     },
     "X13": {
-      "kind": "video", "url": "assets/social/Dual-ALOHA%20Spatial-Constraint%20Demo.mp4", "poster": "assets/social/X13.jpg", "source_url": "https://x.com/qineng_wang/status/2099893504658866561", "source_page_url": "https://x.com/qineng_wang/status/2099893504658866561", "source_id": "S052",
-      "source_path": "User attachment Dual-ALOHA Spatial-Constraint Demo.mp4; first decoded frame at 00:00:00", "classification": "User-supplied Dual-ALOHA video; exact original-post URL supplied by the user, not independently verified in this update.",
-      "alt": {"en": "Supplied video for the Dual-ALOHA spatial-constraint lead.", "zh": "用户提供的 Dual-ALOHA 空间约束演示视频。"},
-      "caption": {"en": "User-supplied video; the exact original-post URL was supplied by the user and was not independently verified in this update.", "zh": "用户提供的视频；具体原帖 URL 由用户补充，本轮未独立核验。"}
+      "kind": "video",
+      "url": "assets/social/Dual-ALOHA%20Spatial-Constraint%20Demo.mp4",
+      "poster": "assets/social/X13.jpg",
+      "source_url": "https://x.com/qineng_wang/status/2099893504658866561",
+      "source_page_url": "https://x.com/qineng_wang/status/2099893504658866561",
+      "source_id": "S052",
+      "source_path": "User attachment Dual-ALOHA Spatial-Constraint Demo.mp4; first decoded frame at 00:00:00",
+      "classification": "User-supplied Dual-ALOHA video; exact original-post URL supplied by the user, not independently verified in this update.",
+      "alt": {
+        "en": "Supplied video for the Dual-ALOHA spatial-constraint lead.",
+        "zh": "用户提供的 Dual-ALOHA 空间约束演示视频。"
+      },
+      "caption": {
+        "en": "User-supplied video; the exact original-post URL was supplied by the user and was not independently verified in this update.",
+        "zh": "用户提供的视频；具体原帖 URL 由用户补充，本轮未独立核验。"
+      }
     },
     "X14": {
-      "kind": "video", "url": "assets/social/Office%20Scene%20to%20Newton%20%20G1.mp4", "poster": "assets/social/X14.jpg", "source_url": "https://x.com/Jiarui_X/status/2098439950991806804", "source_page_url": "https://x.com/Jiarui_X/status/2098439950991806804", "source_id": "S033",
-      "source_path": "User attachment social-videos.zip: Office Scene to Newton  G1.mp4; first decoded frame at 00:00:00", "classification": "User-supplied original-post video; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied video for the office-to-Newton/G1 post.", "zh": "用户提供的办公场景到 Newton/G1 原帖视频。"},
-      "caption": {"en": "Supplied original-post video; the original post remains linked.", "zh": "用户提供的原帖视频；原帖链接仍保留。"}
+      "kind": "video",
+      "url": "assets/social/Office%20Scene%20to%20Newton%20%20G1.mp4",
+      "poster": "assets/social/X14.jpg",
+      "source_url": "https://x.com/Jiarui_X/status/2098439950991806804",
+      "source_page_url": "https://x.com/Jiarui_X/status/2098439950991806804",
+      "source_id": "S033",
+      "source_path": "User attachment social-videos.zip: Office Scene to Newton  G1.mp4; first decoded frame at 00:00:00",
+      "classification": "User-supplied original-post video; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied video for the office-to-Newton/G1 post.",
+        "zh": "用户提供的办公场景到 Newton/G1 原帖视频。"
+      },
+      "caption": {
+        "en": "Supplied original-post video; the original post remains linked.",
+        "zh": "用户提供的原帖视频；原帖链接仍保留。"
+      }
     },
     "P18": {
-      "kind": "video", "url": "assets/social/wujie2.mp4", "poster": "assets/posters/P18.jpg", "source_url": "https://x.com/chooi_jeq/status/2101118049944543545", "source_page_url": "https://x.com/chooi_jeq/status/2101118049944543545", "source_id": "S055",
-      "source_path": "User attachment `wujie2.mp4`; SHA-256 b372896be1a04201f8e0a891d8ab60ae94ed2fc2ed537e455d6dcf5b8c7a21f1; 10.000 s; first decoded frame at 00:00:00", "classification": "User-supplied RoboHarm release-post video, content-matched despite the misleading filename; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied RoboHarm release video comparing harmful robot-task attempts and outcomes.", "zh": "用户提供的 RoboHarm 发布视频，展示危险机器人任务的尝试与结果对比。"},
-      "caption": {"en": "Supplied RoboHarm release-post video; the code, report, and exact post remain linked.", "zh": "用户提供的 RoboHarm 发布帖视频；代码、报告与具体原帖链接均保留。"}
+      "kind": "video",
+      "url": "assets/social/wujie2.mp4",
+      "poster": "assets/posters/P18.jpg",
+      "source_url": "https://x.com/chooi_jeq/status/2101118049944543545",
+      "source_page_url": "https://x.com/chooi_jeq/status/2101118049944543545",
+      "source_id": "S055",
+      "source_path": "User attachment `wujie2.mp4`; SHA-256 b372896be1a04201f8e0a891d8ab60ae94ed2fc2ed537e455d6dcf5b8c7a21f1; 10.000 s; first decoded frame at 00:00:00",
+      "classification": "User-supplied RoboHarm release-post video, content-matched despite the misleading filename; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied RoboHarm release video comparing harmful robot-task attempts and outcomes.",
+        "zh": "用户提供的 RoboHarm 发布视频，展示危险机器人任务的尝试与结果对比。"
+      },
+      "caption": {
+        "en": "Supplied RoboHarm release-post video; the code, report, and exact post remain linked.",
+        "zh": "用户提供的 RoboHarm 发布帖视频；代码、报告与具体原帖链接均保留。"
+      }
     },
     "P19": {
-      "kind": "image", "url": "assets/posters/P19-robofind-fig3.jpg", "fit": "contain", "source_url": "https://arxiv.org/abs/2609.20330", "source_page_url": "https://arxiv.org/abs/2609.20330", "source_id": "S056",
-      "source_path": "RoboFind arXiv v1 PDF, page 4, Fig. 3; embedded figure extracted and resized to 1400 px width without content changes", "classification": "Paper mechanism figure showing target teaching, search, verification, and recovery; not a video frame or generated illustration.",
-      "alt": {"en": "RoboFind Figure 3: target teaching, robot search, candidate verification, and recovery pipeline.", "zh": "RoboFind 论文图 3：目标教学、机器人搜索、候选验证与恢复流程。"},
-      "caption": {"en": "RoboFind arXiv v1, page 4, Figure 3 (CC BY 4.0); resized only.", "zh": "RoboFind arXiv v1 第 4 页图 3（CC BY 4.0）；仅调整尺寸。"}
+      "kind": "image",
+      "url": "assets/posters/P19-robofind-fig3.jpg",
+      "fit": "contain",
+      "source_url": "https://arxiv.org/abs/2609.20330",
+      "source_page_url": "https://arxiv.org/abs/2609.20330",
+      "source_id": "S056",
+      "source_path": "RoboFind arXiv v1 PDF, page 4, Fig. 3; embedded figure extracted and resized to 1400 px width without content changes",
+      "classification": "Paper mechanism figure showing target teaching, search, verification, and recovery; not a video frame or generated illustration.",
+      "alt": {
+        "en": "RoboFind Figure 3: target teaching, robot search, candidate verification, and recovery pipeline.",
+        "zh": "RoboFind 论文图 3：目标教学、机器人搜索、候选验证与恢复流程。"
+      },
+      "caption": {
+        "en": "RoboFind arXiv v1, page 4, Figure 3 (CC BY 4.0); resized only.",
+        "zh": "RoboFind arXiv v1 第 4 页图 3（CC BY 4.0）；仅调整尺寸。"
+      }
     },
     "X15": {
-      "kind": "video", "url": "assets/social/savetwt.com_2100754714971287557_640x360.mp4", "poster": "assets/social/X15.jpg", "source_url": "https://x.com/frankzydou/status/2100754714971287557", "source_page_url": "https://x.com/frankzydou/status/2100754714971287557", "source_id": "S057",
-      "source_path": "User attachment `savetwt.com_2100754714971287557_640x360.mp4`; SHA-256 f9f554b52f32eb66dd19e5e0475db11d989eb08e1e314c0802e7f0a0f7bd36c3; 34.154667 s; first decoded frame at 00:00:00", "classification": "User-supplied Wuji2 original-post video; poster extracted from the supplied video.",
-      "alt": {"en": "Supplied video of the Wuji2 robotic hand using finger contacts to stand upright.", "zh": "用户提供的 Wuji2 灵巧手利用手指接触自扶正视频。"},
-      "caption": {"en": "Supplied Wuji2 original-post video; accelerated and normal-speed segments are retained.", "zh": "用户提供的 Wuji2 原帖视频；保留加速与正常速度片段。"}
+      "kind": "video",
+      "url": "assets/social/savetwt.com_2100754714971287557_640x360.mp4",
+      "poster": "assets/social/X15.jpg",
+      "source_url": "https://x.com/frankzydou/status/2100754714971287557",
+      "source_page_url": "https://x.com/frankzydou/status/2100754714971287557",
+      "source_id": "S057",
+      "source_path": "User attachment `savetwt.com_2100754714971287557_640x360.mp4`; SHA-256 f9f554b52f32eb66dd19e5e0475db11d989eb08e1e314c0802e7f0a0f7bd36c3; 34.154667 s; first decoded frame at 00:00:00",
+      "classification": "User-supplied Wuji2 original-post video; poster extracted from the supplied video.",
+      "alt": {
+        "en": "Supplied video of the Wuji2 robotic hand using finger contacts to stand upright.",
+        "zh": "用户提供的 Wuji2 灵巧手利用手指接触自扶正视频。"
+      },
+      "caption": {
+        "en": "Supplied Wuji2 original-post video; accelerated and normal-speed segments are retained.",
+        "zh": "用户提供的 Wuji2 原帖视频；保留加速与正常速度片段。"
+      }
+    },
+    "P20": {
+      "kind": "image",
+      "url": "assets/posters/P20-embodiedswe-overview.jpg",
+      "source_url": "https://embodiedswe.github.io/",
+      "source_page_url": "https://embodiedswe.github.io/",
+      "source_path": "Official project-page overview.jpg downloaded 2026-09-24.",
+      "classification": "Project overview figure; not an independently reproduced result.",
+      "source_id": "S059",
+      "alt": {
+        "en": "Official EmbodiedSWE overview figure.",
+        "zh": "EmbodiedSWE 官方总览图。"
+      },
+      "caption": {
+        "en": "Official EmbodiedSWE overview figure.",
+        "zh": "EmbodiedSWE 官方总览图。"
+      }
+    },
+    "P21": {
+      "kind": "video",
+      "url": "assets/posters/P21-openarm.mp4",
+      "poster": "assets/posters/P21-openarm.jpg",
+      "source_url": "https://arena.himrobotics.com/uploads/source_59ffd3291f3623fc498d",
+      "source_page_url": "https://arena.himrobotics.com/uploads/source_59ffd3291f3623fc498d",
+      "source_path": "Official HIM Arena video URL; first decoded frame at 00:00:00, extracted 2026-09-24 with ffmpeg.",
+      "classification": "Official submission video and its first-frame poster; HIM states the shown arm motion is simulated.",
+      "source_id": "S061",
+      "alt": {
+        "en": "OpenArm Mona Lisa simulated LeRobot ACT submission video.",
+        "zh": "OpenArm Mona Lisa 的仿真 LeRobot ACT 投稿视频。"
+      },
+      "caption": {
+        "en": "Official HIM Arena submission video; physical arm and real paint were not tested.",
+        "zh": "HIM Arena 官方投稿视频；未测试真实机械臂和真实颜料。"
+      }
+    },
+    "P22": {
+      "kind": "video",
+      "url": "assets/posters/P22-fridge.mp4",
+      "poster": "assets/posters/P22-fridge.jpg",
+      "source_url": "https://arena.himrobotics.com/uploads/source_62bc9b696cef9e7c64d6",
+      "source_page_url": "https://arena.himrobotics.com/uploads/source_62bc9b696cef9e7c64d6",
+      "source_path": "Official HIM Arena video URL; first decoded frame at 00:00:00, extracted 2026-09-24 with ffmpeg. The source response had a damaged final segment; the local review file is a 226.234-second decodable transcode.",
+      "classification": "Official submission video with a repaired review transcode and first-frame poster; this is a MuJoCo demonstration, not real-hardware footage.",
+      "source_id": "S062",
+      "alt": {
+        "en": "Fridge Speller MuJoCo submission video.",
+        "zh": "Fridge Speller 的 MuJoCo 投稿视频。"
+      },
+      "caption": {
+        "en": "Official HIM Arena submission video showing the nominal simulated sequence; the damaged source tail is omitted from this review transcode.",
+        "zh": "HIM Arena 官方投稿视频，展示标称仿真连续流程；审核转码省略了损坏的源文件尾段。"
+      }
+    },
+    "P23": {
+      "kind": "image",
+      "url": "assets/posters/P23-navigation-fig2.png",
+      "source_url": "https://arxiv.org/abs/2609.20116",
+      "source_page_url": "https://arxiv.org/abs/2609.20116",
+      "source_path": "arXiv:2609.20116v2 PDF, page 3, Figure 2; full mechanism retained from the locally read PDF.",
+      "classification": "Paper mechanism figure, not a video frame.",
+      "source_id": "S065",
+      "alt": {
+        "en": "Figure 2 navigation workflow from the paper.",
+        "zh": "论文图 2：导航工作流。"
+      },
+      "caption": {
+        "en": "Figure 2 navigation workflow from the paper.",
+        "zh": "论文图 2：导航工作流。"
+      }
+    },
+    "P24": {
+      "kind": "image",
+      "url": "assets/posters/P24-pantograph-vlm-harness.jpg",
+      "source_url": "https://pantograph.com/journal/vlm-harness",
+      "source_page_url": "https://pantograph.com/journal/vlm-harness",
+      "source_path": "Official report social-preview image downloaded 2026-09-24.",
+      "classification": "Official report visual; selected videos remain on the source page.",
+      "source_id": "S066",
+      "alt": {
+        "en": "Official Pantograph report social-preview image.",
+        "zh": "Pantograph 官方报告社交预览图。"
+      },
+      "caption": {
+        "en": "Official Pantograph report social-preview image.",
+        "zh": "Pantograph 官方报告社交预览图。"
+      }
+    },
+    "P25": {
+      "kind": "image",
+      "url": "assets/posters/P25-robot-agent-gallery.png",
+      "source_url": "https://github.com/tianqi-zh/robot-agent-gallery",
+      "source_page_url": "https://github.com/tianqi-zh/robot-agent-gallery",
+      "source_path": "Repository assets/social-preview.png downloaded 2026-09-24.",
+      "classification": "Repository-provided gallery preview.",
+      "source_id": "S067",
+      "alt": {
+        "en": "Robot Agent Gallery repository social preview.",
+        "zh": "Robot Agent Gallery 仓库社交预览图。"
+      },
+      "caption": {
+        "en": "Robot Agent Gallery repository social preview.",
+        "zh": "Robot Agent Gallery 仓库社交预览图。"
+      }
+    },
+    "P26": {
+      "kind": "image",
+      "url": "assets/posters/P26-axol-pick-pack.jpg",
+      "source_url": "https://github.com/dineshreddy91/robot-pick-pack",
+      "source_page_url": "https://github.com/dineshreddy91/robot-pick-pack",
+      "source_path": "Repository docs/evidence/final_scene.jpg downloaded 2026-09-24.",
+      "classification": "Project evidence photograph; the repository contains no public video.",
+      "source_id": "S068",
+      "alt": {
+        "en": "Axol repository final-scene evidence photograph.",
+        "zh": "Axol 仓库的最终场景证据照片。"
+      },
+      "caption": {
+        "en": "Axol repository final-scene evidence photograph.",
+        "zh": "Axol 仓库的最终场景证据照片。"
+      }
+    },
+    "P27": {
+      "kind": "image",
+      "url": "assets/posters/P27-llm-robotics-playground.png",
+      "source_url": "https://github.com/dimentary/llm-robotics-playground",
+      "source_page_url": "https://github.com/dimentary/llm-robotics-playground",
+      "source_path": "Repository experiments/headphone-untangling/preview.png copied from the verified source checkout.",
+      "classification": "Project experiment preview; release videos remain linked at source.",
+      "source_id": "S069",
+      "alt": {
+        "en": "Headphone-untangling experiment preview.",
+        "zh": "耳机线解缠实验预览图。"
+      },
+      "caption": {
+        "en": "Headphone-untangling experiment preview.",
+        "zh": "耳机线解缠实验预览图。"
+      }
+    },
+    "P28": {
+      "kind": "image",
+      "url": "assets/posters/P28-dexjoco.png",
+      "source_url": "https://github.com/YichengDraw/astra-policy-dexjoco",
+      "source_page_url": "https://github.com/YichengDraw/astra-policy-dexjoco",
+      "source_path": "Repository media/microwave-sequence.png downloaded 2026-09-24.",
+      "classification": "Project sequence image; three selected success videos remain at source.",
+      "source_id": "S070",
+      "alt": {
+        "en": "DexJoCo microwave success sequence.",
+        "zh": "DexJoCo 微波炉任务成功序列图。"
+      },
+      "caption": {
+        "en": "DexJoCo microwave success sequence.",
+        "zh": "DexJoCo 微波炉任务成功序列图。"
+      }
+    },
+    "P29": {
+      "kind": "image",
+      "url": "assets/posters/P29-astra-robomme.png",
+      "source_url": "https://github.com/bingaochen/Astra-on-RoboMME",
+      "source_page_url": "https://github.com/bingaochen/Astra-on-RoboMME",
+      "source_path": "Repository assets/method.png downloaded 2026-09-24.",
+      "classification": "Project method diagram, not a rollout frame.",
+      "source_id": "S071",
+      "alt": {
+        "en": "Astra-on-RoboMME three-tier method diagram.",
+        "zh": "Astra-on-RoboMME 三层方法图。"
+      },
+      "caption": {
+        "en": "Astra-on-RoboMME three-tier method diagram.",
+        "zh": "Astra-on-RoboMME 三层方法图。"
+      }
+    },
+    "P30": {
+      "kind": "image",
+      "url": "assets/posters/P30-roboicl.jpg",
+      "source_url": "https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/",
+      "source_page_url": "https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/",
+      "source_path": "Official project-page request-anatomy image downloaded 2026-09-24.",
+      "classification": "Project-hosted request-anatomy image; rollout videos remain at source.",
+      "source_id": "S072",
+      "alt": {
+        "en": "RoboICL live request-anatomy frame.",
+        "zh": "RoboICL 在线请求结构示例帧。"
+      },
+      "caption": {
+        "en": "RoboICL live request-anatomy frame.",
+        "zh": "RoboICL 在线请求结构示例帧。"
+      }
+    },
+    "P31": {
+      "kind": "image",
+      "url": "assets/posters/P31-gpt6-libero-probe.jpg",
+      "source_url": "https://github.com/Jacksonha7/gpt6-libero-probe",
+      "source_page_url": "https://github.com/Jacksonha7/gpt6-libero-probe",
+      "source_path": "Repository assets/task8_grasp_points.jpg copied from the verified source checkout.",
+      "classification": "Project evidence image; comparison media are GIFs.",
+      "source_id": "S073",
+      "alt": {
+        "en": "LIBERO task-eight grasp-point evidence image.",
+        "zh": "LIBERO 第八任务抓取点证据图。"
+      },
+      "caption": {
+        "en": "LIBERO task-eight grasp-point evidence image.",
+        "zh": "LIBERO 第八任务抓取点证据图。"
+      }
+    },
+    "P32": {
+      "kind": "image",
+      "url": "assets/posters/P32-astra-world-model.jpg",
+      "source_url": "https://github.com/wentingw/astra-world-model-blog",
+      "source_page_url": "https://github.com/wentingw/astra-world-model-blog",
+      "source_path": "Repository assets/hero.jpg downloaded 2026-09-24.",
+      "classification": "Project hero image; drone and G1 replays remain at source.",
+      "source_id": "S074",
+      "alt": {
+        "en": "Official Astra World Model hero image.",
+        "zh": "Astra World Model 官方头图。"
+      },
+      "caption": {
+        "en": "Official Astra World Model hero image.",
+        "zh": "Astra World Model 官方头图。"
+      }
+    },
+    "P33": {
+      "kind": "image",
+      "url": "assets/posters/P33-robot-vllm.png",
+      "source_url": "https://github.com/nssmd/robot-vllm",
+      "source_page_url": "https://github.com/nssmd/robot-vllm",
+      "source_path": "Repository docs/assets/architecture.png downloaded 2026-09-24.",
+      "classification": "Project architecture diagram; no public video was found.",
+      "source_id": "S075",
+      "alt": {
+        "en": "Robot-vLLM architecture diagram.",
+        "zh": "Robot-vLLM 架构图。"
+      },
+      "caption": {
+        "en": "Robot-vLLM architecture diagram.",
+        "zh": "Robot-vLLM 架构图。"
+      }
+    },
+    "P34": {
+      "kind": "image",
+      "url": "assets/posters/P34-quackd.png",
+      "source_url": "https://github.com/rokbenko/quackd",
+      "source_page_url": "https://github.com/rokbenko/quackd",
+      "source_path": "Repository docs/assets/lerobot-what-it-saw.png downloaded 2026-09-24.",
+      "classification": "Project evidence image; the restricted X post is merged into this card.",
+      "source_id": "S076",
+      "alt": {
+        "en": "Project image showing what the LeRobot camera observed.",
+        "zh": "项目图：LeRobot 相机所见画面。"
+      },
+      "caption": {
+        "en": "Project image showing what the LeRobot camera observed.",
+        "zh": "项目图：LeRobot 相机所见画面。"
+      }
     }
   },
   "missing_policy": {
