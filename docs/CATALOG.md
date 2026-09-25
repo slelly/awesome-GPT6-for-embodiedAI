@@ -1,6 +1,6 @@
 # 完整目录 / Full catalogue
 
-证据快照：2026-09-24。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
+证据快照：2026-09-25。本文件由 `scripts/build.py` 生成；请编辑 `data/projects.json`。
 
 **A/B/C/D 是来源证据等级，不是模型能力、代码质量或独立复现等级。所有条目均未由本仓库独立运行机器人实验。**
 
@@ -8,7 +8,7 @@ A：一手正文可读；B：一手入口存在但关键实施/模型关系不�
 
 “核心”仅代表与主题直接相关；不等于证据全部完整，也不保证日期均精确落在窗口内。
 
-## 核心项目与评测 · 27
+## 核心项目与评测 · 31
 
 <a id="p01"></a>
 ### P01 · GPT-Policy · In-Context Robot Learning
@@ -708,7 +708,126 @@ results：[https://robodawn.top/results/](https://robodawn.top/results/)
 
 ---
 
-## 配套资源与对照 · 8
+<a id="p36"></a>
+### P36 · DrivingBench · Astra 真实汽车闭环驾驶评测
+
+DrivingBench 让 GPT-6 Astra 通过 observe、set_motion 与 stop_now 三个 MCP 工具闭环控制真实 Toyota Corolla；在同一对话的首次失败与反思后，第二次低速尝试完成 134.7 米锥桶路线。
+
+**来源等级：A** · 真机 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Aditya Ramabadran, Simon Mahns, Tobias Gessler  
+**事件日期：** 2026-09-18（本月更新，基础项目更早）  
+**日期依据：** Official harness repository initial commit 2026-09-18T00:59:00Z; public benchmark discussion followed in the current review window.  
+**入口：** [https://drivingbench.com/](https://drivingbench.com/)  
+**代码入口：** [https://github.com/aditya-ramabadran/drivingbench_harness_v1](https://github.com/aditya-ramabadran/drivingbench_harness_v1)  
+**许可状态：** Harness 为 MIT；官方站视频与画面未见独立再许可声明，本站仅远程引用官方预览图。  
+**控制接口 / 作用：** 前向/广角相机 + 车速/方向盘遥测 → Astra/Codex → MCP 离散运动指令 → openpilot/comma four → 转向、加速与制动；人类驾驶员全程备刹车
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Astra best course progress | 100 % | attempt 2 of up to 3 attempts in one continuous chat | 134.7 m completed in 5:22; Codex medium; low-speed closed cone course |
+| Astra first-attempt progress | 49 % | attempt 1 in the same continuous chat | 67.3 m, DNF; followed by a generic reflection prompt before attempt 2 |
+
+**限制与未决项：** 每个模型只有一段连续对话中的最多三次相关尝试，不是多 seed 独立重复。 路线位于空停车场且速度很低，驾驶员全程准备制动；不能外推到公共道路自动驾驶。 Astra 第二次成功依赖首次尝试后的同上下文反思，首试成功率与 best-of-three 必须分开理解。 模型并非车载实时控制器；推理延迟、离散观察与 openpilot 执行层共同影响结果。
+
+report：[https://drivingbench.com/report/](https://drivingbench.com/report/)  
+trace：[https://drivingbench.com/trace/gpt-6-astra/2/](https://drivingbench.com/trace/gpt-6-astra/2/)  
+code：[https://github.com/aditya-ramabadran/drivingbench_harness_v1](https://github.com/aditya-ramabadran/drivingbench_harness_v1)  
+
+**来源：** [S085 · DrivingBench official benchmark, report, and Astra traces](SOURCES.md#s085) · [S086 · DrivingBench v1 harness](SOURCES.md#s086)
+
+---
+
+<a id="p37"></a>
+### P37 · Astra Robot Sim2Real · 电梯按钮经验复用
+
+GPT-6 Astra 读取机器人几何、历史图像/动作与可复用局部技能，针对电梯按钮任务生成低层 API 程序；仓库公开仿真与 XLeRobot 真机逐试次数据、代码、报告及演示。
+
+**来源等级：A** · 真机 + 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Sida He, Lingxi Xie, Yunning Cao et al. / Huawei Inc.  
+**事件日期：** 2026-09-24（窗口内）  
+**日期依据：** Public release commit e324643 dated 2026-09-24T13:31:37+08:00.  
+**入口：** [https://github.com/hesd10/astra-robot-sim2real](https://github.com/hesd10/astra-robot-sim2real)  
+**代码入口：** [https://github.com/hesd10/astra-robot-sim2real](https://github.com/hesd10/astra-robot-sim2real)  
+**许可状态：** 项目整体尚未指定许可；XLeRobot 上游为 Apache-2.0，仓库说明 D3 演示经操作者授权发布。  
+**控制接口 / 作用：** 当前相机图像 + 机器人几何/校准 + 历史经验/局部技能 → Astra 生成程序 → 低层仿真或 XLeRobot 控制 API → 新图像反馈
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Synchronized-experience mean-time reduction | 68.6 % | 30 fixed-start simulation trials across 10 conditions | relative to the no-extra-assets/no-experience baseline |
+| Simulation-experience real-robot mean-time reduction | 49.9 % | 12 real-robot trials | same-start comparison in the released sim2real study |
+| Reusable LOOP skill mean-time reduction | 30.6 % | 27 near-button simulation trials | relative to the condition with no supplied local skill |
+
+**限制与未决项：** 报告的是任务时间相对变化，不是跨任务通用成功率；不同实验组的分母不能合并。 真机成功以操作者确认夹爪尖接触按钮为准，未独立复现。 项目整体无统一许可，不能将公开代码与媒体等同于可自由再分发。 模型权重固定，但经验材料、提示和技能接口随条件改变，指标应按各自协议解释。
+
+paper：[https://github.com/hesd10/astra-robot-sim2real/blob/codex/publication-draft/paper/main.pdf](https://github.com/hesd10/astra-robot-sim2real/blob/codex/publication-draft/paper/main.pdf)  
+report：[https://github.com/hesd10/astra-robot-sim2real/blob/codex/publication-draft/report/REPORT.md](https://github.com/hesd10/astra-robot-sim2real/blob/codex/publication-draft/report/REPORT.md)  
+video：[https://github.com/hesd10/astra-robot-sim2real/blob/codex/publication-draft/media/D3-realtime-muted.mp4](https://github.com/hesd10/astra-robot-sim2real/blob/codex/publication-draft/media/D3-realtime-muted.mp4)  
+
+**来源：** [S087 · Robot Manipulation with GPT-6-Astra release](SOURCES.md#s087)
+
+---
+
+<a id="p38"></a>
+### P38 · From Grasping to Skills · Astra 跨会话技能复用
+
+六次独立 Astra/XLeRobot 牛奶盒抓取会话只通过人工审阅的通用流程与可复用代码跨会话传递经验，记录了成功、失败、恢复与操作者干预。
+
+**来源等级：A** · 真机 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** hesd10  
+**事件日期：** 2026-09-21（窗口内）  
+**日期依据：** Consolidated public release commit 9c12635 dated 2026-09-21T09:43:03+08:00.  
+**入口：** [https://github.com/hesd10/astra-grasping-skills](https://github.com/hesd10/astra-grasping-skills)  
+**代码入口：** [https://github.com/hesd10/astra-grasping-skills](https://github.com/hesd10/astra-grasping-skills)  
+**许可状态：** 仓库未指定项目级许可；公开资料可核验，不据此推定代码或媒体再许可。  
+**控制接口 / 作用：** 多相机观察 + 当前会话上下文 + 审阅后的通用 procedure/skill 代码 → Astra 生成与执行机器人程序 → XLeRobot 动作与视觉复核
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| Stable-suspension successes | 4 successes | 6 | six successive fresh-workspace/fresh-conversation real-robot carton-grasping attempts |
+| Successful-run execution-time reduction | 40.8 % | run 001 (31:39) versus run 006 (18:45) | descriptive sequence comparison; not a controlled causal estimate |
+
+**限制与未决项：** 每个演进版本只有一次尝试，且包含人工干预与第六次前的额外回顾，不能据此建立稳定因果改进。 成功定义为肉眼可见的稳定悬空；要求的 3 cm 间隙没有独立测量。 失败用时是终止前时长，不能与成功用时直接解释为效率。 仓库整体无明确许可，本站只远程引用官方关键帧。
+
+report：[https://github.com/hesd10/astra-grasping-skills/blob/main/physical/report/REPORT.md](https://github.com/hesd10/astra-grasping-skills/blob/main/physical/report/REPORT.md)  
+data：[https://github.com/hesd10/astra-grasping-skills/blob/main/results.json](https://github.com/hesd10/astra-grasping-skills/blob/main/results.json)  
+
+**来源：** [S088 · From Grasping to Skills release](SOURCES.md#s088)
+
+---
+
+<a id="p40"></a>
+### P40 · Robo-Harness K1 · 感知工具增强机器人智能体
+
+Robo-Harness K1 将标定深度、持久视觉锚点、空间测量与抓取候选暴露为工具；在 18 个配对 LIBERO-PRO case 上，GPT-6 Astra 从 RGB-only 的 11/18 提升到 K1 的 16/18。
+
+**来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
+
+**作者 / 团队：** Zexi Li, Yehang Zhang, Wenqian Li et al.  
+**事件日期：** 2026-09-24（窗口内）  
+**日期依据：** arXiv:2609.29389 v1 submitted 2026-09-24T11:16:18Z.  
+**入口：** [https://arxiv.org/abs/2609.29389](https://arxiv.org/abs/2609.29389)  
+**代码入口：** 未定位公开代码；不等于确认代码不存在  
+**许可状态：** 论文为 arXiv non-exclusive distribution license；摘要页未给出公开代码入口。  
+**控制接口 / 作用：** RGB/机器人状态 → Astra 选择 grounding、depth、anchor、grasp 等感知工具 → 通用运动/夹爪工具 → 仿真执行与反馈
+
+| 指标 | 结果 | 分母 | 协议 / 注意事项 |
+| --- | --- | --- | --- |
+| K1 + GPT-6 Astra task accuracy | 88.9 % | 16/18 matched LIBERO-PRO cases | six cases each from Spatial, Object, and Goal; fixed task/state subset |
+| RGB-only GPT-6 Astra task accuracy | 61.1 % | 11/18 matched LIBERO-PRO cases | paired task identities and initial states; Inspect Robots RGB-only interface |
+
+**限制与未决项：** Astra 对比只有 18 个预算受限、确定性选取的 case；单个结果会改变 5.6 个百分点。 K1 与 RGB-only 对比同时改变感知、记忆、控制接口和完成反馈，不能把差异归因于单一工具。 Astra 结果来自仿真 LIBERO-PRO；论文跨 embodiment 的 RoboSuite/RoboTwin 迁移使用 Gemini，而非 Astra。 公开摘要未链接代码或独立复现包；结果仅按作者论文记录。
+
+paper：[https://arxiv.org/abs/2609.29389](https://arxiv.org/abs/2609.29389)  
+html：[https://arxiv.org/html/2609.29389v1](https://arxiv.org/html/2609.29389v1)  
+
+**来源：** [S090 · Robo-Harness K1 preprint](SOURCES.md#s090)
+
+---
+
+## 配套资源与对照 · 9
 
 <a id="p13"></a>
 ### P13 · Inspect Robots
@@ -854,9 +973,9 @@ project：[https://tianqi-zh.github.io/robot-agent-gallery/](https://tianqi-zh.g
 ---
 
 <a id="p27"></a>
-### P27 · LLM Robotics Playground · 四项 MuJoCo 控制器实验
+### P27 · LLM Robotics Playground · 五项仿真机器人实验
 
-Astra/Codex 协助搭建 MuJoCo 环境并编写耳机线解缠、六足搬运、白板写程序和灵巧手绘画控制器；回放时不调用模型。
+Astra/Codex 协助搭建四项 MuJoCo 环境和控制器；2026-09-24 新增 Baoding balls Isaac Lab/PhysX PPO 基线、checkpoint 与固定回放，该新增项本身不使用 Astra 在线控制。
 
 **来源等级：A** · 仿真 · 一手资料明确涉及 GPT-6
 
@@ -866,9 +985,9 @@ Astra/Codex 协助搭建 MuJoCo 环境并编写耳机线解缠、六足搬运、
 **入口：** [https://github.com/dimentary/llm-robotics-playground](https://github.com/dimentary/llm-robotics-playground)  
 **代码入口：** [https://github.com/dimentary/llm-robotics-playground](https://github.com/dimentary/llm-robotics-playground)  
 **许可状态：** 项目代码 MIT；上游机器人模型及鸽子图样保持各自许可。  
-**控制接口 / 作用：** Astra/Codex 编写环境与控制代码 → 仿真真值状态/接触 → 固定控制器回放
+**控制接口 / 作用：** 前四项：Astra/Codex 编写环境与控制代码 → 仿真真值状态/接触 → 固定控制器回放；Baoding：PPO 训练策略 → Isaac Lab/PhysX rollout → MuJoCo 运动学回放
 
-**限制与未决项：** 不是 Astra 在线闭环控制。 项目样例不能作为通用机器人成功率。 上游资产许可应与 MIT 代码分开理解。
+**限制与未决项：** 不是 Astra 在线闭环控制。 项目样例不能作为通用机器人成功率。 上游资产许可应与 MIT 代码分开理解。 Baoding balls 是独立 RL 基线，不能归因于 GPT-6 Astra。
 
 release：[https://github.com/dimentary/llm-robotics-playground/releases/tag/v0.1.0](https://github.com/dimentary/llm-robotics-playground/releases/tag/v0.1.0)  
 
@@ -900,6 +1019,30 @@ Astra 读取 RGB/几何输入并调用 Blender 构造对象化三维场景；下
 
 
 **来源：** [S074 · Astra World Model research repository](SOURCES.md#s074)
+
+---
+
+<a id="p39"></a>
+### P39 · BluPe Remote YAM · Astra 共享真机运行基础设施
+
+开源 runner 让本地 Codex/Astra 通过公开 Session API 加入 BluPe 共享 YAM/SO101 机器人队列，读取三路相机并提交受限轨迹；近期更新加入运行对比指标与可选推理强度。
+
+**来源等级：A** · 真机 + 仿真 · 基础设施，不是单独的 GPT-6 成果
+
+**作者 / 团队：** Andrew Liu / BluPe  
+**事件日期：** 2026-09-07（本月更新，基础项目更早）  
+**日期依据：** GitHub repository created 2026-09-07T08:32:16Z; active run-metrics and reasoning-effort updates landed 2026-09-25.  
+**入口：** [https://github.com/andlyu/blupe-remote-yam](https://github.com/andlyu/blupe-remote-yam)  
+**代码入口：** [https://github.com/andlyu/blupe-remote-yam](https://github.com/andlyu/blupe-remote-yam)  
+**许可状态：** 仓库无统一项目许可；RoboCurve 适配代码与 I2RT/robot models 各自保留上游许可。  
+**控制接口 / 作用：** 远端三相机/队列状态 → 本地 Astra runner 与 IK → Session API 轨迹请求 → 网关就绪/限位/停止检查 → 共享 YAM 或 SO101
+
+**限制与未决项：** 这是可复用基础设施，不是独立 GPT-6 成功率或新模型能力结果。 真机执行依赖共享队列、现场操作者就绪和网关安全检查；本轮未远程启动机器人。 仓库未提供统一许可，不能把可访问性等同于可自由再分发。 mock 与 no-hardware-control 模式不构成真机验证。
+
+runs：[https://huggingface.co/datasets/andlyu/Public-YAM-runs](https://huggingface.co/datasets/andlyu/Public-YAM-runs)  
+api：[https://github.com/andlyu/blupe-remote-yam/blob/main/API.md](https://github.com/andlyu/blupe-remote-yam/blob/main/API.md)  
+
+**来源：** [S089 · BluPe Remote YAM runner](SOURCES.md#s089)
 
 ---
 

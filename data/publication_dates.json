@@ -449,5 +449,40 @@
     "basis": "arXiv:2609.22966 v1 was submitted 2026-09-19T11:34:13Z.",
     "rule": null,
     "uncertainty": "Paper submission date; public code followed on 2026-09-22."
+  },
+  "P36": {
+    "date": "2026-09-18",
+    "status": "verified",
+    "basis": "DrivingBench harness initial commit was authored 2026-09-18T00:59:00Z.",
+    "rule": null,
+    "uncertainty": "The benchmark site's public launch date is not printed; current-window public discussion followed the code release."
+  },
+  "P37": {
+    "date": "2026-09-24",
+    "status": "verified",
+    "basis": "Public release commit e324643 was authored 2026-09-24T13:31:37+08:00.",
+    "rule": null,
+    "uncertainty": "Repository release date; no arXiv identifier was present."
+  },
+  "P38": {
+    "date": "2026-09-21",
+    "status": "verified",
+    "basis": "Consolidated public release commit 9c12635 was authored 2026-09-21T09:43:03+08:00.",
+    "rule": null,
+    "uncertainty": "The repository was created earlier; the display date uses the authored release commit."
+  },
+  "P39": {
+    "date": "2026-09-07",
+    "status": "verified",
+    "basis": "GitHub repository creation timestamp is 2026-09-07T08:32:16Z.",
+    "rule": null,
+    "uncertainty": "Infrastructure received substantial run-analysis updates on 2026-09-25."
+  },
+  "P40": {
+    "date": "2026-09-24",
+    "status": "verified",
+    "basis": "arXiv:2609.29389 v1 was submitted 2026-09-24T11:16:18Z.",
+    "rule": null,
+    "uncertainty": "Paper submission date; no public code link was present on the abstract page."
   }
 }

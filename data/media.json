@@ -850,6 +850,94 @@
         "en": "Official MIT repository copy of RoboDawn arXiv v1, PDF page 5, Figure 2.",
         "zh": "RoboDawn arXiv v1 PDF 第 5 页图 2 的官方 MIT 仓库副本。"
       }
+    },
+    "P36": {
+      "kind": "image",
+      "url": "https://drivingbench.com/media/hero-teaser-v13-final-10s.avif",
+      "source_url": "https://drivingbench.com/media/hero-teaser-v13-final-10s.avif",
+      "source_page_url": "https://drivingbench.com/",
+      "source_path": "Official homepage AVIF preview asset checked 2026-09-25; retained at the source URL without local copying or re-encoding.",
+      "classification": "Official DrivingBench homepage preview for the real-car evaluation; not generated decoration and not presented as a separately retained video.",
+      "source_id": "S085",
+      "alt": {
+        "en": "DrivingBench official preview of the real-car cone-course evaluation.",
+        "zh": "DrivingBench 真实汽车锥桶路线评测官方预览图。"
+      },
+      "caption": {
+        "en": "Official DrivingBench homepage preview.",
+        "zh": "DrivingBench 官方首页预览图。"
+      }
+    },
+    "P37": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/hesd10/astra-robot-sim2real/e324643f03d05656f49bc4fc575759fd46cb9fe0/paper/figures/teaser.png",
+      "fit": "contain",
+      "source_url": "https://github.com/hesd10/astra-robot-sim2real/blob/e324643f03d05656f49bc4fc575759fd46cb9fe0/paper/figures/teaser.png",
+      "source_page_url": "https://github.com/hesd10/astra-robot-sim2real",
+      "source_path": "Official release teaser figure at commit e324643f03d05656f49bc4fc575759fd46cb9fe0; served from the pinned repository without local copying.",
+      "classification": "Official study teaser summarizing simulation, sim2real, and local-skill evaluations; not an independently reproduced result.",
+      "source_id": "S087",
+      "alt": {
+        "en": "Astra robot manipulation study teaser across simulation, sim2real, and local-skill evaluations.",
+        "zh": "Astra 机器人操作研究的仿真、仿真到真机与局部技能评测总览图。"
+      },
+      "caption": {
+        "en": "Official release teaser figure.",
+        "zh": "官方发布的研究总览图。"
+      }
+    },
+    "P38": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/hesd10/astra-grasping-skills/9c1263597fd01514bae1cf96473eaf204aa1d8db/physical/figures/run-006-keyframes.jpg",
+      "source_url": "https://github.com/hesd10/astra-grasping-skills/blob/9c1263597fd01514bae1cf96473eaf204aa1d8db/physical/figures/run-006-keyframes.jpg",
+      "source_page_url": "https://github.com/hesd10/astra-grasping-skills",
+      "source_path": "Official run-006 keyframe sequence at release commit 9c1263597fd01514bae1cf96473eaf204aa1d8db; served from the pinned repository without local copying.",
+      "classification": "Official real-robot experiment keyframes from the sixth carton-grasping attempt; not generated decoration.",
+      "source_id": "S088",
+      "alt": {
+        "en": "Keyframes from Astra/XLeRobot carton-grasping run 006.",
+        "zh": "Astra/XLeRobot 牛奶盒抓取第 006 次运行关键帧。"
+      },
+      "caption": {
+        "en": "Official keyframe sequence from successful run 006.",
+        "zh": "成功运行 006 的官方关键帧序列。"
+      }
+    },
+    "P39": {
+      "kind": "image",
+      "url": "assets/posters/P39-blupe-remote-yam.svg",
+      "fit": "contain",
+      "source_url": "https://github.com/andlyu/blupe-remote-yam",
+      "source_page_url": "https://github.com/andlyu/blupe-remote-yam",
+      "source_path": "Local site typographic cover created 2026-09-25 after the official repository tree was checked and no meaningful project image or robot demonstration asset was found.",
+      "classification": "Site-made text cover naming BluPe Remote YAM; not a robot image, demonstration, or experimental result.",
+      "source_id": "S089",
+      "alt": {
+        "en": "Text cover for BluPe Remote YAM shared real-robot infrastructure.",
+        "zh": "BluPe Remote YAM 共享真机基础设施文字封面。"
+      },
+      "caption": {
+        "en": "Site-made typographic cover; no project media is implied.",
+        "zh": "本站制作的文字封面，不代表项目实验媒体。"
+      }
+    },
+    "P40": {
+      "kind": "image",
+      "url": "https://arxiv.org/html/2609.29389v1/k1_framework.png",
+      "fit": "contain",
+      "source_url": "https://arxiv.org/html/2609.29389v1/k1_framework.png",
+      "source_page_url": "https://arxiv.org/abs/2609.29389",
+      "source_path": "arXiv:2609.29389v1 HTML Figure 1 served from the official arXiv paper page.",
+      "classification": "Paper overview/result figure comparing the K1 harness and matched systems; not a generated illustration or independently reproduced result.",
+      "source_id": "S090",
+      "alt": {
+        "en": "Robo-Harness K1 overview and matched LIBERO-PRO comparison.",
+        "zh": "Robo-Harness K1 总览及配对 LIBERO-PRO 对比图。"
+      },
+      "caption": {
+        "en": "Robo-Harness K1 arXiv v1 Figure 1.",
+        "zh": "Robo-Harness K1 arXiv v1 图 1。"
+      }
     }
   },
   "missing_policy": {

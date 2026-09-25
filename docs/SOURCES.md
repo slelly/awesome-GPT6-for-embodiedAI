@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-09-24 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-09-25 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -623,9 +623,9 @@ Official repository README, deterministic controller boundary, safety-stop recor
 
 [https://github.com/dimentary/llm-robotics-playground](https://github.com/dimentary/llm-robotics-playground)
 
-类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-25
 
-Official repository, v0.1.0 release, four experiment previews, replay assets, and MIT code license checked.
+Official repository, v0.1.0 release, five experiment previews, replay assets, and MIT code license checked. The 2026-09-24 Baoding update is an Isaac Lab/PhysX PPO baseline rather than online Astra control.
 
 <a id="s070"></a>
 ## S070 · GPT-6 Astra policy on DexJoCo
@@ -761,3 +761,57 @@ arXiv v1 submitted 2026-09-19T11:34:13Z. The locally read 16-page PDF supplies t
 类型：`primary` · 读取：`page_text` · 检查日期：2026-09-24
 
 MIT repository created 2026-09-22 with harnesses, prompts, demonstrations, evaluation seeds, and pinned RoboTwin/RoboDojo submodules; public results were not rerun by this catalogue.
+
+<a id="s085"></a>
+## S085 · DrivingBench official benchmark, report, and Astra traces
+
+[https://drivingbench.com/](https://drivingbench.com/)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-25
+
+Official leaderboard, methods report, and per-attempt trace viewer document the real Corolla setup, continuous-chat protocol, 49% first attempt, and 100%/134.7 m/5:22 second attempt.
+
+<a id="s086"></a>
+## S086 · DrivingBench v1 harness
+
+[https://github.com/aditya-ramabadran/drivingbench_harness_v1](https://github.com/aditya-ramabadran/drivingbench_harness_v1)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-25
+
+MIT repository publishes the observe/set_motion/stop_now MCP interface, comma/openpilot integration, safety boundaries, tests, and trace format; initial commit is dated 2026-09-18.
+
+<a id="s087"></a>
+## S087 · Robot Manipulation with GPT-6-Astra release
+
+[https://github.com/hesd10/astra-robot-sim2real](https://github.com/hesd10/astra-robot-sim2real)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-25
+
+Public release commit e324643 contains the paper, trial-level simulation and real-robot results, analysis scripts, XLeRobot control code, prompts, local skills, and real-time/6x D3 demonstrations.
+
+<a id="s088"></a>
+## S088 · From Grasping to Skills release
+
+[https://github.com/hesd10/astra-grasping-skills](https://github.com/hesd10/astra-grasping-skills)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-25
+
+Consolidated public repository records six fresh-session Astra/XLeRobot carton-grasping attempts, per-run evidence, skill revisions, operator interventions, machine-readable outcomes, and explicit causal limitations.
+
+<a id="s089"></a>
+## S089 · BluPe Remote YAM runner
+
+[https://github.com/andlyu/blupe-remote-yam](https://github.com/andlyu/blupe-remote-yam)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-25
+
+Official repository documents the local Codex/Astra runner, public shared-robot queue, camera/session API, gateway safety checks, local logs, and 2026-09-25 run-metric and reasoning-effort updates. No meaningful project image was found in the repository tree.
+
+<a id="s090"></a>
+## S090 · Robo-Harness K1 preprint
+
+[https://arxiv.org/abs/2609.29389](https://arxiv.org/abs/2609.29389)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-25
+
+arXiv v1 submitted 2026-09-24T11:16:18Z. The HTML paper specifies the 18-case paired Astra comparison, interface changes, denominators, simulation-only Astra boundary, and the retained Figure 1 cover.

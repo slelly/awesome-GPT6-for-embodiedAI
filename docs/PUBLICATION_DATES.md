@@ -39,6 +39,11 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | P33 | 2026-0915 | verified | 2026-09-15 | Repository created and v0.5.0 released 2026-09-15 UTC. | — | Release date is directly verifiable. | [S075](SOURCES.md#s075) |
 | P34 | 2026-0915 | verified | 2026-09-15 | quackd v0.9.0 and the public SO-101 log were released 2026-09-15. | — | The associated author post followed on 2026-09-16. | [S076](SOURCES.md#s076) · [S077](SOURCES.md#s077) |
 | P35 | 2026-0919 | verified | 2026-09-19 | arXiv:2609.22966 v1 was submitted 2026-09-19T11:34:13Z. | — | Paper submission date; public code followed on 2026-09-22. | [S082](SOURCES.md#s082) · [S083](SOURCES.md#s083) · [S084](SOURCES.md#s084) |
+| P36 | 2026-0918 | verified | 2026-09-18 | DrivingBench harness initial commit was authored 2026-09-18T00:59:00Z. | — | The benchmark site's public launch date is not printed; current-window public discussion followed the code release. | [S085](SOURCES.md#s085) · [S086](SOURCES.md#s086) |
+| P37 | 2026-0924 | verified | 2026-09-24 | Public release commit e324643 was authored 2026-09-24T13:31:37+08:00. | — | Repository release date; no arXiv identifier was present. | [S087](SOURCES.md#s087) |
+| P38 | 2026-0921 | verified | 2026-09-21 | Consolidated public release commit 9c12635 was authored 2026-09-21T09:43:03+08:00. | — | The repository was created earlier; the display date uses the authored release commit. | [S088](SOURCES.md#s088) |
+| P39 | 2026-0907 | verified | 2026-09-07 | GitHub repository creation timestamp is 2026-09-07T08:32:16Z. | — | Infrastructure received substantial run-analysis updates on 2026-09-25. | [S089](SOURCES.md#s089) |
+| P40 | 2026-0924 | verified | 2026-09-24 | arXiv:2609.29389 v1 was submitted 2026-09-24T11:16:18Z. | — | Paper submission date; no public code link was present on the abstract page. | [S090](SOURCES.md#s090) |
 | X01 | 2026-0912 | verified | 2026-09-12 | 保留项目记录给出精确演示日期；原帖绝对时间未另行复核。 | — | 无；资料记录为精确日。 | [S036](SOURCES.md#s036) |
 | X02 | 2026-0914 | verified | pending confirmation | 原帖 status ID `2099524132341711051` 依 X Snowflake epoch 解码为 `2026-09-14T15:42:15.079Z`。 | — | 日期精确到 UTC 日；从原帖 ID 时间位推导，未把二手索引的相对时间当日期。 | [S036](SOURCES.md#s036) |
 | X03 | 2026-0908 | verified | 2026-09-08 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S037](SOURCES.md#s037) |

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">BluPe Remote YAM</title>
+  <desc id="desc">A site-made text cover, not a robot demonstration image.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10283b"/>
+      <stop offset="1" stop-color="#1d4b58"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M0 694C261 596 385 817 702 691s430-189 898-53V900H0Z" fill="#74c7be" opacity=".15"/>
+  <path d="M0 732C340 620 496 816 849 661s461-128 751-38" fill="none" stroke="#dff5e8" stroke-width="3" opacity=".28"/>
+  <rect x="130" y="138" width="1340" height="624" rx="30" fill="#071923" opacity=".26" stroke="#c5ede5" stroke-opacity=".32" stroke-width="2"/>
+  <text x="210" y="314" fill="#dff5e8" font-family="Arial, Helvetica, sans-serif" font-size="32" letter-spacing="7">INFRASTRUCTURE TEXT COVER</text>
+  <text x="210" y="468" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700">BluPe Remote YAM</text>
+  <text x="210" y="550" fill="#c5ede5" font-family="Arial, Helvetica, sans-serif" font-size="38">Shared Real-Robot Runner for Astra</text>
+  <line x1="210" y1="610" x2="760" y2="610" stroke="#74c7be" stroke-width="4"/>
+  <text x="210" y="676" fill="#dff5e8" font-family="Arial, Helvetica, sans-serif" font-size="28">Site-made typographic cover · not a robot demo image</text>
+</svg>

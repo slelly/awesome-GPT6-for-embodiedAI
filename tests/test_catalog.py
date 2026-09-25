@@ -41,9 +41,9 @@ class CatalogueTests(unittest.TestCase):
     def test_scene_tags_are_complete_and_source_bounded(self):
         allowed={'sim','real'}
         self.assertTrue(all(set(p['scene_tags'])<=allowed and p['scene_tags'] for p in self.projects))
-        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),34)
-        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),22)
-        self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),6)
+        self.assertEqual(sum('sim' in p['scene_tags'] for p in self.projects),37)
+        self.assertEqual(sum('real' in p['scene_tags'] for p in self.projects),26)
+        self.assertEqual(sum(set(p['scene_tags'])==allowed for p in self.projects),8)
         self.assertEqual(self.by_id['P12']['scene_tags'],['real'])
         self.assertEqual(self.by_id['P15']['scene_tags'],['sim','real'])
         ledger=(ROOT/'docs/SCENE_TAGS.md').read_text(encoding='utf-8')
@@ -63,8 +63,8 @@ class CatalogueTests(unittest.TestCase):
 
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
-        self.assertEqual(len(retained),50)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),29)
+        self.assertEqual(len(retained),55)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),34)
         self.assertEqual(sum(item['kind']=='video' for item in retained),21)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
         self.assertEqual(len(videos),21)
@@ -126,7 +126,7 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(self.media['media']['X15']['url'],'assets/social/savetwt.com_2100754714971287557_640x360.mp4')
         self.assertIn('f9f554b52f32eb66dd19e5e0475db11d989eb08e1e314c0802e7f0a0f7bd36c3',self.media['media']['X15']['source_path'])
         self.assertEqual(self.meta['window_start'],'2026-08-20')
-        self.assertEqual(self.meta['window_end'],'2026-09-24')
+        self.assertEqual(self.meta['window_end'],'2026-09-25')
 
     def test_initial_snapshot_counts(self):
         if self.meta['version']!='0.1.0':
@@ -139,7 +139,7 @@ class CatalogueTests(unittest.TestCase):
     def test_catalogue_excludes_awesome_collection_pseudo_cards(self):
         removed={'R01','R02','R03','R04','R05','R06','R07','R08'}
         self.assertTrue(removed.isdisjoint(self.by_id))
-        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':27,'supporting':8,'watchlist':15})
+        self.assertEqual(Counter(p['section'] for p in self.projects),{'core':31,'supporting':9,'watchlist':15})
         self.assertFalse(any(p['section']=='rednote_leads' for p in self.projects))
         self.assertNotIn('小红书待核实线索 · 0',(ROOT/'docs/CATALOG.md').read_text(encoding='utf-8'))
         repositories={}
@@ -173,6 +173,21 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(len(real_metrics),3)
         self.assertTrue(all(m['protocol']=='Gemini 3.8 Flash, not GPT-6 Astra' for m in real_metrics))
         self.assertEqual(self.media['media']['P35']['fit'],'contain')
+
+    def test_daily_additions_keep_protocol_boundaries(self):
+        driving=self.by_id['P36']
+        self.assertEqual(driving['environment'],'real')
+        self.assertEqual(driving['metrics'][0]['value'],100)
+        self.assertIn('attempt 2',driving['metrics'][0]['denominator'])
+        self.assertIn('same continuous chat',driving['metrics'][1]['denominator'])
+        self.assertIn('not evidence for public-road',self.i18n['en']['P36']['detail'])
+        k1=self.by_id['P40']
+        self.assertEqual(k1['metrics'][0]['denominator'],'16/18 matched LIBERO-PRO cases')
+        self.assertEqual(k1['metrics'][1]['denominator'],'11/18 matched LIBERO-PRO cases')
+        self.assertEqual(k1['environment'],'simulation')
+        self.assertIsNone(k1['code_url'])
+        self.assertEqual(self.by_id['P39']['gpt6_relation'],'infrastructure')
+        self.assertIn('Baoding',self.by_id['P27']['summary'])
 
     def test_source_references_exist(self):
         ids={s['id'] for s in self.sources}

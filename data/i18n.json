@@ -203,9 +203,9 @@
       "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
     },
     "P27": {
-      "title": "LLM Robotics Playground",
-      "summary": "Astra/Codex helps build four MuJoCo environments and controllers; replay does not call the model online.",
-      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+      "title": "LLM Robotics Playground · Five Simulation Experiments",
+      "summary": "Astra/Codex helped build the first four MuJoCo environments and controllers; a September 24 update adds a Baoding-balls Isaac Lab/PhysX PPO baseline, checkpoint, and fixed replay.",
+      "detail": "The Baoding addition is an RL baseline rather than online Astra control; replay does not call a model."
     },
     "P28": {
       "title": "GPT-6 Astra Policy on DexJoCo",
@@ -246,6 +246,31 @@
       "title": "RoboDawn · Closed-Loop Robot Control with Frozen VLMs",
       "summary": "A frozen VLM issues discrete move, rotate, and gripper commands in a feedback loop and adapts from in-context demonstrations; GPT-6 Astra is evaluated in simulation, while the paper's real-robot table uses Gemini 3.8 Flash.",
       "detail": "The catalogue keeps the simulation and real-robot model roles separate and reports author-provided results without claiming an independent reproduction."
+    },
+    "P36": {
+      "title": "DrivingBench · Astra Closed-Loop Real-Car Evaluation",
+      "summary": "GPT-6 Astra used three MCP tools to observe and drive a real Toyota Corolla around a low-speed cone course, completing 134.7 m on its second attempt after same-chat reflection.",
+      "detail": "The result is one supervised continuous-chat trial on an empty lot, not evidence for public-road autonomous driving."
+    },
+    "P37": {
+      "title": "Astra Robot Sim2Real · Elevator-Button Experience Reuse",
+      "summary": "GPT-6 Astra uses robot geometry, recorded experience, and reusable local skills to write low-level programs for elevator-button manipulation in simulation and on a physical XLeRobot.",
+      "detail": "Released timing reductions belong to distinct protocols and are not presented as a pooled general success rate."
+    },
+    "P38": {
+      "title": "From Grasping to Skills · Cross-Session Astra Skill Reuse",
+      "summary": "Six fresh-session Astra/XLeRobot carton-grasping attempts retain only reviewed procedures and reusable code between sessions, preserving successes, failures, recoveries, and interventions.",
+      "detail": "The evolving one-run-per-version sequence is descriptive and does not establish a controlled causal improvement."
+    },
+    "P39": {
+      "title": "BluPe Remote YAM · Shared Real-Robot Infrastructure",
+      "summary": "An open runner lets local Codex/Astra sessions join a shared YAM/SO101 queue, receive three camera views, and submit bounded trajectories through a supervised gateway.",
+      "detail": "This is execution infrastructure, not a standalone GPT-6 performance result; no robot was started during this catalogue review."
+    },
+    "P40": {
+      "title": "Robo-Harness K1 · Perception Tools for Robot-Use Agents",
+      "summary": "K1 exposes calibrated depth, persistent anchors, spatial measurements, and grasp candidates as tools; GPT-6 Astra reaches 16/18 on a paired LIBERO-PRO subset versus 11/18 with an RGB-only interface.",
+      "detail": "The 18-case comparison changes several interface components together and reports Astra only in simulation."
     }
   }
 }
