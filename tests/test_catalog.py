@@ -64,10 +64,10 @@ class CatalogueTests(unittest.TestCase):
     def test_retained_media_manifest_has_expected_covers_and_videos(self):
         retained=[item for item in self.media['media'].values() if item['kind'] in {'image','video'}]
         self.assertEqual(len(retained),57)
-        self.assertEqual(sum(item['kind']=='image' for item in retained),36)
-        self.assertEqual(sum(item['kind']=='video' for item in retained),21)
+        self.assertEqual(sum(item['kind']=='image' for item in retained),35)
+        self.assertEqual(sum(item['kind']=='video' for item in retained),22)
         videos={pid:item for pid,item in self.media['media'].items() if item['kind']=='video'}
-        self.assertEqual(len(videos),21)
+        self.assertEqual(len(videos),22)
         self.assertTrue(all(item.get('poster','').startswith('assets/') for item in videos.values()))
         self.assertTrue(all((ROOT/'site'/item['poster']).is_file() for item in videos.values()))
         self.assertTrue(all('first decoded frame at 00:00:00' in item.get('source_path','') for item in videos.values()))
@@ -79,6 +79,8 @@ class CatalogueTests(unittest.TestCase):
         self.assertEqual(videos['P22']['url'],'assets/posters/P22-fridge.mp4')
         self.assertIn('226.234-second decodable transcode',videos['P22']['source_path'])
         self.assertIn('Official project-page performance figure',self.media['media']['P23']['source_path'])
+        self.assertEqual(videos['P42']['poster'],'assets/posters/P42-real2sim-first-frame.jpg')
+        self.assertIn('45.000-second three-scene V5 overview video',videos['P42']['source_path'])
         self.assertIn('PDF page 5, Figure 2',self.media['media']['P35']['source_path'])
         social_video_names={
             'X01':'Physical Robot Keyboard Typing.mp4',

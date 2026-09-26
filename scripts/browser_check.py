@@ -99,7 +99,7 @@ def main() -> int:
 
         retained = {pid: item for pid, item in manifest['media'].items() if item['kind'] in {'image', 'video'}}
         videos = {pid: item for pid, item in retained.items() if item['kind'] == 'video'}
-        assert len(retained) == 57 and len(videos) == 21
+        assert len(retained) == 57 and len(videos) == 22
         statuses = page.evaluate("""async (posters) => Promise.all(posters.map(async (poster) => {
             const response = await fetch(new URL(poster, location.href));
             return response.ok && (response.headers.get('content-type') || '').startsWith('image/');
@@ -131,6 +131,7 @@ def main() -> int:
                         video = card.locator('video')
                         assert video.count() == 1 and video.get_attribute('controls') is not None, pid
                         assert video.get_attribute('preload') == 'none' and video.get_attribute('poster') == item['poster'], pid
+                        assert video.get_attribute('src') == item['url'], pid
                 styles = page.locator('.published').evaluate_all("""els => els.map(el => {
                     const style = getComputedStyle(el);
                     return [style.backgroundColor, style.borderColor, style.color, style.fontSize];
@@ -191,7 +192,7 @@ def main() -> int:
         assert page.locator('dialog, #detail-dialog').count() == 0
         assert not errors, errors
         browser.close()
-    print('PASS: no detail UI/keyboard/click hooks; all 57 sourced verified-or-explicitly-estimated publication displays, 21 first-frame video posters plus retained image covers, video controls, search, groups, language, mobile, and Pages subpath work.')
+    print('PASS: no detail UI/keyboard/click hooks; all 57 sourced verified-or-explicitly-estimated publication displays, 22 first-frame video posters plus retained image covers, video controls, search, groups, language, mobile, and Pages subpath work.')
     return 0
 
 

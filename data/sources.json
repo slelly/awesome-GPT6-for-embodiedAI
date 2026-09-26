@@ -852,6 +852,6 @@
     "kind": "primary",
     "access": "page_text",
     "checked_at": "2026-09-26",
-    "notes": "MIT repository publishes the workflow contract, three-scene showcase, replayable MuJoCo example, geometry audits, source manifest, media notices, result limitations, and official comparison image retained for the card."
+    "notes": "MIT repository publishes the workflow contract, three-scene showcase, replayable MuJoCo example, geometry audits, source manifest, media notices, and result limitations. Its authorized 45-second V5 overview is retained as the card video with an exact first-frame poster; the media itself is outside the software MIT license."
   }
 ]

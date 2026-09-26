@@ -959,20 +959,21 @@
       }
     },
     "P42": {
-      "kind": "image",
-      "url": "https://raw.githubusercontent.com/Roboparty/gpt-6-astra-real2sim-workflow/783445b588f4358614066a2d4970c76755e12116/docs/showcase/media/comparison.jpg",
-      "source_url": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/783445b588f4358614066a2d4970c76755e12116/docs/showcase/media/comparison.jpg",
+      "kind": "video",
+      "url": "https://raw.githubusercontent.com/Roboparty/gpt-6-astra-real2sim-workflow/783445b588f4358614066a2d4970c76755e12116/docs/showcase/media/overview.mp4",
+      "poster": "assets/posters/P42-real2sim-first-frame.jpg",
+      "source_url": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/783445b588f4358614066a2d4970c76755e12116/docs/showcase/media/overview.mp4",
       "source_page_url": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow",
-      "source_path": "Official three-scene showcase comparison at release commit 783445b588f4358614066a2d4970c76755e12116; served from the pinned repository without local copying.",
-      "classification": "Official source-photo and reconstructed-scene comparison; not generated decoration and not an independently reproduced result.",
+      "source_path": "Official 45.000-second three-scene V5 overview video at release commit 783445b588f4358614066a2d4970c76755e12116 (1440x840 H.264, SHA-256 80f8d10660b6619144b10e7f6c6e3bd1cfebd85a97b394072f8a0ae06cc345d4); local poster SHA-256 6534e92f8a224c3ce88ac1b08acc4b0abd1bb1ba70bcee10a31f35e6202d898a, first decoded frame at 00:00:00.",
+      "classification": "Official project overview video and exact first-frame poster showing the source photograph beside the V5 reconstruction; not generated decoration or an independently reproduced result.",
       "source_id": "S095",
       "alt": {
-        "en": "Source-photo and reconstructed-scene comparison from the Astra Real2Sim workflow.",
-        "zh": "Astra Real2Sim 工作流的源照片与重建场景对比。"
+        "en": "Official Astra Real2Sim overview video comparing source photographs with reconstructed scenes.",
+        "zh": "Astra Real2Sim 官方总览视频，对比源照片与重建场景。"
       },
       "caption": {
-        "en": "Official three-scene Real2Sim showcase comparison.",
-        "zh": "官方三场景 Real2Sim 展示对比图。"
+        "en": "Official 45-second V5 overview; poster is the first decoded frame.",
+        "zh": "官方 45 秒 V5 总览；封面取自首个解码帧。"
       }
     }
   },

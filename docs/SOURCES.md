@@ -859,4 +859,4 @@ Official 2026-09-25 report entry is linked from the repository and cited by its 
 
 类型：`primary` · 读取：`page_text` · 检查日期：2026-09-26
 
-MIT repository publishes the workflow contract, three-scene showcase, replayable MuJoCo example, geometry audits, source manifest, media notices, result limitations, and official comparison image retained for the card.
+MIT repository publishes the workflow contract, three-scene showcase, replayable MuJoCo example, geometry audits, source manifest, media notices, and result limitations. Its authorized 45-second V5 overview is retained as the card video with an exact first-frame poster; the media itself is outside the software MIT license.
