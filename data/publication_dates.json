@@ -484,5 +484,19 @@
     "basis": "arXiv:2609.29389 v1 was submitted 2026-09-24T11:16:18Z.",
     "rule": null,
     "uncertainty": "Paper submission date; no public code link was present on the abstract page."
+  },
+  "P41": {
+    "date": "2026-09-25",
+    "status": "verified",
+    "basis": "Official repository commit 69af84d was authored 2026-09-25T18:07:13Z and the cited report is dated 2026-09-25.",
+    "rule": null,
+    "uncertainty": "Public release date; individual benchmark runs may predate the release."
+  },
+  "P42": {
+    "date": "2026-09-24",
+    "status": "verified",
+    "basis": "GitHub repository creation timestamp is 2026-09-24T09:58:36Z.",
+    "rule": null,
+    "uncertainty": "Repository creation date; the reviewed release commit followed on 2026-09-25."
   }
 }

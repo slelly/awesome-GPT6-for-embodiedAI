@@ -26,7 +26,7 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | P20 | 2026-0920 | verified | 2026-09-20 | 作者新闻明确标注 2026-09-20 released。 | — | 作者发布公告的日期，不是论文提交日。 | [S059](SOURCES.md#s059) · [S060](SOURCES.md#s060) |
 | P21 | ≈ 2026-0923 | estimated | pending confirmation | 独立项目页未提供发布日期；2026-09-23 仅为本轮发现日。 | 以本轮首次发现日作为内部排序回退值；不代表发布日期。 | 实际发布日期未知；页面直接显示未知，内部排序使用发现日。 | [S061](SOURCES.md#s061) · [S063](SOURCES.md#s063) |
 | P22 | ≈ 2026-0923 | estimated | pending confirmation | 独立项目页未提供发布日期；2026-09-23 仅为本轮发现日。 | 以本轮首次发现日作为内部排序回退值；不代表发布日期。 | 实际发布日期未知；页面直接显示未知，内部排序使用发现日。 | [S062](SOURCES.md#s062) · [S063](SOURCES.md#s063) |
-| P23 | 2026-0917 | verified | 2026-09-17 | arXiv v1 submitted 2026-09-17. | — | This is the paper's first public submission date. | [S065](SOURCES.md#s065) |
+| P23 | 2026-0917 | verified | 2026-09-17 | arXiv v1 submitted 2026-09-17. | — | This is the paper's first public submission date. | [S065](SOURCES.md#s065) · [S091](SOURCES.md#s091) · [S092](SOURCES.md#s092) |
 | P24 | 2026-0917 | verified | 2026-09-17 | Pantograph research index dates the report to 2026-09-17. | — | Official report date; not an experiment-run timestamp. | [S066](SOURCES.md#s066) |
 | P25 | 2026-0918 | verified | 2026-09-18 | GitHub repository created 2026-09-18. | — | Repository creation date; media/results were updated later. | [S067](SOURCES.md#s067) |
 | P26 | 2026-0917 | verified | 2026-09-17 | GitHub repository created 2026-09-17. | — | Repository creation date; not necessarily the physical run date. | [S068](SOURCES.md#s068) |
@@ -44,6 +44,8 @@ The Gallery shows verified dates as `YYYY-MMDD` and explicit estimates as `≈ Y
 | P38 | 2026-0921 | verified | 2026-09-21 | Consolidated public release commit 9c12635 was authored 2026-09-21T09:43:03+08:00. | — | The repository was created earlier; the display date uses the authored release commit. | [S088](SOURCES.md#s088) |
 | P39 | 2026-0907 | verified | 2026-09-07 | GitHub repository creation timestamp is 2026-09-07T08:32:16Z. | — | Infrastructure received substantial run-analysis updates on 2026-09-25. | [S089](SOURCES.md#s089) |
 | P40 | 2026-0924 | verified | 2026-09-24 | arXiv:2609.29389 v1 was submitted 2026-09-24T11:16:18Z. | — | Paper submission date; no public code link was present on the abstract page. | [S090](SOURCES.md#s090) |
+| P41 | 2026-0925 | verified | 2026-09-25 | Official repository commit 69af84d was authored 2026-09-25T18:07:13Z and the cited report is dated 2026-09-25. | — | Public release date; individual benchmark runs may predate the release. | [S093](SOURCES.md#s093) · [S094](SOURCES.md#s094) |
+| P42 | 2026-0924 | verified | 2026-09-24 | GitHub repository creation timestamp is 2026-09-24T09:58:36Z. | — | Repository creation date; the reviewed release commit followed on 2026-09-25. | [S095](SOURCES.md#s095) |
 | X01 | 2026-0912 | verified | 2026-09-12 | 保留项目记录给出精确演示日期；原帖绝对时间未另行复核。 | — | 无；资料记录为精确日。 | [S036](SOURCES.md#s036) |
 | X02 | 2026-0914 | verified | pending confirmation | 原帖 status ID `2099524132341711051` 依 X Snowflake epoch 解码为 `2026-09-14T15:42:15.079Z`。 | — | 日期精确到 UTC 日；从原帖 ID 时间位推导，未把二手索引的相对时间当日期。 | [S036](SOURCES.md#s036) |
 | X03 | 2026-0908 | verified | 2026-09-08 | 保留项目来源记录给出精确日。 | — | 无；资料记录为精确日。 | [S037](SOURCES.md#s037) |

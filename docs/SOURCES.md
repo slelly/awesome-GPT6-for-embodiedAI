@@ -1,6 +1,6 @@
 # 来源台账 / Source ledger
 
-本文件由 `data/sources.json` 生成。外链状态是 2026-09-25 的读取方式，不代表当前仍可访问。
+本文件由 `data/sources.json` 生成。外链状态是 2026-09-26 的读取方式，不代表当前仍可访问。
 
 `search_text`：读取搜索返回的正文/索引；`page_text`：直接读取页面正文；`partial_index`：只有局部索引；`linked_only`：只取得链接，未读全文。
 
@@ -815,3 +815,48 @@ Official repository documents the local Codex/Astra runner, public shared-robot 
 类型：`primary` · 读取：`page_text` · 检查日期：2026-09-25
 
 arXiv v1 submitted 2026-09-24T11:16:18Z. The HTML paper specifies the 18-case paired Astra comparison, interface changes, denominators, simulation-only Astra boundary, and the retained Figure 1 cover.
+
+<a id="s091"></a>
+## S091 · GPT-6-Astra Lights Up Embodied Navigation report
+
+[https://arxiv.org/abs/2609.29861](https://arxiv.org/abs/2609.29861)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-26
+
+CC BY 4.0 technical report submitted 2026-09-24T14:21:26Z. The HTML paper documents the R2R-CE-100 protocol, medium/ultra single-run results, action interface, comparison boundaries, and failure analysis.
+
+<a id="s092"></a>
+## S092 · GPT-6-Astra for VLN official project repository
+
+[https://github.com/daiguangzhao/gpt-6-astra-for-vln](https://github.com/daiguangzhao/gpt-6-astra-for-vln)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-26
+
+Official website repository created 2026-09-24 contains the updated report, local result figures, comparison data, and project-page implementation; it identifies the earlier workflow study as a separate V1 site.
+
+<a id="s093"></a>
+## S093 · PyRUA-Lean official repository
+
+[https://github.com/DAGroup-PKU/PyRUA-Lean](https://github.com/DAGroup-PKU/PyRUA-Lean)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-26
+
+Apache-2.0 repository publishes the robot-code interface, paired cell lists, frozen dependency sets, prompts, evaluation protocol, analysis scripts, and four benchmark summaries. The catalogue did not rerun the GPU evaluations.
+
+<a id="s094"></a>
+## S094 · Fewer Tokens, Better Action technical blog
+
+[https://dagroup-pku.github.io/Agentic-Robot/posts/fewer-tokens-better-action/](https://dagroup-pku.github.io/Agentic-Robot/posts/fewer-tokens-better-action/)
+
+类型：`primary` · 读取：`linked_only` · 检查日期：2026-09-26
+
+Official 2026-09-25 report entry is linked from the repository and cited by its README. Direct page retrieval failed in this environment, so quantitative fields were checked against the repository README and protocol rather than copied from an inaccessible page.
+
+<a id="s095"></a>
+## S095 · GPT-6 Astra Real2Sim workflow release
+
+[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-09-26
+
+MIT repository publishes the workflow contract, three-scene showcase, replayable MuJoCo example, geometry audits, source manifest, media notices, result limitations, and official comparison image retained for the card.

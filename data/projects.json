@@ -928,7 +928,7 @@
   },
   {
     "id": "P23",
-    "title": "How Far Can GPT-6-Astra Go? · 连续环境视觉语言导航",
+    "title": "GPT-6-Astra Lights Up Embodied Navigation · 零样本连续环境导航",
     "section": "core",
     "category": "closed_loop",
     "environment": "simulation",
@@ -937,50 +937,55 @@
     ],
     "gpt6_relation": "explicit_primary",
     "evidence_level": "A",
-    "summary": "Astra 在 VLN-CE 工作流中根据图像、指令、执行反馈与历史提出导航动作；固定 R2R-CE val-unseen 子集报告 SR 52.0%、SPL 48.9%、nDTW 70.8%。",
-    "authors": "Guangzhao Dai, Qi Wu, Bin Zhu",
+    "summary": "扩展报告让 GPT-6 Astra 仅凭单目 RGB 在 Codex harness 中自主选择观测、原子动作和停止时机；在固定 R2R-CE-100 上，medium/ultra 各单次运行报告 SR 76.0%/79.0%、SPL 67.9%/69.5%。",
+    "authors": "Guangzhao Dai, Qianru Sun, Qi Wu, Bin Zhu",
     "event_date": "2026-09-17",
     "event_date_basis": "arXiv v1 submitted 2026-09-17; v2 followed on 2026-09-18.",
-    "window_status": "in_window",
-    "url": "https://arxiv.org/abs/2609.20116",
-    "code_url": null,
-    "license_status": "论文按 arXiv 页面提供；图 2 仅用于本地审核预览，公开再利用许可未确认。",
-    "control_interface": "选定观测与历史 → Astra 导航决策 → 环境动作与反馈循环",
+    "window_status": "updated_in_window",
+    "url": "https://arxiv.org/abs/2609.29861",
+    "code_url": "https://github.com/daiguangzhao/gpt-6-astra-for-vln",
+    "license_status": "扩展报告采用 CC BY 4.0；项目网站仓库未声明独立代码许可。",
+    "control_interface": "512×512 单目 RGB + 指令/连续会话上下文 → Astra 自主调用 observe() 与 step(actions) → 0.25 m 前进、15° 转向、30° 俯仰或 STOP",
     "metrics": [
       {
-        "name": "Navigation success rate",
-        "value": 52.0,
+        "name": "Ultra reasoning success rate",
+        "value": 79.0,
         "unit": "%",
-        "denominator": "50 R2R-CE val-unseen episodes",
-        "protocol": "fixed author-selected evaluation subset"
+        "denominator": "100 fixed R2R-CE validation-unseen episodes",
+        "protocol": "one run per episode; explicit STOP within 3 m; 500 primitive-action / 2,400 s budget"
       },
       {
-        "name": "SPL",
-        "value": 48.9,
+        "name": "Ultra reasoning SPL",
+        "value": 69.5,
         "unit": "%",
-        "denominator": "same 50 episodes",
-        "protocol": "R2R-CE evaluation"
+        "denominator": "same 100 episodes",
+        "protocol": "same single-run ultra evaluation"
       },
       {
-        "name": "nDTW",
-        "value": 70.8,
-        "unit": "score",
-        "denominator": "same 50 episodes",
-        "protocol": "R2R-CE evaluation"
+        "name": "Medium reasoning success rate",
+        "value": 76.0,
+        "unit": "%",
+        "denominator": "same 100 episodes",
+        "protocol": "one run per episode under the same prompt, tools, and budgets"
       }
     ],
     "limitations": [
-      "结果来自作者固定 50-episode 子集，未独立复现。",
-      "52% 包含 36% 接受 STOP 后成功与 16% 到步数上限时满足距离条件。",
-      "未发现公开视频或代码入口。"
+      "每种 reasoning effort 对每个 episode 仅运行一次，未报告跨 seed 方差，本站未独立复现。",
+      "固定 100-episode 子集与训练方法使用的完整 val-unseen split 不同；论文也明确说明跨方法比较并非严格公平。",
+      "Ultra 的 21 个失败中有 13 个最终距目标至少 5 m；更高 reasoning effort 未消除路线保持与目标确认问题。",
+      "本条目合并同作者早期 arXiv:2609.20116 工作流研究，不另建重复卡片。"
     ],
     "source_ids": [
-      "S065"
+      "S065",
+      "S091",
+      "S092"
     ],
     "links": {
-      "paper": "https://arxiv.org/abs/2609.20116"
+      "paper": "https://arxiv.org/abs/2609.29861",
+      "project": "https://daiguangzhao.github.io/gpt-6-astra-for-vln/",
+      "earlier_report": "https://arxiv.org/abs/2609.20116"
     },
-    "last_checked": "2026-09-24",
+    "last_checked": "2026-09-26",
     "independently_reproduced": false
   },
   {
@@ -1793,6 +1798,126 @@
       "html": "https://arxiv.org/html/2609.29389v1"
     },
     "last_checked": "2026-09-25",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P41",
+    "title": "PyRUA-Lean · 用代码而非逐步工具调用控制机器人",
+    "section": "core",
+    "category": "harness",
+    "environment": "simulation",
+    "scene_tags": [
+      "sim"
+    ],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "PyRUA-Lean 让 GPT-6 Astra 在持久 Python 命名空间中编写面向 robo 对象的代码，以一次调用组合感知、运动、VLA 技能与状态检查；作者在四组仿真基准上与相同模型、基元和调用预算的 RPent 工具调用方式做配对比较。",
+    "authors": "Ruiyang Si, Jianxin Bi, Wenbo Huang et al. / DAGroup-PKU",
+    "event_date": "2026-09-25",
+    "event_date_basis": "Official repository and cited technical blog were published 2026-09-25; repository commit 69af84d is dated 2026-09-25T18:07:13Z.",
+    "window_status": "in_window",
+    "url": "https://github.com/DAGroup-PKU/PyRUA-Lean",
+    "code_url": "https://github.com/DAGroup-PKU/PyRUA-Lean",
+    "license_status": "PyRUA-Lean 采用 Apache-2.0；依赖的 RPent、仿真器、VLA 与模型资产适用各自许可。",
+    "control_interface": "任务卡/初始图像 + 生成的 robo API 文档 → Astra 编写 Python cells → 沙箱内调用感知、伺服与冻结 VLA 技能 → 同一基准成功判定",
+    "metrics": [
+      {
+        "name": "LIBERO-PRO code-arm success rate",
+        "value": 94.0,
+        "unit": "%",
+        "denominator": "40 tasks × 5 seeds; paired against 83.0% tool-calling arm",
+        "protocol": "same GPT-6 Astra, primitives, simulator, success predicate, and 40-response budget"
+      },
+      {
+        "name": "RoboTwin 2.0 code-arm success rate",
+        "value": 67.2,
+        "unit": "%",
+        "denominator": "50 tasks × 5 buildable seeds; paired against 60.0% tool-calling arm",
+        "protocol": "same model, LingBot-VLA skills, task cells, and request budget"
+      },
+      {
+        "name": "RoboCasa365 atomic code-arm success rate",
+        "value": 86.7,
+        "unit": "%",
+        "denominator": "18 tasks × 5 seeds; paired against 78.9% tool-calling arm",
+        "protocol": "same model, RLDX-1/navigation skills, task cells, and request budget"
+      },
+      {
+        "name": "RoboCasa365 composite code-arm success rate",
+        "value": 39.4,
+        "unit": "%",
+        "denominator": "32 tasks × 5 seeds; paired against 34.4% tool-calling arm",
+        "protocol": "same model and 100-response composite-task budget"
+      }
+    ],
+    "limitations": [
+      "结果由作者提供并附协议与分析脚本，本站未下载模型权重、运行 GPU 仿真或独立复现。",
+      "代码臂与工具调用臂的交互形式有意不同：代码臂把多步操作放进 Python cell，工具臂在动作后持续接收图像；结果不能归因为单一低层技能。",
+      "成本与 token 降幅仅在两种方式都成功的实例上计算，并依赖发布时的模型价格与网关行为。",
+      "四组结果均为仿真；不代表真实机器人成功率。"
+    ],
+    "source_ids": [
+      "S093",
+      "S094"
+    ],
+    "links": {
+      "report": "https://dagroup-pku.github.io/Agentic-Robot/posts/fewer-tokens-better-action/",
+      "protocol": "https://github.com/DAGroup-PKU/PyRUA-Lean/blob/main/evaluation/PROTOCOL.md"
+    },
+    "last_checked": "2026-09-26",
+    "independently_reproduced": false
+  },
+  {
+    "id": "P42",
+    "title": "GPT-6 Astra Real2Sim Workflow · 可编辑房间重建与仿真复核",
+    "section": "core",
+    "category": "real2sim",
+    "environment": "visual_replay",
+    "scene_tags": [
+      "sim"
+    ],
+    "gpt6_relation": "explicit_primary",
+    "evidence_level": "A",
+    "summary": "该工作流用 GPT-6 Astra 观察房间照片、决定建模步骤并复查预览，Blender/Python 生成可编辑场景；公开仓库提供三个展示场景、一个可复跑 MuJoCo 案例、几何审计与输入来源台账。",
+    "authors": "Roboparty",
+    "event_date": "2026-09-24",
+    "event_date_basis": "GitHub repository created 2026-09-24T09:58:36Z; reviewed release commit 783445b was published 2026-09-25T15:32:15Z.",
+    "window_status": "in_window",
+    "url": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow",
+    "code_url": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow",
+    "license_status": "代码采用 MIT；照片、视频、ArtVIP 参考资产与其他第三方材料按仓库 MEDIA_NOTICE/THIRD_PARTY_NOTICES 分别处理。",
+    "control_interface": "房间照片 + 已知尺寸/候选家具规格 → Astra 观察、建模决策与预览复查 → Blender/Python 构建 → 几何审计、GLB/USD 导出与可选 MuJoCo 动力学",
+    "metrics": [
+      {
+        "name": "VITBERGET cabinet F-score @10 mm",
+        "value": 59.15,
+        "unit": "%",
+        "denominator": "60,000 surface samples per direction against the ArtVIP reference",
+        "protocol": "single reconstructed object; original scale retained; specification/reference assisted"
+      },
+      {
+        "name": "BRUKSVARA wardrobe F-score @10 mm",
+        "value": 60.13,
+        "unit": "%",
+        "denominator": "60,000 surface samples per direction against the ArtVIP reference",
+        "protocol": "single reconstructed object; original scale retained; specification/reference assisted"
+      }
+    ],
+    "limitations": [
+      "家具规格和 ArtVIP 参考参与制作，评测不是独立留出测试；两个物体的表面指标不能代表整间房间准确率。",
+      "三个 V5 展示场景的大型模型未随 Git 仓库分发；仓库内可复跑案例与展示场景需分开理解。",
+      "流程依赖 Astra 进行建模决策，但冻结配方复跑不再调用模型；这不是在线机器人策略。",
+      "作者报告 663 个去重几何对象中仍有 77 个开放曲线管件和 2,546 个零面积面。"
+    ],
+    "source_ids": [
+      "S095"
+    ],
+    "links": {
+      "video": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/showcase/media/overview.mp4",
+      "accuracy": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/showcase/ACCURACY.md",
+      "replay": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/example/REPLAY.md"
+    },
+    "last_checked": "2026-09-26",
     "independently_reproduced": false
   },
   {

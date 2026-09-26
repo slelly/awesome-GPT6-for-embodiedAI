@@ -808,5 +808,50 @@
     "access": "page_text",
     "checked_at": "2026-09-25",
     "notes": "arXiv v1 submitted 2026-09-24T11:16:18Z. The HTML paper specifies the 18-case paired Astra comparison, interface changes, denominators, simulation-only Astra boundary, and the retained Figure 1 cover."
+  },
+  {
+    "id": "S091",
+    "title": "GPT-6-Astra Lights Up Embodied Navigation report",
+    "url": "https://arxiv.org/abs/2609.29861",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-26",
+    "notes": "CC BY 4.0 technical report submitted 2026-09-24T14:21:26Z. The HTML paper documents the R2R-CE-100 protocol, medium/ultra single-run results, action interface, comparison boundaries, and failure analysis."
+  },
+  {
+    "id": "S092",
+    "title": "GPT-6-Astra for VLN official project repository",
+    "url": "https://github.com/daiguangzhao/gpt-6-astra-for-vln",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-26",
+    "notes": "Official website repository created 2026-09-24 contains the updated report, local result figures, comparison data, and project-page implementation; it identifies the earlier workflow study as a separate V1 site."
+  },
+  {
+    "id": "S093",
+    "title": "PyRUA-Lean official repository",
+    "url": "https://github.com/DAGroup-PKU/PyRUA-Lean",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-26",
+    "notes": "Apache-2.0 repository publishes the robot-code interface, paired cell lists, frozen dependency sets, prompts, evaluation protocol, analysis scripts, and four benchmark summaries. The catalogue did not rerun the GPU evaluations."
+  },
+  {
+    "id": "S094",
+    "title": "Fewer Tokens, Better Action technical blog",
+    "url": "https://dagroup-pku.github.io/Agentic-Robot/posts/fewer-tokens-better-action/",
+    "kind": "primary",
+    "access": "linked_only",
+    "checked_at": "2026-09-26",
+    "notes": "Official 2026-09-25 report entry is linked from the repository and cited by its README. Direct page retrieval failed in this environment, so quantitative fields were checked against the repository README and protocol rather than copied from an inaccessible page."
+  },
+  {
+    "id": "S095",
+    "title": "GPT-6 Astra Real2Sim workflow release",
+    "url": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow",
+    "kind": "primary",
+    "access": "page_text",
+    "checked_at": "2026-09-26",
+    "notes": "MIT repository publishes the workflow contract, three-scene showcase, replayable MuJoCo example, geometry audits, source manifest, media notices, result limitations, and official comparison image retained for the card."
   }
 ]

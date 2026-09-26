@@ -183,9 +183,9 @@
       "summary": "A simulated Unitree G1 with Dex3-1 hands walks to a fridge and spells HELLO with magnets. The author credits GPT-6 Astra for building the project; this is a nominal-scene demo, without evidence of direct model control or real-hardware results. Publication date unknown."
     },
     "P23": {
-      "title": "How Far Can GPT-6-Astra Go? · VLN-CE",
-      "summary": "Astra proposes navigation actions from selected observations, execution feedback, and history on a fixed R2R-CE subset.",
-      "detail": "Author-provided evidence is retained with explicit protocol, licensing, and reproduction limits."
+      "title": "GPT-6-Astra Lights Up Embodied Navigation · Zero-Shot VLN-CE",
+      "summary": "Using only monocular RGB in a Codex harness, Astra chooses observations, primitive actions, and when to stop; single runs on R2R-CE-100 report 76.0%/79.0% SR for medium/ultra reasoning.",
+      "detail": "The fixed subset differs from full-split trained evaluations, each configuration has one run per episode, and route following and goal verification remain failure modes."
     },
     "P24": {
       "title": "Benchmarking Frontier VLMs on Robots · Pantograph",
@@ -271,6 +271,16 @@
       "title": "Robo-Harness K1 · Perception Tools for Robot-Use Agents",
       "summary": "K1 exposes calibrated depth, persistent anchors, spatial measurements, and grasp candidates as tools; GPT-6 Astra reaches 16/18 on a paired LIBERO-PRO subset versus 11/18 with an RGB-only interface.",
       "detail": "The 18-case comparison changes several interface components together and reports Astra only in simulation."
+    },
+    "P41": {
+      "title": "PyRUA-Lean · Robot Agents That Act in Code",
+      "summary": "GPT-6 Astra writes Python against a persistent robot object, combining perception, motion, VLA skills, and checks inside each call; the release compares this interface with RPent tool calling on four simulation suites.",
+      "detail": "The paired author results use the same model, primitives, cells, judges, and response budgets, but intentionally change the interaction form; no physical-robot result is claimed."
+    },
+    "P42": {
+      "title": "GPT-6 Astra Real2Sim Workflow · Editable Rooms and Simulation Review",
+      "summary": "Astra observes room photos, makes modelling decisions, and reviews previews while Blender and Python produce editable scenes, geometry audits, and an optional MuJoCo replay.",
+      "detail": "Furniture specifications and reference assets assist reconstruction, so the published object-level surface scores are not an independent held-out room benchmark."
     }
   }
 }

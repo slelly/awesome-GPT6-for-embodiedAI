@@ -631,19 +631,20 @@
     },
     "P23": {
       "kind": "image",
-      "url": "assets/posters/P23-navigation-fig2.png",
-      "source_url": "https://arxiv.org/abs/2609.20116",
-      "source_page_url": "https://arxiv.org/abs/2609.20116",
-      "source_path": "arXiv:2609.20116v2 PDF, page 3, Figure 2; full mechanism retained from the locally read PDF.",
-      "classification": "Paper mechanism figure, not a video frame.",
-      "source_id": "S065",
+      "url": "https://raw.githubusercontent.com/daiguangzhao/gpt-6-astra-for-vln/ed6b2076148425793d59d2d9c4fbb3cdfb13b72d/assets/performance.webp",
+      "fit": "contain",
+      "source_url": "https://github.com/daiguangzhao/gpt-6-astra-for-vln/blob/ed6b2076148425793d59d2d9c4fbb3cdfb13b72d/assets/performance.webp",
+      "source_page_url": "https://arxiv.org/abs/2609.29861",
+      "source_path": "Official project-page performance figure at commit ed6b2076148425793d59d2d9c4fbb3cdfb13b72d; served from the pinned repository without local copying.",
+      "classification": "Official expanded-report performance figure for the R2R-CE-100 evaluation; author-provided results, not an independently reproduced chart.",
+      "source_id": "S092",
       "alt": {
-        "en": "Figure 2 navigation workflow from the paper.",
-        "zh": "论文图 2：导航工作流。"
+        "en": "GPT-6 Astra medium and ultra navigation results on R2R-CE-100.",
+        "zh": "GPT-6 Astra medium 与 ultra 在 R2R-CE-100 上的导航结果。"
       },
       "caption": {
-        "en": "Figure 2 navigation workflow from the paper.",
-        "zh": "论文图 2：导航工作流。"
+        "en": "Official performance figure from the expanded navigation report.",
+        "zh": "扩展导航报告的官方性能图。"
       }
     },
     "P24": {
@@ -937,6 +938,41 @@
       "caption": {
         "en": "Robo-Harness K1 arXiv v1 Figure 1.",
         "zh": "Robo-Harness K1 arXiv v1 图 1。"
+      }
+    },
+    "P41": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/DAGroup-PKU/PyRUA-Lean/69af84d69154799357871299ac88c74445393e87/docs/assets/results-overview.png",
+      "fit": "contain",
+      "source_url": "https://github.com/DAGroup-PKU/PyRUA-Lean/blob/69af84d69154799357871299ac88c74445393e87/docs/assets/results-overview.png",
+      "source_page_url": "https://github.com/DAGroup-PKU/PyRUA-Lean",
+      "source_path": "Official repository results overview at release commit 69af84d69154799357871299ac88c74445393e87; served from the pinned repository without local copying.",
+      "classification": "Author-provided four-benchmark comparison of code and tool-calling interfaces; not an independently reproduced chart.",
+      "source_id": "S093",
+      "alt": {
+        "en": "PyRUA-Lean results overview across LIBERO-PRO, RoboTwin 2.0, and RoboCasa365.",
+        "zh": "PyRUA-Lean 在 LIBERO-PRO、RoboTwin 2.0 与 RoboCasa365 上的结果总览。"
+      },
+      "caption": {
+        "en": "Official PyRUA-Lean four-benchmark results overview.",
+        "zh": "PyRUA-Lean 官方四基准结果总览。"
+      }
+    },
+    "P42": {
+      "kind": "image",
+      "url": "https://raw.githubusercontent.com/Roboparty/gpt-6-astra-real2sim-workflow/783445b588f4358614066a2d4970c76755e12116/docs/showcase/media/comparison.jpg",
+      "source_url": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/783445b588f4358614066a2d4970c76755e12116/docs/showcase/media/comparison.jpg",
+      "source_page_url": "https://github.com/Roboparty/gpt-6-astra-real2sim-workflow",
+      "source_path": "Official three-scene showcase comparison at release commit 783445b588f4358614066a2d4970c76755e12116; served from the pinned repository without local copying.",
+      "classification": "Official source-photo and reconstructed-scene comparison; not generated decoration and not an independently reproduced result.",
+      "source_id": "S095",
+      "alt": {
+        "en": "Source-photo and reconstructed-scene comparison from the Astra Real2Sim workflow.",
+        "zh": "Astra Real2Sim 工作流的源照片与重建场景对比。"
+      },
+      "caption": {
+        "en": "Official three-scene Real2Sim showcase comparison.",
+        "zh": "官方三场景 Real2Sim 展示对比图。"
       }
     }
   },
