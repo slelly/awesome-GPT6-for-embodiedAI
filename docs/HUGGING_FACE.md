@@ -14,6 +14,7 @@
 | HF06 | [PhysBrain 1.5 8B](https://huggingface.co/DeepCybo/PhysBrain1.5-8B) | model | [P15](CATALOG.md#p15) | linked_from_primary |
 | HF07 | [PhysBrain 1.5 2B](https://huggingface.co/DeepCybo/PhysBrain1.5-2B) | model | [P15](CATALOG.md#p15) | linked_from_primary |
 | HF08 | [RoboDojo official HF repository](https://huggingface.co/datasets/RoboDojo-Benchmark/RoboDojo) | dataset | [P16](CATALOG.md#p16) | partial_index |
+| HF09 | [RoboParty Real2Sim interactive showcase](https://huggingface.co/spaces/Wgeorge321/roboparty-real2sim-showcase) | space | [P42](CATALOG.md#p42) | page_text |
 
 ## HF01 · AGP canonical evaluated trials
 
@@ -78,6 +79,14 @@
 许可：未核实
 
 来源：[S016](SOURCES.md#s016) · [S046](SOURCES.md#s046)
+
+## HF09 · RoboParty Real2Sim interactive showcase
+
+免费静态 Space：三房间原图/重建拖动对比、26 秒项目宣传片和复跑文档入口；不运行在线重建，未提供新的独立验证结果。
+
+许可：工作流代码采用 MIT；Space 中照片与派生媒体适用项目独立媒体条款，不能推断为开放内容许可。
+
+来源：[S118](SOURCES.md#s118)
 
 ## 下载之前
 

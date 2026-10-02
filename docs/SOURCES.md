@@ -1049,3 +1049,12 @@ The 2026-09-30 release publishes one Desk1 image comparison among the project's 
 类型：`primary` · 读取：`page_text` · 检查日期：2026-10-02
 
 arXiv v1 defines an agent-native MuJoCo/Franka benchmark with 200 integrated tasks and a 30-task primary suite. It reports GPT-6 Astra/Codex as the strongest of seven evaluated agent configurations while retaining hard-task failures. The paper links dzj441/Libero-Agent, whose README still says code is coming soon at this check.
+
+<a id="s118"></a>
+## S118 · RoboParty Real2Sim interactive Space showcase
+
+[https://huggingface.co/spaces/Wgeorge321/roboparty-real2sim-showcase](https://huggingface.co/spaces/Wgeorge321/roboparty-real2sim-showcase)
+
+类型：`primary` · 读取：`page_text` · 检查日期：2026-10-02
+
+Public static Space at commit 59f6746d3ec52889250bec24e80a9bdf4556496e. Browser-checked three room selectors, photo/reconstruction slider, GitHub links and a 26-second video. Displays existing V5 results; no inference, uploads, new benchmark, or independently reproduced experiment. Project affiliation disclosed in the contribution.
