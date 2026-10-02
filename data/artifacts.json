@@ -112,5 +112,19 @@
     ],
     "license_status": "未核实",
     "last_checked": "2026-09-18"
+  },
+  {
+    "id": "HF09",
+    "title": "RoboParty Real2Sim interactive showcase",
+    "project_id": "P42",
+    "url": "https://huggingface.co/spaces/Wgeorge321/roboparty-real2sim-showcase",
+    "kind": "space",
+    "verification": "page_text",
+    "description": "免费静态 Space：三房间原图/重建拖动对比、26 秒项目宣传片和复跑文档入口；不运行在线重建，未提供新的独立验证结果。",
+    "source_ids": [
+      "S118"
+    ],
+    "license_status": "工作流代码采用 MIT；Space 中照片与派生媒体适用项目独立媒体条款，不能推断为开放内容许可。",
+    "last_checked": "2026-10-02"
   }
 ]

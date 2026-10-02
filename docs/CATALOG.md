@@ -895,7 +895,7 @@ canonical_commit：[https://github.com/DAGroup-PKU/PyRUA-Lean/commit/0f88f1cc5e3
 | Independent candidate VITBERGET mean bidirectional surface distance | 25.84 mm | 60,000 samples per direction against the ArtVIP reference | retained 2026-09-26 candidate; rigid alignment only; no scale fit, ICP, or post-measurement revision |
 | Independent candidate BRUKSVARA F-score @10 mm | 80.53 % | 60,000 samples per direction against the ArtVIP reference | reference-assisted cabinet metric on the unchanged candidate; not a whole-room score |
 
-**限制与未决项：** 家具规格和 ArtVIP 参考参与制作，评测不是独立留出测试；两个物体的表面指标不能代表整间房间准确率。 新增独立候选的视觉复核要求修改，静态引擎检查因后墙碰撞体偏移 25 mm（容差 6 mm）失败；不能称为仿真就绪。 新旧柜体数值来自不同修订条件；仓库明确说明不能把差异当作控制充分的算法版本比较。 三个 V5 展示场景的大型模型未随 Git 仓库分发；仓库内可复跑案例与展示场景需分开理解。 流程依赖 Astra 进行建模决策，但冻结配方复跑不再调用模型；这不是在线机器人策略。 作者报告 663 个去重几何对象中仍有 77 个开放曲线管件和 2,546 个零面积面。
+**限制与未决项：** 家具规格和 ArtVIP 参考参与制作，评测不是独立留出测试；两个物体的表面指标不能代表整间房间准确率。 新增独立候选的视觉复核要求修改，静态引擎检查因后墙碰撞体偏移 25 mm（容差 6 mm）失败；不能称为仿真就绪。 新旧柜体数值来自不同修订条件；仓库明确说明不能把差异当作控制充分的算法版本比较。 三个 V5 展示场景的大型模型未随 Git 仓库分发；仓库内可复跑案例与展示场景需分开理解。 流程依赖 Astra 进行建模决策，但冻结配方复跑不再调用模型；这不是在线机器人策略。 作者报告 663 个去重几何对象中仍有 77 个开放曲线管件和 2,546 个零面积面。 公开 Space 仅交互预览已有 V5 照片/重建与宣传片，不运行在线重建、接收上传或提供新的实验结果。
 
 video：[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/showcase/media/overview.mp4](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/showcase/media/overview.mp4)  
 accuracy：[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/showcase/ACCURACY.md](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/docs/showcase/ACCURACY.md)  
@@ -903,8 +903,10 @@ replay：[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/d
 independent_test：[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/examples/independent_whole_scene_20260926/README.md](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/examples/independent_whole_scene_20260926/README.md)  
 independent_accuracy：[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/examples/independent_whole_scene_20260926/ACCURACY.md](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/main/examples/independent_whole_scene_20260926/ACCURACY.md)  
 desk1_comparison：[https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/f3fedad4be37a63189edd3414e47095bb3838e2b/docs/research/DESK1_GPT6_PROJECT_COMPARISON_20260930.md](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow/blob/f3fedad4be37a63189edd3414e47095bb3838e2b/docs/research/DESK1_GPT6_PROJECT_COMPARISON_20260930.md)  
+project：[https://wgeorge321-roboparty-real2sim-showcase.static.hf.space/index.html](https://wgeorge321-roboparty-real2sim-showcase.static.hf.space/index.html)  
+showcase：[https://huggingface.co/spaces/Wgeorge321/roboparty-real2sim-showcase](https://huggingface.co/spaces/Wgeorge321/roboparty-real2sim-showcase)  
 
-**来源：** [S095 · GPT-6 Astra Real2Sim workflow release](SOURCES.md#s095) · [S102 · Astra Real2Sim independent whole-scene audit](SOURCES.md#s102) · [S116 · GPT-6 Astra Real2Sim Desk1 comparison release](SOURCES.md#s116)
+**来源：** [S095 · GPT-6 Astra Real2Sim workflow release](SOURCES.md#s095) · [S102 · Astra Real2Sim independent whole-scene audit](SOURCES.md#s102) · [S116 · GPT-6 Astra Real2Sim Desk1 comparison release](SOURCES.md#s116) · [S118 · RoboParty Real2Sim interactive Space showcase](SOURCES.md#s118)
 
 ---
 

@@ -280,7 +280,7 @@
     "P42": {
       "title": "GPT-6 Astra Real2Sim Workflow · Editable Rooms and Simulation Review",
       "summary": "Astra observes room photos, makes modelling decisions, and reviews previews while Blender and Python produce editable scenes; a September 30 release adds one-image Desk1 comparisons with scoped Pi3X and MoGe-3 static adapters.",
-      "detail": "The reference routes did not run the other projects' complete frameworks or independent Astra iterations, so the image-fit values are not a framework ranking, 3D-accuracy result, or SOTA claim."
+      "detail": "The reference routes did not run the other projects' complete frameworks or independent Astra iterations, so the image-fit values are not a framework ranking, 3D-accuracy result, or SOTA claim. The public static Space adds a draggable viewer of existing V5 examples and a 26-second film; it does not run online reconstruction or add experimental evidence."
     },
     "P43": {
       "title": "AgenticGenTAMP · Coding Agents for Generalized Task and Motion Planning",
